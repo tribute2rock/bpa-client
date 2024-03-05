@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBG3</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 30px;">Performance Security</b>
+            
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            Date:{{subform.2.issuedate.formattedissueDateBG}} <br>
+            {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+            {{subform.2.beneficiary_address}} <br>
+
+                   </p>
+        <br><br><br><br>
+        <p>
+            our Ref. No.: {{subform.2.reference_number}}
+        <p>
+            On  <b> {{subform.2.issuedate.formattedissueDateBG}} </b> you concluded with <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}},
+                 {{subform.2.company_address}} </b> ("Contractor") a contract for <b> {{subform.2.purpose_guarantee}} </b> Contract No: <b> {{contract_number}} </b> (project, object of contract) 
+            at a price of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}) </b> .
+        </p>
+        <p>
+            In accordance with the provisions of the contract the 
+            Contractor is obligated to provide a performance bond for 5 % of the contract price.
+                      
+        </p>
+        <p>
+            We, the undersigned <b> Global IME Bank Limited </b> (Guarantor), waiving all objections and
+             defenses under the aforementioned contract, hereby irrevocably and independently guarantees
+              to pay on your first written demand an amount up to a total of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> against your written declaration that the
+               Contractor has failed to duly perform the aforementioned contract.
+        </p>
+        <p>
+            In the event of any claim under this guarantee, payment shall be effected to KfW, Frankfurtam Main, 
+            BIC: KFWIDEFF, account IBAN: DE53 5002 0400 3800 0000 00, for account of <b> {{subform.2.salutation}} {{subform.2.beneficiary_name}} {{subform.2.beneficiary_address}}</b> , Account No.:..........
+            at NMB Bank Limited, Babarmahal, Kathmandu, Nepal (project-executing agency/purchaser).
+        </p>
+        <p>
+            This guarantee shall expire no later than <b> {{subform.2.validityDate}} </b>  
+        </p>
+        <p>
+            By this date we must have received any claims for payment by letter or encoded telecommunication.
+        </p>
+        <p>
+            It is understood that you will return this guarantee to us on expiry or after payment of the total amount to be claimed hereunder.
+        </p>
+        <p>
+            This guarantee is governed by the laws of Nepal
+ 
+   
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>..........</b><br /><br />
+            <b>Place, date</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>..........</b><br /><br />
+            <b>Guarantor</b><br /><br />
+            
+            
+        </p>
+        
+        <div>
+            <table  style="border:2px solid black;">
+                <td>
+                    <i>If the institution issuing the Performance security is located outside the country of the employer,
+                        it shall have correspondent financial institution located in the country of the employer to make it enforceable.
+                    </i>
+                </td>
+            </table>
+        </div>  
+         </div>    
+           
+        
+        
+        
+        
+</body>
+
+
+
+</html>

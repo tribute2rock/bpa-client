@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apgInAccordance</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Performance Guarantee No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            We have been informed that <b>{{subform.2.salutation_acccount}} </b> <b>{{subform.2.company_name}}</b>,
+            <b> {{subform.2.company_address}}</b>
+            (hereinafter called “the Contractor”), has been notified by you to sign the Contract No.
+            <b>{{subform.2.contract_number}}</b> for the Execution of <b>{{subform.2.purpose_guarantee}}</b>
+            (hereinafter called ‘The Contract’).
+        </p>
+        <p>
+            Furthermore, we understand that, according to the conditions of the Contract, a performance guarantee is
+            required.
+        </p>
+        <p>
+            At the request of the Contractor, we, <b>Global IME Bank Limited, {{subform.2.branch_name}}, Nepal</b>
+            hereby irrevocably
+            undertakes
+            to pay you any sum or sums not exceeding in total an amount of <b>{{main.currency_short}}
+                {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b> such sum being payable in
+            Nepalese Rupees, upon receipt by us of your
+            first demand
+            in writing accompanied by a written statement stating that the Contractor is in breach of its obligations(s)
+            under the Contract, without your needing to prove or to show grounds for your demand or the sum specified
+            therein.
+        </p>
+        <p>
+            This guarantee shall be expire, no later than the <b>{{subform.2.final_validityDate}}</b> and any demand for
+            payment under
+            this
+            guarantee must be received at Trade Operations Department, Central Business Park, 6th Floor, Thapathali,
+            Kathmandu, Nepal on or before that date.
+        </p>
+        <p>
+            <b>For: Global IME Bank Limited <br>
+                Trade Operations </b><br>
+        </p>
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name2}}</b><br /><br />
+            <b>Designation : {{subform.2.designation2}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+    </div>
+</body>
+
+</html>

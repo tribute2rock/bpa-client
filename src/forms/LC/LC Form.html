@@ -1,0 +1,2539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="mt-3">
+        <div class="print-head-wrapper">
+            <img src="https://globalimebank.com/assets/upload/images/config/Gibl_logo-1.png" class="main-logo" />
+            <p class="mb-0 ml-3"><b>Application and agreement <br /> for issuance of Letter of Credit</b></p>
+            <hr class="w-100" />
+        </div>
+        <div class="form-group row align-items-center">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Nature of LC</label>
+                    <select name="nature_of_lc" id="nature_of_lc" data-label="Nature of LC" class="form-control">
+                        <option value="IRREVOCABLE">IRREVOCABLE</option>
+                        <option value="IRREVOCABLE TRANSFERABLE">IRREVOCABLE TRANSFERABLE</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                APPLICANT NAME AND ADDRESS
+            </span>
+        </h6>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Name</label>
+                    <textarea type="text" class="form-control" name="applicantName" id="applicantName"
+                        data-label="Applicant Name" required></textarea>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea type="text" class="form-control" name="applicantAddress" id="applicantAddress"
+                        data-label="Applicant Address" required></textarea>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="applicantEmail" id="applicantEmail"
+                        data-label="Applicant Email"></input>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>PAN Number</label>
+                    <input type="number"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="9" class="form-control" name="pan_number" id="pan_number"
+                        data-label="Applicant PAN Number" onkeypress="return onlyNumberKey(event)" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>EXIM Code</label>
+                    <input type="text" class="form-control" name="exim_code" id="exim_code" data-label="EXIM Code"
+                        maxlength="15" minlength="15"></input>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Phone <small>(Use comma for multiple phone numbers)</small></label>
+                    <div class="d-flex">
+                        <input type="text" class="form-control text-center" style="width: 100px;"
+                            name="applicantPhonePrefix" id="applicantPhonePrefix" data-label="Applicant Phone Prefix"
+                            value='+977' disabled></input>
+                        <input type="text" class="form-control" name="applicantPhone" id="applicantPhone"
+                            data-label="Applicant Phone" required></input>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                BENEFICIARY NAME AND ADDRESS
+            </span>
+        </h6>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Name</label>
+                    <textarea type="text" class="form-control" name="beneficiary_name" id="beneficiary_name"
+                        data-label="Beneficiary Name" required></textarea>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Country</label>
+                    <select name="country" id="country" data-label="Country" class="form-control">
+                        <option value="NPL">NEPAL</option>
+                        <option value="ABW">Aruba</option>
+                        <option value="AGO">Angola</option>
+                        <option value="AIA">Anguilla</option>
+                        <option value="ALA">Aland Islands</option>
+                        <option value="ALB">Albania</option>
+                        <option value="AND">Andorra</option>
+                        <option value="ARE">United Arab Emirates the</option>
+                        <option value="ARG">Argentina</option>
+                        <option value="ARM">Armenia</option>
+                        <option value="ASM">American Samoa</option>
+                        <option value="ATA">Antarctica</option>
+                        <option value="ATF">French Southern Territories the</option>
+                        <option value="ATG">Antigua and Barbuda</option>
+                        <option value="AUS">Australia</option>
+                        <option value="AUT">Austria</option>
+                        <option value="AZE">Azerbaijan</option>
+                        <option value="BDI">Burundi</option>
+                        <option value="BEL">Belgium</option>
+                        <option value="BEN">Benin</option>
+                        <option value="BES">Bonaire, Sint Eustatius and Saba</option>
+                        <option value="BFA">Burkina Faso</option>
+                        <option value="BGD">Bangladesh</option>
+                        <option value="BGR">Bulgaria</option>
+                        <option value="BHR">Bahrain</option>
+                        <option value="BHS">Bahamas the</option>
+                        <option value="BIH">Bosnia and Herzegovina</option>
+                        <option value="BLM">Saint Barthélemy</option>
+                        <option value="BLR">Belarus</option>
+                        <option value="BLZ">Belize</option>
+                        <option value="BMU">Bermuda</option>
+                        <option value="BOL">Bolivia Plurinational State of</option>
+                        <option value="BRA">Brazil</option>
+                        <option value="BRB">Barbados</option>
+                        <option value="BRN">Brunei Darussalam</option>
+                        <option value="BTN">Bhutan</option>
+                        <option value="BVT">Bouvet Island</option>
+                        <option value="BWA">Botswana</option>
+                        <option value="CAF">Central African Republic the</option>
+                        <option value="CAN">Canada</option>
+                        <option value="CCK">Cocos Keeling Islands the</option>
+                        <option value="CHE">Switzerland</option>
+                        <option value="CHL">Chile</option>
+                        <option value="CHN">China</option>
+                        <option value="CIV">Côte d'Ivoire</option>
+                        <option value="CMR">Cameroon</option>
+                        <option value="COD">Congo the Democratic Republic of the</option>
+                        <option value="COG">Congo the</option>
+                        <option value="COK">Cook Islands the</option>
+                        <option value="COL">Colombia</option>
+                        <option value="COM">Comoros the</option>
+                        <option value="CPV">Cabo Verde</option>
+                        <option value="CRI">Costa Rica</option>
+                        <option value="CUB">Cuba</option>
+                        <option value="CUW">Curaçao</option>
+                        <option value="CXR">Christmas Island</option>
+                        <option value="CYM">Cayman Islands the</option>
+                        <option value="CYP">Cyprus</option>
+                        <option value="CZE">Czechia</option>
+                        <option value="DEU">Germany</option>
+                        <option value="DJI">Djibouti</option>
+                        <option value="DMA">Dominica</option>
+                        <option value="DNK">Denmark</option>
+                        <option value="DOM">Dominican Republic the</option>
+                        <option value="DZA">Algeria</option>
+                        <option value="ECU">Ecuador</option>
+                        <option value="EGY">Egypt</option>
+                        <option value="ERI">Eritrea</option>
+                        <option value="ESH">Western Sahara*</option>
+                        <option value="ESP">Spain</option>
+                        <option value="EST">Estonia</option>
+                        <option value="ETH">Ethiopia</option>
+                        <option value="FIN">Finland</option>
+                        <option value="FJI">Fiji</option>
+                        <option value="FLK">Falkland Islands the [Malvinas]</option>
+                        <option value="FRA">France</option>
+                        <option value="FRO">Faroe Islands the</option>
+                        <option value="FSM">Micronesia Federated States of</option>
+                        <option value="GAB">Gabon</option>
+                        <option value="GBR">United Kingdom of Great Britain and Northern Ireland the</option>
+                        <option value="GEO">Georgia</option>
+                        <option value="GGY">Guernsey</option>
+                        <option value="GHA">Ghana</option>
+                        <option value="GIB">Gibraltar</option>
+                        <option value="GIN">Guinea</option>
+                        <option value="GLP">Guadeloupe</option>
+                        <option value="GMB">Gambia the</option>
+                        <option value="GNB">Guinea-Bissau</option>
+                        <option value="GNQ">Equatorial Guinea</option>
+                        <option value="GRC">Greece</option>
+                        <option value="GRD">Grenada</option>
+                        <option value="GRL">Greenland</option>
+                        <option value="GTM">Guatemala</option>
+                        <option value="GUF">French Guiana</option>
+                        <option value="GUM">Guam</option>
+                        <option value="GUY">Guyana</option>
+                        <option value="HKG">Hong Kong</option>
+                        <option value="HMD">Heard Island and McDonald Islands</option>
+                        <option value="HND">Honduras</option>
+                        <option value="HRV">Croatia</option>
+                        <option value="HTI">Haiti</option>
+                        <option value="HUN">Hungary</option>
+                        <option value="IDN">Indonesia</option>
+                        <option value="IMN">Isle of Man</option>
+                        <option value="IND">India</option>
+                        <option value="IOT">British Indian Ocean Territory the</option>
+                        <option value="IRL">Ireland</option>
+                        <option value="ISL">Iceland</option>
+                        <option value="ISR">Israel</option>
+                        <option value="ITA">Italy</option>
+                        <option value="JAM">Jamaica</option>
+                        <option value="JEY">Jersey</option>
+                        <option value="JOR">Jordan</option>
+                        <option value="JPN">Japan</option>
+                        <option value="KAZ">Kazakhstan</option>
+                        <option value="KEN">Kenya</option>
+                        <option value="KGZ">Kyrgyzstan</option>
+                        <option value="KHM">Cambodia</option>
+                        <option value="KIR">Kiribati</option>
+                        <option value="KNA">Saint Kitts and Nevis</option>
+                        <option value="KOR">Korea the Republic of</option>
+                        <option value="KWT">Kuwait</option>
+                        <option value="LAO">Lao People's Democratic Republic the</option>
+                        <option value="LBN">Lebanon</option>
+                        <option value="LBR">Liberia</option>
+                        <option value="LBY">Libya</option>
+                        <option value="LCA">Saint Lucia</option>
+                        <option value="LIE">Liechtenstein</option>
+                        <option value="LKA">Sri Lanka</option>
+                        <option value="LSO">Lesotho</option>
+                        <option value="LTU">Lithuania</option>
+                        <option value="LUX">Luxembourg</option>
+                        <option value="LVA">Latvia</option>
+                        <option value="MAC">Macao</option>
+                        <option value="MAF">Saint Martin French part</option>
+                        <option value="MAR">Morocco</option>
+                        <option value="MCO">Monaco</option>
+                        <option value="MDA">Moldova the Republic of</option>
+                        <option value="MDG">Madagascar</option>
+                        <option value="MDV">Maldives</option>
+                        <option value="MEX">Mexico</option>
+                        <option value="MHL">Marshall Islands the</option>
+                        <option value="MKD">Macedonia the former Yugoslav Republic of</option>
+                        <option value="MLI">Mali</option>
+                        <option value="MLT">Malta</option>
+                        <option value="MMR">Myanmar</option>
+                        <option value="MNE">Montenegro</option>
+                        <option value="MNG">Mongolia</option>
+                        <option value="MNP">Northern Mariana Islands the</option>
+                        <option value="MOZ">Mozambique</option>
+                        <option value="MRT">Mauritania</option>
+                        <option value="MSR">Montserrat</option>
+                        <option value="MTQ">Martinique</option>
+                        <option value="MUS">Mauritius</option>
+                        <option value="MWI">Malawi</option>
+                        <option value="MYS">Malaysia</option>
+                        <option value="MYT">Mayotte</option>
+                        <option value="NAM">Namibia</option>
+                        <option value="NCL">New Caledonia</option>
+                        <option value="NER">Niger the</option>
+                        <option value="NFK">Norfolk Island</option>
+                        <option value="NGA">Nigeria</option>
+                        <option value="NIC">Nicaragua</option>
+                        <option value="NIU">Niue</option>
+                        <option value="NLD">Netherlands the</option>
+                        <option value="NOR">Norway</option>
+                        <option value="NRU">Nauru</option>
+                        <option value="NZL">New Zealand</option>
+                        <option value="OMN">Oman</option>
+                        <option value="PAK">Pakistan</option>
+                        <option value="PAN">Panama</option>
+                        <option value="PCN">Pitcairn</option>
+                        <option value="PER">Peru</option>
+                        <option value="PHL">Philippines the</option>
+                        <option value="PLW">Palau</option>
+                        <option value="PNG">Papua New Guinea</option>
+                        <option value="POL">Poland</option>
+                        <option value="PRI">Puerto Rico</option>
+                        <option value="PRK">Korea the Democratic People's Republic of</option>
+                        <option value="PRT">Portugal</option>
+                        <option value="PRY">Paraguay</option>
+                        <option value="PSE">Palestine, State of</option>
+                        <option value="PYF">French Polynesia</option>
+                        <option value="QAT">Qatar</option>
+                        <option value="REU">Réunion</option>
+                        <option value="ROU">Romania</option>
+                        <option value="RUS">Russian Federation the</option>
+                        <option value="RWA">Rwanda</option>
+                        <option value="SAU">Saudi Arabia</option>
+                        <option value="SDN">Sudan the</option>
+                        <option value="SEN">Senegal</option>
+                        <option value="SGP">Singapore</option>
+                        <option value="SGS">South Georgia and the South Sandwich Islands</option>
+                        <option value="SHN">Saint Helena, Ascension and Tristan da Cunha</option>
+                        <option value="SJM">Svalbard and Jan Mayen</option>
+                        <option value="SLB">Solomon Islands</option>
+                        <option value="SLE">Sierra Leone</option>
+                        <option value="SLV">El Salvador</option>
+                        <option value="SMR">San Marino</option>
+                        <option value="SOM">Somalia</option>
+                        <option value="SPM">Saint Pierre and Miquelon</option>
+                        <option value="SRB">Serbia</option>
+                        <option value="SSD">South Sudan</option>
+                        <option value="STP">Sao Tome and Principe</option>
+                        <option value="SUR">Suriname</option>
+                        <option value="SVK">Slovakia</option>
+                        <option value="SVN">Slovenia</option>
+                        <option value="SWE">Sweden</option>
+                        <option value="SWZ">Swaziland</option>
+                        <option value="SXM">Sint Maarten Dutch part</option>
+                        <option value="SYC">Seychelles</option>
+                        <option value="SYR">Syrian Arab Republic</option>
+                        <option value="TCA">Turks and Caicos Islands the</option>
+                        <option value="TCD">Chad</option>
+                        <option value="TGO">Togo</option>
+                        <option value="THA">Thailand</option>
+                        <option value="TJK">Tajikistan</option>
+                        <option value="TKL">Tokelau</option>
+                        <option value="TKM">Turkmenistan</option>
+                        <option value="TLS">Timor-Leste</option>
+                        <option value="TON">Tonga</option>
+                        <option value="TTO">Trinidad and Tobago</option>
+                        <option value="TUN">Tunisia</option>
+                        <option value="TUR">Turkey</option>
+                        <option value="TUV">Tuvalu</option>
+                        <option value="TWN">Taiwan Province of China</option>
+                        <option value="TZA">Tanzania, United Republic of</option>
+                        <option value="UGA">Uganda</option>
+                        <option value="UKR">Ukraine</option>
+                        <option value="UMI">United States Minor Outlying Islands the</option>
+                        <option value="URY">Uruguay</option>
+                        <option value="USA">United States of America the</option>
+                        <option value="UZB">Uzbekistan</option>
+                        <option value="VAT">Holy See the</option>
+                        <option value="VCT">Saint Vincent and the Grenadines</option>
+                        <option value="VEN">Venezuela Bolivarian Republic of</option>
+                        <option value="VGB">Virgin Islands British</option>
+                        <option value="VIR">Virgin Islands U.S.</option>
+                        <option value="VNM">Viet Nam</option>
+                        <option value="VUT">Vanuatu</option>
+                        <option value="WLF">Wallis and Futuna</option>
+                        <option value="WSM">Samoa</option>
+                        <option value="YEM">Yemen</option>
+                        <option value="ZAF">South Africa</option>
+                        <option value="ZMB">Zambia</option>
+                        <option value="ZWE">Zimbabwe</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea type="text" class="form-control" name="beneficiary_address" id="beneficiary_address"
+                        data-label="Beneficiary Address" required></textarea>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Phone <small>(Use comma for multiple phone numbers)</small></label>
+                    <input type="text" class="form-control" name="beneficiary_phone" id="beneficiary_phone"
+                        data-label="Beneficiary Phone" required></input>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="beneficiary_email" id="beneficiary_email"
+                        data-label="Beneficiary Email"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <h6 class="heading-title">
+                    <span>
+                        MODE OF TRANSMISSION
+                    </span>
+                </h6>
+                <div class="form-group">
+                    <label>Mode of transmission</label>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="check1" name="mode_of_transmission"
+                            data-label="Mode of transmission" value="By tele transmission" checked></input>
+                        <label class="form-check-label" for="check1">By tele transmission</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <h6 class="heading-title">
+                    <span>
+                        CURRENCY AND AMOUNT
+                    </span>
+                </h6>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Currency</label>
+                            <select class="form-control" name="currency" id="currency" data-label="Currency" required>
+                                <option value="" selected disabled hidden>Select</option>
+                                <option value="NPR">NPR</option>
+                                <option value="INR">INR</option>
+                                <option value="USD">USD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="EURO">EURO</option>
+                                <option value="SGD">SGD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="JPY">JPY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Amount</label>
+                            <input type="text" class="form-control" name="currency_amount" id="currency_amount"
+                                data-label="Currency Amount" required onkeypress="return onlyNumberKey(event)"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h6 class="heading-title">
+                    <span>
+                        TOLERENCE
+                    </span>
+                </h6>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Type</label>
+                            <select class="form-control" name="tolerance_type" id="tolerance_type"
+                                data-label="Tolerance Type" required>
+                                <option value="" selected disabled hidden>Select</option>
+                                <option value="0/0">0/0</option>
+                                <option value="Plus or Minus">Plus or Minus</option>
+                                <option value="Plus">Plus</option>
+                                <option value="Minus">Minus</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Percentage</label>
+                            <input type="number" class="form-control" name="tolerance_percentage"
+                                id="tolerance_percentage" data-label="Tolerance Percentage"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                INCOTERMS
+            </span>
+        </h6>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Type</label>
+                    <select class="form-control" name="incoterms_type" data-label="Incoterms Type">
+                        <option value="CIF">CIF</option>
+                        <option value="CIP">CIP</option>
+                        <option value="CFR">CFR</option>
+                        <option value="CPT">CPT</option>
+                        <option value="DAT">DAT</option>
+                        <option value="DAP">DAP</option>
+                        <option value="DDP">DDP</option>
+                        <option value="EXW">EXW</option>
+                        <option value="FAS">FAS</option>
+                        <option value="FCA">FCA</option>
+                        <option value="FOB">FOB</option>
+                        <option value="OTHER">Others (CNI, EX Factory-----)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4 inco-terms" style="display: none">
+                <div class="form-group">
+                    <label>Delivery Terms</label>
+                    <input type="text" class="form-control" name="incoterms_delivery_term" id="incoterms_delivery_term"
+                        data-label="Incoterms Delivery Term"></input>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Named Place</label>
+                    <input type="text" class="form-control" name="incoterms_named" data-label="Incoterms Named Place"
+                        required></input>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                TENURE / PAYMENT TERMS
+            </span>
+        </h6>
+        <div class="row align-items-center">
+            <div class="col-1">
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tenor" id="sight_tenor" value="Sight"
+                            required></input>
+                        <label class="form-check-label" for="sight_tenor">Sight</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tenor" id="usance_payment"
+                            value="Usance Payment"></input>
+                        <label class="form-check-label" for="usance_payment">Usance</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tenor" id="mixed_payment"
+                            value="Mixed Payment"></input>
+                        <label class="form-check-label" for="mixed_payment">Mixed Payment</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tenor" id="differed_payment"
+                            value="Differed Payment"></input>
+                        <label class="form-check-label" for="differed_payment">Differed Payment</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 tenor-remark">
+                <div class="form-group">
+                    <label>Payment Detail</label>
+                    <input type="text" class="form-control" name="remark_for_usance"
+                        data-label="Remarks For Usance"></input>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                CREDIT AVAILABLE WITH / NEGOTIATING BANK
+            </span>
+        </h6>
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Credit available with / Negotiating bank</label>
+                    <input type="text" class="form-control" name="credit_available_with"
+                        data-label="Credit Available With" required></input>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>By</label>
+                    <select name="payment_by" data-label="Payment By" class="form-control">
+                        <option value="Acceptance">ACCEPTANCE</option>
+                        <option value="Def Payment">DEF PAYMENT</option>
+                        <option value="Mixed Pymt">MIXED PYMT</option>
+                        <option value="Negotiation" selected>NEGOTIATION</option>
+                        <option value="Payment">PAYMENT</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <h6 class="heading-title">
+                    <span>
+                        PARTIAL SHIPMENT
+                    </span>
+                </h6>
+                <label>Partial Shipment</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="partial_shipment" id="ps_allowed"
+                            value="Allowed" data-label="Partial Shipment" required></input>
+                        <label class="form-check-label" for="ps_allowed">Allowed</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="partial_shipment" id="ps_not_allowed"
+                            value="Not Allowed" data-label="Partial Shipment"></input>
+                        <label class="form-check-label" for="ps_not_allowed">Not Allowed</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <h6 class="heading-title">
+                    <span>
+                        TRANSSHIPMENT
+                    </span>
+                </h6>
+                <label>Transshipment</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="transshipment" id="transshipment_allowed"
+                            data-label="Transshipment" value="Allowed" required></input>
+                        <label class="form-check-label" for="transshipment_allowed">Allowed</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="transshipment" id="transshipment_not_allowed"
+                            data-label="Transshipment" value="Not Allowed"></input>
+                        <label class="form-check-label" for="transshipment_not_allowed">Not Allowed</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <h6 class="heading-title">
+                    <span>
+                        SHIPMENT FROM
+                    </span>
+                </h6>
+                <div class="form-group">
+                    <label>Shipment from / Place of Taking in Charge/Dispatch from / Place
+                        of Receipt</label>
+                    <input type="text" class="form-control" name="shipment_from" data-label="Shipment From"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6 port-landing">
+                <h6 class="heading-title">
+                    <span>
+                        PORT OF LOADING / AIRPORT OF DEPARTURE
+                    </span>
+                </h6>
+                <div class="form-group">
+                    <label>Port of Loading / Airport of Departure</label>
+                    <input type="text" class="form-control" name="port_of_loading" data-label="Port of Loading"></input>
+                </div>
+            </div>
+            <div class="col-6 port-discharge">
+                <h6 class="heading-title">
+                    <span>
+                        PORT OF DISCHARGE / AIRPORT OF DESTINATION
+                    </span>
+                </h6>
+                <div class="form-group">
+                    <label>Port of Discharge / Airport of Destination</label>
+                    <input type="text" class="form-control" name="port_of_discharge"
+                        data-label="Port of Discharge"></input>
+                </div>
+            </div>
+            <div class="col-6">
+                <h6 class="heading-title">
+                    <span>
+                        PLACE OF FINAL DESTINATION / PLACE OF DELIVERY
+                    </span>
+                </h6>
+                <div class="form-group">
+                    <label>Place of final destination / Place of delivery</label>
+                    <input type="text" class="form-control" name="port_of_final_destination"
+                        id="port_of_final_destination" data-label="Port of Final Destination"></input>
+                </div>
+            </div>
+            <div class="col-6 custom-entry">
+                <h6 class="heading-title">
+                    <span>
+                        CUSTOM ENTRY POINT IN NEPAL
+                    </span>
+                </h6>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-8">
+                            <label>Custom entry point in Nepal</label>
+                            <select name="custom_entry_point_in_neapl" data-label="Custom Entry Point In Nepal"
+                                class="form-control">
+                                <option value="MECHI">
+                                    MECHI CUSTOMS OFFICE, KAKARVITTA, NEPAL
+                                </option>
+                                <option value="BIRATNAGAR">
+                                    BIRATNAGAR CUSTOMS OFFICE, BIRATNAGAR, NEPAL
+                                </option>
+                                <option value="BIRGUNJ">
+                                    BIRGUNJ CUSTOMS OFFICE, BIRGUNJ, NEPAL
+                                </option>
+                                <option value="BHAIRAHAWA">
+                                    BHAIRAHAWA CUSTOMS OFFICE, BHAIRAHAWA, NEPAL
+                                </option>
+                                <option value="NEPALGUNJ">
+                                    NEPALGUNJ CUSTOMS OFFICE, NEPALGUNJ, NEPAL
+                                </option>
+                                <option value="KAILALI">
+                                    KAILALI CUSTOMS OFFICE, DHANGADHI, NEPAL
+                                </option>
+                                <option value="DRYPORT">
+                                    DRYPORT CUSTOMS OFFICE, SIRSIYA, NEPAL
+                                </option>
+                                <option value="RASUWA">
+                                    RASUWA CUSTOMS OFFICE, RASUWA, NEPAL
+                                </option>
+                                <option value="TRIBHUVAN">
+                                    TRIBHUVAN INTERNATIONAL AIRPORT CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="KRISHNANAGAR">
+                                    KRISHNANAGAR CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="JALESHWAR">
+                                    JALESHWAR CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="TATOPANI">
+                                    TATOPANI CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="KANCHANPUR">
+                                    KANCHANPUR CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="JANAKPUR">
+                                    JANAKPUR CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="RAJBIRAJ">
+                                    RAJBIRAJ CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="SARLAHI">
+                                    SARLAHI CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="SIRAHA">
+                                    SIRAHA CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="SUNSARI">
+                                    SUNSARI CUSTOMS OFFICE, NEPAL
+                                </option>
+                                <option value="OTHER">
+                                    OTHER
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label>If Other (specify) </label>
+                            <input type="text" class="form-control" id="if_other" name="if_other"
+                                data-label="Other Entry Point" disabled></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                EXPIRY / SHIPMENT DETAILS
+            </span>
+        </h6>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Latest Date of Shipment </label>
+                    <input type="date" class="form-control" name="latest_date_of_shipment" id="latest_date_of_shipment"
+                        data-label="Latest Date of Shipment" required></input>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Expiry Date</label>
+                    <input type="date" class="form-control" name="expiry_date" data-label="Expiry Date"
+                        required></input>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Document Presentation Period</label>
+                    <input type="text" class="form-control" name="document_presentation_period"
+                        data-label="Document Presentation Period" disabled></input>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Place of Expiry</label>
+                    <input type="text" class="form-control" name="place_of_expiry" data-label="Place of Expiry"
+                        maxlength="30" value="AT NEGOTIATING BANK COUNTER" required></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h6 class="heading-title">
+                    <span>
+                        TT REIMBURSEMENT
+                    </span>
+                </h6>
+                <label>TT Reimbursement</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tt_reimbursement"
+                            id="tt_reimburdement_allowed" value="Allowed" data-label="TT Reimbursement"
+                            required></input>
+                        <label class="form-check-label" for="tt_reimburdement_allowed">Allowed</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tt_reimbursement"
+                            id="tt_reimburdement_not_allowed" value="Not Allowed" data-label="TT Reimbursement"></input>
+                        <label class="form-check-label" for="tt_reimburdement_not_allowed">Not Allowed</label>
+                    </div>
+                </div>
+                <label>Charges (only if allowed) </label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tt_reimbursement_charges"
+                            id="tt_reimbursement_charges_applicant" value="Applicant"
+                            data-label="TT Reimbursement Charge"></input>
+                        <label class="form-check-label" for="tt_reimbursement_charges_applicant">Applicant</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tt_reimbursement_charges"
+                            id="tt_reimbursement_charges_beneficiary" value="Beneficiary"
+                            data-label="TT Reimbursement Charge"></input>
+                        <label class="form-check-label" for="tt_reimbursement_charges_beneficiary">Beneficiary</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h6 class="heading-title">
+                    <span>
+                        CONFIRMATION STATUS
+                    </span>
+                </h6>
+                <label>Confirmation Status</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confirmation_status"
+                            id="confirmation_status_without" value="Without" data-label="Confirmation Status"
+                            required></input>
+                        <label class="form-check-label" for="confirmation_status_without">Without</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confirmation_status"
+                            id="confirmation_status_mayadd" value="May Add" data-label="Confirmation Status"></input>
+                        <label class="form-check-label" for="confirmation_status_mayadd">May Add</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confirmation_status"
+                            id="confirmation_status_add" value="Add" data-label="Confirmation Status"></input>
+                        <label class="form-check-label" for="confirmation_status_add">Add</label>
+                    </div>
+                </div>
+                <label>Charges (only if add or may add) </label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confirmation_Status_charges"
+                            id="confirmation_Status_charges" value="Applicant" data-label="Confirmation Status Charges"
+                            required></input>
+                        <label class="form-check-label" for="confirmation_Status_charges">Applicant</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="confirmation_Status_charges"
+                            id="confirmation_Status_charges1" value="Beneficiary"
+                            data-label="Confirmation Status Charges"></input>
+                        <label class="form-check-label" for="confirmation_Status_charges1">Beneficiary</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h6 class="heading-title">
+                    <span>
+                        BANK CHARGES
+                    </span>
+                </h6>
+                <label>Inside Nepal</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inside_nepal_bc"
+                            id="inside_nepal_bank_charges1" value="Applicant" data-label="Bank Charges (Inside Nepal)"
+                            required></input>
+                        <label class="form-check-label" for="inside_nepal_bank_charges1">Applicant</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inside_nepal_bc"
+                            id="inside_nepal_bank_charges2" value="Beneficiary"
+                            data-label="Bank Charges (Inside Nepal)"></input>
+                        <label class="form-check-label" for="inside_nepal_bank_charges2">Beneficiary</label>
+                    </div>
+                </div>
+                <label>Outside Nepal</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="outside_nepal_bc" id="insice_nepal_bc2"
+                            value="Applicant" data-label="Bank Charges (Outside Nepal)" required></input>
+                        <label class="form-check-label" for="insice_nepal_bc2">Applicant</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="outside_nepal_bc" id="outside_nepal_bc1"
+                            value="Beneficiary" data-label="Bank Charges (Outside Nepal)"></input>
+                        <label class="form-check-label" for="outside_nepal_bc1">Beneficiary</label>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center flex-wrap mb-2">
+                    <div class="custom-control custom-checkbox d-inline mr-3">
+                        <input type="checkbox" class="custom-control-input" id="checkbox_bank_charges_other"
+                            name="checkbox_bank_charges_other" data-label="Bank Charges Other"
+                            value="bank charges other"></input>
+                        <label class="custom-control-label" for="checkbox_bank_charges_other">OTHER</label>
+                    </div>
+                </div>
+                <input type="text" class="form-control mb-2" id="bank_charges_other" name="bank_charges_other"
+                    data-label="Bank Charges (Other)" style="display: none"></input>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                DESCRIPTION, SPECIFICATION AND QUANTITY OF GOODS AND OR SERVICE
+            </span>
+        </h6>
+        <div class="form-group">
+            <label>DESCRIPTION, SPECIFICATION AND QUANTITY OF GOODS AND OR SERVICE
+            </label>
+            <textarea class="form-control" id="description_or_specification_and_quantity_of_goods_and_services"
+                name="description_or_specification_and_quantity_of_goods_and_services"
+                data-label="DESCRIPTION, SPECIFICATION AND QUANTITY OF GOODS AND OR SERVICE" required></textarea>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>As per proforma invoice number </label>
+                    <input type="text" class="form-control" name="as_per_performer_invoice_number"
+                        data-label="As per proforma invoice number" required></input>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Dated (mm-dd-yyyy) </label>
+                    <input type="date" class="form-control" name="dated" id="dated" data-label="Dated" required></input>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Master Goods</label>
+                    <input type="text" class="form-control" name="master_goods" data-label="Master Goods"
+                        required></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>HS Code</label>
+                    <div class="autocomplete">
+                        <input type="text" class="form-control" id="hs_code" name="hs_code"
+                            data-label="HS Code"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Selected Code</label>
+                    <input type="text" class="form-control" id="hs_code_desc" name="hs_code_desc"
+                        data-label="HS Code Name" disabled></input>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="text" class="form-control" name="quantity" data-label="Quantity"></input>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Rate</label>
+                    <input type="text" class="form-control" name="rate" data-label="Rate"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h6 class="heading-title">
+                    <span>
+                        AUTHORIZED TO DEBIT OUR ACCOUNT
+                    </span>
+                </h6>
+                <div class="form-group">
+                    <label>Account No.</label>
+                    <input type="text" class="form-control account-number" name="account_number"
+                        data-label="Account Number" maxlength="14" required></input>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                DOCUMENTS REQUIRED
+            </span>
+        </h6>
+        <ol class="ml-3 pl-0">
+            <li>
+                <div class="d-flex align-items-center">
+                    <div class="custom-control custom-checkbox d-inline mr-2">
+                        <input type="checkbox" class="custom-control-input" id="dr" name="document_required"
+                            data-label="Signed" value="signed" checked></input>
+                        <label class="custom-control-label" for="dr">SIGNED</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-inline mr-2">
+                        <input type="checkbox" class="custom-control-input " id="dr1" name="document_required_com"
+                            data-label="Commercial Invoice" value="commercial invoice"></input>
+                        <label class="custom-control-label" for="dr1">COMMERCIAL INVOICE</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-inline mr-2">
+                        <input type="checkbox" class="custom-control-input " id="dr2" name="document_required_tax"
+                            data-label="Tax Invoice In" value="tax invoice in"></input>
+                        <label class="custom-control-label" for="dr2">TAX INVOICE IN</label>
+                    </div>
+                    <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                        name="document_required_original" data-label="Document Originals"></input>
+                    ORIGINAL /S AND
+                    <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                        name="document_required_copies" data-label="Document Copies"></input>
+                    COPY/IES
+                </div>
+            </li>
+            <li>
+                TRANSPORTATION DOCUMENT
+                <br />
+                <ol type="A" class="ml-0 pl-0">
+                    <li>
+                        <div class="custom-control custom-checkbox d-inline">
+                            <input class="form-check-input" type="radio" name="transportation_documentp" id="for_land"
+                                value="for land" data-label="Transportation Document" required></input>
+                            <label class="form-check-label" for="for_land">For Land</label>
+                        </div>
+                        <div class="ml-2" id="for_land_elements">
+                            LORRY RECEIPT /TRUCK RECEIPT/ CONSIGNMENT NOTE ORIGINAL
+                            CONSIGNEE COPY IN
+                            <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                                name="tranportation_document_original_copy"
+                                data-label="Tranportation Document Original Copy" disabled></input>
+                            ORIGINAL /S AND
+                            <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                                name="tranportation_document_copy" data-label="Tranportation Document Copies"
+                                disabled></input>
+                            COPIES ISSUED BY CARRIER OR ITS AUTHORIZED AGENT CONSIGNED TO
+                            GLOBAL IME BANK LIMITED, NEPAL MARKED
+                            <br />
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="radio" name="transportation_documentp_forland"
+                                        value="Freight Prepaid" id="freight_prepaid"
+                                        data-label="Select Transportation Document For Land" disabled></input>
+                                    <label class="form-check-label" for="freight_prepaid">FREIGHT PREPAID
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="radio" name="transportation_documentp_forland"
+                                        id="to_collect_and_notigy_applicant" value="To Collect and Notify Applicant"
+                                        data-label="Select Transportation Document For Land" disabled></input>
+                                    <label class="form-check-label" for="to_collect_and_notigy_applicant">TO COLLECT
+                                        AND
+                                        NOTIFY
+                                        APPLICANT</label>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input delivery-chalan" type="checkbox"
+                                        name="transportation_documentp_land" id="delivery_chalan_issued_by_benificiary"
+                                        value="Delivery challan issued acceptable"
+                                        data-label="DELIVERY CHALLAN ISSUED BY BENEFICIARY IS ALSO ACCEPTABLE"
+                                        disabled></input>
+                                    <label class="form-check-label delivery-chalan"
+                                        for="delivery_chalan_issued_by_benificiary">DELIVERY
+                                        CHALLAN ISSUED BY BENEFICIARY IS ALSO ACCEPTABLE</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </li>
+                    <li>
+                        <div class="custom-control custom-checkbox d-inline">
+                            <input class="form-check-input" type="radio" name="transportation_documentp" id="for_sea"
+                                data-label="Transportation Document" value="for sea"></input>
+                            <label class="form-check-label" for="for_sea">For Sea</label>
+                        </div>
+                        <div class="ml-2" id="for_sea_elements">
+                            3/3 SET OF ORIGINAL CLEAN SHIPPED ON BOARD OCEAN/MULTIMODAL BILL
+                            OF LADING ISSUED BY CARRIER OR ITS AUTHORIZED AGENT MADE OUT TO
+                            THE ORDER OF GLOBAL IME BANK LIMITED, NEPAL MARKED<br />
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="radio" name="transportation_documentp_forsea"
+                                        value="Freight Prepaid" id="freight_prepaid0"
+                                        data-label="Select Transportation Document For Sea" disabled></input>
+                                    <label class="form-check-label" for="freight_prepaid0">FREIGHT PREPAID
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="radio" name="transportation_documentp_forsea"
+                                        id="to_collect_and_notigy_applicant0" value="To Collect and Notify Applicant"
+                                        data-label="Select Transportation Document For Sea" disabled></input>
+                                    <label class="form-check-label" for="to_collect_and_notigy_applicant0">TO
+                                        COLLECT
+                                        AND NOTIFY
+                                        APPLICANT</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </li>
+                    <li>
+                        <div class="custom-control custom-checkbox d-inline">
+                            <input class="form-check-input" type="radio" name="transportation_documentp" id="for_air"
+                                data-label="Transportation Document" value="for air"></input>
+                            <label class="form-check-label" for="for_air">For Air</label>
+                        </div>
+                        <div class="ml-2" id="for_air_elements">
+                            AIR WAY BILL (ORIGINAL 3 FOR SHIPPER) ISSUED BY CARRIER OR ITS
+                            AUTHORIZED AGENT CONSIGNED TO GLOBAL IME BANK LIMITED, NEPAL
+                            MARKED<br />
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="radio" name="transportation_documentp_forair"
+                                        data-label="Select Transportation Document For Air" id="freight_prepaid1"
+                                        value="Freight Prepaid" disabled></input>
+                                    <label class="form-check-label" for="freight_prepaid1">FREIGHT PREPAID</label>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="radio" name="transportation_documentp_forair"
+                                        data-label="Select Transportation Document For Air"
+                                        id="to_collect_and_notigy_applicant1" value="To Collect and Notify Applicant"
+                                        disabled></input>
+                                    <label class="form-check-label" for="to_collect_and_notigy_applicant1">TO
+                                        COLLECT
+                                        AND NOTIFY
+                                        APPLICANT</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </li>
+                    <li>
+                        <div class="custom-control custom-checkbox d-inline">
+                            <input class="form-check-input" type="radio" name="transportation_documentp" id="for_rail"
+                                value="for rail" data-label="Transportation Document"></input>
+                            <label class="form-check-label" for="for_rail">For Rail</label>
+                        </div>
+                        <div class="ml-2">
+                            COPY OF RAIL WAY RECEIPT MADE OUT TO THE ORDER OF GLOBAL IME
+                            BANK LIMITED, NEPAL AND MARKED ‘PAID
+                        </div>
+                    </li>
+                </ol> <br />
+            </li>
+            <li>
+                <div id="certificate_of_elements">
+                    <div class="d-flex">
+                        <div class="custom-control custom-checkbox mr-2 mb-2">
+                            <input type="checkbox" class="custom-control-input" id="check2" name="certificacte_of"
+                                data-label="Certificate Of" value="certificate of"></input>
+                            <label class="custom-control-label" for="check2" style="white-space: nowrap;">CERTIFICATE
+                                OF</label>
+                        </div>
+                        <div id="certificate_of_elements_inside" class="d-flex align-items-center flex-wrap">
+                            <input type="text" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                                name="certificacte_of_origin_in" data-label="Certificate Of Origin In" disabled></input>
+                            ORIGIN IN
+                            <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                                name="certificacte_of_originals_and" data-label="Certificate Of Originals And"
+                                disabled></input>
+                            ORIGINAL /S AND
+                            <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                                name="certificacte_of_copies_issued_by" data-label="Certificate Of Copies Issued By"
+                                disabled></input>
+                            COPY/IES ISSUED BY
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="checkbox" name="certificacte_ofp_ben"
+                                        id="beneficiary" data-label="Certificate of Beneficiary" value="beneficiary"
+                                        disabled></input>
+                                    <label class="form-check-label" for="beneficiary">BENEFICIARY</label>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="checkbox" name="certificacte_ofp_cha"
+                                        id="chamber_of_commerce" value="chamber of commerce"
+                                        data-label="Certificate of Chamber of Commerce" disabled></input>
+                                    <label class="form-check-label" for="chamber_of_commerce">CHAMBER OF
+                                        COMMERCE</label>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="checkbox" name="certificacte_ofp_gov"
+                                        id="government_authority" value="government authority"
+                                        data-label="Certificate of Government Authority" disabled></input>
+                                    <label class="form-check-label" for="government_authority">GOVERNMENT
+                                        AUTHORITY</label>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox d-inline mr-2">
+                                <div class="custom-control custom-checkbox d-inline">
+                                    <input class="form-check-input" type="checkbox" name="certificacte_ofp_oth"
+                                        id="others_certificate" value="other"
+                                        data-label="Certificate of Government Authority Other" disabled></input>
+                                    <label class="form-check-label" for="others_certificate">OTHER (specify)</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control d-inline ml-2 mr-2 mt-2" style="width: 200px"
+                                name="certificacte_of_other_text" data-label="Certificate Of" disabled></input>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </li>
+            <li>
+                <div class="d-flex align-items-center flex-wrap">
+                    <div class="custom-control custom-checkbox d-inline mr-3">
+                        <input type="checkbox" class="custom-control-input" id="packing_list" name="packing_list"
+                            data-label="Packing List" value="packing list"></input>
+                        <label class="custom-control-label" for="packing_list">PACKING LIST</label>
+                    </div>
+                    IN
+                    <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                        name="packing_list_original" id="packing_list_original" data-label="Packing List Original"
+                        disabled></input>
+                    ORIGINAL /S AND
+                    <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                        name="packing_list_copy" id="packing_list_copy" data-label="Packing List Copy" disabled></input>
+                    COPY/IES
+                </div>
+                <br />
+            </li>
+            <li>
+                <div class="d-flex align-items-center flex-wrap">
+                    <div class="custom-control custom-checkbox d-inline mr-3">
+                        <input type="checkbox" class="custom-control-input" id="weightList" name="weight_list"
+                            data-label="Weight List" value="weight list"></input>
+                        <label class="custom-control-label" for="weightList">WEIGHT LIST</label>
+                    </div>
+                    IN
+                    <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                        name="weight_list_original" id="weight_list_original" data-label="Weight List Original"
+                        disabled></input>
+                    ORIGINAL /S AND
+                    <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                        name="weight_list_copy" id="weight_list_copy" data-label="Weight List Copy" disabled></input>
+                    COPY/IES
+                </div>
+                <br />
+            </li>
+            <li>
+                <div class="d-flex align-items-center flex-wrap">
+                    <div class="custom-control custom-checkbox d-inline mr-3">
+                        <input type="checkbox" class="custom-control-input" id="insurance_policy"
+                            name="insurance_policy_or_certificate" data-label="Insurance Policy or Certificate"
+                            value="insurance policy or certificate"></input>
+                        <label class="custom-control-label" for="insurance_policy">INSURANCE POLICY OR
+                            CERTIFICATE</label>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center flex-wrap" id="insurance_policy_elements_inside">
+                    IN
+                    <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                        name="insurance_policy_or_certificate_original"
+                        data-label="Insurance Policy or Certificate original/s" disabled></input>
+                    ORIGINAL /S AND
+                    <input type="number" class="form-control d-inline ml-2 mr-2" style="width: 80px"
+                        name="insurance_policy_or_certificate_copy"
+                        data-label="Insurance Policy or Certificate coyp/ies" disabled></input> COPY/IES SSUED BY
+                    INSURANCE COMPANY IN
+                    FAVOUR OF GLOBAL IME BANK LIMITED, NEPAL MENTIONING CLAIMS IF ANY SHALL BE PAYABLE IN NEPAL IN
+                    THE
+                    CURRENCY OF CREDIT FOR INVOICE VALUE PLUS 10 PERCENT COVERING FOLLOWING RISKS AS PER INSTITUTE
+                    CARGO
+                    <div class="d-flex align-items-center flex-wrap mt-2 mb-2">
+                        <div class="custom-control custom-checkbox d-inline mr-3">
+                            <input type="checkbox" class="custom-control-input" id="clauseA"
+                                name="insurance_policy_or_certificate_risk_A" data-label="CLAUSE A (ALL RISKS)"
+                                value="clause a" disabled></input>
+                            <label class="custom-control-label" for="clauseA">CLAUSE 'A' (ALL RISKS)</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-inline mr-3">
+                            <input type="checkbox" class="custom-control-input" id="INSTITUE_island"
+                                name="insurance_policy_or_certificate_risk_B"
+                                data-label="INSTITUTE INLAND TRANSIT CLAUSE A" value="institute inland transit clause a"
+                                disabled></input>
+                            <label class="custom-control-label" for="INSTITUE_island">INSTITUTE INLAND TRANSIT
+                                CLAUSE
+                                'A'</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-inline mr-3">
+                            <input type="checkbox" class="custom-control-input" id="air_risk"
+                                name="insurance_policy_or_certificate_risk_C" data-label="AIR RISK" value="air risk"
+                                disabled></input>
+                            <label class="custom-control-label" for="air_risk">AIR RISK</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-inline mr-3">
+                            <input type="checkbox" class="custom-control-input" id="marine_risk"
+                                name="insurance_policy_or_certificate_risk_D" data-label="MARINE RISK"
+                                value="marine risk" disabled></input>
+                            <label class="custom-control-label" for="marine_risk">MARINE RISK</label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap">
+                        <div class="custom-control custom-checkbox d-inline mr-3">
+                            <input type="checkbox" class="custom-control-input" id="INSTITUE"
+                                name="insurance_policy_or_certificate_risk_E" data-label="INSTITUE WAR CLAUSE,SRCC ..."
+                                value="institue war" disabled></input>
+                            <label class="custom-control-label" for="INSTITUE">INSTITUE WAR CLAUSE,SRCC, TPND,
+                                TRANSSHIPMENT RISKS
+                                IF
+                                APPLICABLE IRRESPECTIVE OF PERCENTAGE AND COVERING
+                            </label>
+                        </div>
+                        ALL RISKS INCLUDING ROAD RISKS UPTO
+                        <input type="text" class="form-control d-inline ml-2 mr-2" style="width: 200px"
+                            name="insurance_policy_or_certificate_risk_upto" data-label="Risks Upto" disabled></input>
+                    </div>
+                </div>
+                <br />
+            </li>
+            <li class="goods-receipt">
+                <div class="d-flex align-items-center flex-wrap ">
+                    <div class="custom-control custom-checkbox d-inline mr-3">
+                        <input type="checkbox" class="custom-control-input" id="goods_receipt" name="goods_receipt"
+                            data-label="GOODS RECEIPT NOTE CLAUSE" value="goods receipt"></input>
+                        <label class="custom-control-label" for="goods_receipt">GOODS RECEIPT NOTE CLAUSE</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-inline">
+                        <input class="form-check-input" type="radio" name="goods_receipt_note" id="receipt_original"
+                            value="receipt original" data-label="Receipt Original"></input>
+                        <label class="form-check-label" for="receipt_original">Original</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-inline">
+                        <input class="form-check-input" type="radio" name="goods_receipt_note" id="receipt_copy"
+                            value="receipt copy" data-label="Receipt Copy"></input>
+                        <label class="form-check-label" for="receipt_copy">Copy</label>
+                    </div>
+                </div>
+                <br />
+            </li>
+            <li>
+                <div class="d-flex align-items-center flex-wrap mb-2">
+                    <div class="custom-control custom-checkbox d-inline mr-3">
+                        <input type="checkbox" class="custom-control-input" id="other_document" name="other_document"
+                            data-label="Other Document" value="other documents"></input>
+                        <label class="custom-control-label" for="other_document">OTHER DOCUMENTS (IF APPLICABLE,
+                            PLEASE
+                            KEEP
+                            BULLET WISE</label>
+                    </div>
+                </div>
+                <textarea class="form-control" id="textarea_other_document" name="textarea_other_document"
+                    data-label="Other Document TextArea"></textarea>
+                <br />
+            </li>
+        </ol>
+        <div class="d-flex align-items-center flex-wrap mb-2">
+            <div class="custom-control custom-checkbox d-inline mr-3">
+                <input type="checkbox" class="custom-control-input" id="other_condition" name="other_condition"
+                    data-label="Other Condition" value="other condition required as per attached sheet"></input>
+                <label class="custom-control-label" for="other_condition">DOCUMENTS (FILE UPLOADED REQUIRED)</label>
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile2"
+                            name="fileupload_termsAndConditions" data-label="Terms And Conditions" style="display: none"
+                            onchange="updateImageDisplay('termsAndConditions_preview')"></input>
+                    </div>
+                    <div class="img-preview termsAndConditions_preview" id="termsAndConditions_preview">
+                        <p class="termsAndConditions_preview_p">No files currently selected for upload</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                OTHER TERMS AND CONDITIONS
+            </span>
+        </h6>
+        <label>OTHER CONDITIONS REQUIRED AS PER ATTACHED SHEET</label>
+        <textarea class="form-control mb-2" name="other_condition_required_as_per_attached_sheet"
+            id="other_condition_required_as_per_attached_sheet"
+            data-label="Other Condition Attached as per Attached Sheet"></textarea>
+        <label>Separate sheet attached</label>
+        <div class="d-flex align-items-center flex-wrap mb-2">
+            <div class="custom-control custom-checkbox d-inline">
+                <input class="form-check-input" type="radio" name="seperate_sheet_attached"
+                    id="yes_Seperate_sheet_attached" data-label="Seperate Sheet Attached" value="Yes"></input>
+                <label class="form-check-label" for="yes_Seperate_sheet_attached">Yes</label>
+            </div>
+            <div class="custom-control custom-checkbox d-inline">
+                <input class="form-check-input" type="radio" data-label="Seperate SHeet Attached"
+                    name="seperate_sheet_attached" id="no_seperate_sheet" value="No"></input>
+                <label class="form-check-label" for="no_seperate_sheet">No</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <input type="file" class="form-control-file" id="exampleFormControlFile3"
+                    name="fileupload_approvalSheet" data-label="Approval Sheet" id="customFile" style="display: none"
+                    onchange="updateImageDisplay('approvalSheet_preview')"></input>
+            </div>
+            <div class="img-preview approvalSheet_preview" id="approvalSheet_preview">
+                <p class="approvalSheet_preview_p">No files currently selected for upload</p>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                DOCUMENTS
+            </span>
+        </h6>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="fileupload_performaInvoice">Performa Invoice</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                        name="fileupload_performaInvoice" data-label="Performa Invoice" id="fileupload_performaInvoice"
+                        required onchange="updateImageDisplay('performaInvoice_preview')"></input>
+                </div>
+                <div class="img-preview performaInvoice_preview" id="performaInvoice_preview">
+                    <p class="performaInvoice_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="exampleFormControlFile4">Bi.Bi.Ni</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile4" name="fileupload_BiBiNi"
+                        data-label="Bi.Bi.Ni" id="fileupload_BiBiNi"
+                        onchange="updateImageDisplay('BiBiNi_preview')"></input>
+                </div>
+                <div class="img-preview BiBiNi_preview" id="BiBiNi_preview">
+                    <p class="BiBiNi_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                ADVISING BANK DETAILS
+            </span>
+        </h6>
+        <label>Advising bank details</label>
+        <textarea class="form-control mb-2" name="advising_bank_details" data-label="Advising bank details"
+            required></textarea>
+        <p>Please issue irrevocable LC as per above detail / terms and condition
+            on our account. We guarantee due compliance / fulfillment of all
+            obligations of the opener / applicant / importer / buyer under this LC
+            as per terms and conditions of LC, GIBL policies/practices, UCPDC, NRB
+            regulation, directive, circular and standard banking practices. We
+            also unconditionally accept the security agreement printed in this form.
+        </p>
+        <br />
+    </div>
+    <div class="terms-condition">
+        <p><b>Terms & Conditions </b></p>
+        <ol>
+            <li>The "Bank""You" Your relate to Global IME Bank Ltd.</li>
+            <li>The terms "Applicant" We "Our" relate to the party signing the application.</li>
+            <li>The "Guarantor" means the Co-signer of the application.</li>
+            <li>The "Instrument" means any draft, receipt, acceptance of cables or written demand for payment.</li>
+            <li>"Property" means goods and merchandise and any all documents relative thereto, securities, funds and any
+                all other forms of property whether real personal or mixed and any right or interest therein.</li>
+            <li>"Security Agreement" means an agreement which creates or provides for a security interest including
+                where applicable law provides therefore/or a trust receipt as defined in and complying with such law.
+            </li>
+            <li>"Application" means the application on the front page of this document as such application may be
+                amended or modified from time with the written or oral agreement of consent of the applicants.
+                consideration of the insurance by the bank of a Letter of Credit as requested in application (such
+                letter of credit as from time to time amended or modified with the consent of the Applicant being herein
+                after referred to as (Credit)the Applicant hereby agrees with the Bank as follows with respect to the
+                Credit.</li>
+        </ol>
+        <ol>
+            <li>We undertake to accept or pay upon demand or presentation of all drafts drawn pursuant thereto, whether
+                or not the shipment(s) is/are made or diverted to port(s) other than specified.</li>
+            <li>The Bank may honor as complying with the terms of the Credit and of the application therefore, any
+                instruments or other documents otherwise in order signed or issued by an administrator, executor,
+                trustee in bankruptcy, debtor in possession, assignee for benefit or creditors, liquidator, receiver or
+                other legal representative of the party authorized under this credit to draw or issue such instruments
+                or other documents.</li>
+            <li>Notwithstanding anything contained in this agreement you may debit our account for the payment of all
+                sums in connection with this Credit including commission interest and charges or with the whole or part
+                of the amount or the Credit at any time(s) if you think fit, and on demand by you we shall replenish our
+                account with you to meet such debit(s) are passed the bills are drawn or the Acceptances are given or at
+                your option in Rupees at your selling rate of exchange of the currency. That it is at your sole option
+                to claim payment of any bill drawn pursuant thereto either at the rate of exchange ruling on the date of
+                its negotiation abroad or the date of its payment by us or in the event of any legal proceedings being
+                taken in respect of such bill at the rate ruling at eh date of institution of the proceedings or of the
+                decree in such proceedings, and we are bound to make payment of the said bill at whichever of the above
+                rates you may name. Without affective your rights as before mentioned, we agree to accept and pay at
+                maturity and bills drawn under this Credit or to provide you with funds to meet any acceptance(s) given
+                by you under this credit three days before the due date or earlier, if required in the event of nay
+                default, you may sell the documents or goods before or after arrival, and we shall pay you any deficit
+                upon demand by you as aforesaid and we indemnify you against all claims, demands costs and expenses
+                incurred in connection with this Credit.</li>
+            <li>To pay you on demand your commission which shall be determined by you from time, on full amount of
+                Credit-assurance.</li>
+            <li>Until the payment of every indebtedness and liability, absolute or contingent, which now is or bear
+                after may become due and owing by us to you on any transaction now or hereafter with you including
+                transaction(s) under other Credits(s) we agree that the title and ownership of all goods shipped under
+                or in connection with the sail Credit(s) or in any way relating thereto, whether or not released to us
+                in trust to Bailee and/or the proceeds of such goods and of all bills of lading, policies or
+                certificates of insurance or other documents given therefore, shall be and remain in you and we hereby
+                given you full power and authority at your discretion by yourselves of through your agent(s) at any time
+                to have and take possession thereof, and all policies or certificates of insurance thereon, and proceeds
+                of such policies and certificate and to hold and/to collect the same or under the terms expressed below
+                to dispose thereof at any times(s) and irrespective of the maturity of the draft(s) or acceptance(s)
+                under the said Credit(s).</li>
+            <li>We authorize you and your correspondents to receive and accept at your discretion any documents issued
+                by or on behalf of any carrier, including lighterage receipt which acknowledge receipt of goods for
+                transportation, whatever the specific provisions of such documents and the date of such document, as
+                bill of lading and the shipment complying with the terms of Credit(s) and where applicable, we authorize
+                you or your correspondents to accept either insurance policy or certificate in compliance with the terms
+                of the Credit(s).</li>
+            <li>We assume all risks and responsibility for the kind, quality, delivery or existence or the merchandise
+                purporting to be represented by any document(s) drawn under this Credit and for the acts and character
+                of our agents appointed by us either expressly or otherwise and/or for any difference in quality and/or
+                quantity of merchandise shipped under this Credit from that expressed in any document(s) issued under
+                this Credit, and/or for the validity, genuineness, sufficiency of any document(s) even if such
+                document(s) should in fact prove to be in any or all respect incorrect, defective, irregular, fraudulent
+                or forged and/or for the time, place, manner or order in which the shipment(s) is/are made and/or for
+                partial or incomplete shipment and/or for failure or omission to ship of any or all of the merchandise
+                referred to in the Credit and/or for the adequacy, validity or genuineness of any policy or certificate
+                of insurance of the solvency or responsibility for the insurance company and/or for any delay, default,
+                fraud or deviation from instructions in connections with the merchandise and/or shipping or other
+                documents and/or for the delay in arrival or non arrival wither of the merchandise or of any or all of
+                the said documents and or for any breach of contract between us and the shippers and vendors, we also
+                agree not to claim from you damages or hold you in any manner responsible for any delay, oversight,
+                mistake or negligence on your part or on part of any of your agents or correspondents in issuing this
+                credit and/or for the compliance with any of our instructions given on this Application. We hold you
+                harmless from all losses and damages suffered by you from any and all action taken by you or your agents
+                or your correspondents in good faith in furtherance or our above request or due to error(s) omission(s),
+                interruption(s) or delay(s) in transmission or delivery of any and all messages by mail, cable or
+                telegraph whether or not the same be coded.</li>
+            <li>Where applicable, we agree to obtain and present to you promptly the necessary import license for your
+                record and action.</li>
+            <li>As security for the payment of performance of any and all of our obligations and/or liabilities
+                hereunder, absolute or contingent and also for the payment or performance of any and all obligations
+                and/or liabilities, absolute or contingent, due or to become due, which are now or may at any time(s)
+                hereafter be owing by us to you or which are now or hereafter existing, we hereby.
+                <ol style="list-style-type: upper-alpha;">
+                    <li>recognize and admit your ownership in and unqualified right to the possession and disposal of
+                        any or all
+                        shipping document, warehouse receipts, policies or certificates of insurance and other documents
+                        accompanying or relative to instruments frawn under the credit and in and to any and all
+                        property
+                        shipped under or pursuant to or in connection with the Credit or in any way relative thereto or
+                        to any
+                        of the instruments drawn thereunder (whether or not such documents, goods or other property be
+                        released
+                        to upon the order of the Applicant under a security agreement of Bailee receipt) and in and to
+                        the
+                        process of each and all of the foregoing.</li>
+                    <li>pledge to you and/or give you a general lien upon and/or right of set off against all our right,
+                        title
+                        and interest in and to the balance of every deposit account now or at any time hereafter
+                        existing in our
+                        name with you and any other claims that we may have against you.</li>
+                    <li>any in and to all our property, claims and demand and right and interest therein, and in and to
+                        all
+                        evidence thereof which have been or at any time shall be delivery to or otherwise come into your
+                        possession custody or control or into the possession custody or control of any of your agents or
+                        correspondent's for your account for any purpose whether or not for the express purpose of being
+                        used by
+                        you as collateral security or for sale keeping or for any other or different purpose you deem to
+                        have
+                        possession custody or control of such property actually in transit of or set apart for your of
+                        your
+                        agents correspondents, or other security of whatever nature including cash, shall not be deemed
+                        a waiver
+                        of any of your rights or powers hereunder.</li>
+                    <li>If nay party shall have joined in the Application for the Credit we assign and transfer to you
+                        all our
+                        right, tittle and interest in and to all property and interest which we may now or hereafter
+                        obtain from
+                        such party as security for the obligations or such party arising in connection with the
+                        transaction to
+                        which the Credit relates.</li>
+                    <li>Agree at any time and from time to time or demand to deliver convey transfer to assign to you
+                        additional
+                        security of a value and character satisfactory to you or to make such payment as you may
+                        require.</li>
+                </ol>
+            </li>
+            <li> Your rights and lines hereunder shall continue unimpaired and we shall be and remain obligated in
+                accordance with the terms and provisions hereof notwithstanding with release and/or substitution of any
+                property which may be held as security hereunder at any time(s) or of any right interest therein. No
+                delay extension of time, renewal, compromise or other indulgence which maybe held as security hereunder
+                at any time(s) or of any right interest therein. No delay extension of time, renewal, compromise or
+                other indulgence which may occur or be granted by you shall impair your rights and powers hereunder. No
+                waiver shall be deemed to be made by you of any of your rights hereunder unless the same shall be in
+                writing signed by you and each waiver, if any, shall be waiver only with respect to the specific
+                instance involved and shall in no way impair rights of our obligations to you in any other respect and
+                any other time.</li>
+            <li> In the event of any change or modification with our consent relative to the Credit or any instrument or
+                documents called for hereunder including waiver of non-compliance of any such instruments with the terms
+                of the Credit this agreement shall be binding upon us with regard to the Credit as so charged or
+                modified and to any action taken by you or your agents of your correspondents relative thereto.</li>
+            <li> The instrument(s) accepted in connection with this credit shall be those which are generally acceptable
+                under the laws customs and usage at the place of negotiation and will be governed accordingly.</li>
+            <li> This Agreement shall also constitute and agreement between us and your correspondents and or agents
+                whom you may employ for the purpose and in connection with this Credit.</li>
+            <li> If the Agreement is signed but by and for one individual the term "me" "our" "us" shall be read
+                throughout applicable as "I" "my" "me" as the case may be if this Agreement is signed or otherwise
+                executed by or on behalf of more than one party the obligations and liabilities of such parties shall be
+                deemed to be joint and several unless expressly stated to the contrary.</li>
+            <li> In case of the principal or ourselves being a Firm, Company of Corporation, our obligations hereunder
+                shall be binding on their successors or assigns and shall continue notwithstanding and change in the
+                constitution of the Firm or Company or Corporation and where ourselves are a Firm shall bind the members
+                from time to time of our Firm jointly and severally and notwithstanding that the Firm may be reduced to
+                or consist of a single person.</li>
+            <li> This credit is subject to the Uniform Customs and Practice for Documentary Credit in force.</li>
+
+
+        </ol>
+        <p style="margin-top: 20px;">Signature & Stamp</p>
+    </div>
+    <style>
+        * {
+            text-transform: uppercase
+        }
+
+        .heading-title {
+            position: relative;
+            margin-bottom: 15px;
+            background-color: #f5f5f5;
+            padding: 12px 0 15px 20px;
+        }
+
+        .heading-title span {
+            color: #363636;
+            display: inline-block;
+            position: relative;
+            z-index: 99;
+        }
+
+        .heading-title::before,
+        .heading-title::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            z-index: 9;
+
+        }
+
+        .heading-title::before {
+            background: #c5191e;
+            bottom: 3px;
+
+        }
+
+        .heading-title::after {
+            background: #0f428a;
+            bottom: 0;
+
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .autocomplete-items div:hover {
+            background-color: #e9e9e9;
+        }
+
+        .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+
+        .img-preview img {
+            width: 100px;
+            height: 120px;
+            object-fit: contain;
+            object-position: top;
+            border: 1px solid #aaa;
+            padding: 2px;
+        }
+
+        .print-head-wrapper,
+        .terms-condition {
+            display: none;
+        }
+
+        .terms-condition {
+            font-size: 10px;
+        }
+
+        .main-logo {
+            width: 200px;
+        }
+
+        @media print {
+            .body-overlay:before {
+                background-color: transparent;
+            }
+
+            .terms-condition {
+                display: block;
+                page-break-before: always;
+                font-size: 10px;
+            }
+
+            .print-head-wrapper {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            autoAdjustTextArea();
+            var userAccount = $(".user-account").text();
+            var checkUserAccount = $(".account-number").val();
+            if (!checkUserAccount) {
+                $(".account-number").val(userAccount);
+            }
+            var tenorSelect = $("input[type=radio][name=tenor]:checked").val();
+            if (tenorSelect == "Sight") {
+                $(".tenor-remark").hide();
+                $(".tenor-remark input").prop("required", false);
+                $(".tenor-remark input").val("");
+            } else {
+                $(".tenor-remark").show();
+                $(".tenor-remark input").prop("required", true);
+            }
+
+            var currencyValue = $('select[name*="currency"]').val();
+            if (currencyValue == "NPR") {
+                $(".delivery-chalan").show();
+                $(".goods-receipt").show();
+                $(".port-landing , .port-discharge, .custom-entry").hide();
+                $("input[type=text][name=hs_code]").prop("required", false);
+                $("input[type=checkbox][name=certificacte_of]").prop("required", false);
+                $("input[type=text][name=certificacte_of_origin_in]").prop("required", false);
+                $("input[type=text][name=certificacte_of_originals_and]").prop("required", false);
+                $("input[type=text][name=certificacte_of_copies_issued_by]").prop("required", false);
+                $('select[name*="custom_entry_point_in_neapl"]').val("");
+                $("select[name*=custom_entry_point_in_neapl]").prop("required", false);
+
+                //for exim code on selecting NPR
+                document.getElementById('exim_code').disabled = true;
+                document.getElementById('exim_code').required = false;
+                document.getElementById('exim_code').value = "";
+
+                //for disabling CERTIFICATE OF ORIGIN FIELD 
+                $("#certificate_of_elements :input").attr("disabled", true);
+                $("#certificate_of_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'text':
+                        case 'number':
+                            $(this).val('');
+                            break;
+                        case 'checkbox':
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+
+                $("input[type=file][name=fileupload_BiBiNi]").prop("required", false);
+            } else {
+                $(".delivery-chalan").hide();
+                $(".goods-receipt").hide();
+                $(".port-landing , .port-discharge, .custom-entry").show();
+                $("input[type=text][name=hs_code]").prop("required", true);
+                $("input[type=checkbox][name=certificacte_of]").prop("required", true);
+                $("input[type=text][name=certificacte_of_origin_in]").prop("required", true);
+                $("input[type=text][name=certificacte_of_originals_and]").prop("required", true);
+                $("input[type=text][name=certificacte_of_copies_issued_by]").prop("required", true);
+                $("select[name*=custom_entry_point_in_neapl]").prop("required", true);
+
+                //for exim code on not selecting NPR
+                document.getElementById('exim_code').disabled = false;
+                document.getElementById('exim_code').required = true;
+                // document.getElementById('exim_code').value = document.getElementById('pan_number').value;
+
+                //for enabling CERTIFICATE OF ORIGIN FIELD 
+                $("#certificate_of_elements :input").attr("disabled", false);
+
+                $("input[type=file][name=fileupload_BiBiNi]").prop("required", true);
+            }
+
+            var customEntryPoint = $('select[name*="custom_entry_point_in_neapl"]').val();
+            if (customEntryPoint == "OTHER") {
+                $("input[type=text][name=if_other]").prop("required", true);
+                document.getElementById('if_other').disabled = false;
+            } else {
+                $("input[type=text][name=if_other]").prop("required", false);
+                document.getElementById('if_other').value = "";
+                document.getElementById('if_other').disabled = true;
+            }
+
+            var incotermType = $('select[name*="incoterms_type"]').val();
+            if (incotermType == "OTHER") {
+                $(".inco-terms").show();
+            } else {
+                document.getElementById('incoterms_delivery_term').value = "";
+                $(".inco-terms").hide();
+            }
+
+            var incotermTypeOne = $('select[name*="incoterms_type"]').val();
+            if (incotermTypeOne == "CIF" || incotermTypeOne == "CIP") {
+                $("input[type=checkbox][name=insurance_policy_or_certificate]").prop("required", true);
+                $("input[type=number][name=insurance_policy_or_certificate_original]").prop("required", true);
+                $("input[type=number][name=insurance_policy_or_certificate_copy]").prop("required", true);
+                $("input[type=text][name=insurance_policy_or_certificate_risk_upto]").prop("required", true);
+            } else {
+                $("input[type=checkbox][name=insurance_policy_or_certificate]").prop("required", false);
+                $("input[type=number][name=insurance_policy_or_certificate_original]").prop("required", false);
+                $("input[type=number][name=insurance_policy_or_certificate_copy]").prop("required", false);
+                $("input[type=text][name=insurance_policy_or_certificate_risk_upto]").prop("required", false);
+            }
+
+            var toleranceType = $("select[name=tolerance_type]").val();
+            if (toleranceType !== "0/0") {
+                document.getElementById("tolerance_percentage").disabled = false;
+                document.getElementById("tolerance_percentage").required = true;
+            } else {
+                document.getElementById("tolerance_percentage").disabled = true;
+                document.getElementById("tolerance_percentage").value = "";
+                document.getElementById("tolerance_percentage").required = false;
+            }
+            //  Image Upload
+            // var imgVal = $("#performaInvoice_preview p").text();
+            // var imgVal1 = $("#BiBiNi_preview p").text();
+            // console.log(imgVal);
+            // console.log(imgVal1);
+            // if (imgVal !== "No files currently selected for upload") {
+            // $("#exampleFormControlFile1").prop("required", false);
+            // }
+            // if (imgVal1 !== "No files currently selected for upload") {
+            // $("#exampleFormControlFile4").prop("required", false);
+            // }
+
+            // Other bank charges
+            var otherBankCharges = $("input[type=checkbox][name=checkbox_bank_charges_other]");
+            if (otherBankCharges.is(":checked")) {
+                $("input[type=text][name=bank_charges_other]").show();
+                $("input[type=text][name=bank_charges_other]").prop(
+                    "required",
+                    true
+                );
+                //disable inside nepal
+                $("input[type=radio][name=inside_nepal_bc]").prop(
+                    "checked",
+                    false
+                );
+                $("input[type=radio][name=inside_nepal_bc]").prop(
+                    "checked",
+                    false
+                );
+                $("input[type=radio][name=inside_nepal_bc]").attr(
+                    "disabled",
+                    true
+                );
+
+                //disable outside nepal
+                $("input[type=radio][name=outside_nepal_bc]").prop(
+                    "checked",
+                    false
+                );
+                $("input[type=radio][name=outside_nepal_bc]").prop(
+                    "checked",
+                    false
+                );
+                $("input[type=radio][name=outside_nepal_bc]").attr(
+                    "disabled",
+                    true
+                );
+            } else {
+                $("input[type=text][name=bank_charges_other]").hide();
+                $("input[type=text][name=bank_charges_other]").prop(
+                    "required",
+                    false
+                );
+
+                //enable inside nepal
+                $("input[type=radio][name=inside_nepal_bc]").attr(
+                    "disabled",
+                    false
+                );
+
+                //enable outside nepal
+                $("input[type=radio][name=outside_nepal_bc]").attr(
+                    "disabled",
+                    false
+                );
+
+            }
+
+            // In case of TT not allowed and confirmation without
+            var defaultConfirmation = $("input[type=radio][name=confirmation_status]:checked").val();
+            var defaultTt = $("input[type=radio][name=tt_reimbursement]:checked").val();
+            if (defaultConfirmation == 'Without') {
+                $("input[type=radio][name=confirmation_Status_charges]").prop("checked", false);
+                $("input[type=radio][name=confirmation_Status_charges]").attr("disabled", true);
+                $("input[type=radio][name=confirmation_Status_charges]").prop("required", false);
+            }
+            if (defaultTt == 'Not Allowed') {
+                $("input[type=radio][name=tt_reimbursement_charges]").prop("checked", false);
+                $("input[type=radio][name=tt_reimbursement_charges]").attr("disabled", true);
+                $("input[type=radio][name=tt_reimbursement_charges]").prop("required", false);
+
+            }
+        });
+        function autoAdjustTextArea() {
+            let textArea = document.getElementById("beneficiary_address");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+
+            textArea = document.getElementById("description_or_specification_and_quantity_of_goods_and_services");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+
+            textArea = document.getElementById("textarea_other_document");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+
+            textArea = document.getElementById("other_condition_required_as_per_attached_sheet");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+        }
+
+        function updateImageDisplay(l) {
+            const preview = document.querySelector(`.${l}`);
+
+            const uploadfile = event.target.files;
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            const curFiles = uploadfile;
+            if (curFiles.length === 0) {
+                const para = document.createElement('p');
+                para.textContent = 'No files currently selected for upload';
+                preview.appendChild(para);
+            } else {
+                const list = document.createElement('div');
+                preview.appendChild(list);
+
+                for (const file of curFiles) {
+                    const listItem = document.createElement('div');
+                    const para = document.createElement('p');
+                    if (validFileType(file)) {
+                        para.textContent = `File: ${file.name}, size ${returnFileSize(file.size)}.`;
+                        const image = document.createElement('img');
+                        image.src = URL.createObjectURL(file);
+
+                        listItem.appendChild(image);
+                        listItem.appendChild(para);
+                    } else {
+                        para.textContent = `File: ${file.name}, size ${returnFileSize(file.size)}.`;
+                        listItem.appendChild(para);
+                    }
+
+                    list.appendChild(listItem);
+                }
+            }
+        }
+
+        function validFileType(file) {
+            let imgFileTypes = [
+                "image/apng",
+                "image/bmp",
+                "image/gif",
+                "image/jpeg",
+                "image/pjpeg",
+                "image/png",
+                "image/svg+xml",
+                "image/tiff",
+                "image/webp",
+                "image/x-icon"
+            ];
+            return imgFileTypes.includes(file.type);
+        }
+
+        function returnFileSize(number) {
+            if (number < 1024) {
+                return number + 'bytes';
+            } else if (number >= 1024 && number < 1048576) {
+                return (number / 1024).toFixed(1) + 'KB';
+            } else if (number >= 1048576) {
+                return (number / 1048576).toFixed(1) + 'MB';
+            }
+        }
+
+        function onlyNumberKey(evt) {
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57) && ASCIICode !== 46)
+                return false;
+            return true;
+        }
+        $('#applicantPhone, #beneficiary_phone').on('change, keyup', function () {
+            this.value = this.value.replace(/[^0-9 \,]/, '');
+        });
+
+        $("#currency_amount").change(function () {
+            var thisValue = $(this).val();
+            if (thisValue == "") {
+                return;
+            }
+            var numberValuevalue = parseFloat(thisValue).toFixed(2);
+            if (numberValuevalue == "NaN") {
+                $("#currency_amount").val("");
+            } else {
+                $(this).val(numberValuevalue);
+            }
+
+        });
+        // pan_number and exim_code
+        document.getElementById('pan_number').addEventListener('change', eximcode);
+
+        function eximcode() {
+            document.getElementById('exim_code').value = document.getElementById('pan_number').value;
+        }
+
+        $('select[name*="incoterms_type"]').on("change", function () {
+            if (this.value == "OTHER") {
+                $(".inco-terms").show();
+            } else {
+                document.getElementById('incoterms_delivery_term').value = "";
+                $(".inco-terms").hide();
+            }
+        });
+        $("input[type=radio][name=tenor]").change(function () {
+            if (this.value == "Sight") {
+                $(".tenor-remark").hide();
+                $(".tenor-remark input").prop("required", false);
+                $(".tenor-remark input").val("");
+            } else {
+                $(".tenor-remark").show();
+                $(".tenor-remark input").prop("required", true);
+            }
+        });
+        $(".goods-receipt").hide();
+        $(".delivery-chalan").hide();
+        $('select[name*="currency"]').on("change", function () {
+            if (this.value == "NPR") {
+
+                // IF NPR LC REQUEST (INTERNAL/EXTERNAL):: TT/CONFIRM FILED TO BE NOT ALLOWED/ WITHOUT (2023/7/17)
+                $("input[type=radio][name=tt_reimbursement][value='Not Allowed']").prop("checked", true)
+                $("input[type=radio][name=tt_reimbursement_charges]").prop("checked", false);
+                $("input[type=radio][name=tt_reimbursement_charges]").attr("disabled", true);
+                $("input[type=radio][name=tt_reimbursement_charges]").prop("required", false);
+                $("input[type=radio][name=confirmation_status][value='Without']").prop("checked", true)
+                $("input[type=radio][name=confirmation_Status_charges]").prop("checked", false);
+                $("input[type=radio][name=confirmation_Status_charges]").attr("disabled", true);
+                $("input[type=radio][name=confirmation_Status_charges]").prop("required", false);
+
+                $(".delivery-chalan").show();
+                $(".goods-receipt").show();
+                $(".port-landing , .port-discharge, .custom-entry").hide();
+                $("input[type=text][name=hs_code]").prop("required", false);
+                $("input[type=checkbox][name=certificacte_of]").prop("required", false);
+                $("input[type=text][name=certificacte_of_origin_in]").prop("required", false);
+                $("input[type=text][name=certificacte_of_originals_and]").prop("required", false);
+                $("input[type=text][name=certificacte_of_copies_issued_by]").prop("required", false);
+                $("select[name*=custom_entry_point_in_neapl]").prop("required", false);
+                $('select[name*="custom_entry_point_in_neapl"]').val("");
+
+                //for exim code on selecting NPR
+                document.getElementById('exim_code').disabled = true;
+                document.getElementById('exim_code').required = false;
+                document.getElementById('exim_code').value = "";
+
+                //for disabling CERTIFICATE OF ORIGIN FIELD 
+                $("#certificate_of_elements :input").attr("disabled", true);
+                $("#certificate_of_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'text':
+                        case 'number':
+                            $(this).val('');
+                            break;
+                        case 'checkbox':
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+
+                $("input[type=file][name=fileupload_BiBiNi]").prop("required", false);
+
+            } else {
+
+                // IF NPR LC REQUEST (INTERNAL/EXTERNAL):: TT/CONFIRM FILED TO BE NOT ALLOWED/ WITHOUT (2023/7/17)
+                $("input[type=radio][name=tt_reimbursement][value='Not Allowed']").prop("checked", false)
+                $("input[type=radio][name=tt_reimbursement_charges]").attr("disabled", false)
+                $("input[type=radio][name=confirmation_status][value='Without']").prop("checked", false)
+                $("input[type=radio][name=confirmation_Status_charges]").attr("disabled", false)
+
+                $(".delivery-chalan").hide();
+                $(".goods-receipt").hide();
+                $(".port-landing , .port-discharge, .custom-entry").show();
+                $("input[type=text][name=hs_code]").prop("required", true);
+                $("input[type=checkbox][name=certificacte_of]").prop("required", true);
+                $("input[type=text][name=certificacte_of_origin_in]").prop("required", true);
+                $("input[type=text][name=certificacte_of_originals_and]").prop("required", true);
+                $("input[type=text][name=certificacte_of_copies_issued_by]").prop("required", true);
+                $("select[name*=custom_entry_point_in_neapl]").prop("required", true);
+
+                //for exim code on not selecting NPR
+                document.getElementById('exim_code').disabled = false;
+                document.getElementById('exim_code').required = true;
+                // document.getElementById('exim_code').value = document.getElementById('pan_number').value;
+
+                //for enabling CERTIFICATE OF ORIGIN FIELD 
+                $("#certificate_of_elements :input").attr("disabled", false);
+
+                $("input[type=file][name=fileupload_BiBiNi]").prop("required", true);
+
+            }
+        });
+
+        $('select[name*="custom_entry_point_in_neapl"]').on("change", function () {
+            if (this.value == "OTHER") {
+                $("input[type=text][name=if_other]").prop("required", true);
+                document.getElementById('if_other').disabled = false;
+            } else {
+                $("input[type=text][name=if_other]").prop("required", false);
+                document.getElementById('if_other').value = "";
+                document.getElementById('if_other').disabled = true;
+            }
+        });
+
+        $(function () {
+            var dtToday = new Date();
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+
+            if (month < 10)
+                month = '0' + month.toString();
+            if (day < 10)
+                day = '0' + day.toString();
+
+            var maxDate = year + '-' + month + '-' + day;
+            $('#dated').attr('max', maxDate);
+        });
+
+        $("input[type=date][name=latest_date_of_shipment],input[type=date][name=expiry_date]").change(function () {
+            var start = $("input[type=date][name=latest_date_of_shipment]").val();
+            var end = $("input[type=date][name=expiry_date]").val();
+            var diff = new Date(Date.parse(end) - Date.parse(start));
+            var days = diff / 1000 / 60 / 60 / 24;
+            if (days < 1 || isNaN(days)) {
+                $("input[type=text][name=document_presentation_period]").val(
+                    "please check date"
+                );
+            } else {
+                $("input[type=text][name=document_presentation_period]").val(days);
+            }
+        });
+        $("input[type=radio][name=tt_reimbursement]").change(function () {
+            if (this.value == "Allowed") {
+                $("input[type=radio][name=tt_reimbursement_charges]").attr(
+                    "disabled",
+                    false
+                );
+                $("input[type=radio][value=Applicant]").prop("required", true);
+            } else if (this.value == "Not Allowed") {
+                $("input[type=radio][name=tt_reimbursement_charges]").prop(
+                    "checked",
+                    false
+                );
+                $("input[type=radio][name=tt_reimbursement_charges]").prop(
+                    "checked",
+                    false
+                );
+                $("input[type=radio][name=tt_reimbursement_charges]").attr(
+                    "disabled",
+                    true
+                );
+                $("input[type=radio][value=Applicant]").prop("required", false);
+            }
+        });
+        $("input[type=radio][name=confirmation_status]").change(function () {
+            if (this.value == "May Add" || this.value == "Add") {
+                $("input[type=radio][name=confirmation_Status_charges]").attr(
+                    "disabled",
+                    false
+                );
+                $("input[type=radio][value=Applicant]").prop("required", true);
+            } else if (this.value == "Without") {
+                $("input[type=radio][name=confirmation_Status_charges]").prop(
+                    "checked",
+                    false
+                );
+                $("input[type=radio][name=confirmation_Status_charges]").prop(
+                    "checked",
+                    false
+                );
+                $("input[type=radio][name=confirmation_Status_charges]").attr(
+                    "disabled",
+                    true
+                );
+                $("input[type=radio][value=Applicant]").prop("required", false);
+            }
+        });
+
+        $("input[type=checkbox][name=checkbox_bank_charges_other]").change(
+            function () {
+                if (this.checked == true) {
+                    $("input[type=text][name=bank_charges_other]").show();
+                    $("input[type=text][name=bank_charges_other]").prop(
+                        "required",
+                        true
+                    );
+                    //disable inside nepal
+                    $("input[type=radio][name=inside_nepal_bc]").prop(
+                        "checked",
+                        false
+                    );
+                    $("input[type=radio][name=inside_nepal_bc]").prop(
+                        "checked",
+                        false
+                    );
+                    $("input[type=radio][name=inside_nepal_bc]").attr(
+                        "disabled",
+                        true
+                    );
+
+                    //disable outside nepal
+                    $("input[type=radio][name=outside_nepal_bc]").prop(
+                        "checked",
+                        false
+                    );
+                    $("input[type=radio][name=outside_nepal_bc]").prop(
+                        "checked",
+                        false
+                    );
+                    $("input[type=radio][name=outside_nepal_bc]").attr(
+                        "disabled",
+                        true
+                    );
+                } else {
+                    $("input[type=text][name=bank_charges_other]").hide();
+                    $("input[type=text][name=bank_charges_other]").prop(
+                        "required",
+                        false
+                    );
+
+                    //enable inside nepal
+                    $("input[type=radio][name=inside_nepal_bc]").attr(
+                        "disabled",
+                        false
+                    );
+
+                    //enable outside nepal
+                    $("input[type=radio][name=outside_nepal_bc]").attr(
+                        "disabled",
+                        false
+                    );
+
+                }
+            }
+        );
+
+        $("input[type=checkbox][name=other_condition]").change(
+            function () {
+                if (this.checked == true) {
+                    $("input[type=file][name=fileupload_termsAndConditions]").show();
+                    $("input[type=file][name=fileupload_termsAndConditions]").prop(
+                        "required",
+                        true
+                    );
+                } else {
+                    $("input[type=file][name=fileupload_termsAndConditions]").hide();
+                    $("input[type=file][name=fileupload_termsAndConditions]").prop(
+                        "required",
+                        false
+                    );
+                }
+            }
+        );
+
+        $("input[type=radio][name=seperate_sheet_attached]").change(function () {
+            if (this.value == "Yes") {
+                $("input[type=file][name=fileupload_approvalSheet]").show();
+                $("input[type=file][name=fileupload_approvalSheet]").prop("required", true);
+            } else {
+                $("input[type=file][name=fileupload_approvalSheet]").hide();
+                $("input[type=file][name=fileupload_approvalSheet]").prop("required", false);
+            }
+        });
+
+
+        $('select[name*="incoterms_type"]').on("change", function () {
+            if (this.value == "CIF" || this.value == "CIP") {
+                $("input[type=checkbox][name=insurance_policy_or_certificate]").prop("required", true);
+                $("input[type=number][name=insurance_policy_or_certificate_original]").prop("required", true);
+                $("input[type=number][name=insurance_policy_or_certificate_copy]").prop("required", true);
+                $("input[type=text][name=insurance_policy_or_certificate_risk_upto]").prop("required", true);
+            } else {
+                $("input[type=checkbox][name=insurance_policy_or_certificate]").prop("required", false);
+                $("input[type=number][name=insurance_policy_or_certificate_original]").prop("required", false);
+                $("input[type=number][name=insurance_policy_or_certificate_copy]").prop("required", false);
+                $("input[type=text][name=insurance_policy_or_certificate_risk_upto]").prop("required", false);
+            }
+        });
+
+        /* make the percentage field disabled if 0/0 is selected */
+        $("select[name=tolerance_type]").change(function () {
+            if (this.value !== "0/0") {
+                document.getElementById("tolerance_percentage").disabled = false;
+                document.getElementById("tolerance_percentage").required = true;
+            } else {
+                document.getElementById("tolerance_percentage").disabled = true;
+                document.getElementById("tolerance_percentage").value = "";
+                document.getElementById("tolerance_percentage").required = false;
+            }
+        });
+
+        /* cap tolerance percentage at 20% */
+        $("input[type=number][name=tolerance_percentage]").keyup(function () {
+            if (this.value > 20) {
+                document.getElementById("tolerance_percentage").value = 20;
+            } else if (this.value < 0) {
+                document.getElementById("tolerance_percentage").value = 0;
+            }
+        });
+
+        //herere
+        $("input[type=radio][name=transportation_documentp]").change(function () {
+            if (this.value == "for land") {
+                //REQUIRED FIELDS
+                $("input[type=radio][name=transportation_documentp_forland]").prop("required", true);
+                $("input[type=radio][name=transportation_documentp_forsea]").prop("required", false);
+                $("input[type=radio][name=transportation_documentp_forair]").prop("required", false);
+
+                //DISABLE OTHER ELEMENTS
+                $("#for_sea_elements :input").attr("disabled", true);
+                $("#for_air_elements :input").attr("disabled", true);
+
+                //ENABLE SELF ELEMENTS
+                $("#for_land_elements :input").attr("disabled", false);
+
+                //RESET VALUES
+                $("#for_sea_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+                $("#for_air_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+            } else if (this.value == "for sea") {
+                //REQUIRED FIELDS
+                $("input[type=radio][name=transportation_documentp_forsea]").prop("required", true);
+                $("input[type=radio][name=transportation_documentp_forland]").prop("required", false);
+                $("input[type=radio][name=transportation_documentp_forair]").prop("required", false);
+
+                //DISABLE OTHER ELEMENTS
+                $("#for_land_elements :input").attr("disabled", true);
+                $("#for_air_elements :input").attr("disabled", true);
+
+                //ENABLE SELF ELEMENTS
+                $("#for_sea_elements :input").attr("disabled", false);
+
+                //RESET VALUES
+                $("#for_land_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'text':
+                        case 'number':
+                            $(this).val('');
+                            break;
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+                $("#for_air_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+            } else if (this.value == "for air") {
+                //REQUIRED FIELDS
+                $("input[type=radio][name=transportation_documentp_forair]").prop("required", true);
+                $("input[type=radio][name=transportation_documentp_forsea]").prop("required", false);
+                $("input[type=radio][name=transportation_documentp_forland]").prop("required", false);
+
+                //DISABLE OTHER ELEMENTS
+                $("#for_land_elements :input").attr("disabled", true);
+                $("#for_sea_elements :input").attr("disabled", true);
+
+                //ENABLE SELF ELEMENTS
+                $("#for_air_elements :input").attr("disabled", false);
+
+                //RESET VALUES
+                $("#for_land_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'text':
+                        case 'number':
+                            $(this).val('');
+                            break;
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+                $("#for_sea_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+            } else if (this.value == "for rail") {
+                //REQUIRED FIELDS
+                $("input[type=radio][name=transportation_documentp_forair]").prop("required", false);
+                $("input[type=radio][name=transportation_documentp_forsea]").prop("required", false);
+                $("input[type=radio][name=transportation_documentp_forland]").prop("required", false);
+
+                //DISABLE OTHER ELEMENTS
+                $("#for_land_elements :input").attr("disabled", true);
+                $("#for_sea_elements :input").attr("disabled", true);
+                $("#for_air_elements :input").attr("disabled", true);
+
+                //RESET VALUES
+                $("#for_land_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'text':
+                        case 'number':
+                            $(this).val('');
+                            break;
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+                $("#for_sea_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+                $("#for_air_elements").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'radio':
+                            this.checked = false;
+                            break;
+                    }
+                });
+            }
+        });
+
+        $("input[type=checkbox][name=certificacte_of]").change(function () {
+            if (this.checked == true) {
+                $("#certificate_of_elements_inside :input").attr("disabled", false);
+            } else {
+                $("#certificate_of_elements_inside :input").attr("disabled", true);
+                //RESET VALUES
+                $("#certificate_of_elements_inside").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'text':
+                        case 'number':
+                            $(this).val('');
+                            break;
+                        case 'checkbox':
+                            this.checked = false;
+                            break;
+                    }
+                });
+            }
+        });
+
+        $("input[type=checkbox][name=packing_list]").change(function () {
+            if (this.checked == true) {
+                $("#packing_list_original").prop("disabled", false);
+                $("#packing_list_copy").attr("disabled", false);
+            } else {
+                $("#packing_list_original").attr("disabled", true);
+                $("#packing_list_copy").attr("disabled", true);
+                //RESET VALUES
+                document.getElementById('packing_list_original').value = '';
+                document.getElementById('packing_list_copy').value = '';
+            }
+        });
+
+        $("input[type=checkbox][name=weight_list]").change(function () {
+            if (this.checked == true) {
+                $("#weight_list_original").attr("disabled", false);
+                $("#weight_list_copy").attr("disabled", false);
+            } else {
+                $("#weight_list_original").attr("disabled", true);
+                $("#weight_list_copy").attr("disabled", true);
+                //RESET VALUES
+                document.getElementById('weight_list_original').value = '';
+                document.getElementById('weight_list_copy').value = '';
+            }
+        });
+        $("input[type=checkbox][name=insurance_policy_or_certificate]").change(function () {
+            if (this.checked == true) {
+                $("#insurance_policy_elements_inside :input").attr("disabled", false);
+                $("input[type=number][name=insurance_policy_or_certificate_original]").prop("required", true);
+                $("input[type=number][name=insurance_policy_or_certificate_copy]").prop("required", true);
+                $("input[type=text][name=insurance_policy_or_certificate_risk_upto]").prop("required", true);
+            } else {
+                $("#insurance_policy_elements_inside :input").attr("disabled", true);
+                $("input[type=number][name=insurance_policy_or_certificate_original]").prop("required", false);
+                $("input[type=number][name=insurance_policy_or_certificate_copy]").prop("required", false);
+                $("input[type=text][name=insurance_policy_or_certificate_risk_upto]").prop("required", false);
+                //RESET VALUES
+                $("#insurance_policy_elements_inside").find(':input').each(function () {
+                    switch (this.type) {
+                        case 'text':
+                        case 'number':
+                            $(this).val('');
+                            break;
+                        case 'checkbox':
+                            this.checked = false;
+                            break;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

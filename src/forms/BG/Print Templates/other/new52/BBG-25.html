@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>BBG-25</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-top: 100px; text-align: justify;">
+            <p>
+                <b>Date:<b>{{subform.2.issuedate.default}}</b></b>
+            </p>
+            <p style="margin-bottom:0;width:100%; float: left;">
+                <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}} </b>
+                    </b>
+                    <p>
+                        <b>{{subform.2.beneficiary_address}}</b>
+                    </p>
+                    <br>
+                   
+            </p>
+           
+              <p>
+                <b style="font-size: 20px;">Guarantee Details :</b><br />
+                <b>GUARANTEE REFERENCE NO.: {{subform.2.reference_number}}</b><br />
+                <b>APPLICANT:{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b><br />
+                <b>GUARANTEE EFFECTIVE DATE : ..........</b><br />
+                <b>GUARANTEE EXPIRY DATE  : {{subform.2.validityDate}}</b><br />
+                <b>GUARANTEE AMOUNT ( in words) : {{main.currency_full}} {{subform.2.in_words}}</b><br />
+                <b>GUARANTEE AMOUNT ( in figure) : {{main.currency_short}} {{subform.2.in_figures}}</b><br />
+                <b>PURPOSE : {{subform.2.purpose_guarantee}}</b><br />
+                
+            </p>
+            In consideration of your allowing the aforesaid Applicant to participate in your Bid for the above purpose 
+            ("the Contract"), We Global IME Bank Ltd.  having our registered/corporate office at {{subform.2.company_address}}
+            Nepal, (the Guarantor") understand that you have requested a Bid Bond from the Applicant for 
+            an amount as mentioned above. In this regard we agree and covenant that in the event of the 
+            Applicant failing to perform its obligations under the contract, for any reason whatsoever, 
+            the Guarantor shall pay you without demur a maximum sum of above amount upon receipt of your 
+            claim accompanied by your statement that the Applicant failed to comply with the Contract terms.
+
+            <br>
+            <p>Notwithstanding anything contained hereinabove, our liability under this Guarantee
+                 is restricted to the above amount in maximum and shall remain in full force from the
+                  effective date until the close of banking hours on the expiry date or on completion of
+                  the Contract whichever is earlier. </p>
+          
+           
+            <p>In all communications, please state our above Guarantee Reference Number.
+                
+            </p>
+            <br>
+            <br><br><br> <br><br><br>
+         
+            
+            <p style="float: left; width: 50%;">
+                <b>..........</b><br /><br />
+                <b>Authorized Signature</b><br /><br />
+               
+            </p>
+            
+
+                
+                
+            </p>
+          
+            
+           
+       
+           
+           
+        </div>
+
+    </body>
+
+</html>

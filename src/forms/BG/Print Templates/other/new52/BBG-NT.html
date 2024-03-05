@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBG-NT</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b > {{subform.2.issuedate.formattedissueDateBG}}</b> <br>
+           <b>{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b> 
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+     
+        <p>
+            Whereas <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b>
+            (hereinafter called "the Bidder") has submitted his Sealed Quotation (ST)
+             dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b> for the service of <b> {{subform.2.purpose_guarantee}} </b>(hereinafter called "the Sealed Quotation").
+        </p>
+        <p>
+            KNOW ALL PEOPLE by these presents that We <b> Global IME Bank Ltd</b> of Nepal having our registered office at Kantipath, Nepal
+            (hereinafter called "the Bank") are bound unto <b> {{subform.2.beneficiary_name}} {{subform.2.beneficiary_address}} </b>(hereinafter called “the Purchaser") in the sum of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}} ), </b> for which payment well and truly to be maid to the said Purchaser, the Bank binds itself, its successors, and assigns by these presents. Sealed with
+            the Common Seal of the said Bank this <b> {{subform.2.issuedate.formattedissueDateBG}}</b>
+
+        </p>
+        
+        THE CONDITIONS of this obligation are:
+        </p>
+        <ol type="a" style="list-style:decimal; margin-left: 0; padding-left: 15px;">
+            <li>
+                if the Bidder requests for withdrawal or modification during the period of bid validity specified by the
+                Bidder on the Letter of Bid. after sealed Quotation submission deadline.   
+            </li>
+
+            <li>
+                If the bidder changes the prices or substance of the sealed Quotation while providing information.
+
+            </li>
+            <li>lf the Bidder involves in fraud and corruption pursuant to <b> Section I:Clause No:9.</b></li>
+           <li>If the successful Bidder fail to;
+            <ol type="a">
+                <li>furnish a perforamance security in accordance with the instruction to Bidder;</li>
+                <li>sign the Contract in accordance within the period stipulated in Letter of Award; or,</li>
+                <li>accept the correction of arithmetical errors pursuant to Section III Clause No 13.3.2;</li>
+                <li>fails to provide the clarification of its sealed Quotation by the date and time set in the Purchaser's 
+                    request for clarification.
+                </li>
+            </ol>
+           </li>
+            
+
+        </ol>
+        <p>
+            we undertake to pay to the Purchaser up to the above amount upon receipt of its first written demand,
+             without the Purchaser's having to substantiate its demand, provided that in its demand the Purchaser
+              will note that the amount claimed by it is due to it owing to the occurrence of one or both of the 
+              two conditions, specifying the occurred condition or conditions. 
+        </p>
+       
+        <p>
+         
+            This guarantee will remain in force up to <b> Ninety (90) days </b> (i.e.,<b> {{subform.2.validityDate}}</b>)
+             from the date of opening of the Sealed Quotation. and any demand in respect there of 
+             should reach the Bank not later than the above date 
+            
+        </p>
+    
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>..........</b><br />
+            <b> Signature of the bank</b><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>..........</b><br />
+            <b>Common Seal of the bank</b><br />
+           
+        </p>
+        <br><br><br><br><br>
+            </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>Document</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            
+       
+            <p>
+                <b style="text-align: left; display:flex; flex-direction: column; align-items: center;">Form of Bid Security-Demand Guarantee</b>
+            </p>
+              <p>
+                <b>Beneficiary: {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}}</b><br />
+                <b>Request for Bids No: ..........</b><br />
+                <b>Date:{{subform.2.issuedate.formattedissueDateBG}}</b><br />
+                <b>BID GURANTEE No.: ..........</b><br />
+                <b>Guarantor : Global IME Bank Ltd. Kantipath, Nepal</b><br />
+                
+                
+            </p>
+            <p>
+                We have been informed that <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called "the Applicant")
+                has submited or will submit to the Beneficiary its Bid (hereinafter called "thc Bid") for the
+                execution of <b> {{subform.2.purpose_guarantee}} </b> under Request for Bids No:.......... ("the RFB").
+
+            </p>
+            <p>Furthermore, we understand that, according to the Beneficiary's conditions, Bids must be
+                supported by a Bid guarantee. </p>
+          
+           
+            <p>
+                At the request of the Applicant, we, as Guarantor, hereby inevocably undeftake to pay the
+                Beneficiary any sum or sums not excceding in total an amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}) </b>
+                upon receipt by us of the Beneficiary's complying demand, supported by thc Beneficiary's
+                statement whether in the demand itself or a separatc signed document accompanying or
+                identifying the demand, stating that either thc Applicant:
+                <ol type="a">
+                    <li>has withdrawn its Bidprior to the Bid validity expiry date set forth in the Applicant's
+                        Letter of Bid, or any extended date provided by the Applicant; or</li>
+                    <li> having been notified of the acceptance of its Bid by the Beneficiary prior to the expiry date
+                        of the Bid validity or any extension thereto provided by the Applicant, (i) has failed to
+                        execute the contract agreement, or (ii) has failed to fumish the Performance Security and, if
+                        required, the Environmental and Social (ES) Performance Security, in accordance with the
+                        lnstructions to Biddcrs ("ITB") ofthe Beneficiary's Bidding documcnt.</li>
+                </ol>
+            </p>
+            <p>
+                This guarantee will expire: (a) if the Applicant is the successful Bidder, upon our receipt of
+                copies of the conhact agreement signed by the Applicant and the Performance Securityand, if
+                required, the Environmental and Social (ES) Performancc Security, issued to thc Beneficiary in
+                rclation to such contract agreement; or (b) if the Applicant is not the successful Bidder, upon the
+                earlier of(i) our receipt ofa copy ofthe Bencficiary's notification to the Applicant ofthe results
+                of the Bidding process; or (ii)twenty-eight days after the expiry dateofthe Bidvalidify.
+            </p>
+            <p>
+                Consequently, any demand for palment under this guarantee must be received by us at lhe office
+                indicated above on or before that date.
+             </p>
+             <p>
+                This guarantee is subject to the Uniform Rules for Demand Guarantees (URDC) 2010 Revision,
+                 ICC Publication No. 758.
+             </p>
+             <br><br><br><br>
+            
+               <p style="float:right; width: 100%;">
+                <b>{{subform.2.name1}}</b><br /><br />
+                <b><i>[Signature(s)]</i></b><br /><br />
+
+                
+                
+            </p>
+          
+            
+           
+       
+           
+           
+        </div>
+
+    </body>
+
+</html>

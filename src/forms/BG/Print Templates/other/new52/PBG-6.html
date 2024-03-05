@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBG-6 </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+            <b> Date:{{subform.2.issuedate.formattedissueDateBG}}</b> <br>
+            <b>{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+                {{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+          <b> Our Ref.No: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            AT THE REQUEST OF <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b>("OUR CUSTOMER" OR THE
+            “AGENT”) AND IN ORDER TO ENABLE OUR CUSTOMER TO COMPLY WITH IATA’S
+            REQUIREMENTS UNDER THE APPLICABLE IATA RESOLUTIONS, RULES AND PROCEDURES
+            (“THE RULES”) FOR PARTICIPATION IN BSP NEPAL, WE GLOBAL IME BANK LTD., XXXXX,
+            KATHMANDU, NEPAL (THE “BANK”) HEREBY GUARANTEE [OPTION: AS SURETY],
+            RENOUNCING ALL LEGAL EXCEPTIONS AND OBJECTIONS AND WAIVING ALL DEFENCES
+            AVAILABLE TO US UNDER APPLICABLE LAW, AND HEREBY UNCONDITIONALLY ASSUME
+            JOINT AND SEVERAL LIABILITY WITH OUR CUSTOMER FOR PAYMENT OF ALL AMOUNTS
+            NOW OWING OR THAT MAY HEREAFTER BECOME OWING BY AGENT TO MEMBERS OF THE
+            INTERNATIONAL AIR TRANSPORT ASSOCIATION (“IATA”), AND AIRLINES PARTICIPATING IN
+            THE AFOREMENTIONED IATA BSP, WHICH HAVE OR WILL APPOINT THE AGENT
+            (COLLECTIVELY THE “IATA CLAIMANTS” AND INDIVIDUALLY AN “IATA CLAIMANT”), SUBJECT
+            TO THE FOLLOWING CONDITIONS: 
+        </p>
+        <p>
+           <ol type="1">
+            <li>If and when our Customer shall fail to pay any sum(s) whatsoever payable immediately or
+                otherwise in respect of the issuance during the period of this Guarantee of Traffic Documents
+                or Transportation Orders, or air waybill or any other sum payable under the Rules (hereinafter
+                referred to as “the Debt”), we will pay that sum to you (up to the limit sum) unconditionally on
+                demand being made as hereinafter provided. </li>
+            <li>Our total liability under this Guarantee is limited to and shall in no circumstances exceed the
+                sum of<b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b>.</li>
+            <li>This Guarantee subject to the limit sum shall not be satisfied, discharged or affected by any
+                intermediate payment or settlement of account. </li>
+            <li> The giving of time to our Customer or the neglect or forbearance by you in requiring or
+                enforcing payment of monies under the terms of the Passenger Sales Agency Agreement
+                signed by our Customer as a condition of accreditation as an IATA Agent, or other indulgence,
+                shall not in any way prejudice or affect this Guarantee. </li>
+            <li>This Guarantee is valid from <b> {{subform.2.issuedate.formattedissueDateBG}}</b>and shall expire on <b> {{subform.2.validityDate}}</b>
+                (hereinafter called the “Expiry Date”) and is conditional upon claim(s) being made and
+                received by us not later than three (3) months from the Expiry Date i.e. <b> {{subform.2.validityDate}}</b>
+                Thereafter liability hereunder shall automatically cease and this Guarantee shall become null
+                and void. </li>
+            <li> Payment against this Guarantee shall be conditional on a written demand by IATA’s
+                authorized person - stating that our Customer has failed to pay the Debt, and accompanied by
+                a letter signed by IATA stating that our Customer has been declared in default under the
+                Rules. The Debt so stated by IATA shall be deemed conclusive and final and we hereby
+                confirm that we will not require proof of the same. Payment of all amounts due hereunder will
+                be made in immediately available funds to IATA. </li>
+            <li>This Guarantee shall remain in full force and effect, notwithstanding any change in the
+                constitution of our Customer. 
+                </li>
+            <li>This Guarantee shall be in addition to and shall not be in any way prejudiced and affected by
+                any one or more securities or guarantees from our Customer, which you may now or
+                subsequently hold. Notwithstanding any other provision of this Guarantee, if our Customer
+                provides a separate guarantee (or any other type of security) in favor of an IATA Claimant
+                guaranteeing to such IATA Claimant the prompt payment of all amounts that may become
+                due and payable by our Customer, such IATA Claimant shall not be entitled to any payment
+                under this present industry Guarantee until all outstanding indebtedness of our Customer to
+                all other IATA Claimants hereunder shall have been discharged and no further indebtedness
+                of our Customer to such other IATA Claimants can arise. </li>
+            <li>Bankruptcy, liquidation, or insolvency of our Customer shall not affect or determine our liability
+                under this Guarantee. </li>
+            <li>The obligations under this Guarantee shall be valid and effective regardless of any law
+                regulation and decree now or after this date in effect which affects or might in any way affect
+                the Rules, and we hereby confirm that you are not bound to take any steps or to exhaust any
+                remedies against our Customer before calling on this Guarantee and are entitled to treat us
+                as surety or joint and several debtors with our Customer up to limit sum payable under this
+                Guarantee. </li>
+            <li>This Guarantee shall be governed by and construed in accordance with the Laws of NEPAL.</li>
+            <li>This Guarantee is non-assignable. It may be translated into another language for day-to-day
+                operational use if necessary; however, in case of any inconsistency between the English
+                version and the other version, the English version shall prevail.</li>
+           </ol>
+        </p>
+        <br />
+       
+        <p>
+            <b>For:Global IME Bank Limited</b><br>
+              <b><span style="margin-left: 20px;">  Trade Operation</span></b>
+        </p>
+        <br><br><br>
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+            
+        </p>
+        <br>
+        <br>
+       
+   
+    </div>
+</body>
+
+
+
+</html>

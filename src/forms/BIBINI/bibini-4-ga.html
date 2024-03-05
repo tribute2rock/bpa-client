@@ -1,0 +1,466 @@
+<body>
+    <style>
+        table {
+            border: 1px solid black;
+            border-radius: 2px;
+            width: 100%;
+            border-collapse: collapse;
+            overflow-wrap: break-word;
+        }
+
+        td {
+            overflow-wrap: break-word;
+        }
+
+        th {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+
+        table input {
+            border: 0;
+        }
+
+        .custom {
+            border: 0;
+        }
+
+        .datepicker,
+        input {
+            font-family: Arial, sans-serif;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .datepicker:focus,
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+        }
+    </style>
+    <div class="container">
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="1" data-label="अनुसूची"
+            name="name_anusuchi" value="अनुसूची १.१०" />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="2" data-label=".इ.प्रा."
+            name="name_pratipatra" value="परिपत्र संख्या-१ को दफा १.१.४ (क) र दफा १.११.१ को प्रयोजनको लागि" />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="3" data-label="ISSUING BANK"
+            name="name_issuing" value="ग्लोबल आइएमई बैंक लि." />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="4"
+            data-label="BI BI NI FORM TYPE" name="name_bibini_ft" value="वि.बि.नि.फा.नं. ४ (ग)" />
+        <div class="float-right">अनुसूची १.१०</div> <br /> <br />
+        <div> <input onkeyup="transformToUppercase(this)" type="hidden" data-order="6" data-label="BI BI NI SRL NO"
+                name="requestIdentifier_copy" class=" custom datepicker" id="copy" placeholder="BIBINI Number"> </div>
+        <div class="text-center"> (इ.प्रा. परिपत्र संख्या-१ को दफा १.१.४ (क) र दफा १.११.१ को प्रयोजनको लागि)<br />
+            वि.बि.नि.फा.नं. ४ (ग) <div> <b style="font-size: 20px"> ग्लोबल आइएमई बैंक लि.</b> <br />
+                <div> <select class="datepicker selectBranchddl" data-order="5" data-label="SELECTED BRANCH"
+                        id="selectBranch" name="branch"></select> शाखा </div>
+                <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-label="REQUESTED BRANCH SOL"
+                    name="requestedBranchSol_branch" id="requestedBranchSol_branch" />
+            </div>
+        </div>
+        <div class="float-right"> मितिः<input required data-required="true" id="date-required"
+                onkeyup="transformToUppercase(this)" type="text" data-order="7" data-label="ISSUED DATE" name="date"
+                class="datepicker mypicker" autocomplete="off" placeholder="DD-MM-YYYY" id="date" /> </div>
+        <div> सि.नं . <br /> नेपाल सरकार<br /> <input data-order="8" data-label="CUSTOM NAME"
+                onkeyup="transformToUppercase(this)" type="hidden" name="customer_name" id="vansar_name" /> <input
+                onkeyup="transformToUppercase(this)" type="hidden" name="customer_address" id="vansar_address"
+                data-order="9" data-label="CUSTOM ADDRESS" />
+            <div class="custom"> <select class="custom datepicker" id="vansar" data-label="CUSTOM OFFICE" name="vansar">
+                    <option value=" "> Select Custom Office</option>
+                    <option value="PASHUPATINAGAR - ILAM, NEPAL"> PASHUPATINAGAR CUSTOMS OFFICE, ILAM </option>
+                    <option value="MECHI - JHAPA, NEPAL"> MECHI CUSTOMS OFFICE, JHAPA </option>
+                    <option value="BHADRAPUR - JHAPA, NEPAL"> BHADRAPUR CUSTOMS OFFICE, JHAPA </option>
+                    <option value="BIRATNAGAR - RANI, MORANG, NEPAL"> BIRATNAGAR CUSTOMS OFFICE, RANI, MORANG
+                    </option>
+                    <option value="SUNSARI - NEPAL"> SUNSARI CUSTOMS OFFICE </option>
+                    <option value="OLANGCHUNGOLA - TAPLEJUNG, NEPAL"> OLANGCHUNGOLA CUSTOMS OFFICE, TAPLEJUNG
+                    </option>
+                    <option value="KIMATHANKA - SANKHUWASAVA, NEPAL"> KIMATHANKA CUSTOMS OFFICE, SANKHUWASAVA
+                    </option>
+                    <option value="RAJBIRAJ - SAPTARI, NEPAL"> RAJBIRAJ CUSTOMS OFFICE, SAPTARI </option>
+                    <option value="THADI - SIRAHA, NEPAL"> THADI CUSTOMS OFFICE, SIRAHA </option>
+                    <option value="SIRAHA - SIRAHA, NEPAL"> SIRAHA CUSTOMS OFFICE, SIRAHA </option>
+                    <option value="JANAKPUR - DHANUSHA, NEPAL"> JANAKPUR CUSTOMS OFFICE, DHANUSHA </option>
+                    <option value="JALESHWAR - MAHOTTARI, NEPAL"> JALESHWAR CUSTOMS OFFICE, MAHOTTARI </option>
+                    <option value="SARLAHI - MALANGAWA, NEPAL"> SARLAHI CUSTOMS OFFICE, MALANGAWA </option>
+                    <option value="GAUR - RAUTAHAT, NEPAL"> GAUR CUSTOMS OFFICE, RAUTAHAT </option>
+                    <option value="BIRGUNJ - PARSA, NEPAL"> BIRGUNJ CUSTOMS OFFICE, PARSA </option>
+                    <option value="DRY PORT - SIRSIYA, PARSA, NEPAL"> DRY PORT CUSTOMS OFFICE, SIRSIYA, PARSA
+                    </option>
+                    <option value="LAMA BAGAR - DOLAKHA, NEPAL"> LAMA BAGAR CUSTOMS OFFICE, DOLAKHA </option>
+                    <option value="TATOPANI - SINDHUPALCHOWK, NEPAL"> TATOPANI CUSTOMS OFFICE, SINDHUPALCHOWK
+                    </option>
+                    <option value="TRIBHUWAN AIRPORT - KATHMANDU, NEPAL"> TRIBHUWAN AIRPORT CUSTOMS OFFICE,
+                        KATHMANDU </option>
+                    <option value="CHOBHAR DRYPORT - NEPAL"> CHOBHAR DRYPORT CUSTOMS OFFICE </option>
+                    <option value="RASUWA - TIMURE, NEPAL"> RASUWA CUSTOMS OFFICE, TIMURE </option>
+                    <option value="LARKE - GORKHA, NEPAL"> LARKE CUSTOMS OFFICE, GORKHA </option>
+                    <option value="MUSTANG - NEPAL"> MUSTANG CUSTOMS OFFICE </option>
+                    <option value="TRIVENI - NEPAL"> TRIVENI CUSTOMS OFFICE </option>
+                    <option value="MAHESPUR - NAWALPARASI, NEPAL"> MAHESPUR CUSTOMS OFFICE, NAWALPARASI </option>
+                    <option value="BHAIRAHAWA - RUPANDEHI, NEPAL"> BHAIRAHAWA CUSTOMS OFFICE, RUPANDEHI </option>
+                    <option value="GAUTAM BUDDHA AIRPORT - NEPAL"> GAUTAM BUDDHA AIRPORT CUSTOMS OFFICE </option>
+                    <option value="SUTHAULI - KAPILVASTU, NEPAL"> SUTHAULI CUSTOMS OFFICE, KAPILVASTU </option>
+                    <option value="KRISHNAGAR - KAPILVASTU, NEPAL"> KRISHNAGAR CUSTOMS OFFICE, KAPILVASTU </option>
+                    <option value="KOILABAS - DANG, NEPAL"> KOILABAS CUSTOMS OFFICE, DANG </option>
+                    <option value="NEPALGUNJ - BANKE, NEPAL"> NEPALGUNJ CUSTOMS OFFICE, BANKE </option>
+                    <option value="RAJAPUR - BARDIYA, NEPAL"> RAJAPUR CUSTOMS OFFICE, BARDIYA </option>
+                    <option value="MUGU - NEPAL"> MUGU CUSTOMS OFFICE </option>
+                    <option value="YARI NAKA - HUMLA, NEPAL"> YARI NAKA CUSTOMS OFFICE, HUMLA </option>
+                    <option value="SATI - KAILALI, NEPAL"> SATI CUSTOMS OFFICE, KAILALI </option>
+                    <option value="KAILALI - DHANGADHI, NEPAL"> KAILALI CUSTOMS OFFICE, DHANGADHI </option>
+                    <option value="KANCHANPUR - MAHENDRANAGAR, NEPAL"> KANCHANPUR CUSTOMS OFFICE, MAHENDRANAGAR
+                    </option>
+                    <option value="DARCHULA - NEPAL"> DARCHULA CUSTOMS OFFICE </option>
+                    <option value="MAHAKALI - BAITADI, NEPAL"> MAHAKALI CUSTOMS OFFICE, BAITADI </option>
+                </select> भन्सार कार्यालय </div> ................................ |<br />
+        </div> <br /><br />
+        <div class="text-center"> <b> विषय :<select class="datepicker" data-label="SUBJECT" name="subject-select"
+                    id="subject-select">
+                    <option value="first">प्रतितपत्र</option>
+                    <option value="second">ड्राफट</option>
+                    <option value="third">टि.टि.</option>
+                    <option value="fourth">वा क्रेडिट अन्तर्गतको</option>
+                </select> सटही सुविधा (भा.रू) ।</b> </div>
+        <div>महाशय,</div>
+        <div> निम्न विवरण बमोजिमको सामानको पैठारीको लागि मेसर्स<input required data-required="true" id="data-required"
+                onkeyup="transformToUppercase(this)" type="name" data-order="10" data-label="APPLICANT NAME"
+                name="applicant_name" class="datepicker" id="applicant_name"
+                placeholder="............................................................" /> लाई यस
+            बैंकबाट
+            निम्नानुसारको भा.रु. प्रतीतपत्र / ड्राफट /टि.टि. संकेत नम्बर<input data-required="true" id="data-required"
+                onkeyup="transformToUppercase(this)" type="text" data-order="11" data-label="REFERENCE NO" name="lc"
+                class="datepicker" id="lc" placeholder="LC/TT/DD Number" /> बाट
+            प्रदान गरिएको / क्रेडिट सुविधा अन्तर्गत आयात भएको व्यहोरा प्रमाणित गरिएको छ। </div> <br />
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 mb-3">
+                <table>
+                    <tr class="table-data">
+                        <th>सि.नं.</th>
+                        <th>आयात गरिने सामानको विवरण</th>
+                        <th>हार्मोनिक कोड नम्बर</th>
+                        <th>परिमाण</th>
+                        <th> सटही लिएको / क्रेडिट<br /> सुविधा अन्तर्गतको<br /> कुल भा. रु. रकम </th>
+                    </tr>
+                    <tr>
+                        <th> <input style="max-width: 20mm" onkeyup="transformToUppercase(this)" type="text"
+                                data-label="SN 1" name="sn1" class="custom" id="sn1" /> </th>
+                        <th> <input onkeyup="transformToUppercase(this)" type="text" data-order="22"
+                                data-label="IMPORTING GOODS 1" name="importing-good1" class="custom"
+                                id="importing-good1" /> </th>
+                        <th> <input onkeyup="transformToUppercase(this)" type="text" data-order="19"
+                                data-label="HARMONIC CODE 1" name="harmonic-code1" class="custom" id="harmonic-code1" />
+                        </th>
+                        <th> <input style="max-width: 20mm" onkeyup="transformToUppercase(this)" type="text"
+                                data-order="25" data-label="QTY 1" name="quantity1" class="custom" id="quantity1" />
+                        </th>
+                        <th class="custom">
+                            <table class="custom">
+                                <tr class="custom">
+                                    <td> <select class="datepicker" name="currency1" id="currency" data-order="12"
+                                            data-label="CURRENCY 1">
+                                            <option value="">Select</option>
+                                            <option value="INR">INR</option>
+                                        </select> </td>
+                                    <td> <input onkeyup="transformToUppercase(this)" type="text" step="0.01" min="0"
+                                            data-order="13" data-label="CURRENCY AMOUNT 1" name="amount1"
+                                            class="custom currencyInput datepicker" id="amount1" placeholder="रकम" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th> <input style="max-width: 20mm" onkeyup="transformToUppercase(this)" type="text"
+                                data-label="SN 2" name="sn2" class="custom" id="sn2" /> </th>
+                        <th> <input onkeyup="transformToUppercase(this)" type="text" data-order="23"
+                                data-label="IMPORTING GOODS 2" name="importing-good2" class="custom"
+                                id="importing-good2" /> </th>
+                        <th> <input onkeyup="transformToUppercase(this)" type="text" data-order="20"
+                                data-label="HARMONIC CODE 2" name="harmonic-code2" class="custom" id="harmonic-code2" />
+                        </th>
+                        <th> <input style="max-width: 20mm" onkeyup="transformToUppercase(this)" type="text"
+                                data-order="26" data-label="QTY 2" name="quantity2" class="custom" id="quantity2" />
+                        </th>
+                        <th>
+                            <table class="custom">
+                                <tr class="custom">
+                                    <td class="custom"> <select class="datepicker" name="currency2" id="currency"
+                                            data-order="14" data-label="CURRENCY 2">
+                                            <option value="">Select</option>
+                                            <option value="INR">INR</option>
+                                        </select> </td>
+                                    <td> <input onkeyup="transformToUppercase(this)" type="text" step="0.01" min="0"
+                                            data-order="15" data-label="CURRENCY AMOUNT 2" name="amount2"
+                                            class="custom currencyInput datepicker" id="amount2" placeholder="रकम" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th> <input style="max-width: 20mm" onkeyup="transformToUppercase(this)" type="text"
+                                data-label="SN 3" name="sn3" class="custom" id="sn3" /> </th>
+                        <th> <input onkeyup="transformToUppercase(this)" type="text" data-order="24"
+                                data-label="IMPORTING GOODS 3" name="importing-good3" class="custom"
+                                id="importing-good3" /> </th>
+                        <th> <input onkeyup="transformToUppercase(this)" type="text" data-order="21"
+                                data-label="HARMONIC CODE 3" name="harmonic-code3" class="custom" id="harmonic-code3" />
+                        </th>
+                        <th> <input style="max-width: 20mm" onkeyup="transformToUppercase(this)" type="text"
+                                data-order="27" data-label="QTY 3" name="quantity3" class="custom" id="quantity3" />
+                        </th>
+                        <th>
+                            <table class="custom">
+                                <tr class="custom">
+                                    <td class="custom"> <select class="datepicker" name="currency3" id="currency"
+                                            data-order="16" data-label="CURRENCY 3">
+                                            <option value="">Select</option>
+                                            <option value="INR">INR</option>
+                                        </select> </td>
+                                    <td> <input onkeyup="transformToUppercase(this)" type="text" step="0.01" min="0"
+                                            data-order="17" data-label="CURRENCY AMOUNT 3" name="amount3"
+                                            class="custom currencyInput datepicker" id="amount3" placeholder="रकम" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                    <tr style="border: none;">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th> <select class="datepicker" name="totalName" id="currency">
+                                <option value="">Select Total</option>
+                                <option value="Total">Total</option>
+                            </select></th>
+                        <th>
+                            <table style="border: none;" class="custom">
+                                <tr style="border: none;" class="custom">
+                                    <td style="border: none;" class="custom"> <select class="datepicker"
+                                            name="totalCurrency" id="currency" required>
+                                            <option value="">Select</option>
+                                            <option value="INR">INR</option>
+                                        </select> </td>
+                                    <td style="border: none;"> <input onkeyup="transformToUppercase(this)" type=" text"
+                                            step="0.01" min="0" data-order="18" data-label="TOTAL AMOUNT" name="total"
+                                            class="custom currencyInput datepicker" id="total" placeholder="Total"
+                                            required>
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 mb-3"> <label for="Remarks">Description</label> <textarea name="description"
+                    class="form-control" id="description" data-order="28" onkeyup="transformToUppercase(this)"
+                    data-label="DESCRIPTION" rows="3"></textarea>
+                <br /><br /><br />
+                ..............................................<br />
+                <p>विवरण तयार गर्नेको दस्तखत</p>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+                <div>भवदीय,</div> <br />
+                <div>अख्तियार प्राप्त अधिकारीको दस्तखत</div> <br />
+                <div> नामः<input required data-required="true" id="data-required" onkeyup="transformToUppercase(this)"
+                        type="name" data-order="29" data-label="REPORTER'S NAME" name="reporter-name"
+                        class="custom account-name" id="reporter-name" placeholder="नाम लेख्नुहोस " /> </div> <br />
+                <div> पद:<input required data-required="true" id="data-required" onkeyup="transformToUppercase(this)"
+                        type="name" data-order="30" data-label="REPORTER'S DESIGNATION" name="reporter-designation"
+                        class="custom" id="reporter-designation" placeholder=" पद लेख्नुहोस " /> </div> <br />
+                <div>बैंकको छाप</div>
+            </div>
+        </div>
+        <div class="row">
+            <p> <b>नोटः आयात गरिने सम्पूर्ण बस्तुहरुको नाम, ब्राण्ड, परिमाण, इकाइ मूल्य, कूल मृल्यबारे विस्तृत र
+                    प्रमाणित विवरण अनिवार्य रुपले उल्लेख गर्नु पर्नेछ । यस पृष्ठमा नअटाएको खण्डमा पछाडिको पृष्ठ प्रयोग
+                    गर्नु पर्नेछ ।</b> </p>
+        </div>
+        <hr style="border-style: dotted; border-width: 1px" />
+        <div class="text-center"> <b><u>भन्सार प्रयोजनको लागि</u></b> </div>
+        <div> माथि उल्लेखित विवरण अनुसारको मूल्य भा.रू .............................................. को जम्मा
+            .............................................. परिमाणको ..............................................
+            सामानहरु मिति .............................................. को भंसार रसीद नं.
+            .............................................. बाट यस भंसार कार्यालयबाट छुटाई लगेको प्रमाणित गर्दछौं ।
+        </div> <br /><br />
+        <div class="float-right"> ..............................................<br /> <b>भन्सार अधिकृतको दस्तखत र
+                छाप</b> </div> <br /><br /><br />
+        <div> नोटः<br /> (क) पहिलो २ प्रति भन्सार प्रयोजनका लागि (भंसार कार्यालयबाट प्रमाणित गरिसकेपछि १ प्रति सम्बन्धित
+            बैक /वित्तीय संस्थामा नै बुझाउनुपर्ने|)<br /> (ख) तेस्रो प्रति नेपाल राष्ट्र बैंक, विदेशी विनिमय
+            व्यवस्थापन विभाग, बालुवाटारमा पठाउनु पर्ने ।<br /> (ग) चौथो प्रति सम्बन्धित बैंक / वित्तीय संस्थामा अभिलेख
+            राख्नुपर्ने ।<br /> </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        $(".mypicker").datepicker({
+            dateFormat: "dd-mm-yy",
+
+        });
+    });
+
+    var globalSol = {};
+    var globalSolA = [];
+    $('#selectBranch').on('change', function () {
+
+        let finalBranch = document.getElementById('selectBranch').value;
+        let test = globalSolA.find(branch => branch.name.replace("BRANCH", ' ') == finalBranch)
+        document.getElementById('requestedBranchSol_branch').value = test.sol;
+
+    });
+    var currencyInputs = document.getElementsByClassName("currencyInput");
+    for (var i = 0; i < currencyInputs.length; i++) {
+        if (currencyInputs[i] instanceof HTMLInputElement) {
+            currencyInputs[i].addEventListener("blur", function () {
+                var value = parseFloat(this.value.replaceAll(",", "")).toFixed(2);
+
+                if (value != "NaN") {
+                    this.value = formatCurrency(value);
+                }
+                else {
+                    this.value = "";
+                }
+            });
+        } else {
+            console.error("Element with class 'currencyInput' not found or not an input element.");
+        }
+    }
+
+
+    run();
+    async function run() {
+        const branchURL = `http://192.168.126.74:8080/api/dbBranches`;
+        var branches;
+        let data = await fetch(`${branchURL}`, {
+            method: "GET",
+        });
+        branches = await data.json();
+        if (branches && branches.data.length > 0) {
+            branches.data.sort((a, b) => a.sol - b.sol)
+        }
+        var selectedBranch = "";
+        let branchdllList = document.getElementsByClassName("selectBranchddl");
+        for (let brddl of branchdllList) {
+            if (selectedBranch == "") {
+                selectedBranch = brddl.value;
+            }
+            for (let i = 0; i < branches.data.length; i++) {
+                let selOption = document.createElement("option");
+                selOption.text = branches.data[i].name;
+                let branchName = branches.data[i].name;
+                let newBranchName = branchName.replace("BRANCH", ' ')
+                selOption.value = newBranchName
+                if (selectedBranch == newBranchName) {
+                    selOption.selected = true;
+                }
+                brddl.appendChild(selOption);
+            }
+        }
+        globalSolA = branches.data;
+        if (!document.getElementById('requestedBranchSol_branch').value) {
+            document.getElementById('requestedBranchSol_branch').value = globalSolA[0].sol;
+        }
+    }
+
+
+    function transformToUppercase(element) {
+        if (element.tagName === 'INPUT') {
+            // For input elements, convert their values to uppercase
+            element.value = element.value.toUpperCase();
+        } else if (element.tagName === 'SELECT') {
+            // For select elements, convert the value of the selected option to uppercase
+            const selectedOption = element.options[element.selectedIndex];
+            selectedOption.value = selectedOption.value.toUpperCase();
+        }
+    }
+
+    // Convert currencyInput value to Nepali currency format
+    //  var currencyInputs = document.getElementsByClassName("currencyInput");
+    //  for (var i = 0; i < currencyInputs.length; i++) {
+    //      if (currencyInputs[i] instanceof HTMLInputElement) {
+    //          currencyInputs[i].addEventListener("blur", function () {
+    //              var value = parseFloat(this.value).toFixed(2);
+    //             this.value = formatCurrency(value);
+    //          });
+    //      } else {
+    //          console.error("Element with class 'currencyInput' not found or not an input element.");
+    //        }
+    //   }
+
+
+    // Format currency value in Nepali or INR format
+    function formatCurrency(value) {
+        return parseFloat(value).toLocaleString("ne-IN", {
+            style: "decimal",
+            useGrouping: true,
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        });
+    }
+    document.getElementById("vansar").addEventListener("change", function () {
+        var splitval = this.value.split("-");
+        document.getElementById("vansar_name").value = splitval[0].trim();
+        document.getElementById("vansar_address").value = splitval[1].trim();
+    });
+
+    document
+        .getElementById("harmonic-code1")
+        .addEventListener("keypress", function (evt) {
+            var charCode = evt.which ? evt.which : event.keyCode;
+            if (
+                charCode != 44 &&
+                charCode != 45 &&
+                charCode != 46 &&
+                charCode != 32 &&
+                (charCode < 48 || charCode > 57)
+            ) {
+                evt.preventDefault();
+            }
+            else { return true; }
+
+        });
+
+    document
+        .getElementById("harmonic-code2")
+        .addEventListener("keypress", function (evt) {
+            var charCode = evt.which ? evt.which : event.keyCode;
+            if (
+                charCode != 44 &&
+                charCode != 45 &&
+                charCode != 46 &&
+                charCode != 32 &&
+
+                (charCode < 48 || charCode > 57)
+            ) {
+                evt.preventDefault();
+            }
+            else { return true; }
+
+        });
+
+    document
+        .getElementById("harmonic-code3")
+        .addEventListener("keypress", function (evt) {
+            var charCode = evt.which ? evt.which : event.keyCode;
+            if (
+                charCode != 44 &&
+                charCode != 45 &&
+                charCode != 46 &&
+                charCode != 32 &&
+
+                (charCode < 48 || charCode > 57)
+            ) {
+                evt.preventDefault();
+            }
+            else { return true; }
+
+        });
+</script>

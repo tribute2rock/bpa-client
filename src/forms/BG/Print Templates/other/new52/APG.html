@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Payment Security</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 30px;">Advance Payment Security</b>
+            
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">Beneficiary: {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} </b> <br>
+        </p>
+        <p>
+            <b>Date: {{subform.2.issuedate.formattedissueDateBG}}</b>
+        </p>
+        <p>
+            <b>Advance Payment Guarantee No.:..........</b>
+        </p>
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b>
+              (hereinafter called "the Contractor") has entered into Contract No. <b> {{subform.2.contract_number}} </b> dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b> with you, 
+              for the execution of <b> {{subform.2.purpose_guarantee}}  </b> (hereinafter called "the Contractor")          
+        </p>
+        <p>
+           Furthermore, we understand that, according to the conditions of the contract, an advance payment 
+            in the sum  <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> is to be made against an advance payment guarantee.            
+        </p>
+        <p>
+            At the request of the Contractor, we {{subform.2.company_name}}, {{subform.2.company_address}}  hereby irrevocaly undertake to pay you any sum or sums not exceeding in total an amount of 
+            <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> upon receipt by us of your first demand in writing
+            accompanied by a written statement stating that the Contractor is in breach of its obligation under
+            the Contract because the Contractor
+            <ol type="a">
+                <li>used the advance payment for purposes other than the costs of mobilization in respect of the Works.</li>
+                <li> has failed to repay the advance payment when it has become due to payable in accordance with the
+                     conditions of the Contract, specifying the amount payable by the contractor.
+                </li>
+            </ol>
+             
+        </p>
+        <p>
+            It is a condition for any claim and payment under this guarantee to be made that the advance
+            payment referred to above must have been received by the Contractor on its account number:.......... 
+           at <b>Global IME Bank Ltd. Kantipath, Nepal</b>.
+
+        </p>
+        <p>
+            The maximum amount of this guarantee shall be progressively reduced by the amount of the
+            advance payment repaid by the Contractor as indicated in copies of interim statements or payment
+            certificates which shall be presented to us. This guarantee shall expire, at the latest, upon our
+            receipt of a copy of the interim payment certificate indicating that ninety percent (90%) of the
+            Contract Price has been certified for payment, or on the <b> {{subform.2.validityDate}} </b> 
+            , whichever is earlier. Consequently, any demand for payment under this guarantee must be received by us at
+            this office on or before that date.
+
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 458 (or
+            ICC Publication No. 758 as applicable).
+        </p>
+        <br />
+        <br />
+        <br />
+        <p style="text-align: left; display:flex; flex-direction: column; align-items: center">
+            <br>..........</br>
+           <i><b> [Signature(s) and seal of Bank (where appropriate)]</b></i> <hr  style="height: 1px; background-color: black;"/><br />
+            
+        <p>
+            <div>
+                <table  style="border:2px solid black;">
+                    <td>
+                        If the institution issuing the advance payment security is located outside the country of the employer, it shall have a
+                        correspondent financial institution located in the country of the employer to make it enforceable.
+                    </td>
+                </table>
+            </div>
+        </p>
+        <br />
+        <br />
+        <br />
+        
+       
+    </div>
+</body>
+
+
+
+</html>

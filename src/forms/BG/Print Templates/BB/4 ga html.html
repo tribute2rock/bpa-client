@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        table {
+
+            border: 1px solid black;
+            border-radius: 2px;
+            width: 100%;
+            border-collapse: collapse;
+            overflow-wrap: break-word;
+        }
+
+        td {
+            overflow-wrap: break-word;
+        }
+
+        th {
+
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+
+        table input {
+            border: 0;
+        }
+
+        .custom {
+            border: 0;
+        }
+
+        .datepicker,
+        input {
+            font-family: Arial, sans-serif;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .datepicker:focus,
+        input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+        }
+    </style>
+    <div class="container">
+        <div class="float-right">
+            अनुसूची १.१०
+        </div><br>
+        <div>
+            ग्लोबल आइएमई बैंक लि. <br>
+            <div> <select class="datepicker" required data-label="Selected Branch" id="selectBranch" name="branch">
+                </select> शाखा
+            </div>
+        </div>
+        <div class="text-center">
+            (इ.प्रा. परिपत्र संख्या-१ को दफा १.१.४ (क) र दफा १.११.१ को प्रयोजनको लागि) <br>
+            वि.बि.नि.फा.नं. ४ (ग)
+        </div>
+        <div class="float-right">
+            मितिः <input required data-required="true" id="date-required" type="date" data-label="date" name="date"
+                class=" datepicker" id="date">
+        </div>
+        <div>
+            नेपाल सरकार <br>
+            <div class="custom"><select required class="custom datepicker" name="customer_name"
+                    data-label="customer_name">
+
+                    <option value="MECHI">
+
+                        MECHI CUSTOMS OFFICE, KAKARVITTA, NEPAL
+
+                    </option>
+
+                    <option value="BIRATNAGAR">
+
+                        BIRATNAGAR CUSTOMS OFFICE, BIRATNAGAR, NEPAL
+
+                    </option>
+
+                    <option value="BIRGUNJ">
+
+                        BIRGUNJ CUSTOMS OFFICE, BIRGUNJ, NEPAL
+
+                    </option>
+
+                    <option value="BHAIRAHAWA">
+
+                        BHAIRAHAWA CUSTOMS OFFICE, BHAIRAHAWA, NEPAL
+
+                    </option>
+
+                    <option value="NEPALGUNJ">
+
+                        NEPALGUNJ CUSTOMS OFFICE, NEPALGUNJ, NEPAL
+
+                    </option>
+
+                    <option value="KAILALI">
+
+                        KAILALI CUSTOMS OFFICE, DHANGADHI, NEPAL
+
+                    </option>
+
+                    <option value="DRYPORT">
+
+                        DRYPORT CUSTOMS OFFICE, SIRSIYA, NEPAL
+
+                    </option>
+
+                    <option value="RASUWA">
+                        RASUWA CUSTOMS OFFICE, RASUWA, NEPAL
+
+                    </option>
+
+                    <option value="TRIBHUVAN">
+
+                        TRIBHUVAN INTERNATIONAL AIRPORT CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="KRISHNANAGAR">
+
+                        KRISHNANAGAR CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="JALESHWAR">
+
+                        JALESHWAR CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="TATOPANI">
+
+                        TATOPANI CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="KANCHANPUR">
+
+                        KANCHANPUR CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="JANAKPUR">
+
+                        JANAKPUR CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="RAJBIRAJ">
+
+                        RAJBIRAJ CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="SARLAHI">
+
+                        SARLAHI CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="SIRAHA">
+
+                        SIRAHA CUSTOMS OFFICE, NEPAL
+
+                    </option>
+
+                    <option value="SUNSARI">
+
+                        SUNSARI CUSTOMS OFFICE, NEPAL
+
+                    </option>
+                </select> भन्सार कार्यालय
+            </div>
+            ................................ | <br>
+        </div>
+        <br><br>
+
+        <div class="text-center">
+            <b> विषय : <select class="datepicker" name="subject-select" id="subject-select">
+                    <option value="first">प्रतितपत्र</option>
+                    <option value="second">ड्राफट</option>
+                    <option value="third"> टि.टि.</option>
+                </select> सटही सुविधा (भा.रू) । </b>
+        </div>
+
+        <div>
+            महाशय,
+        </div>
+        <div>
+            निम्न विवरण बमोजिमको सामानको पैठारीको लागि मेसर्स <input required data-required="true" id="data-required"
+                type="name" data-label="applicant_name" name="applicant_name" class="datepicker" id="applicant_name"
+                placeholder="............................................................">
+            लाई यस बैंकबाट निम्नानुसारको भा.रु. प्रतीतपत्र / ड्राफट /टि.टि. नम्बर <input required data-required="true"
+                id="data-required" type="text" data-label="lc" name="lc" class="datepicker" id="lc"
+                placeholder="LC Number">
+            बाट प्रदान गरिएको व्यहोरा प्रमाणित गरिएको छ।
+        </div><br>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 mb-3">
+                <table>
+                    <tr class="table-data">
+                        <th>सि.नं.</th>
+                        <th>आयात गरिने सामानको विवरण </th>
+                        <th>हार्मोनिक कोड नम्बर</th>
+                        <th>परिमाण</th>
+                        <th>सटही लिएको / क्रेडिट <br> सुविधा अन्तर्गतको <br> कुल
+                            भा. रु. रकम</th>
+                    </tr>
+                    <tr>
+                        <th><input style="max-width: 20mm;" type="text" data-label="sn1" name="sn1" class="custom"
+                                id="sn1"></th>
+                        <th><input type="text" data-label="importing-good1" name="importing-good1" class="custom"
+                                id="importing-good1">
+                        </th>
+                        <th><input type="text" data-label="harmonic-code1" name="harmonic-code1" class="custom"
+                                id="harmonic-code1">
+                        </th>
+                        <th><input style="max-width: 20mm;" type="text" data-label="quantity1" name="quantity1"
+                                class="custom" id="quantity1"></th>
+                        <th class="custom">
+                            <table class="custom">
+                                <tr class="custom">
+                                    <td>
+                                        <select class="datepicker" name="currency1" id="currency">
+                                            <option value=" "> Currency</option>
+                                            <option value="INR">INR</option>
+                                            <option value="USD">USD</option>
+
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="number" step="0.01" min="0" data-label="amount1" name="amount1"
+                                            class="custom datepicker" id="amount1" placeholder="रकम">
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><input style="max-width: 20mm;" type="text" step="0.01" min="0" data-label="sn2" name="sn2"
+                                class="custom" id="sn2"></th>
+                        <th><input type="text" data-label="importing-good2" name="importing-good2" class="custom"
+                                id="importing-good2"></th>
+                        <th><input type="text" data-label="harmonic-code2" name="harmonic-code2" class="custom"
+                                id="harmonic-code2"></th>
+                        <th><input style="max-width: 20mm;" type="text" data-label="quantity2" name="quantity2"
+                                class="custom" id="quantity2"></th>
+                        <th>
+                            <table class="custom">
+                                <tr class="custom">
+                                    <td class="custom">
+                                        <select class="datepicker" name="currency2" id="currency">
+                                            <option value=" "> Currency</option>
+                                            <option value="INR">INR</option>
+                                            <option value="USD">USD</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" data-label="amount2" name="amount2" class="custom datepicker"
+                                            id="amount2" placeholder="रकम">
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><input style="max-width: 20mm;" type="text" step="0.01" min="0" data-label="sn3" name="sn3"
+                                class="custom" id="sn3"></th>
+                        <th><input type="text" data-label="importing-good3" name="importing-good3" class="custom"
+                                id="importing-good3"></th>
+                        <th><input type="text" data-label="harmonic-code3" name="harmonic-code3" class="custom"
+                                id="harmonic-code3"></th>
+                        <th><input style="max-width: 20mm;" type="text" data-label="quantity3" name="quantity3"
+                                class="custom" id="quantity3"></th>
+                        <th>
+                            <table class="custom">
+                                <tr class="custom">
+                                    <td class="custom">
+                                        <select class="datepicker" name="currency3" id="currency">
+                                            <option value=" "> Currency</option>
+                                            <option value="INR">INR</option>
+                                            <option value="USD">USD</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" data-label="amount3" name="amount3" class="custom datepicker"
+                                            id="amount3" placeholder="रकम">
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </th>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 mb-3">
+                <label for="Remarks">Description</label>
+                <textarea required name="description" class="form-control" id="description" data-label="Description"
+                    rows="3" data-label="Subject"></textarea>
+
+                <br><br><br>
+                .............................................. <br>
+                <p>विवरण तयार गर्नेको दस्तखत</p>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3 ">
+                <div>
+                    भवदीय,
+                </div> <br>
+                <div>
+                    अख्तियार प्राप्त अधिकारीको दस्तखत
+                </div><br>
+                <div>
+                    नामः <input required data-required="true" id="data-required" type="name" data-label="reporter-name"
+                        name="reporter-name" class="custom account-name" id="reporter-name"
+                        placeholder="नाम लेख्नुहोस ">
+                </div><br>
+                <div>
+                    पद: <input required data-required="true" id="data-required" type="name"
+                        data-label="reporter-designation" name="reporter-designation" class="custom"
+                        id="reporter-designation" placeholder=" पद लेख्नुहोस ">
+                </div><br>
+                <div>
+                    बैंकको छाप
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <p><b>नोटः आयात गरिने सम्पूर्ण बस्तुहरुको नाम, ब्राण्ड, परिमाण, इकाइ मूल्य, कूल मृल्यबारे विस्तृत र प्रमाणित
+                    विवरण अनिवार्य रुपले उल्लेख गर्नु पर्नेछ ।
+                    यस पृष्ठमा नअटाएको खण्डमा पछाडिको पृष्ठ प्रयोग गर्नु पर्नेछ ।</b></p>
+
+        </div>
+        <hr style="border-style: dotted;  border-width: 2px;">
+        <div class="text-center">
+            <b><u>भन्सार प्रयोजनको लागि</u></b>
+        </div>
+        <div>
+            माथि उल्लेखित विवरण अनुसारको मूल्य भा.रू .............................................. को जम्मा
+            ..............................................
+            परिमाणको .............................................. सामानहरु मिति
+            .............................................. को भंसार रसीद नं.
+            ..............................................
+            बाट यस भंसार कार्यालयबाट छुटाई लगेको प्रमाणित गर्दछौं ।
+        </div> <br><br>
+        <div class="float-right">
+            .............................................. <br>
+            <b>भन्सार अधिकृतको दस्तखत र छाप</b>
+        </div> <br> <br><br>
+        <div>
+            नोटः <br>
+            (क) पहिलो दुईप्रति भंसार प्रयोजनका लागि (भंसार कार्यालयबाट प्रमाणित गरी सो को एकप्रति सम्बन्धित बैक /वित्तीय
+            संस्थामै फिर्ता बुझाउनुपर्ने) <br>
+            (ख) तेश्रो प्रति नेपाल राष्ट्र बैंक, विदेशी विनिमय व्यवस्थापन विभाग, बालुवाटारमा पठाउनु पर्ने । <br>
+            (ग) चौथो प्रति सम्बन्धित बैंक / वित्तीय संस्थामा अभिलेख राख्नुपर्ने । <br>
+        </div>
+
+    </div>
+</body>
+
+</html>

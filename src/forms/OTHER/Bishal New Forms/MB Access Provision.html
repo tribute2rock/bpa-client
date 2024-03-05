@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>MB Access Provision</title>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 20px;">
+        <h6 class="title">
+            <span>
+                Processing Branch:
+            </span>
+        </h6>
+
+        <div class="row pb-2 px-2">
+            <div class="col-lg-4 col-sm-12 mb-3 d-flex align-items-center">
+                <div class="d-flex align-items-center pt-4">
+                    Inside Nepal&nbsp;
+                    <label class="switch">
+                        <input type="checkbox" name="origin" id="origin" data-label="Outside Nepal">
+                        <div class="slider round"><span class="on"></span><span class="off"></span></div>
+                    </label>&nbsp;Outside Nepal
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+                <label for="selectCountry" class="pb-2">Country</label>
+                <select class="form-control" data-label="Country" id="selectCountry" name="selectCountry"
+                    datarequired="true">
+                    <option value="">Select country</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AX">Aland Islands</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="AG">Antigua and Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BB">Barbados</option>
+                    <option value="BY">Belarus</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BZ">Belize</option>
+                    <option value="BJ">Benin</option>
+                    <option value="BM">Bermuda</option>
+                    <option value="BT">Bhutan</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                    <option value="BA">Bosnia and Herzegovina</option>
+                    <option value="BW">Botswana</option>
+                    <option value="BV">Bouvet Island</option>
+                    <option value="BR">Brazil</option>
+                    <option value="IO">British Indian Ocean Territory</option>
+                    <option value="BN">Brunei Darussalam</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="BF">Burkina Faso</option>
+                    <option value="BI">Burundi</option>
+                    <option value="KH">Cambodia</option>
+                    <option value="CM">Cameroon</option>
+                    <option value="CA">Canada</option>
+                    <option value="CV">Cape Verde</option>
+                    <option value="KY">Cayman Islands</option>
+                    <option value="CF">Central African Republic</option>
+                    <option value="TD">Chad</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CX">Christmas Island</option>
+                    <option value="CC">Cocos (Keeling) Islands</option>
+                    <option value="CO">Colombia</option>
+                    <option value="KM">Comoros</option>
+                    <option value="CG">Congo</option>
+                    <option value="CD">Congo, Democratic Republic of the Congo</option>
+                    <option value="CK">Cook Islands</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="CI">Cote D'Ivoire</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CU">Cuba</option>
+                    <option value="CW">Curacao</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="DK">Denmark</option>
+                    <option value="DJ">Djibouti</option>
+                    <option value="DM">Dominica</option>
+                    <option value="DO">Dominican Republic</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="EG">Egypt</option>
+                    <option value="SV">El Salvador</option>
+                    <option value="GQ">Equatorial Guinea</option>
+                    <option value="ER">Eritrea</option>
+                    <option value="EE">Estonia</option>
+                    <option value="ET">Ethiopia</option>
+                    <option value="FK">Falkland Islands (Malvinas)</option>
+                    <option value="FO">Faroe Islands</option>
+                    <option value="FJ">Fiji</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="GF">French Guiana</option>
+                    <option value="PF">French Polynesia</option>
+                    <option value="TF">French Southern Territories</option>
+                    <option value="GA">Gabon</option>
+                    <option value="GM">Gambia</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GI">Gibraltar</option>
+                    <option value="GR">Greece</option>
+                    <option value="GL">Greenland</option>
+                    <option value="GD">Grenada</option>
+                    <option value="GP">Guadeloupe</option>
+                    <option value="GU">Guam</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="GG">Guernsey</option>
+                    <option value="GN">Guinea</option>
+                    <option value="GW">Guinea-Bissau</option>
+                    <option value="GY">Guyana</option>
+                    <option value="HT">Haiti</option>
+                    <option value="HM">Heard Island and Mcdonald Islands</option>
+                    <option value="VA">Holy See (Vatican City State)</option>
+                    <option value="HN">Honduras</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IR">Iran, Islamic Republic of</option>
+                    <option value="IQ">Iraq</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IM">Isle of Man</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="JM">Jamaica</option>
+                    <option value="JP">Japan</option>
+                    <option value="JE">Jersey</option>
+                    <option value="JO">Jordan</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="KI">Kiribati</option>
+                    <option value="KP">Korea, Democratic People's Republic of</option>
+                    <option value="KR">Korea, Republic of</option>
+                    <option value="XK">Kosovo</option>
+                    <option value="KW">Kuwait</option>
+                    <option value="KG">Kyrgyzstan</option>
+                    <option value="LA">Lao People's Democratic Republic</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LB">Lebanon</option>
+                    <option value="LS">Lesotho</option>
+                    <option value="LR">Liberia</option>
+                    <option value="LY">Libyan Arab Jamahiriya</option>
+                    <option value="LI">Liechtenstein</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MO">Macao</option>
+                    <option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+                    <option value="MG">Madagascar</option>
+                    <option value="MW">Malawi</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MV">Maldives</option>
+                    <option value="ML">Mali</option>
+                    <option value="MT">Malta</option>
+                    <option value="MH">Marshall Islands</option>
+                    <option value="MQ">Martinique</option>
+                    <option value="MR">Mauritania</option>
+                    <option value="MU">Mauritius</option>
+                    <option value="YT">Mayotte</option>
+                    <option value="MX">Mexico</option>
+                    <option value="FM">Micronesia, Federated States of</option>
+                    <option value="MD">Moldova, Republic of</option>
+                    <option value="MC">Monaco</option>
+                    <option value="MN">Mongolia</option>
+                    <option value="ME">Montenegro</option>
+                    <option value="MS">Montserrat</option>
+                    <option value="MA">Morocco</option>
+                    <option value="MZ">Mozambique</option>
+                    <option value="MM">Myanmar</option>
+                    <option value="NA">Namibia</option>
+                    <option value="NR">Nauru</option>
+                    <option value="NP">Nepal</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="AN">Netherlands Antilles</option>
+                    <option value="NC">New Caledonia</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NI">Nicaragua</option>
+                    <option value="NE">Niger</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="NU">Niue</option>
+                    <option value="NF">Norfolk Island</option>
+                    <option value="MP">Northern Mariana Islands</option>
+                    <option value="NO">Norway</option>
+                    <option value="OM">Oman</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PW">Palau</option>
+                    <option value="PS">Palestinian Territory, Occupied</option>
+                    <option value="PA">Panama</option>
+                    <option value="PG">Papua New Guinea</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PN">Pitcairn</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="QA">Qatar</option>
+                    <option value="RE">Reunion</option>
+                    <option value="RO">Romania</option>
+                    <option value="RU">Russian Federation</option>
+                    <option value="RW">Rwanda</option>
+                    <option value="BL">Saint Barthelemy</option>
+                    <option value="SH">Saint Helena</option>
+                    <option value="KN">Saint Kitts and Nevis</option>
+                    <option value="LC">Saint Lucia</option>
+                    <option value="MF">Saint Martin</option>
+                    <option value="PM">Saint Pierre and Miquelon</option>
+                    <option value="VC">Saint Vincent and the Grenadines</option>
+                    <option value="WS">Samoa</option>
+                    <option value="SM">San Marino</option>
+                    <option value="ST">Sao Tome and Principe</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="SN">Senegal</option>
+                    <option value="RS">Serbia</option>
+                    <option value="CS">Serbia and Montenegro</option>
+                    <option value="SC">Seychelles</option>
+                    <option value="SL">Sierra Leone</option>
+                    <option value="SG">Singapore</option>
+                    <option value="SX">Sint Maarten</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="SB">Solomon Islands</option>
+                    <option value="SO">Somalia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="GS">South Georgia and the South Sandwich Islands</option>
+                    <option value="SS">South Sudan</option>
+                    <option value="ES">Spain</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="SD">Sudan</option>
+                    <option value="SR">Suriname</option>
+                    <option value="SJ">Svalbard and Jan Mayen</option>
+                    <option value="SZ">Swaziland</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="SY">Syrian Arab Republic</option>
+                    <option value="TW">Taiwan, Province of China</option>
+                    <option value="TJ">Tajikistan</option>
+                    <option value="TZ">Tanzania, United Republic of</option>
+                    <option value="TH">Thailand</option>
+                    <option value="TL">Timor-Leste</option>
+                    <option value="TG">Togo</option>
+                    <option value="TK">Tokelau</option>
+                    <option value="TO">Tonga</option>
+                    <option value="TT">Trinidad and Tobago</option>
+                    <option value="TN">Tunisia</option>
+                    <option value="TR">Turkey</option>
+                    <option value="TM">Turkmenistan</option>
+                    <option value="TC">Turks and Caicos Islands</option>
+                    <option value="TV">Tuvalu</option>
+                    <option value="UG">Uganda</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="US">United States</option>
+                    <option value="UM">United States Minor Outlying Islands</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="UZ">Uzbekistan</option>
+                    <option value="VU">Vanuatu</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="VN">Viet Nam</option>
+                    <option value="VG">Virgin Islands, British</option>
+                    <option value="VI">Virgin Islands, U.s.</option>
+                    <option value="WF">Wallis and Futuna</option>
+                    <option value="EH">Western Sahara</option>
+                    <option value="YE">Yemen</option>
+                    <option value="ZM">Zambia</option>
+                    <option value="ZW">Zimbabwe</option>
+                </select>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+                <label for="selectBranch" class="pb-2">Branch</label>
+                <select class="form-control" data-label="Branch" id="selectBranch" name="selectBranch"
+                    datarequired="true">
+                    <option value="11">BIRGUNJ</option>
+                    <option value="01">KANTIPATH BRANCH</option>
+                    <option value="12">BAGLUNG BRANCH</option>
+                    <option value="02">NEW ROAD BRANCH</option>
+                    <option value="15">BIRATNAGAR BRANCH</option>
+                    <option value="16">LAHAN BRANCH</option>
+                    <option value="03">SITAPAILA BRANCH</option>
+                    <option value="04">SANO GAUCHARAN BRANCH</option>
+                    <option value="17">B.P CHOWK,BUTWAL</option>
+                    <option value="05">KIRTIPUR BRANCH</option>
+                    <option value="18">NARAYANGHAT BRANCH</option>
+                    <option value="06">KULESHWOR BRANCH</option>
+                    <option value="26">BHAIRAHAWA BRANCH</option>
+                    <option value="31">BAITADI BRANCH</option>
+                    <option value="59">KHUSIBU BRANCH</option>
+                    <option value="63">RAJBIRAJ BRANCH</option>
+                    <option value="66">KUSMA BRANCH</option>
+                    <option value="68">DHARAN BRANCH</option>
+                    <option value="69">CHAINPUR BRANCH</option>
+                    <option value="84">SINAMANGAL BRANCH</option>
+                    <option value="88">GWARKO BRANCH</option>
+                    <option value="19">DADELDHURA BRANCH</option>
+                    <option value="09">THAMEL BRANCH</option>
+                    <option value="29">MID- BANESHWOR BRANCH</option>
+                    <option value="44">JANAKPUR BRANCH</option>
+                    <option value="37">CHABAHIL BRANCH</option>
+                    <option value="71">MAJUWA BRANCH</option>
+                    <option value="72">WAMI BRANCH</option>
+                    <option value="73">LALBANDI BRANCH</option>
+                    <option value="75">KAMALADI BRANCH</option>
+                    <option value="76">TERHATHUM BRANCH</option>
+                    <option value="77">CHARALI BRANCH</option>
+                    <option value="78">BARHABISE BRANCH</option>
+                    <option value="79">MANAKAMANA BRANCH</option>
+                    <option value="85">NAKHU BRANCH</option>
+                    <option value="86">KAPILVASTU BRANCH</option>
+                    <option value="90">THANKOT BRANCH</option>
+                    <option value="93">DAMAULI BRANCH</option>
+                    <option value="94">GALKOT BRANCH</option>
+                    <option value="A6">DHOBIGHAT BRANCH</option>
+                    <option value="A7">DHALKEBAR BRANCH</option>
+                    <option value="A8">MANTHALI BRANCH</option>
+                    <option value="21">TRIBHUWAN CHOWK,NEPALGUNJ</option>
+                    <option value="25">CHETRAPARTI BRANCH</option>
+                    <option value="27">PHIKAL BRANCH</option>
+                    <option value="32">DILLIBAZAR BRANCH</option>
+                    <option value="56">MIRCHAIYAYA BRANCH</option>
+                    <option value="49">ARGHAKHANCHI BRANCH</option>
+                    <option value="38">KALANKI BRANCH</option>
+                    <option value="51">ITAHARI BRANCH</option>
+                    <option value="36">KOTESHWOR BRANCH</option>
+                    <option value="41">GHORAHI BRANCH</option>
+                    <option value="64">TATOPANI BRANCH</option>
+                    <option value="42">TADI BRANCH</option>
+                    <option value="43">MAHENDRANAGAR BRANCH</option>
+                    <option value="46">HETAUDA BRANCH</option>
+                    <option value="67">MANGALBAZAR BRANCH</option>
+                    <option value="82">SULICHAUR BRANCH</option>
+                    <option value="83">KOHALPUR BRANCH</option>
+                    <option value="91">SUKEDHARA BRANCH</option>
+                    <option value="95">AASON BRANCH</option>
+                    <option value="96">BHOTEWODAR BRANCH</option>
+                    <option value="A9">TRISHULI BRANCH</option>
+                    <option value="B3">DHADINGBESI BRANCH</option>
+                    <option value="22">GHAIGHAT BRANCH</option>
+                    <option value="07">LAGANKHEL BRANCH</option>
+                    <option value="23">DHULABARI BRANCH</option>
+                    <option value="24">DHANGADI BRANCH</option>
+                    <option value="28">KUPONDOLE BRANCH</option>
+                    <option value="34">TRIPURESHWOR BRANCH</option>
+                    <option value="53">RUKUM BRANCH</option>
+                    <option value="52">KAWASOTI BRANCH</option>
+                    <option value="47">MILAN CHOWK, BUTWAL</option>
+                    <option value="50">LIWANG BRANCH</option>
+                    <option value="33">PANIPOKHARI BRANCH</option>
+                    <option value="65">SABHAGRIHA CHOWK, POKHARA</option>
+                    <option value="80">PULCHOWK BRANCH</option>
+                    <option value="81">BAIRENI BRANCH</option>
+                    <option value="A1">CREDIT - CORPORATE</option>
+                    <option value="A2">CREDIT - IPFC</option>
+                    <option value="A3">BURTIBANG BRANCH</option>
+                    <option value="C3">SIRANCHOWK BRANCH</option>
+                    <option value="C4">KURINTAR BRANCH</option>
+                    <option value="C5">BETHANCHOWK BRANCH</option>
+                    <option value="C6">GAUDAKOT BRANCH</option>
+                    <option value="08">DHAPASI BRANCH</option>
+                    <option value="30">SURKHET BRANCH</option>
+                    <option value="35">GONGABU BRANCH</option>
+                    <option value="61">SURYABINAYAK BRANCH</option>
+                    <option value="62">PUSHPALAL CHOWK, NEPALGUNJ</option>
+                    <option value="54">TAPLEJUNG BRANCH</option>
+                    <option value="57">TULSIPUR BRANCH</option>
+                    <option value="58">BIRTAMOD BRANCH</option>
+                    <option value="48">BENI BRANCH</option>
+                    <option value="45">KUSHMISHERA BRANCH</option>
+                    <option value="39">ANAMNAGAR BRANCH</option>
+                    <option value="40">SATDOBATO BRANCH</option>
+                    <option value="70">TAMGHAS BRANCH</option>
+                    <option value="74">PHIDIM BRANCH</option>
+                    <option value="87">KALIKOT BRANCH</option>
+                    <option value="92">BESISAHAR BRANCH</option>
+                    <option value="B4">BHUMAHI BRANCH</option>
+                    <option value="B5">KHOLESIMAL BRANCH</option>
+                    <option value="B6">KANCHANBARI BRANCH</option>
+                    <option value="B7">BELCHOWK BRANCH</option>
+                    <option value="B8">SUNDAR BAZAR BRANCH</option>
+                    <option value="C2">DUMRE BRANCH</option>
+                    <option value="D8">MANAMAIJU BRANCH</option>
+                    <option value="D9">HATTIGAUDA BRANCH</option>
+                    <option value="F5">SALYAN BRANCH</option>
+                    <option value="F6">BHOTKHOLA BRANCH</option>
+                    <option value="F8">BARDIBAS BRANCH</option>
+                    <option value="F9">KHOTANG BRANCH</option>
+                    <option value="G2">HILE BRANCH</option>
+                    <option value="G4">BHOJPUR BRANCH</option>
+                    <option value="G6">KHADICHAUR BRANCH</option>
+                    <option value="G7">BHAISEPATI BRANCH</option>
+                    <option value="G3">DAILEKH BRANCH</option>
+                    <option value="G9">NAWALPUR BRANCH</option>
+                    <option value="H1">NAGARJUN BRANCH</option>
+                    <option value="H2">HOLERI BRANCH</option>
+                    <option value="H4">BANDIPUR BRANCH</option>
+                    <option value="I3">MAHARAJGUNJ KATHMANDU BRANCH</option>
+                    <option value="I4">DHUNCHE BRANCH</option>
+                    <option value="M6">SARAI BRANCH</option>
+                    <option value="J1">NAREFAT BRANCH</option>
+                    <option value="R5">SANKHAMUL BRANCH</option>
+                    <option value="E2">RASKOT BRANCH</option>
+                    <option value="F3">GAIDAKOT BRANCH</option>
+                    <option value="H7">KRISHNANAGAR BRANCH</option>
+                    <option value="H8">BHAIRAHAWA SEZ BRANCH</option>
+                    <option value="I6">CHAUTARA BRANCH</option>
+                    <option value="I7">GAUR BRANCH</option>
+                    <option value="M7">TAHU BRANCH</option>
+                    <option value="R6">RUPANI BRANCH</option>
+                    <option value="J2">TRAFFIC CHOWK BRANCH</option>
+                    <option value="R8">GURBHAKOT BRANCH</option>
+                    <option value="M8">POKHARATHOK BRANCH</option>
+                    <option value="J4">KUMARIPATI BRANCH</option>
+                    <option value="J5">BAFAL KALANKI BRANCH</option>
+                    <option value="M9">PANAUTI BRANCH</option>
+                    <option value="J6">BALAJU BRANCH</option>
+                    <option value="J7">BALEWA BRANCH</option>
+                    <option value="J8">DHANGADI II BRANCH</option>
+                    <option value="N1">BHAKUNDEBESHI BRANCH</option>
+                    <option value="K1">DARCHULA BRANCH</option>
+                    <option value="K2">CHANDOLE BRANCH</option>
+                    <option value="K3">JYATHAASON BRANCH</option>
+                    <option value="N2">KHADBARI BRANCH</option>
+                    <option value="D1">CORPORATE BRANCH</option>
+                    <option value="E1">AMARSINGHCHOWK BRANCH</option>
+                    <option value="R9">DORAMBA BRANCH</option>
+                    <option value="T1">BUNGDIKALI BRANCH</option>
+                    <option value="T2">ADANCHULI BRANCH</option>
+                    <option value="N3">THAPATHALI BRANCH</option>
+                    <option value="K6">PRATAPPUR BRANCH</option>
+                    <option value="K8">CHARKHAL BRANCH</option>
+                    <option value="U3">KANDAGHARI BRANCH</option>
+                    <option value="U5">KHUMALTAR BRANCH</option>
+                    <option value="U6">THAWANG BRANCH</option>
+                    <option value="S1">NAUKUNDA BRANCH</option>
+                    <option value="S2">TATOPANI JUMLA BRANCH</option>
+                    <option value="S5">FAKTANGLUNG BRANCH</option>
+                    <option value="S6">JITPUR BRANCH</option>
+                    <option value="S7">TEENPAINI BRANCH</option>
+                    <option value="S8">DUIKHOLI BRANCH</option>
+                    <option value="S9">SUKIDAHA BRANCH</option>
+                    <option value="N8">BARDAGHAT BRANCH</option>
+                    <option value="N9">SALJHANDI BRANCH</option>
+                    <option value="G1">SOLU BRANCH</option>
+                    <option value="G5">BHADRAPUR BRANCH</option>
+                    <option value="L1">JIRIKHIMTI BRANCH</option>
+                    <option value="L2">SAHID CHOWK BRANCH</option>
+                    <option value="L3">GOKULESHWOR BRANCH</option>
+                    <option value="L4">TIMURE BRANCH</option>
+                    <option value="L6">KATARI BRANCH</option>
+                    <option value="L8">PARSA BRANCH</option>
+                    <option value="O1">KHAIRENI BRANCH</option>
+                    <option value="O2">LUMBINI BRANCH</option>
+                    <option value="O3">PUTALISADAK BRANCH</option>
+                    <option value="O4">PRAVASH BRANCH</option>
+                    <option value="O5">CHANDRAUTA BRANCH</option>
+                    <option value="O6">PIPARA BRANCH</option>
+                    <option value="O7">BANGAIN BRANCH</option>
+                    <option value="O8">BHALWARI BRANCH</option>
+                    <option value="O9">KERWANI BRANCH</option>
+                    <option value="P6">BATTAR BRANCH</option>
+                    <option value="P7">HARIWON BRANCH</option>
+                    <option value="Q4">RAMPUR PALPA BRANCH</option>
+                    <option value="U7">BALUWAPATI BRANCH</option>
+                    <option value="F2">PURBA KHOLA BRANCH</option>
+                    <option value="N4">KUNTABESHI BRANCH</option>
+                    <option value="N5">MOTIPUR BRANCH</option>
+                    <option value="P5">TINKUNE BRANCH</option>
+                    <option value="P9">LAKESIDE POKHARA</option>
+                    <option value="Q3">NAYA MILL BRANCH</option>
+                    <option value="U8">KAMALBINAYAK BRANCH</option>
+                    <option value="V3">SANAGAON BRANCH</option>
+                    <option value="V8">KAPAN BRANCH</option>
+                    <option value="W1">DULEGAUDA BRANCH</option>
+                    <option value="V5">RUKUM EAST BRANCH</option>
+                    <option value="V7">JHUMKA BRANCH</option>
+                    <option value="W2">LAMAHI BRANCH</option>
+                    <option value="D2">JORPATI BRANCH</option>
+                    <option value="D3">TANSEN BRANCH</option>
+                    <option value="F4">ATTARIYA BRANCH</option>
+                    <option value="H5">OKHALDHUNGA BRANCH</option>
+                    <option value="H6">PIPALLABAZAR BRANCH</option>
+                    <option value="M4">BHARATPUR BRANCH</option>
+                    <option value="I9">INARUWA BRANCH</option>
+                    <option value="Q9">BHURIGAUN BARDIYA BRANCH</option>
+                    <option value="R1">DUMKIBAS BRANCH</option>
+                    <option value="R2">WALING BRANCH</option>
+                    <option value="R3">GHATHAGHAR BRANCH</option>
+                    <option value="R4">ILAM BRANCH</option>
+                    <option value="T4">TAJAKOT BRANCH</option>
+                    <option value="T5">BALIYA BRANCH</option>
+                    <option value="T7">SUNDHARA LALITPUR BRANCH</option>
+                    <option value="T8">NAYABAZAR KIRTIPUR BRANCH</option>
+                    <option value="T9">KHARIBOT BRANCH</option>
+                    <option value="U1">IMAKHEL BRANCH</option>
+                    <option value="U2">TAULIHAWA BRANCH</option>
+                    <option value="Q1">DORDI BRANCH</option>
+                    <option value="Q2">DEVINAGAR BRANCH</option>
+                    <option value="D4">GORKHA BAZAR BRANCH</option>
+                    <option value="D5">BIRATCHOWK BRANCH</option>
+                    <option value="D6">NIJGADH BRANCH</option>
+                    <option value="Q6">SIMRAUNGADH BRANCH</option>
+                    <option value="Q7">TIKAPUR BRANCH</option>
+                    <option value="Q8">BUDHIBAZAR KASKI BRANCH</option>
+                    <option value="N6">CHHAHARA BRANCH</option>
+                    <option value="N7">DANGIHAT BRANCH</option>
+                    <option value="P1">MAHARAJGUNJ BRANCH</option>
+                    <option value="P2">BIJUWAR BRANCH</option>
+                    <option value="P3">THARMARE BRANCH</option>
+                    <option value="P4">LEKHNATH BRANCH</option>
+                    <option value="K5">PAKHRIBAS BRANCH</option>
+                    <option value="U9">MANANG BRANCH</option>
+                    <option value="V2">MUSTANG BRANCH</option>
+                    <option value="V9">TOKHA BRANCH</option>
+                    <option value="C7">PURCHOUDI BRANCH</option>
+                    <option value="C8">GOTHATAR BRANCH</option>
+                    <option value="C9">DAMAK BRANCH</option>
+                    <option value="E3">DAKNESHWORI BRANCH</option>
+                    <option value="E4">MITHILA BIHARI BRANCH</option>
+                    <option value="E5">FETA BRANCH</option>
+                    <option value="E6">FATUWA BIJAYPUR BRANCH</option>
+                    <option value="E9">AJAYAMERU BRANCH</option>
+                    <option value="F1">DOGADA KEDAR BRANCH</option>
+                    <option value="F7">SINDHULI BRANCH</option>
+                    <option value="M5">MURGIYA BRANCH</option>
+                    <option value="L9">GEETANAGAR BRANCH</option>
+                    <option value="M1">DALDALE BRANCH</option>
+                    <option value="M2">BUTWAL MAIN BRANCH</option>
+                    <option value="W3">SUKHIPUR BRANCH</option>
+                    <option value="20">LAMKI BRANCH</option>
+                    <option value="A4">SUNDHARA II BRANCH</option>
+                    <option value="342">NARAYANGHAT IV BRANCH</option>
+                    <option value="310">AMLEKHGUNJ BRANCH</option>
+                    <option value="330">TAMGHAS HOSPITAL LINE BRANCH</option>
+                    <option value="338">BELAURI BRANCH</option>
+                    <option value="348">DHUNGE ADDA BRANCH</option>
+                    <option value="353">GALCCHI BRANCH</option>
+                    <option value="369">BAGAR BRANCH</option>
+                    <option value="372">CORPORATE II OFFICE</option>
+                    <option value="359">CHHINAMASTA BRANCH</option>
+                    <option value="373">AMARAPURI BRANCH</option>
+                    <option value="363">RAKSIRANG BRANCH</option>
+                    <option value="S3">CHHEDAGAD BRANCH</option>
+                    <option value="V4">SHANTINAGAR BRANCH</option>
+                    <option value="328">BALKHU BRANCH</option>
+                    <option value="340">BHALUWANG BRANCH</option>
+                    <option value="311">JANAKPUR STATION ROAD BRANCH</option>
+                    <option value="347">BARDAGHAT-B BRANCH</option>
+                    <option value="355">GADHIMAI BRANCH</option>
+                    <option value="365">KALIKANAGAR BRANCH</option>
+                    <option value="368">KAKARVITTA BRANCH</option>
+                    <option value="376">RUBY VALLEY BRANCH</option>
+                    <option value="361">PATARASI BRANCH</option>
+                    <option value="375">HAKIM CHOWK BRANCH</option>
+                    <option value="60">SIRAHA BRANCH</option>
+                    <option value="D7">BOGTAN BRANCH</option>
+                    <option value="302">NEWROAD GATE BRANCH</option>
+                    <option value="304">HETAUDA BANK ROAD BRANCH</option>
+                    <option value="339">RAJAPUR BRANCH</option>
+                    <option value="323">TIKAPUR-B BRANCH</option>
+                    <option value="329">PRAGATIPATH BRANCH</option>
+                    <option value="307">POKHARA BRANCH</option>
+                    <option value="309">ADARSHA NAGAR CHOWK BRANCH</option>
+                    <option value="331">SANDHIKHARKA BRANCH</option>
+                    <option value="336">DHARAN GHANTAGHAR BRANCH</option>
+                    <option value="337">DAILEKH NAYABAZAR BRANCH</option>
+                    <option value="346">INDRACHOWK BRANCH</option>
+                    <option value="315">SURKHET-B BRANCH</option>
+                    <option value="318">JUMLA BRANCH</option>
+                    <option value="364">KALIKAMAI BRANCH</option>
+                    <option value="362">KHANIYABAS BRANCH</option>
+                    <option value="L7">RAMPUR BRANCH</option>
+                    <option value="K4">KALIKASTHAN BRANCH</option>
+                    <option value="303">BUTWAL BRANCH</option>
+                    <option value="305">NEPALGUNJ BRANCH</option>
+                    <option value="327">KHAIRENITAR BRANCH</option>
+                    <option value="334">OLD BANESHWOR BRANCH</option>
+                    <option value="344">NAXAL BRANCH</option>
+                    <option value="345">LANKU BRANCH</option>
+                    <option value="354">BUDDHABARE BRANCH</option>
+                    <option value="316">GHORAHI-B BRANCH</option>
+                    <option value="356">INDRASAROVAR BRANCH</option>
+                    <option value="317">TULSIPUR BP CHOWK BRANCH</option>
+                    <option value="370">POWERHOUSE BRANCH</option>
+                    <option value="358">TINPATAN BRANCH</option>
+                    <option value="374">KALAIYA BRANCH</option>
+                    <option value="V1">MUGU BRANCH</option>
+                    <option value="320">ATTARIYA-B BRANCH</option>
+                    <option value="321">NEW BANESHWOR BRANCH</option>
+                    <option value="322">CHABAHIL CHOWK BRANCH</option>
+                    <option value="324">TUFANDADA BRANCH</option>
+                    <option value="326">SANKHU BRANCH</option>
+                    <option value="341">DEVDAHA BRANCH</option>
+                    <option value="333">BHADRAPUR ROAD BRANCH</option>
+                    <option value="314">KOHALPUR MAIN BAZAR BRANCH</option>
+                    <option value="351">ITACHHEN BRANCH</option>
+                    <option value="367">MANIGRAM BRANCH</option>
+                    <option value="319">BALAJU II BRANCH</option>
+                    <option value="371">TREASURY SOL</option>
+                    <option value="360">MALIKA BRANCH</option>
+                    <option value="55">GOLBAZAR BRANCH</option>
+                    <option value="A5">BALAJU CHOWK BRANCH</option>
+                    <option value="B2">BAJURA BRANCH</option>
+                    <option value="C1">GYANESHWOR BRANCH</option>
+                    <option value="I5">BYPASS ROAD BIRGUNJ BRANCH</option>
+                    <option value="J9">ACHHAM BRANCH</option>
+                    <option value="S4">NAUGAD BRANCH</option>
+                    <option value="P8">CHANDRAPUR BRANCH</option>
+                    <option value="H3">CHARIKOT BRANCH</option>
+                    <option value="M3">MADI BRANCH</option>
+                    <option value="Q5">SULIKOT GORKHA BRANCH</option>
+                    <option value="14">NEW ROAD, POKHARA</option>
+                    <option value="89">BANEPA BRANCH</option>
+                    <option value="97">BHORLETAR BRANCH</option>
+                    <option value="10">BANASTHALI BRANCH</option>
+                    <option value="B9">BEGNAS BRANCH</option>
+                    <option value="G8">UDIPUR BRANCH</option>
+                    <option value="R7">BHANDARA BRANCH</option>
+                    <option value="E7">BELWA BRANCH</option>
+                    <option value="H9">GULARIYA BRANCH</option>
+                    <option value="V6">BAJHANG BRANCH</option>
+                    <option value="T6">THIMI BRANCH</option>
+                    <option value="E8">PURBI CHAUKI BRANCH</option>
+                    <option value="B1">PARASI BRANCH</option>
+                    <option value="I2">CHIPLEDHUNGA BRANCH</option>
+                    <option value="T3">CHANKHELI BRANCH</option>
+                    <option value="301">KAMALADI BRANCH</option>
+                    <option value="325">URLABARI BRANCH</option>
+                    <option value="306">DHANGADHI MAIN ROAD BRANCH</option>
+                    <option value="308">BIRATANAGAR MAIN ROAD BRANCH</option>
+                    <option value="343">BHAIRAHAWA III BRANCH</option>
+                    <option value="332">BAGLUNG AAWA ROAD BRANCH</option>
+                    <option value="335">LAHAN GHANTAGHAR CHOWK BRANCH</option>
+                    <option value="312">ITAHARI-B BRANCH</option>
+                    <option value="349">BANESHWOR BRANCH</option>
+                    <option value="313">SAMAKHUSI BRANCH</option>
+                    <option value="350">IMADOL BRANCH</option>
+                    <option value="352">KATARI CHOWK PURBA BRANCH</option>
+                    <option value="366">MAHALAXMISTHAN ROAD BRANCH</option>
+                    <option value="357">ISMA BRANCH</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="pb-3">
+            <h6 class="title">
+                <span>
+                    Account Details:
+                </span>
+            </h6>
+            <div class="row px-2">
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="accountNumber" class="pb-2">Account Number</label>
+                    <input disabled type="text" required datarequired="true" class="form-control accountNumber"
+                        data-label="Account Number" id="accountNumber" name="accountNumber"
+                        placeholder="Account Number">
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="accountNumber" class="pb-2">Account Name</label>
+                    <input disabled type="text" required datarequired="true" class="form-control accountName"
+                        data-label="Account Name" id="accountName" name="accountName" placeholder="Account Name">
+                </div>
+
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="accountNumber" class="pb-2">Mobile Number</label>
+                    <input disabled type="text" required datarequired="true" class="form-control mobileNumber"
+                        data-label="Mobile Number" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number">
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="dob" class="pb-2">Date of Birth</label>
+                    <input type="date" class="form-control" data-label="Date of Birth" id="dob" name="dob"
+                        datarequired="true" onchange="validateDate(this.value)">
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="chooseProfile" class="pb-2">Channel Change Provision </label>
+                    <select class="form-control" data-label="Channel" id="chooseProfile" name="chooseProfile"
+                        datarequired="true">
+                        <option value="">Please Select Provision </option>
+                        <option value="S7">Mobile Banking (MB) </option>
+                        <option value="S8">Web Banking (WB) </option>
+                        <option value="S9">Mobile and Web Banking (Both) </option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="email" class="pb-2">Email address</label>
+                    <input type="email" class="form-control" data-label="Email" id="email" name="email" maxlength="50"
+                        placeholder="Enter Email Address">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <!-- <div class="col-lg-6 col-sm-12 mb-3">
+                <label for="selectBranch">Select Branch</label>
+                <select class="form-control" data-label="Selected Branch" id="selectBranch" name="selectBranch">
+                </select>
+            </div> -->
+            <div class="col-lg-6 col-sm-12 mb-3" style="display: none;">
+                <label for="branch_name">Branch Name</label>
+                <input type="text" class="form-control" data-label="Branch Name" id="branch_name" name="branch_name">
+            </div>
+        </div>
+
+        <h6 class="title">
+            <span>
+                Citizenship / Passport Details:
+            </span>
+        </h6>
+
+        <div class="px-2">
+            <div class="row mb-2">
+                <div class="col-12">
+                    <div class="form-group">
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="checkbox" name="citizenship_documents_checkbox"
+                                id="citizenship_documents_checkbox" value="Citizenship Documents" />
+                            <label class="form-check-label" for="citizenship_documents_checkbox">Citizenship
+                                Details</label>
+                            <small id="citizenship_ron" style="color: red; font-size: x-medium;"></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-3">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 mb-3" id="citizenshipNumberDiv" style="display: none">
+                            <label for="citizenshipNumber" class="pb-2">Citizenship Number
+                            </label>
+                            <input type="text" class="form-control" data-label="Citizenship Number"
+                                id="citizenshipNumber" name="citizenshipNumber" maxlength="20"
+                                placeholder="Enter Citizenship Number">
+                        </div>
+                        <div class="col-lg-6 col-sm-12 mb-3" id="citizenshipFileDiv" style="display: none">
+                            <label for="fileupload_citizenshipFile" class="pb-2">Citizenship Document</label>
+                            <input type="file" class="form-control" id="citizenshipFile"
+                                name="fileupload_citizenshipFile" data-label="Citizenship File"
+                                accept=".jpg,.jpeg,.png,.pdf" max="2097152"
+                                onchange="updateImageDisplay('citizenshipFile_preview')">
+                            <div class="img-preview citizenshipFile_preview" id="citizenshipFile_preview">
+                                <p class="citizenshipFile_preview_p"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="px-2">
+            <div class="row mb-2">
+                <div class="col-12">
+                    <div class="form-group">
+                        <div class="form-check form-check-inline pb-2">
+                            <input class="form-check-input" type="checkbox" name="passport_documents_checkbox"
+                                id="passport_documents_checkbox" value="Passport Documents" />
+                            <label class="form-check-label" for="passport_documents_checkbox">Passport Details</label>
+                            <small id="passport_ron" style="color: red; font-size: x-medium;"></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-3">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 mb-3" id="passportNumberDiv" style="display: none">
+                            <label for="passportNumber" class="pb-2">Passport Number
+                            </label>
+                            <input placeholder="Enter Passport Number" type="text" class="form-control"
+                                data-label="Passport Number" id="passportNumber" name="passportNumber" maxlength="20">
+                        </div>
+                        <div class="col-lg-6 col-sm-12 mb-3" id="passportFileDiv" style="display: none">
+                            <label for="fileupload_passportFile" class="pb-2">Passport Document</label>
+                            <input type="file" class="form-control" id="passportFile" name="fileupload_passportFile"
+                                data-label="Passport File" accept=".jpg,.jpeg,.png,.pdf" max="2097152"
+                                onchange="updateImageDisplay('passportFile_preview')">
+                            <div class="img-preview passportFile_preview" id="passportFile_preview">
+                                <p class="passportFile_preview_p"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <h6 class="title">
+            <span>
+                Reason for changing Profile:
+            </span>
+        </h6>
+        <div class="px-3 pb-3">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="reason" class="pb-2">Your Reason</label>
+                    <div class="form-floating">
+                        <textarea style="height: 120px;width: 100%" datarequired="true" maxlength="250"
+                            class="form-control" data-label="Reason" id="reason" name="reason"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 mb-3">
+                <h6 class="title">
+                    <span>
+                        Upload Signature:
+                    </span>
+                </h6>
+                <div class="px-2">
+                    <input type="file" datarequired="true" class="form-control" id="signature"
+                        name="fileupload_signature" data-label="Signature File" accept=".jpg,.jpeg,.png,.pdf"
+                        max="2097152" onchange="updateImageDisplay('signature_preview')">
+                    <div class="img-preview signature_preview" id="signature_preview">
+                        <p class="signature_preview_p"></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4" style="display: none;">
+                    <label for="identification_type">Identification Type</label>
+                    <input type="text" id="identification_type" name="identification_type"
+                        data-label="Identification Type"></b>
+                    </input>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<style>
+    /* ######################### Title color ############################ */
+    .title {
+        position: relative;
+        margin-bottom: 15px;
+        color: white;
+        padding: 10px 0 10px 10px;
+        background: linear-gradient(90deg, rgba(197, 33, 39, .8), rgba(139, 45, 72, .85) 25.67%, rgba(91, 55, 99, .9) 49.79%, rgba(57, 62, 118, .94) 70.98%, rgba(37, 66, 130, .98) 88.44%, #1d4486) !important;
+    }
+
+    /* ########################### Toggle Switch Color #################################### */
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: rgba(139, 45, 72, 0.85);
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        background-position: 16px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: '';
+        height: 23px;
+        width: 23px;
+        left: 4px;
+        bottom: 4px;
+
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    input:checked+.slider {
+        background-color: rgba(29, 68, 134, 1);
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px green;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+
+    /* on Of css */
+    .on {
+        display: none;
+    }
+
+    .on {
+        color: white !important;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 26%;
+        font-size: 10px;
+        font-family: Verdana, sans-serif;
+    }
+
+    .off {
+        color: white !important;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 70%;
+        font-size: 10px;
+        font-family: Verdana, sans-serif;
+    }
+
+    input:checked+.slider .on {
+        display: block;
+    }
+
+    input:checked+.slider .off {
+        display: none;
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        var userAccount = $(".user-account").text();
+        var userMobile = $(".user-mobile").text();
+        var userAccountName = $(".user-name").text();
+
+        var checkUserAccount = $(".accountNumber").val();
+        var checkUserName = $(".accountName").val();
+        var checkUserMobile = $(".mobileNumber").val();
+        if (!checkUserAccount) {
+            $(".accountNumber").val(userAccount);
+        }
+        if (!checkUserMobile) {
+            $(".mobileNumber").val(userMobile);
+        }
+        if (!checkUserName) {
+            $(".accountName").val(userAccountName);
+        }
+
+        var insideOutsideOnload = $("input[type=checkbox][name=origin]");
+        if (insideOutsideOnload.is(":checked")) {
+            $("input[type=checkbox][name=passport_documents_checkbox]").prop("checked", true);
+            $("input[type=checkbox][name=passport_documents_checkbox]").prop("disabled", true);
+            passportMandatory();
+            //toggleCountry
+            $("#selectCountry").prop("disabled", false);
+        } else {
+            $("input[type=checkbox][name=citizenship_documents_checkbox]").prop("checked", true);
+            $("input[type=checkbox][name=citizenship_documents_checkbox]").prop("disabled", true);
+            citizenshipMandatory();
+            //toggleCountryNepal
+            $("#selectCountry").prop("disabled", true);
+            document.getElementById("selectCountry").value = "NP";
+        }
+
+        var passportDocumentOnload = $("input[type=checkbox][name=passport_documents_checkbox]");
+        if (passportDocumentOnload.is(":checked")) {
+            passportMandatory();
+        } else {
+            passportNotMandatory();
+        }
+
+        var citizenshipDocumentOnload = $("input[type=checkbox][name=citizenship_documents_checkbox]");
+        if (citizenshipDocumentOnload.is(":checked")) {
+            citizenshipMandatory();
+        } else {
+            citizenshipNotMandatory();
+        }
+    })
+
+    function validateDate(inputValue) {
+        const inputDate = new Date(inputValue);
+        const today = new Date();
+
+        // const errorMessage = document.getElementById('errorMessage');
+        const dateInput = document.getElementById('dob');
+
+        if (inputDate > today) {
+            alert("Date must not be beyond the current date.")
+            // errorMessage.textContent = "Date must not be beyond the current date.";
+            dateInput.value = ''; // Clear the input field
+        } else {
+            // errorMessage.textContent = "";
+        }
+    }
+
+    async function run() {
+        const branchURL = `https://globalconnect.gibl.com.np/api/channel-manager/branches-lists`;
+        var branches;
+        let data = await fetch(`${branchURL}`, {
+            method: "GET",
+        });
+        branches = await data.json();
+        for (let i = 0; i < branches.length; i++) {
+            let branchSelOut = document.getElementById("selectBranch");
+            let selOption = document.createElement("option");
+            selOption.text = branches[i].text;
+            selOption.value = branches[i].value;
+            selOption.selected = true;
+            branchSelOut.appendChild(selOption);
+        }
+    }
+
+    $("input[type=checkbox][name=origin]").change(function () {
+        if (this.checked == false) {
+            document.getElementById("branch_name").value = '';
+            document.getElementById("identification_type").value = 'Citizenship';
+            document.getElementById("email").setAttribute("datarequired", 'false');
+            document.getElementById("selectBranch").options.length = 0;
+            run();
+            insideOrOutside('inside');
+        } else if (this.checked == true) {
+            document.getElementById("email").setAttribute("datarequired", 'true');
+            document.getElementById("branch_name").value = 'Panipokhari Branch';
+            document.getElementById("identification_type").value = 'Passport';
+            document.getElementById("selectBranch").options.length = 0;
+            let branchSelOut = document.getElementById("selectBranch");
+            let branchesDummy = [{ id: "P5", text: "TINKUNE BRANCH" }, { id: "84", text: "SINAMANGAL BRANCH" }, { id: "36", text: "KOTESHWOR BRANCH" }, { id: "33", text: "PAANIPOKHARI BRANCH" }]
+            for (let i = 0; i < branchesDummy.length; i++) {
+                let selOption = document.createElement("option");
+                selOption.text = branchesDummy[i].text;
+                selOption.value = branchesDummy[i].id;
+                branchSelOut.appendChild(selOption);
+            }
+            insideOrOutside('outside');
+        }
+    });
+
+    function insideOrOutside(res) {
+        if (res == 'inside') {
+            $("input[type=checkbox][name=citizenship_documents_checkbox]").prop("checked", true);
+            $("input[type=checkbox][name=citizenship_documents_checkbox]").prop("disabled", true);
+            citizenshipMandatory();
+            $("input[type=checkbox][name=passport_documents_checkbox]").prop("checked", false);
+            $("input[type=checkbox][name=passport_documents_checkbox]").prop("disabled", false);
+            passportNotMandatory();
+            //toggleCountryNepal
+            $("#selectCountry").prop("disabled", true);
+            document.getElementById("selectCountry").value = "NP";
+        } else if (res == 'outside') {
+            $("input[type=checkbox][name=passport_documents_checkbox]").prop("checked", true);
+            $("input[type=checkbox][name=passport_documents_checkbox]").prop("disabled", true);
+            passportMandatory();
+            $("input[type=checkbox][name=citizenship_documents_checkbox]").prop("checked", false);
+            $("input[type=checkbox][name=citizenship_documents_checkbox]").prop("disabled", false);
+            citizenshipNotMandatory();
+            //toggleCountry
+            $("#selectCountry").prop("disabled", false);
+            document.getElementById("selectCountry").value = "";
+        }
+    }
+
+    $("select[name=selectBranch]").change(function () {
+        console.log('changed')
+        document.getElementById("branch_name").value = this.options[this.selectedIndex].text;
+    })
+
+    // var passportDocument = $("input[type=checkbox][name=passport_documents_checkbox]");
+    // if (passportDocument.is(":checked")) {
+    //     passportMandatory();
+    // } else {
+    //     passportNotMandatory();
+    // }
+
+    $("input[type=checkbox][name=passport_documents_checkbox]").change(function () {
+        if (this.checked == true) {
+            passportMandatory();
+        } else {
+            passportNotMandatory();
+        }
+    });
+
+    function passportMandatory() {
+        document.getElementById("passport_ron").textContent = '*';
+        $("#passportNumberDiv").show();
+        $("#passportFileDiv").show();
+        $("#passportNumber").prop("datarequired", 'true');
+        $("#passportFile").prop("datarequired", 'true');
+    }
+
+    function passportNotMandatory() {
+        document.getElementById("passport_ron").textContent = '';
+        $("#passportNumberDiv").hide();
+        $("#passportFileDiv").hide();
+        $("#passportNumber").prop("datarequired", 'false');
+        $("#passportFile").prop("datarequired", 'false');
+    }
+
+    // var citizenshipDocument = $("input[type=checkbox][name=citizenship_documents_checkbox]");
+    // if (citizenshipDocument.is(":checked")) {
+    //     citizenshipMandatory();
+    // } else {
+    //     citizenshipNotMandatory();
+    // }
+
+    $("input[type=checkbox][name=citizenship_documents_checkbox]").change(function () {
+        if (this.checked == true) {
+            citizenshipMandatory();
+        } else {
+            citizenshipNotMandatory();
+        }
+    });
+
+    function citizenshipMandatory() {
+        document.getElementById("citizenship_ron").textContent = '*';
+        $("#citizenshipNumberDiv").show();
+        $("#citizenshipFileDiv").show();
+        $("#citizenshipNumber").prop("datarequired", 'true');
+        $("#citizenshipFile").prop("datarequired", 'true');
+    }
+
+    function citizenshipNotMandatory() {
+        document.getElementById("citizenship_ron").textContent = '';
+        $("#citizenshipNumberDiv").hide();
+        $("#citizenshipFileDiv").hide();
+        $("#citizenshipNumber").prop("datarequired", 'false');
+        $("#citizenshipFile").prop("datarequired", 'false');
+    }
+
+    var fileInputSignature = document.getElementById("signature");
+    fileInputSignature.addEventListener("change", function () {
+        const file = fileInputSignature.files[0];
+        fileValidation(file, fileInputSignature)
+    });
+
+    var fileInputCitizenship = document.getElementById("citizenshipFile");
+    fileInputCitizenship.addEventListener("change", function () {
+        const file = fileInputCitizenship.files[0];
+        fileValidation(file, fileInputCitizenship)
+    });
+
+    var fileInputPassport = document.getElementById("passportFile");
+    fileInputPassport.addEventListener("change", function () {
+        const file = fileInputPassport.files[0];
+        fileValidation(file, fileInputPassport)
+    });
+
+    var allowedTypes = ["image/jpeg", "image/png", "application/pdf"];
+    var maxSize = 2 * 1024 * 1024; // 2 MB
+
+    function fileValidation(file, fileInput) {
+        if (!allowedTypes.includes(file.type)) {
+            alert("Invalid file type. Please select a JPEG, PNG, or PDF.");
+            fileInput.value = "";
+            return;
+        }
+
+        if (file.size > maxSize) {
+            alert("File size too large. Maximum file size is 2 MB.");
+            fileInput.value = "";
+            return;
+        }
+    }
+    function updateImageDisplay(l) {
+        const preview = document.querySelector(`.${l}`);
+
+        const uploadfile = event.target.files;
+        while (preview.firstChild) {
+            preview.removeChild(preview.firstChild);
+        }
+
+        const curFiles = uploadfile;
+        if (curFiles.length === 0) {
+            const para = document.createElement('p');
+            para.textContent = 'No files currently selected for upload';
+            preview.appendChild(para);
+        } else {
+            const list = document.createElement('div');
+            preview.appendChild(list);
+
+            for (const file of curFiles) {
+                const listItem = document.createElement('div');
+                const para = document.createElement('p');
+                para.textContent = `File: ${file.name}.`;
+                const image = document.createElement('img');
+                listItem.appendChild(para);
+                list.appendChild(listItem);
+            }
+        }
+    }
+</script>
+
+</html>

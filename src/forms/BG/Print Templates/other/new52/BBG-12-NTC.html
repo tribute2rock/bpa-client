@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBG-12-NTC</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b> {{subform.2.issuedate.formattedissueDateBG}} </b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Reference No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            Whereas,
+            <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called "the Bidder"),  has submitted its bid dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b>
+            to Sealed Quotation No.:<b> .......... </b> for <b> {{subform.2.purpose_guarantee}} </b> (hereinafter called "the Sealed Quotation").
+        </p>
+        <p>
+            KNOW ALL PEOPLE by these presents that We, <b> Global IME Bank Ltd.</b> having our registered office at 
+            Kathmandu-3, Nepal (hereinafter called "the bank"), are bound unto <b> {{subform.2.company_name}}, {{subform.2.company_address}} </b>(hereinafter called "the Purchaser")
+             in the sum of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}) </b>
+             for which payment well and truly to be made to the said Purchaser, the bank binds itself, its successors, and assigns 
+             by these presents. Sealed with the Common Seal of the said Bank this <b> {{subform.2.issuedate.formattedissueDateBG}} </b>. 
+        </p>
+        
+        THE CONDITIONS of this obligation are:
+        </p>
+        <ul style="list-style:decimal; margin-left: 0; padding-left: 15px;">
+            <li>
+                If the bidder withdraws its quotation during the period of validity specified (45 days from the date of opening of the sealed quotation)
+                 by the bidder of the Annex-II in Quotation Form of sealed quotation no. .......... <br> OR 
+            </li>
+
+            <li>
+                If the bidder, having been notified of the acceptance of its quotation by the Purchaser during the period of quotation validity:                 
+                
+                    <ol type="a">
+                        <li>Fails or refuses to sign the contract agreement within stipulated time as per clause no.-8.5 of III  section :
+                             Instructions to bidder of sealed quotation no: ..........., 
+                        </li>
+                        <li>Fails or refuses to Furnish the Performance Security, in accordance with the clause no. -12.6.4 of Section III: 
+                            Instructions to bidder of sealed quotation no. ...........</li>
+                            <li>Acts against the conduct of bidder specified in clause no.16 of Section III: Instructions to Bidder (ITB) of 
+                                sealed quotation no:............</li>
+                    </ol>
+                    
+                
+            </li>
+            
+
+        </ul>
+        <p>
+            We undertake to pay to the Purchaser up to the above amount upon receipt of his first written demand, without the
+             Purchaser having to substantiate its demand, provided that in its demand the Purchaser will note that the
+              amount claimed by it is due to its owing to the occurrence of one or both of the two conditions, 
+              specifying the occured condition or conditions.
+        </p>
+        <p>
+         <b>
+            This Guarantee shall not he withdrawn or released merely upon return of the original Guarantee by the
+             Bidder unless notified by the Employer for the release of the Guarantee. </b>
+            
+        </p>
+        <p>
+            Notwithstanding anything contained herein above this guarantee will remain in force up to <b> {{subform.2.validityDate}}</b>
+             and any demand in respect there of shall reach the Bank at Central Trade Finance Department, Kamaladi, 
+             Kathmandu, Nepal not later than the above date.
+
+        </p>
+       <p>
+            <b>For: Global IME Bank Limited</b><br>
+            <b><span style="margin-left: 25px;">  Trade Operation</span></b> 
+        </p>
+        <br />
+        <br />
+        <br><br>
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br />
+           
+        </p>
+        <br><br><br><br><br>
+        <footer style=" left:0; bottom: 0;width:100%;text-align:center;">
+            This Bank Guarantee can be verified at our website www.globalimebank.com 
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBG-16</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b>Date: {{subform.2.issuedate.formattedissueDateBG}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}} </b>
+        </p>
+        <p>
+            <b> {{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Ref No.:  {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            Whereas,
+            <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called "the Bidder") ,has submitted its bid dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b>
+            to  <b> {{subform.2.purpose_guarantee}} </b> (hereinafter called "the Bid").
+        </p>
+        <p>
+            KNOW ALL PEOPLE by these presents that We, <b> Global IME Bank Ltd. </b> having our registered office at 
+           <b>Panipokhari, Kathmandu-3, Nepal</b> (hereinafter called "the bank"), are bound unto <b> {{subform.2.beneficiary_name}}, {{subform.2.beneficiary_address}}</b> (hereinafter called "the Purchaser")
+             in the sum of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}) </b>
+             for which payment well and truly to be made to the said Purchaser, the Bank binds itself, its successors, and assigns 
+             by these presents. Sealed with the Common Seal of the said Bank this <b> {{subform.2.issuedate.formattedissueDateBG}}</b>. 
+        </p>
+        
+        THE CONDITIONS of this obligation are:
+        </p>
+        <ul style="list-style:decimal; margin-left: 0; padding-left: 15px;">
+            <li>
+                If a Bidder withdraws its Bid during the period of Bid validity specified by the Bidder on the Bid Form; <br> OR 
+            </li>
+
+            <li>
+                If the Bidder, having been notified of the acceptance of its Bid by the Purchaser during the period of Bid validity:                 
+                
+                    <ol type="a">
+                        <li>Fails or refuses to sign the Contract agreement within stipulated time, or
+                        </li>
+                        <li>Fails or refuses to furnish the Performance Security, in accordance with
+                             the clause No. -4 of Section III : Conditions of Contract(COC),</li>
+                    </ol>
+                    
+            </li>
+            
+
+        </ul>
+        <p>
+            We undertake to pay to the Purchaser up to the above amount upon receipt of his first written demand.
+             without the purchaser having to substantiate his demand, provided that in his demand the Purchaser
+              will note that the amount claimed by it is due to its owing to the occurrence of one or any of the 
+              above conditions, specifying the occurred condition or conditions.
+        </p>
+        <p>
+        <p>
+            Notwithstanding anything contained herein above this guarantee will remain in force up to <b> {{subform.2.validityDate}}</b>
+             . Consequently any demand for the payment under this guarantee must be received by us at the 
+             Central Trade Finance Department, Kamaladi, Kathmandu, Nepal on or before this date ie. <b> {{subform.2.validityDate}}</b>
+
+        </p>
+       <p>
+            <b>For: Global IME Bank Limited</b><br>
+            <b><span >  Trade Operation</span></b> 
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br />
+           
+        </p>
+        <br><br><br><br><br>
+        <footer style=" left:0; bottom: 0;width:100%;text-align:center;">
+            This Bank Guarantee can be verified at our <i>website www.globalimebank.com </i> 
+        </footer>
+    </div>
+</body>
+
+</html>

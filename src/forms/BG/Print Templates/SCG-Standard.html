@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>Document</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            <p>
+                <b>{{subform.2.final_issuedate.default}}</b>
+            </p>
+            <p style="margin-bottom:0;width:100%; float: left;">
+                <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+            </p>
+            <p>
+                <b>{{subform.2.beneficiary_address}}</b>
+            </p>
+            <p>
+                <b>Our Ref No.: {{subform.2.reference_number}}</b>
+            </p>
+            <p>Whereas <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}</b>,
+                <b>{{subform.2.company_address}}</b>,(hereinafter called the Applicant) have applied with you
+                <b>{{subform.2.purpose_guarantee}}</b>
+                {{subform.2.contract_number_final}}<b>{{subform.2.contract_number}}</b> (the Contract) and whereas you
+                require from the Applicant a Supply Credit Guarantee for an amount of <b>{{main.currency_short}}
+                    {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b> we, Global IME Bank
+                Limited, <b>{{subform.2.branch_name}}</b>, Nepal (the Guarantor) hereby agree and covenant as follows:
+            </p>
+            <p>In the event of the Applicant failing to perform their obligations under the Contract for any reason
+                whatsoever, the Guarantor shall pay you without demur a sum or sums up to <b>{{main.currency_short}}
+                    {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b>, against your receipt
+                for the
+                sum claimed accompanied by your statement that the Applicant failed to comply with the Contract terms.
+            </p>
+            <p>Notwithstanding anything stated hereinabove the value of this guarantee shall not exceed
+                <b>{{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b>
+                and it
+                will expire on <b>{{subform.2.final_validityDate}}</b>. Any claim under this guarantee must be received
+                in writing by the Bank within banking hours on or before <b>{{subform.2.final_validityDate}}</b> and if
+                no such claim has been received by the Bank by that time and date, all your rights under this guarantee
+                will cease.
+            </p>
+            <p>Unless demand or claim made in writing by you to us under this Guarantee reaches the counter of this bank
+                at Trade Operations Department, Central Business Park, 6th Floor, Thapathali, Kathmandu, Nepal by
+                <b>{{subform.2.final_validityDate}}</b> within the close of banking hours, all our obligations shall
+                cease and we shall not entertain any claim or contestation beyond or after that date.
+            </p>
+            <p>
+                Retention of guarantee does not confer any rights upon the beneficiary beyond the expiry date.
+            </p>
+            <p>
+                <b>For: Global IME Bank Limited <br>
+                    Trade Operations </b><br>
+            </p>
+            <br />
+            <br />
+            <br />
+            <p style="float: left; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+                <b>Name : {{subform.2.name1}}</b><br /><br />
+                <b>Designation : {{subform.2.designation1}}</b>
+            </p>
+            <p style="float:right; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+                <b>Name : {{subform.2.name2}}</b><br /><br />
+                <b>Designation : {{subform.2.designation2}}</b>
+            </p>
+            <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+                <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+            </footer>
+        </div>
+
+    </body>
+
+</html>

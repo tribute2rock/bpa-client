@@ -1,0 +1,130 @@
+<body>
+  <style>
+    * {
+      font-size: 12px;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+
+    body {
+      margin: 0 !important;
+      margin-top: 0cm !important;
+      margin-bottom: 0cm !important;
+      padding: 0 !important;
+      height: 29.7cm !important;
+      width: 21cm !important;
+    }
+
+    .first {
+      padding-left: 4px;
+    }
+
+    .second {
+      margin-left: 1.5cm;
+      padding-left: 4px;
+    }
+
+    .third {
+      margin-left: 2.7cm;
+      padding-left: 4px;
+    }
+
+    .fourth {
+      margin-left: 3.7cm;
+      padding-left: 4px;
+    }
+  </style>
+  <div style="height: 4cm;width: 21cm;"></div>
+  <div style="height: 0.5cm;width: 21cm;">
+    <div style="height: 0.5cm;width: 8cm;float: left;"></div>
+    <div style="height: 0.5cm;width: 4cm;float: left;">{{main.branch}}</div>
+    <div style="height: 0.5cm;width: 8cm;float: left;"></div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="height: 0.7cm;width: 21cm;"></div>
+  <div style="height: 1cm;width: 21cm;">
+    <div style="height: 1cm;width: 16.2cm;float: left;"></div>
+    <div style="height: 1cm;width: 3.5cm;float: left;padding: 10px;">{{main.date}}</div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="height: 1.3cm;width: 21cm;"></div>
+  <div style="height: 0.5cm;width: 21cm;">
+    <div style="height: 0.7cm;width: 0.7cm;float: left;"></div>
+    <div style="height: 0.5cm;width: 2.5cm;float: left;">{{main.customer_name}}</div>
+    <div style="height: 0.5cm;width: 17.5cm;float: left;"></div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="height: 0.8cm;width: 21cm;"></div>
+  <div style="height: 0.5cm;width: 21cm;">
+    <div style="height: 0.5cm;width: 6.5cm;float: left;"></div>
+    <div style="height: 0.5cm;width: 5.5cm;float: left;">
+      <div style="float: left;font-weight: bold;" class="{{main.subject-select}}">✓</div>
+    </div>
+    <div style="height: 0.5cm;width: 10cm;float: left;"></div>
+  </div>
+  <div style="height: 1.3cm;width: 21cm;"></div>
+  <div style="height: 0.8cm;width: 21cm;">
+    <div style="height: 0.8cm;width: 11.5cm;float: left;"></div>
+    <div style="height: 0.8cm;width: 8cm;float: left; padding-left: 8px;">{{main.applicant_name}}</div>
+    <div style="height: 0.8cm;width: 1.5cm;float: left;"></div>
+  </div>
+  <div style="height: 0.5cm;width: 21cm;">
+    <div style="height: 0.5cm;width: 11.2cm;float: left;"></div>
+    <div style="height: 0.5cm;width: 3cm;float: left;padding-left: 2px;font-size: 10px;">{{main.lc}}</div>
+    <div style="height: 0.5cm;width: 5.5cm;float: left;"></div>
+  </div>
+  <div style="height: 2.7cm;width: 21cm;"></div>
+  <div style="height: 1.1cm;width: 21cm;">
+    <div style="height: 1.1cm;width: 1.7cm;float: left;"></div>
+    <div style="height: 1.1cm;width: 1cm;float: left;">{{main.sn1}}</div>
+    <div style="height: 1.1cm;width: 7.5cm;float: left;word-wrap: break-word;padding-left: 4px;">
+      {{main.importing-good1}}</div>
+    <div style="height: 1.1cm;width: 2.6cm;float: left;word-wrap: break-word;padding-left: 4px;">
+      {{main.harmonic-code1}}</div>
+    <div style="height: 1.1cm;width: 2.4cm;float: left;word-wrap: break-word;padding-left: 4px;">{{main.quantity1}}
+    </div>
+    <div style="height: 1.1cm;width: 4.4cm;float: left;word-wrap: break-word;padding-left: 4px;">{{main.currency1}}
+      {{main.amount1}} </div>
+  </div>
+  <div style="height: 1.1cm;width: 21cm;">
+    <div style="height: 1.1cm;width: 1.7cm;float: left;"></div>
+    <div style="height: 1.1cm;width: 1cm;float: left;padding-left: 4px;">{{main.sn2}}</div>
+    <div style="height: 1.1cm;width: 7.5cm;float: left;word-wrap: break-word;padding-left: 4px;">
+      {{main.importing-good2}}</div>
+    <div style="height: 1.1cm;width: 2.6cm;float: left;word-wrap: break-word;padding-left: 4px;">
+      {{main.harmonic-code2}}</div>
+    <div style="height: 1.1cm;width: 2.4cm;float: left;word-wrap: break-word;padding-left: 4px;">{{main.quantity2}}
+    </div>
+    <div style="height: 1.1cm;width: 4.4cm;float: left;word-wrap: break-word;padding-left: 4px;">{{main.currency2}}
+      {{main.amount2}} </div>
+  </div>
+  <div style="height: 1.2cm;width: 21cm;">
+    <div style="height: 1.1cm;width: 1.7cm;float: left;"></div>
+    <div style="height: 1.1cm;width: 1cm;float: left;padding-left: 4px;">{{main.sn3}}</div>
+    <div style="height: 1.1cm;width: 7.5cm;float: left;word-wrap: break-word;padding-left: 4px;">
+      {{main.importing-good3}}</div>
+    <div style="height: 1.1cm;width: 2.6cm;float: left;word-wrap: break-word;padding-left: 4px;">
+      {{main.harmonic-code3}}</div>
+    <div style="height: 1.1cm;width: 2.4cm;float: left;word-wrap: break-word;padding-left: 4px;">{{main.quantity3}}
+    </div>
+    <div style="height: 1.1cm;width: 4.4cm;float: left;word-wrap: break-word;padding-left: 4px;">{{main.currency3}}
+      {{main.amount3}} </div>
+  </div>
+  <div style="height: 3cm;width: 21cm;">
+    <div style="height: 3cm;width: 2cm; float: left;"></div>
+    <div style="height: 3cm;width: 11cm;float: left;word-wrap: break-word;">{{main.description}}</div>
+    <div style="height: 3cm;width: 1cm;float: left;"></div>
+    <div style="height: 3cm;width: 6cm;float: left;">
+      <div style="height: 1.55cm;width: 6cm;"></div>
+      <div style="height: 0.75cm;width: 6cm;padding-left: 8px;">{{main.reporter-name}}</div>
+      <div style="height: 0.65cm;width: 6cm;padding-left: 8px;">{{main.reporter-designation}}</div>
+    </div>
+    <div style="height: 3cm;width: 1.5cm;float: left;"></div>
+  </div>
+</body>

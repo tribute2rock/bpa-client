@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+
+        <p>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Ref No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>WHEREAS,<b> {{subform.2.salutation_acccount}} </b> <b>{{subform.2.company_name}}</b>,
+            <b>{{subform.2.company_address}}</b>
+            ["hereinafter called "the Bidder"] has submitted its Bid dated Date to
+            <b>{{subform.2.purpose_guarantee}}</b>(hereinafter
+            called "the Bid").
+
+        <p>
+            KNOW ALL PEOPLE by these presents that WE, Global IME Bank Ltd., <b>{{subform.2.branch_name}}</b> of Nepal,
+            having our registered office at <b>{{subform.2.branch_name}}</b> [hereinafter called "the Bank"], are bound
+            unto <b>{{subform.2.beneficiary_name}}</b>, <b>{{subform.2.beneficiary_address}}</b> [hereinafter called
+            "the Purchaser"] in the sum of <b>{{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}})</b> for which payment well and truly to be made to the said Purchaser, the
+            Bank binds itself, its successors, and assigns by these presents. Sealed with the common seal of the said
+            Bank this (Date).
+        </p>
+        <p>
+            The Conditions of this obligation are:<br>
+        </p>
+        <ul style="list-style:lower-alpha ;">
+            <li> If a Bidder withdraws or requested to modify its Bid after the deadline of bid submission and before
+                the expiry of bid validity specified by the Bidder on the Bid Form; or
+            </li>
+            <li>If the Bidder does not accept Corrected Bid Price as per the arithmetical error correction performed
+                during financial evaluation; or
+            </li>
+            <li>If the Bidder’s response to the clarification sought by Nepal Telecom as per Clause No. 17.6 of Section
+                III: ITB, constitutes change in price and substance of the Bid; or
+            </li>
+            <li>If the Bidder carry out or cause to carry out the acts mentioned in Clause No. 24 of Section III: ITB
+                with an intention to influence the implementation of the procurement process or the procurement
+                agreement;
+                or
+            </li>
+            <li>If the bidder, having been notified of the acceptance of its’ bid by Nepal Telecom during the period of
+                bid validity, either fails or refuses to sign the contract agreement within
+                <b>({{subform.2.total_days}}) days</b> from the date of issuance of letter of Acceptance (LOA); or fails
+                or refuses to furnish the Performance Security in accordance with clause No. - 4 of Section IV:
+                Conditions of Contract; or
+            </li>
+            <li>If the Bidder fails to extend the bid validity period as requested by Nepal Telecom as mentioned in
+                clause 8.2 of Section III: ITB.
+            </li>
+        </ul>
+        <p>
+            We undertake to pay to the Purchaser up to the above amount upon receipt of its first written demand,
+            without the Purchaser having to substantiate its demand, provided that in its demand the Purchaser will note
+            that the amount claimed by it is due to its owing to the occurrence of any one of the above conditions,
+            specifying the occurred condition or conditions.
+        </p>
+        <p>
+            Notwithstanding anything contained herein above this guarantee will remain in force up to
+            <b>{{subform.2.final_validityDate}}</b> and any demand in respect there of shall reach the Bank not later
+            than the above date.
+        </p>
+        <p>
+            <b>For: Global IME Bank Limited</b>
+        </p>
+        <br />
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br><br>
+            <b>Name : {{subform.2.name1}}</b><br><br>
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br><br>
+            <b>Name : {{subform.2.name2}}</b><br><br>
+            <b>Designation : {{subform.2.designation2}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+    </div>
+</body>
+
+</html>

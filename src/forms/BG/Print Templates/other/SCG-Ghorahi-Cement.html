@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>Document</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 12px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            <p>
+                <b>{{subform.2.final_issuedate.default}}</b>
+            </p>
+            <p style="margin-bottom:0;width:100%; float: left;">
+                <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+            </p>
+            <p>
+                <b>{{subform.2.beneficiary_address}}</b>
+            </p>
+            <p>
+                <b>Subject: Payment Guarantee</b>
+            </p>
+            <p>
+                <b>Ref No. : {{subform.2.reference_number}}</b><br />
+                <b>Amount : {{main.currency_short}} {{subform.2.in_figures}} </b><br />
+                <b>Applicant : {{subform.2.company_name}} {{subform.2.company_address}}</b><br />
+                <b>Beneficiary : {{subform.2.beneficiary_name}} {{subform.2.beneficiary_address}}</b><br />
+                <b>Effective Date : {{subform.2.final_issuedate.default}}</b><br />
+                <b>Validity : {{subform.2.final_validityDate}}</b><br />
+                <b>Purpose : {{subform.2.purpose_guarantee}}</b>
+            </p>
+            <p> In consideration of your sales of goods to <b>{{subform.2.salutation_acccount}}
+                    {{subform.2.company_name}}</b>, <b>{{subform.2.company_address}}</b> on credit, we
+                <b>{{subform.2.branch_name}}</b> (herein called “the bank), being the guarantor under this guarantee,
+                hereby, irrevocably and unconditionally, undertake to pay your first written demand , any sum or sums up
+                to aggregate maximum amount of <b>{{main.currency_short}} {{subform.2.in_figures}}
+                    ({{main.currency_full}} {{subform.2.in_words}})</b>, stating that the applicant has failed (fully or
+                partially) to pay you on due date.
+            </p>
+            <p>Any first written demand so made by the beneficiary on the bank shall be final and conclusive as regards
+                to the amount due and payable by the bank under this guarantee.
+            </p>
+            <p>Notwithstanding anything stated herein above, the value of this guarantee shall not exceed
+                <b>{{main.currency_short}} {{subform.2.in_figures}}
+                    ({{main.currency_full}} {{subform.2.in_words}})</b>.
+            </p>
+            <p>This guarantee is valid until <b>{{subform.2.final_validityDate}}</b>. Any claim under this
+                guarantee must be reached at the
+                counter of this bank or at the counter of our bank at Central Trade Finance Department, Kamaladi,
+                Kathmandu on or before <b>{{subform.2.final_validityDate}}</b> date within banking hours. In case
+                of any dispute, invoice
+                issued by the beneficiary will be binding for the final decision.
+            </p>
+            <p>
+                This letter of Guarantee will bind our successor and assignees and will remain operative irrespective of
+                any charge in the constitution of our Bank.
+            </p>
+            <br />
+            <br />
+            <br />
+            <p style="float: left; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+                <b>Name : {{subform.2.name1}}</b><br /><br />
+                <b>Designation : {{subform.2.designation1}}</b>
+            </p>
+            <p style="float:right; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+                <b>Name : {{subform.2.name2}}</b><br /><br />
+                <b>Designation : {{subform.2.designation2}}</b>
+            </p>
+            <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+                <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+            </footer>
+        </div>
+
+    </body>
+
+</html>

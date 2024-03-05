@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBG-4 </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+            <b> Date:{{subform.2.issuedate.formattedissueDateBG}}</b> <br> <br>
+            <b>{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} </b> <br>
+            </p>
+        <p>
+          <b> Our Ref.No.: {{subform.2.reference_number}} </b>
+        </p>
+        <p>
+            We have been informed that the <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called “the Bidder”)
+            has submitted to you its bid dated {{subform.2.issuedate.formattedissueDateBG}} (herein after called “the Bid”) for <b> {{subform.2.purpose_guarantee}}</b> .
+            under Invitation for Bids No. ........... <b>("the IFB") </b>
+            
+        </p>
+        <p>
+            Furthermore, we understand that, according to your conditions, bids must be supported by a bid guarantee. 
+        </p>
+        <p>
+            At the request of the Bidder, we <b> Global IME Bank Ltd,</b> hereby irrevocably undertake to pay you any sum
+            or sums not exceeding in total an amount of <b>
+                {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}})
+            </b>  upon receipt by us of your first demand in writing accompanied by a written statement stating that
+            the Bidder is in breach of its obligation (s) under the bid conditions, because the Bidder: 
+            <ol type="a">
+                <li>has withdrawn its Bid during the period of bid validity specified by the Bidder in the Form of Bid;
+                    or 
+                    </li>
+                <li>does not accept the correction of errors in accordance with the Instruction to Bidders (hereinafter
+                    “the ITB’); or</li>
+                <li>having been notified of the acceptance of its Bid by the Employer during the period of bid
+                    validity, (i) fails or refuses to execute the Contract Form, if required, or (ii) fails or refuses to
+                    furnish the performance security, in accordance with the ITB. </li>
+            </ol>
+        </p>
+        <p>
+            This Guarantee will remain in force up to <b>{{subform.2.validityDate}} </b> including the date <b>{{subform.2.total_days}}</b> days after the
+            deadline for submission of Bids as such deadline is stated in the instructions to Bidders or as it may be
+            extended by the Employer, notice of which extension(s) to the bank is hereby waived. Any demand in
+            respect of this guarantee should be reached at the counter of this bank at Central Trade Operations,
+            Kamaladi, Kathmandu, Nepal not later than the above date i.e. <b> {{subform.2.validityDate}} </b> within the banking
+            hours and all our obligations hereunder shall cease and we shall not entertain any claim or contestation
+            beyond or after that date. 
+        </p>
+        <p>
+            This Bank Guarantee shall not be withdrawn or released merely upon return of the original Guarantee by
+            the Bidder unless notified by you for the release of the Guarantee.  
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 758
+        </p>
+        <p>
+          <b>  For:Global IME Bank Limited<br>
+              <span style="margin-left: 25px;">  Trade Operation</span></b>
+        </p>
+        <br /> <br><br><br>
+                <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+            
+        </p>
+        
+      
+    </div>
+</body>
+
+
+
+</html>

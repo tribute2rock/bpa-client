@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Mobile Scheme Transfer</title>
+</head>
+
+<body>
+    <style>
+        /* ######################### Title color ############################ */
+    .title {
+        position: relative;
+        margin-bottom: 15px;
+        color: white;
+        padding: 10px 0 10px 10px;
+        background: linear-gradient(90deg, rgba(197, 33, 39, .8), rgba(139, 45, 72, .85) 25.67%, rgba(91, 55, 99, .9) 49.79%, rgba(57, 62, 118, .94) 70.98%, rgba(37, 66, 130, .98) 88.44%, #1d4486) !important;
+    }
+
+    /* ########################### Toggle Switch Color #################################### */
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: rgba(139, 45, 72, 0.85);
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        background-position: 16px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: '';
+        height: 23px;
+        width: 23px;
+        left: 4px;
+        bottom: 4px;
+
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    input:checked+.slider {
+        background-color: rgba(29, 68, 134, 1);
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px green;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+
+    /* on Of css */
+    .on {
+        display: none;
+    }
+
+    .on {
+        color: white !important;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 26%;
+        font-size: 10px;
+        font-family: Verdana, sans-serif;
+    }
+
+    .off {
+        color: white !important;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 70%;
+        font-size: 10px;
+        font-family: Verdana, sans-serif;
+    }
+
+    input:checked+.slider .on {
+        display: block;
+    }
+
+    input:checked+.slider .off {
+        display: none;
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+    </style>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <h6 class="col-12 title">
+                <span>
+                    Account Details:
+                </span>
+            </h6>
+        </div>
+        <div class="row mb-3">
+            <div class="col-lg-4 col-sm-12 mb-3">
+                <label for="branch" class="pb-2">Applied Branch</label>
+                <select class="form-control" data-label="Applied Branch" id="branch" name="branch">
+                </select>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+                <label for="account_number"  class="pb-2">Account Number</label>
+                <input disabled type="text" required class="form-control accountNumber" data-label="Account Number"
+                    id="account_number" name="account_number" placeholder="Account Number">
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+                <label for="account_name"  class="pb-2">Account Name</label>
+                <input disabled type="text" required class="form-control accountName" data-label="Account Name"
+                    id="account_name" name="account_name" placeholder="Account Name">
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3 d-none">
+                <label for="current_scheme"  class="pb-2">Current Scheme</label>
+                <input type="text" required class="form-control" data-label="Current Scheme" id="current_scheme"
+                    name="current_scheme" disabled>
+            </div>
+        </div>
+        <div class="row">
+            <h6 class="col-12 title">
+                <span>
+                    Scheme Change Details:
+                </span>
+            </h6>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 mb-3">
+                <label for="new_scheme" class="pb-2">New Scheme</label>
+                <select class="form-control" data-label="New Scheme" id="new_scheme" name="new_scheme" required>
+                    <option value="">Please select</option>
+                    <option value="GCSBK">GBL CHORI SURAKCHAY BACHA - GCSBK</option>
+                    <option value="GBNSA">GBL NAVARATNA SALARY A/C - GBNSA</option>
+                    <option value="GBSSA">GBL STUDENT SAVINGS A/C - GBSSA</option>
+                    <option value="GBLAB">GLOBAL ABHIBHAWAK BACHAT - GBLAB</option>
+                    <option value="SAFSD">GLOBAL BALBALIKA BACHAT - SAFSD</option>
+                    <option value="GBLBB">GLOBAL BRANCHLESS BANKING - GBLBB</option>
+                    <option value="GBJOL">GLOBAL JANMABHUMI ONLINE BACHAT ACCOUNT - GBJOL</option>
+                    <option value="GLJNB">GLOBAL JESTHA NAGARIK BACHAT KHATA - GLJNB</option>
+                    <option value="SCSTF">GLOBAL KARMACHARI BACHAT - SCSTF</option>
+                    <option value="GBLLS">GLOBAL LADDER SAVINGS - GBLLS</option>
+                    <option value="GBLNB">GLOBAL NARI BACHAT - GBLNB</option>
+                    <option value="GNSBK">GLOBAL NARI SHAKTI BACHAT - GNSBK</option>
+                    <option value="GBNBK">GLOBAL NAVARATNA BACHAT - GBNBK</option>
+                    <option value="SAGNM">GLOBAL NORMAL SAVINGS - SAGNM</option>
+                    <option value="GBNRN">GLOBAL NRN FCY SAVINGS DEPOSIT ACCOUNT - GBNRN</option>
+                    <option value="GBLPS">GLOBAL PREMIUM SAVINGS - GBLPS</option>
+                    <option value="GBLRD">GLOBAL SAHAYATRI REMITTANCE BACHAT KHATA - GBLRD</option>
+                    <option value="GBSAB">GLOBAL SARAL BACHAT - GBSAB</option>
+                    <option value="GLBSC">GLOBAL SENIOR CITIZEN - GLBSC</option>
+                    <option value="GBLSL">GLOBAL SHARE LAGANI - GBLSL</option>
+                    <option value="GBLJB">JANMABHUMI BACHAT KHATA - GBLJB</option>
+                    <option value="GBLRI">REMITTANCE BACHAT KHATA - IME - GBLRI</option>
+                    <option value="GBSBK">SABAI NEPALIKO BACHAT KHATA - GBSBK</option>
+                    <option value="GBLSA">SOCIAL SECURITY ALLOWANCE - GBLSA</option>
+                    <option value="UNMSD">UN MISSION SAVING DEPOSIT - UNMSD</option>
+                </select>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3">
+                <label for="charge_deduct" class="pb-2">Charge Deduct</label>
+                <select class="form-control" data-label="Charge Deduct" id="charge_deduct" name="charge_deduct"
+                    disabled>
+                    <option value="Y">Yes</option>
+                </select>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-3 d-none">
+                <label for="kyc_update_status">KYC Update Status</label>
+                <input type="text" required class="form-control" data-label="KYC Update Status" id="kyc_update_status"
+                    name="kyc_update_status" disabled>
+            </div>
+        </div>
+        <div class="pb-3">
+            <div class="row">
+                <div class="col-md-6 mb-3 col-sm-12">
+                    <label for="reason" class="pb-2">Remarks:</label>
+                    <div class="form-floating">
+                        <textarea style="height: 120px;width: 100%" required maxlength="250" class="form-control"
+                            data-label="Reason" id="reason" name="reason"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    $(document).ready(function () {
+        var userAccount = $(".user-account").text();
+        var userAccountName = $(".user-name").text();
+
+        var checkUserAccount = $(".accountNumber").val();
+        var checkUserName = $(".accountName").val();
+        if (!checkUserAccount) {
+            $(".accountNumber").val(userAccount);
+        }
+        if (!checkUserName) {
+            $(".accountName").val(userAccountName);
+        }
+    })
+    run();
+    async function run() {
+        const branchURL = `https://globalconnect.gibl.com.np/api/channel-manager/branches-lists`;
+        var branches;
+        let data = await fetch(`${branchURL}`, {
+            method: "GET",
+        });
+        branches = await data.json();
+        for (let i = 0; i < branches.length; i++) {
+            let branchSelOut = document.getElementById("branch");
+            let selOption = document.createElement("option");
+            selOption.text = branches[i].text;
+            selOption.value = branches[i].value;
+            selOption.selected = true;
+            branchSelOut.appendChild(selOption);
+        }
+    }
+</script>
+
+</html>

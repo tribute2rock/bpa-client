@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Ref No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            Whereas,
+            <b>{{subform.2.salutation_acccount}} </b> <b>{{subform.2.company_name}}</b>,
+            <b>{{subform.2.company_address}}</b>, <b>{{subform.2.company_address2}}</b> (hereinafter called
+            "the Bidder") shall submit his Bid dated <b>{{subform.2.bid_date}}</b> for
+            <b>{{subform.2.purpose_guarantee}},
+                {{subform.2.contract_number_final}} {{subform.2.contract_number}}</b> (Hereinafter called "the Bid").
+        </p>
+        <p>
+            Know all people by these presents that We, Global IME Bank Ltd., of Nepal having our registered office at
+            Kamaladi, Kathmandu, Nepal (hereinafter called "the Bank") are bound unto
+            <b>{{subform.2.beneficiary_name}},{{subform.2.beneficiary_address}},{{subform.2.beneficiary_address2}}</b>
+            (hereinafter called "the Employer") in the sum
+            of <b>{{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b>
+            for which payment well and truly
+            to be made to the said Employer, the Bank binds itself, its successors, and assigns by these presents.
+        </p>
+        <p>
+            The conditions of this obligation are:
+        </p>
+        <ul style="list-style:decimal; margin-left: 0; padding-left: 15px;">
+            <li>
+                If, after bid opening, the Bidder withdraws his Bid during the period of Bid validity specified in the
+                Form of Bid; or
+            </li>
+
+            <li>
+                If the Bidder having been notified of the acceptance of its Bid by the Employer during the period of Bid
+                validity:
+            </li>
+            <ul style="list-style:lower-alpha;">
+                <li>
+                    fails or refuses to execute the Form of Agreement in accordance with the Instructions to Bidders, if
+                    required; or
+                </li>
+                <li>
+                    fails or refuses to furnish the Performance Security, in accordance with the Instruction to Bidder;
+
+                    or
+                </li>
+                <li>
+                    does not accept the correction of the bid price
+                </li>
+            </ul>
+
+        </ul>
+        <p>
+            We undertake to pay to the Employer up to the above amount upon receipt of his first written demand, without
+            the Employer's having to substantiate his demand, provided that in his demand the Employer will note that
+            the amount claimed by him is due to him owing to the occurrence of one or any of the above conditions,
+            specifying the occurred condition or conditions.
+        </p>
+        <p>
+            This Guarantee is effective from <b>{{subform.2.final_issuedate.default}}</b> will remain in force up to
+            <b>{{subform.2.final_validityDate}}</b> including the date <b>({{subform.2.total_days}}) days</b> days after
+            the
+            deadline for the submission of
+            bids as such deadline is stated in the Instructions to Bidders or as it may be extended by the Employer,
+            notice of which extension(s) to the Bank is hereby waived.
+            Any demand in respect of this Guarantee should reach the Trade Operations Department, Central Business Park,
+            6th floor, Thapathali, Kathmandu, Nepal not later than the above date
+            i.e.<b>{{subform.2.final_validityDate}}.</b>
+        </p>
+        <p>
+            This Bank Guarantee shall not be withdrawn or released merely upon return of the original guarantee by the
+            Bidder unless notified by you for the release of the guarantee.
+        </p>
+        <p>
+            <b>This Guarantee shall not be withdrawn or released merely upon return of the original Guarantee by the
+
+                Bidder unless notified by the Employer for the release of the Guarantee.</b>
+        </p>
+        <p>
+            Notwithstanding anything contained herein above this guarantee will remain in force from
+            <b>{{subform.2.final_issuedate.default}}</b>
+            Consequently, any demand for the payment under this guarantee must be received by us at the Trade Operations
+            Department, Central Business Park,
+            6th floor, Thapathali, Kathmandu, Nepal on or before this date i.e.
+            <b>{{subform.2.final_validityDate}}</b>.
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 758
+        </p>
+        <p>
+            <b>For: Global IME Bank Limited</b><br>
+            <b>Trade Operations</b>
+        </p>
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name2}}</b><br /><br />
+            <b>Designation : {{subform.2.designation2}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+    </div>
+</body>
+
+</html>

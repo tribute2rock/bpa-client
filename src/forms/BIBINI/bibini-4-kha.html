@@ -1,0 +1,404 @@
+<body>
+    <style>
+        table {
+            padding: 10px;
+            margin-left: 10mm;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 4px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+
+        td {
+            padding: 6px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            border-collapse: collapse;
+        }
+
+        table input {
+            border: 0;
+        }
+
+        .custom {
+            border: 0;
+        }
+
+        .datepicker,
+        input,
+        select {
+            font-family: Arial, sans-serif;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .datepicker:focus,
+        input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+        }
+
+        .currency {
+            text-transform: capitalize;
+        }
+    </style>
+    <div class="container">
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="1" data-label="अनुसूची"
+            name="name_anusuchi" value="अनुसूची १.६" />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="2" data-label=".इ.प्रा."
+            name="name_pratipatra" value="परिपत्र संख्या-१ को दफा १.३.२ को (घ) को प्रयोजनको लागि" />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="3" data-label="ISSUING BANK"
+            name="name_issuing" value="ग्लोबल आइएमई बैंक लि." />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="4"
+            data-label="BI BI NI FORM TYPE" name="name_bibini_ft" value="वि.वि.नि. फा.नं. ४ (ख)" />
+        <div class="float-right"> अनुसूची १.६ </div><br>
+        <div class="text-center">(इ.प्रा. परिपत्र संख्या-१ को दफा १.३.२ को (घ) को प्रयोजनको लागि) <br></div>
+        <div class="text-center"> <b>वि.वि.नि. फा.नं. ४ (ख)</b></div>
+        <div> <input onkeyup="transformToUppercase(this)" type="hidden" data-order="6" data-label="BI BI NI SRL NO"
+                name="requestIdentifier_copy" class=" custom datepicker" id="copy" placeholder="BIBINI Number"> </div>
+        <div> ग्लोबल आइएमई बैंक लि.</div>
+        <div> <select class="datepicker selectBranchddl " required data-order="5" data-label="SELECTED BRANCH"
+                id="selectBranch" name="branch"> </select> शाखा</div>
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-label="REQUESTED BRANCH SOL"
+            name="requestedBranchSol_branch" id="requestedBranchSol_branch" />
+        <div class="float-right">मितिः <input data-required="true" id="date-required"
+                onkeyup="transformToUppercase(this)" type="text" data-order="7" data-label="ISSUED DATE" name="date"
+                class="custom datepicker mypicker" autocomplete="off" id="date" placeholder="DD-MM-YYYY">
+        </div> <br>
+        <div>नेपाल सरकार</div>
+        <div> <select name="customer_address" class="custom" data-order="8" data-label="CUSTOM ADDRESS">
+                <option value="tatopani">तातोपानी</option>
+                <option value="rasuwagadi">रसुवागढी</option>
+            </select> भन्सार कार्यालय । </div>
+        <div class="text-center "> <input required data-required="true" onkeyup="transformToUppercase(this)" type="name"
+                data-label="REFRENCE NO" data-order="10" name="lc" class="datepicker" id="lc"
+                placeholder="TT/DD Number"><br> <br> <b>
+                <u> विषय:- परिवर्त्य वि.मु.को <label for="Subject"> <select class="custom form-select"
+                            name="subject-select" data-label="SUBJECT">
+                            <option value="first">ड्राफ्ट</option>
+                            <option value="second">टि.टि.</option>
+                        </select></label> सटही सुविधा सम्बन्धमा | </u></b> </div> <br>
+        <div style="text-align: justify;">
+            <p> निम्न विवरण बमोजिमको सामानको पैठारीको लागि श्री <input required data-required="true"
+                    onkeyup="transformToUppercase(this)" type="name" data-order="9" data-label="APPLICANT NAME"
+                    name="applicant_name" class="custom" id="applicant_name"
+                    placeholder="........................................"> लाई यस
+                बैंक / वित्तीय संस्थाबाट
+                निम्नानुसारको विदेशी मुद्राको नगद/ ड्राफ्ट / टि.टि. प्रदान गरिएको व्यहोरा प्रमाणित गरिएको छ । यस
+                सम्बन्धी प्रोफर्मा इन्भ्वाइसको प्रतिलिपि यसैसाथ संलग्न छ । साथै, आयातकर्ताले उक्त वस्तु ट्रान्सपोर्ट
+                डकुमेन्ट जारी गराई ढुवानी गर्ने व्यहोरा समेत अनुरोध छ। </p>
+        </div> <br><br>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 mb-3">
+                <table>
+                    <tr class="table-data">
+                        <th>सि.नं.</th>
+                        <th>आयात गरिने सामानको विवरण </th>
+                        <th>हार्मोनिक कोड नम्बर</th>
+                        <th>परिमाण</th>
+                        <th>सटही लिएको कूल वि.मु. रकम</th>
+                    </tr>
+                    <tr>
+                        <th><input style="max-width: 20mm;" required data-required="true"
+                                onkeyup="transformToUppercase(this)" type="text" data-label="SN 1" name="sn1"
+                                class="custom" id="sn1"></th>
+                        <th><input required data-required="true" onkeyup="transformToUppercase(this)" type="text"
+                                data-label="IMPORTING GOODS 1" data-order="19" name="importing-good1" class="custom"
+                                id="importing-good1"> </th>
+                        <th><input required data-required="true" onkeyup="transformToUppercase(this)" type="text"
+                                data-label="HARMONIC CODE 1" data-order="17" name="harmonic-code1" class="custom"
+                                id="harmonic-code1">
+                        </th>
+                        <th><input style="max-width: 35mm;" required data-required="true"
+                                onkeyup="transformToUppercase(this)" type="text" data-order="21" data-label="QTY 1"
+                                name="quantity1" class="custom" id="quantity1"></th>
+                        <th>
+                            <table>
+                                <tr class="custom">
+                                    <td> <select class="custom " name="currency1" id="paidcurrencyName"
+                                            data-label="CURRENCY 1" data-order="11" required>
+                                            <option value="" selected disabled hidden> Select</option>
+                                            <option value="USD">USD</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="EURO">EURO</option>
+                                            <option value="SGD">SGD</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="JPY">JPY</option>
+                                        </select> </td>
+                                    <td> <input required data-required="true" onkeyup="transformToUppercase(this)"
+                                            type="text" step="0.01" min="0" data-order="12"
+                                            data-label="CURRENCY AMOUNT 1" name="amount1" class="custom currencyInput"
+                                            id="amount1" placeholder="रकम">
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><input style="max-width: 20mm;" onkeyup="transformToUppercase(this)" type="text" step="0.01"
+                                min="0" data-label="SN 2" name="sn2" class="custom" id="sn2"></th>
+                        <th><input onkeyup="transformToUppercase(this)" type="text" data-label="IMPORTING GOODS 2"
+                                name="importing-good2" class="custom" data-order="20" id="importing-good2"></th>
+                        <th><input onkeyup="transformToUppercase(this)" data-order="18" type="text"
+                                data-label="HARMONIC CODE 2" name="harmonic-code2" class="custom" id="harmonic-code2">
+                        </th>
+                        <th><input style="max-width: 35mm;" onkeyup="transformToUppercase(this)" type="text"
+                                data-label="QTY 2" data-order="22" name="quantity2" class="custom" id="quantity2"></th>
+                        <th>
+                            <table>
+                                <tr class="custom">
+                                    <td> <select class="custom " name="currency2" id="paidcurrencyName"
+                                            data-label="CURRENCY 2" data-order="13">
+                                            <option value="" selected disabled hidden> Select</option>
+                                            <option value="USD">USD</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="EURO">EURO</option>
+                                            <option value="SGD">SGD</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="JPY">JPY</option>
+                                        </select> </td>
+                                    <td> <input onkeyup="transformToUppercase(this)" type="text" step="0.01" min="0"
+                                            data-label="CURRENCY AMOUNT 2" data-order="14" name="amount2"
+                                            class="custom currencyInput" id="amount2" placeholder="रकम">
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                    <tr style="border: none;">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th> <select class="datepicker" name="totalName" id="currency">
+                                <option value="">Select Total</option>
+                                <option value="Total">Total</option>
+                            </select> </th>
+                        <th>
+                            <table style="border: none;" class="custom">
+                                <tr style="border: none;" class="custom">
+                                    <td style="border: none;" class="custom"> <select class="custom "
+                                            name="totalCurrency" id="totalCurrency" data-order="15"
+                                            data-label="TOTAL CURRENCY" required>
+                                            <option value="" selected disabled hidden> Select</option>
+                                            <option value="USD">USD</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="EURO">EURO</option>
+                                            <option value="SGD">SGD</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="JPY">JPY</option>
+                                        </select> </td>
+                                    <td style="border: none;"> <input onkeyup="transformToUppercase(this)" type=" text"
+                                            step="0.01" min="0" data-order="16" data-label="TOTAL AMOUNT" name="total"
+                                            class="custom currencyInput datepicker" id="total" required
+                                            placeholder="Total">
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 mb-3 ">
+                <div> भवदीय, </div> <br> ........................................ <br>
+                <p>विवरण तयार गर्नेको दस्तखत</p>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3"> <label for="Remarks">Description</label> <textarea required
+                    name="description" class="form-control" onkeyup="transformToUppercase(this)" id="description"
+                    data-order="23" data-label="DESCRIPTION" rows="3"></textarea> <br><br><br> </div>
+            <div class="col-lg-4 col-sm-12 mb-3 ">
+                <div> ........................................ <br> अख्तियार प्राप्त अधिकारीको दस्तखत </div><br>
+                <div> नामः <input required data-required="true" onkeyup="transformToUppercase(this)" type="name"
+                        data-label="REPORTER'S NAME" data-order="24" name="reporter-name" class="custom account-name"
+                        id="reporter-name" placeholder="नाम लेख्नुहोस "> </div><br>
+                <div> पद: <input required data-required="true" onkeyup="transformToUppercase(this)" type="name"
+                        data-label="REPORTER'S DESIGNATION" data-order="25" name="reporter-designation" class="custom"
+                        id="reporter-designation" placeholder=" पद लेख्नुहोस "> </div><br>
+                <div> बैंकको छाप </div>
+            </div>
+        </div>
+    </div>
+    <div class="float-left"> <b>नोटः</b>
+        <ol onkeyup="transformToUppercase(this)" type="i">
+            <li> आयात गरिने सम्पूर्ण वस्तुहरुको नाम, ब्राण्ड, परिमाण, इकाइ मूल्य र कुल मूल्यबारे विस्तृत र प्रमाणित
+                विवरण अनिवार्य रुपले उल्लेख गर्नुपर्नेछ । यस पृष्ठमा नअटाएको खण्डमा पछाडिको पृष्ठ प्रयोग गर्नुपर्नेछ ।
+            </li>
+            <li> माथि उल्लेखित नगद /ड्वाफट/टि.टि. को मिति भन्दा अगाडि नै नेपाल भित्रिसकेको मालवस्तुहरुको आयातको लागि यो
+                फाराम प्रयोग गर्न मिल्ने छैन । </li>
+        </ol>
+    </div> <br> <br><br><br>
+    <hr style="border-style: dotted;  border-width: 1px;">
+    <div class="text-center"> <b>भन्सार प्रयोजनको लागि </b> </div>
+    <div class="text-center">
+        <p> माथि उल्लेखित विवरण अनुसारको मूल्य विदेशी मुद्रा ..................... को जम्मा .....................
+            परिमाणको ..................... सामानहरु मिति ..................... को भन्सार रसिद नं. .....................
+            बाट यस भन्सार <br> कायालयबाट छुटाई लगेको प्रमाणित गर्दछौं । </p>
+    </div> <br><br>
+    <div class="float-right"> ........................................ <br> <b> भन्सार अधिकृतको दस्तखत र छाप </b> <br>
+    </div> <br><br><br>
+    <div class="text-left"> नोट: <br> (क) पहिलो २ प्रति भन्सार प्रयोजनको लागि (भन्सार कार्यालयबाट प्रमाणित गरिसकेपछि १
+        प्रति सम्बन्धित बैंक/वित्तीय संस्थामा नै बुझाउनुपर्ने |) <br> (ख) तेस्रो प्रति सम्बन्धित बैंक /वित्तीय संस्थामा
+        अभिलेख राख्नुपर्ने । </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        $(".mypicker").datepicker({
+            dateFormat: "dd-mm-yy",
+
+        });
+    });
+
+    function transformToUppercase(element) {
+        if (element.tagName === 'INPUT') {
+            // For input elements, convert their values to uppercase
+            element.value = element.value.toUpperCase();
+        } else if (element.tagName === 'SELECT') {
+            // For select elements, convert the value of the selected option to uppercase
+            const selectedOption = element.options[element.selectedIndex];
+            selectedOption.value = selectedOption.value.toUpperCase();
+        }
+    }
+
+    var globalSol = {};
+    var globalSolA = [];
+    $('#selectBranch').on('change', function () {
+
+        let finalBranch = document.getElementById('selectBranch').value;
+        let test = globalSolA.find(branch => branch.name.replace("BRANCH", ' ') == finalBranch)
+        document.getElementById('requestedBranchSol_branch').value = test.sol;
+
+    });
+    var currencyInputs = document.getElementsByClassName("currencyInput");
+    for (var i = 0; i < currencyInputs.length; i++) {
+        if (currencyInputs[i] instanceof HTMLInputElement) {
+            currencyInputs[i].addEventListener("blur", function () {
+                var value = parseFloat(this.value.replaceAll(",", "")).toFixed(2);
+
+                if (value != "NaN") {
+                    this.value = formatCurrency(value);
+                }
+                else {
+                    this.value = "";
+                }
+            });
+        } else {
+            console.error("Element with class 'currencyInput' not found or not an input element.");
+        }
+    }
+
+
+
+    run();
+    async function run() {
+        const branchURL = `http://192.168.126.74:8080/api/dbBranches`;
+        var branches;
+        let data = await fetch(`${branchURL}`, {
+            method: "GET",
+        });
+        branches = await data.json();
+        if (branches && branches.data.length > 0) {
+            branches.data.sort((a, b) => a.sol - b.sol)
+        }
+        var selectedBranch = "";
+        let branchdllList = document.getElementsByClassName("selectBranchddl");
+        for (let brddl of branchdllList) {
+            if (selectedBranch == "") {
+                selectedBranch = brddl.value;
+            }
+            for (let i = 0; i < branches.data.length; i++) {
+                let selOption = document.createElement("option");
+                selOption.text = branches.data[i].name;
+                let branchName = branches.data[i].name;
+                let newBranchName = branchName.replace("BRANCH", ' ')
+                selOption.value = newBranchName
+                if (selectedBranch == newBranchName) {
+                    selOption.selected = true;
+                }
+                brddl.appendChild(selOption);
+            }
+        }
+        globalSolA = branches.data;
+        if (!document.getElementById('requestedBranchSol_branch').value) {
+            document.getElementById('requestedBranchSol_branch').value = globalSolA[0].sol;
+        }
+    }
+
+
+
+
+    // Convert currencyInput value to Nepali currency format
+    //   var currencyInputs = document.getElementsByClassName("currencyInput");
+    //    for (var i = 0; i < currencyInputs.length; i++) {
+    //        if (currencyInputs[i] instanceof HTMLInputElement) {
+    //            currencyInputs[i].addEventListener("blur", function () {
+    //                var value = parseFloat(this.value).toFixed(2);
+    //                this.value = formatCurrency(value);
+    //            });
+    //       } else {
+    //           console.error("Element with class 'currencyInput' not found or not an input element.");
+    //        }
+    //    }
+
+
+
+
+    // Format currency value in Nepali or INR format
+    function formatCurrency(value) {
+        return parseFloat(value).toLocaleString("ne-IN", {
+            style: "decimal",
+            useGrouping: true,
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        });
+    }
+
+    document
+        .getElementById("harmonic-code1")
+        .addEventListener("keypress", function (evt) {
+            var charCode = evt.which ? evt.which : event.keyCode;
+            if (
+                charCode != 44 &&
+                charCode != 45 &&
+                charCode != 46 &&
+                charCode != 32 &&
+                (charCode < 48 || charCode > 57)
+            ) {
+                evt.preventDefault();
+            }
+            else { return true; }
+
+        });
+
+    document
+        .getElementById("harmonic-code2")
+        .addEventListener("keypress", function (evt) {
+            var charCode = evt.which ? evt.which : event.keyCode;
+            if (
+                charCode != 44 &&
+                charCode != 45 &&
+                charCode != 46 &&
+                charCode != 32 &&
+                (charCode < 48 || charCode > 57)
+            ) {
+                evt.preventDefault();
+            }
+            else { return true; }
+
+        });
+
+</script>

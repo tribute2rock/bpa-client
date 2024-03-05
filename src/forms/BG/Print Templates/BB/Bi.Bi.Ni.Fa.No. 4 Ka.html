@@ -1,0 +1,378 @@
+&lt;body>
+    &lt;style>
+         table {
+ 
+             border: 1px solid black;
+             border-radius: 2px;
+             width: 100%;
+             border-collapse: collapse;
+             overflow-wrap: break-word;
+         }
+ 
+         td {
+             overflow-wrap: break-word;
+         }
+ 
+         th {
+ 
+             text-align: center;
+             border: 1px solid #ddd;
+             border-radius: 2px;
+         }
+ 
+         table input {
+             border: 0;
+         }
+ 
+         .custom {
+             border: 0;
+         }
+ 
+         .datepicker,
+         input {
+             font-family: Arial, sans-serif;
+             padding: 8px 12px;
+             border-radius: 8px;
+             background-color: #f0f0f0;
+             border: 1px solid #ccc;
+             color: #333;
+             cursor: pointer;
+         }
+ 
+         .datepicker:focus,
+         input:focus {
+             border-color: #007BFF;
+             box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+         }
+    &lt;/style>
+    &lt;div class="container">
+        &lt;div class="float-right">
+             अनुसूची १.१०
+        &lt;/div>&lt;br>
+         &lt;br>
+        &lt;div>
+        &lt;input type="name" data-label="branch" name="copy" class=" custom datepicker" id="copy"
+                     placeholder="COPY">
+        &lt;/div>
+        &lt;div class="text-center">
+             (इ.प्रा. परिपत्र संख्या-१ को दफा १.१.४ (क) र दफा १.११.१ को प्रयोजनको लागि)&lt;br>
+             वि.बि.नि.फा.नं. ४ (ग)
+             &lt;div >
+             &lt;b  style="font-size: 20px;" >  ग्लोबल आइएमई बैंक लि.&lt;/b>  &lt;br>
+                &lt;div>
+                 &lt;select class="datepicker"  data-label="Selected Branch" id="selectBranch" name="branch">
+                    &lt;/select> शाखा
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="float-right">
+             मितिः&lt;input required data-required="true" id="date-required" type="date" data-label="date" name="date"
+                 class=" datepicker" id="date">
+        &lt;/div>
+        &lt;div>
+             सि.नं . &lt;br>
+             नेपाल सरकार&lt;br>
+            &lt;div class="custom">&lt;select required class="custom datepicker" name="customer_name"
+                     data-label="customer_name">
+ 
+                    &lt;option value="MECHI">
+ 
+                         MECHI CUSTOMS OFFICE, KAKARVITTA, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="BIRATNAGAR">
+ 
+                         BIRATNAGAR CUSTOMS OFFICE, BIRATNAGAR, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="BIRGUNJ">
+ 
+                         BIRGUNJ CUSTOMS OFFICE, BIRGUNJ, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="BHAIRAHAWA">
+ 
+                         BHAIRAHAWA CUSTOMS OFFICE, BHAIRAHAWA, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="NEPALGUNJ">
+ 
+                         NEPALGUNJ CUSTOMS OFFICE, NEPALGUNJ, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="KAILALI">
+ 
+                         KAILALI CUSTOMS OFFICE, DHANGADHI, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="DRYPORT">
+ 
+                         DRYPORT CUSTOMS OFFICE, SIRSIYA, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="RASUWA">
+                         RASUWA CUSTOMS OFFICE, RASUWA, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="TRIBHUVAN">
+ 
+                         TRIBHUVAN INTERNATIONAL AIRPORT CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="KRISHNANAGAR">
+ 
+                         KRISHNANAGAR CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="JALESHWAR">
+ 
+                         JALESHWAR CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="TATOPANI">
+ 
+                         TATOPANI CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="KANCHANPUR">
+ 
+                         KANCHANPUR CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="JANAKPUR">
+ 
+                         JANAKPUR CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="RAJBIRAJ">
+ 
+                         RAJBIRAJ CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="SARLAHI">
+ 
+                         SARLAHI CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="SIRAHA">
+ 
+                         SIRAHA CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+ 
+                    &lt;option value="SUNSARI">
+ 
+                         SUNSARI CUSTOMS OFFICE, NEPAL
+ 
+                    &lt;/option>
+                &lt;/select> भन्सार कार्यालय
+            &lt;/div>
+             ................................ |&lt;br>
+        &lt;/div>
+        &lt;br>&lt;br>
+ 
+        &lt;div class="text-center">
+            &lt;b> विषय :&lt;select class="datepicker" name="subject-select" id="subject-select">
+                    &lt;option value="first">प्रतितपत्र&lt;/option>
+                    &lt;option value="second">ड्राफट&lt;/option>
+                    &lt;option value="third"> टि.टि.&lt;/option>
+                    &lt;option value="fourth"> वा क्रेडिट अन्तर्गतको &lt;/option>
+                &lt;/select> सटही सुविधा (भा.रू) ।&lt;/b>
+        &lt;/div>
+ 
+        &lt;div>
+             महाशय,
+        &lt;/div>
+        &lt;div>
+             निम्न विवरण बमोजिमको सामानको पैठारीको लागि मेसर्स&lt;input required data-required="true" id="data-required"
+                 type="name" data-label="applicant_name" name="applicant_name" class="datepicker" id="applicant_name"
+                 placeholder="............................................................">
+             लाई यस बैंकबाट निम्नानुसारको भा.रु. प्रतीतपत्र / ड्राफट /टि.टि. संकेत  नम्बर&lt;input  data-required="true"
+                 id="data-required" type="text" data-label="lc" name="lc" class="datepicker" id="lc"
+                 placeholder="LC Number">
+             बाट प्रदान गरिएको / क्रेडिट सुविधा अन्तर्गत आयात भएको  व्यहोरा प्रमाणित गरिएको छ।
+        &lt;/div>&lt;br>
+        &lt;div class="row">
+            &lt;div class="col-lg-12 col-sm-12 mb-3">
+                &lt;table>
+                    &lt;tr class="table-data">
+                        &lt;th>सि.नं.&lt;/th>
+                        &lt;th>आयात गरिने सामानको विवरण&lt;/th>
+                        &lt;th>हार्मोनिक कोड नम्बर&lt;/th>
+                        &lt;th>परिमाण&lt;/th>
+                        &lt;th>सटही लिएको / क्रेडिट&lt;br> सुविधा अन्तर्गतको&lt;br> कुल
+                             भा. रु. रकम&lt;/th>
+                    &lt;/tr>
+                    &lt;tr>
+                        &lt;th>&lt;input style="max-width: 20mm;" type="text" data-label="sn1" name="sn1" class="custom"
+                                 id="sn1">&lt;/th>
+                        &lt;th>&lt;input type="text" data-label="importing-good1" name="importing-good1" class="custom"
+                                 id="importing-good1">
+                        &lt;/th>
+                        &lt;th>&lt;input type="text" data-label="harmonic-code1" name="harmonic-code1" class="custom"
+                                 id="harmonic-code1">
+                        &lt;/th>
+                        &lt;th>&lt;input style="max-width: 20mm;" type="text" data-label="quantity1" name="quantity1"
+                                 class="custom" id="quantity1">&lt;/th>
+                        &lt;th class="custom">
+                            &lt;table class="custom">
+                                &lt;tr class="custom">
+                                    &lt;td>
+                                        &lt;select class="datepicker" name="currency1" id="currency">
+                                            &lt;option value="">Select&lt;/option>
+                                            &lt;option value="INR">INR&lt;/option>
+ 
+                                        &lt;/select>
+                                    &lt;/td>
+                                    &lt;td>
+                                        &lt;input type="number" step="0.01" min="0" data-label="amount1" name="amount1"
+                                             class="custom datepicker" id="amount1" placeholder="रकम">
+                                    &lt;/td>
+                                &lt;/tr>
+                            &lt;/table>
+ 
+ 
+                        &lt;/th>
+                    &lt;/tr>
+                    &lt;tr>
+                        &lt;th>&lt;input style="max-width: 20mm;" type="text" data-label="sn2" name="sn2" class="custom"
+                                 id="sn2">&lt;/th>
+                        &lt;th>&lt;input type="text" data-label="importing-good2" name="importing-good2" class="custom"
+                                 id="importing-good2">&lt;/th>
+                        &lt;th>&lt;input type="text" data-label="harmonic-code2" name="harmonic-code2" class="custom"
+                                 id="harmonic-code2">&lt;/th>
+                        &lt;th>&lt;input style="max-width: 20mm;" type="text" data-label="quantity2" name="quantity2"
+                                 class="custom" id="quantity2">&lt;/th>
+                        &lt;th>
+                            &lt;table class="custom">
+                                &lt;tr class="custom">
+                                    &lt;td class="custom">
+                                        &lt;select class="datepicker" name="currency2" id="currency">
+                                            &lt;option value="">Select&lt;/option>
+                                            &lt;option value="INR" >INR&lt;/option>
+ 
+                                        &lt;/select>
+                                    &lt;/td>
+                                    &lt;td>
+                                        &lt;input type="number" step="0.01" min="0" data-label="amount2" name="amount2" class="custom datepicker"
+                                             id="amount2" placeholder="रकम">
+                                    &lt;/td>
+                                &lt;/tr>
+                            &lt;/table>
+ 
+                        &lt;/th>
+                    &lt;/tr>
+                    &lt;tr>
+                        &lt;th>&lt;input style="max-width: 20mm;" type="text" data-label="sn3" name="sn3" class="custom"
+                                 id="sn3">&lt;/th>
+                        &lt;th>&lt;input type="text" data-label="importing-good3" name="importing-good3" class="custom"
+                                 id="importing-good3">&lt;/th>
+                        &lt;th>&lt;input type="text" data-label="harmonic-code3" name="harmonic-code3" class="custom"
+                                 id="harmonic-code3">&lt;/th>
+                        &lt;th>&lt;input style="max-width: 20mm;" type="text" data-label="quantity3" name="quantity3"
+                                 class="custom" id="quantity3">&lt;/th>
+                        &lt;th>
+                            &lt;table class="custom">
+                                &lt;tr class="custom">
+                                    &lt;td class="custom">
+                                        &lt;select class="datepicker" name="currency3" id="currency">
+                                            &lt;option value="">Select&lt;/option>
+                                            &lt;option value="INR" >INR&lt;/option>
+ 
+                                        &lt;/select>
+                                    &lt;/td>
+                                    &lt;td>
+                                        &lt;input type="number" step="0.01" min="0" data-label="amount3" name="amount3" class="custom datepicker"
+                                             id="amount3" placeholder="रकम">
+                                    &lt;/td>
+                                &lt;/tr>
+                            &lt;/table>
+ 
+                        &lt;/th>
+                    &lt;/tr>
+ 
+                &lt;/table>
+            &lt;/div>
+ 
+        &lt;/div>
+        &lt;div class="row">
+            &lt;div class="col-lg-6 col-sm-12 mb-3">
+                &lt;label for="Remarks">Description&lt;/label>
+                &lt;textarea name="description" class="form-control" id="description" data-label="Description" rows="3"
+                     data-label="Subject">&lt;/textarea>
+ 
+                &lt;br>&lt;br>&lt;br>
+                 ..............................................&lt;br>
+                &lt;p>विवरण तयार गर्नेको दस्तखत&lt;/p>
+            &lt;/div>
+            &lt;div class="col-lg-6 col-sm-12 mb-3 ">
+                &lt;div>
+                     भवदीय,
+                &lt;/div>&lt;br>
+                &lt;div>
+                     अख्तियार प्राप्त अधिकारीको दस्तखत
+                &lt;/div>&lt;br>
+                &lt;div>
+                     नामः&lt;input required data-required="true" id="data-required" type="name" data-label="reporter-name"
+                         name="reporter-name" class="custom account-name" id="reporter-name"
+                         placeholder="नाम लेख्नुहोस ">
+                &lt;/div>&lt;br>
+                &lt;div>
+                     पद:&lt;input required data-required="true" id="data-required" type="name"
+                         data-label="reporter-designation" name="reporter-designation" class="custom"
+                         id="reporter-designation" placeholder=" पद लेख्नुहोस ">
+                &lt;/div>&lt;br>
+                &lt;div>
+                     बैंकको छाप
+                &lt;/div>
+            &lt;/div>
+ 
+        &lt;/div>
+        &lt;div class="row">
+            &lt;p>&lt;b>नोटः आयात गरिने सम्पूर्ण बस्तुहरुको नाम, ब्राण्ड, परिमाण, इकाइ मूल्य, कूल मृल्यबारे विस्तृत र प्रमाणित
+                     विवरण अनिवार्य रुपले उल्लेख गर्नु पर्नेछ ।
+                     यस पृष्ठमा नअटाएको खण्डमा पछाडिको पृष्ठ प्रयोग गर्नु पर्नेछ ।&lt;/b>&lt;/p>
+ 
+        &lt;/div>
+        &lt;hr style="border-style: dotted;  border-width: 2px;">
+        &lt;div class="text-center">
+            &lt;b>&lt;u>भन्सार प्रयोजनको लागि&lt;/u>&lt;/b>
+        &lt;/div>
+        &lt;div>
+             माथि उल्लेखित विवरण अनुसारको मूल्य भा.रू .............................................. को जम्मा
+             ..............................................
+             परिमाणको .............................................. सामानहरु मिति
+             .............................................. को भंसार रसीद नं.
+             ..............................................
+             बाट यस भंसार कार्यालयबाट छुटाई लगेको प्रमाणित गर्दछौं ।
+        &lt;/div>&lt;br>&lt;br>
+        &lt;div class="float-right">
+             ..............................................&lt;br>
+            &lt;b>भन्सार अधिकृतको दस्तखत र छाप&lt;/b>
+        &lt;/div>&lt;br>&lt;br>&lt;br>
+        &lt;div>
+             नोटः&lt;br>
+             (क) पहिलो दुईप्रति भंसार प्रयोजनका लागि (भंसार कार्यालयबाट प्रमाणित गरी सो को एकप्रति सम्बन्धित बैक /वित्तीय
+             संस्थामै फिर्ता बुझाउनुपर्ने)&lt;br>
+             (ख) तेश्रो प्रति नेपाल राष्ट्र बैंक, विदेशी विनिमय व्यवस्थापन विभाग, बालुवाटारमा पठाउनु पर्ने ।&lt;br>
+             (ग) चौथो प्रति सम्बन्धित बैंक / वित्तीय संस्थामा अभिलेख राख्नुपर्ने ।&lt;br>
+        &lt;/div>
+ 
+    &lt;/div>
+ &lt;/body>

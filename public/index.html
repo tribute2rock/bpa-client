@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>BPA | General Technology Pvt. Ltd.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/media/logos/favicon.png" />
+  <link rel="stylesheet" id="layout-styles-anchor" href="%PUBLIC_URL%/css/splash-screen.css" />
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' style-src 'self'"> -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/tinymce/tinymce.min.js"></script>
+  <style>
+    .body-overlay:before {
+      top: 50px;
+    }
+
+    .MuiInputBase-root {
+      font-family: sans-serif !important;
+    }
+
+    .modal.in .modal-dialog {
+      -webkit-transform: none !important;
+      -moz-transform: none !important;
+      -ms-transform: none !important;
+      -o-transform: none !important;
+      transform: none !important;
+    }
+
+    .step-label .MuiStepLabel-labelContainer {
+      display: flex;
+      justify-content: center;
+    }
+
+    .step-label .MuiTypography-root {
+      background-color: #f5f5f5;
+      padding: 12px 15px 10px;
+      border-radius: 5px;
+      box-shadow: 0 5px 7px 1px rgba(0, 0, 0, 0.2);
+      position: relative;
+      border: 1px solid #e1e1e1;
+    }
+
+    .step-label .MuiTypography-root h6 {
+      margin-bottom: 0;
+    }
+
+    .step-label .MuiTypography-root .material-icons {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(255, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      transform: scale(0);
+      transition: 400ms ease;
+    }
+
+    .step-label .MuiTypography-root:hover .material-icons {
+      transform: scale(1);
+    }
+
+    .step-label .MuiTypography-root .material-icons:before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+    }
+
+    /*  */
+    .workflow-stepper .MuiStep-root:last-child .MuiTypography-root {
+      background-color: #31dd31;
+      border-color: #31dd31;
+      color: #fff;
+    }
+
+    .workflow-stepper .MuiStep-root:last-child svg {
+      fill: #31dd31;
+    }
+
+    .workflow-stepper .MuiStep-root:last-child .MuiTypography-root:before {
+      /* content: 'Is Approver'; */
+      position: absolute;
+      left: 50%;
+      bottom: -27px;
+      transform: translateX(-50%);
+      font-size: 12px;
+      width: 100%;
+      color: #079707;
+      font-weight: 600;
+    }
+
+    /*  */
+    .workflow-stepper .MuiStep-root:first-child .MuiTypography-root {
+      background-color: #31a7dd;
+      border-color: #31a7dd;
+      color: #fff;
+    }
+
+    .workflow-stepper .MuiStep-root:first-child svg {
+      fill: #31a7dd;
+    }
+
+    .workflow-stepper .MuiStep-root:first-child .MuiTypography-root:before {
+      /* content: 'Is Initiator'; */
+      position: absolute;
+      left: 50%;
+      bottom: -27px;
+      transform: translateX(-50%);
+      font-size: 12px;
+      width: 100%;
+      color: #006593;
+      font-weight: 600;
+    }
+
+    .form-control .MuiInput-underline::before,
+    .form-control .MuiInput-underline:focus:not(.Mui-focused)::before,
+    .form-control .MuiInput-underline:active:not(.Mui-focused)::before,
+    .form-control .MuiInput-underline:hover:not(.Mui-disabled)::before,
+    .form-control .MuiInput-underline::after {
+      border-bottom: none !important;
+    }
+
+    .MuiStepper-root {
+      padding: 24px 0 !important;
+    }
+
+    .MuiStepper-root .MuiSvgIcon-root {
+      width: 2em !important;
+      height: 2em !important;
+    }
+
+    .MuiStepper-root .MuiTypography-body2 {
+      font-size: 1.1rem !important;
+    }
+
+    .MuiStepConnector-alternativeLabel {
+      top: 20px !important;
+    }
+
+    .MuiStepConnector-lineHorizontal {
+      border-top-width: 2px !important;
+    }
+
+    .MuiStepIcon-text {
+      fill: rgba(255, 255, 255, 0.87) !important;
+    }
+
+    .thumbnail img {
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .docs a,
+    .docs button {
+      text-align: center;
+    }
+
+    .docs img {
+      height: 60px;
+      display: block;
+      margin-bottom: 5px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    .sticky-header-card .card-header {
+      position: sticky;
+      top: 0;
+      background: #fff !important;
+      z-index: 1;
+    }
+
+    /* Sweet Alert */
+    .swal2-popup.swal2-icon-warning .swal2-header {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+
+    .swal2-popup.swal2-icon-warning .swal2-header .swal2-title {
+      font-size: 1.2rem;
+      color: #f43535;
+    }
+
+    .swal2-popup.swal2-icon-warning .swal2-content {
+      text-align: left;
+      font-weight: 600;
+      padding-left: 45px;
+    }
+
+    .swal2-popup.swal2-icon-warning .swal2-header .swal2-icon {
+      width: 2em;
+      height: 2em;
+      border-color: #f43535;
+    }
+
+    .swal2-popup.swal2-icon-warning .swal2-header .swal2-icon .swal2-icon-content {
+      font-size: 1.75em;
+      color: #f43535;
+    }
+
+    .swal2-popup.swal2-icon-warning .swal2-header .swal2-warning {
+      margin: 0 15px 0 0;
+    }
+
+    .swal2-popup.swal2-icon-warning .swal2-actions {
+      justify-content: flex-end;
+      padding-right: 0;
+    }
+
+    .swal2-popup.swal2-icon-warning .swal2-styled.swal2-confirm {
+      background-color: #f43535;
+    }
+
+    /* Pagination */
+    /* .MuiPagination-root{
+
+      } */
+    .MuiPagination-root ul li button {
+      color: #7e8299;
+      background-color: #f3f6f9;
+      border: 0 !important;
+      transition: 400ms easeeeee;
+    }
+
+    .MuiPagination-root ul li button:hover {
+      color: #7e8299;
+      background-color: #e4e6ef;
+    }
+
+    .MuiPagination-root .Mui-selected {
+      color: #fff !important;
+      background-color: #3699ff !important;
+    }
+
+    .bank-logo {
+      height: 40px;
+      margin-top: 12px;
+      margin-right: 5px;
+    }
+
+    .body-overlay {
+      position: relative;
+    }
+
+    .body-overlay:before {
+      content: '';
+      position: absolute;
+      width: calc(100% + 40px);
+      height: calc(100% + 38px);
+      z-index: 9;
+      margin: -18px -20px;
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    .customer-comment {
+      background-color: #fbe9eb !important;
+    }
+
+    .customer-comment:before {
+      border-right: solid 10px #fbe9eb !important;
+    }
+
+    .btn-custom {
+      color: #000;
+      background-color: transparent;
+      border-color: transparent;
+      /*set the color you want here*/
+    }
+
+    .btn-custom:hover,
+    .btn-custom:focus,
+    .btn-custom:active,
+    .btn-custom.active,
+    .open>.dropdown-toggle.btn-custom {
+      color: maroon;
+      background-color: transparent;
+      border-color: transparent;
+      /*set the color you want here*/
+    }
+
+    /* warning message css */
+    @keyframes slide {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -120px 60px;
+      }
+    }
+
+    #InfoBanner {
+      margin-bottom: 10px;
+      left: -15px;
+      text-align: center;
+      width: 100%;
+      /* position: absolute;
+        top: 115px; */
+    }
+
+    .reversed {
+      display: inline-block;
+      padding: 0.3em;
+      padding-left: 0.3em;
+      margin-left: 0.8em;
+      position: relative;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 1;
+      color: #fff;
+      font-size: 15px;
+      background-color: #ef5350;
+    }
+
+    .reversed:before,
+    .reversed:after {
+      content: '';
+      width: 0;
+      height: 0;
+      right: -0.8em;
+      position: absolute;
+      top: 0;
+      border-top: 0.8em solid #ef5350;
+    }
+
+    .reversed:after {
+      top: auto;
+      bottom: 0;
+      border-top: none;
+      border-bottom: 0.8em solid #ef5350;
+    }
+
+    .reversedRight:before,
+    .reversedRight:after {
+      border-right: 0.8em solid transparent;
+      right: -0.8em;
+    }
+
+    .reversedRight {
+      width: 17px;
+      border-radius: 5px 0px 0px 5px;
+      animation: tilt 2s infinite;
+    }
+
+    @keyframes tilt {
+      0% {
+        left: 0%;
+      }
+
+      50% {
+        left: 9px;
+      }
+
+      100% {
+        left: 0px;
+      }
+    }
+
+    .reversedLeft {
+      margin-left: 15px;
+      border-radius: 0px 5px 5px 0px;
+    }
+
+    .reversedLeft:before,
+    .reversedLeft:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 0.8em solid transparent;
+      left: -0.8em;
+      position: absolute;
+    }
+
+    .reversedLeft:after {
+      top: auto;
+      bottom: 0;
+      border-top: 0.8em solid #ef5350;
+      border-bottom: none;
+    }
+
+    .reversedLeft:before {
+      bottom: auto;
+      top: 0;
+      border-bottom: 0.8em solid #ef5350;
+      border-top: none;
+    }
+
+    .bgAnimation {
+      background-color: #ef5350;
+      background-image: linear-gradient(45deg, #e57373 25%, transparent 25%, transparent 75%, #e57373 75%, #e57373),
+        linear-gradient(-45deg, #e57373 25%, transparent 25%, transparent 75%, #e57373 75%, #e57373);
+      background-size: 60px 60px;
+      animation: slide 4s infinite linear;
+    }
+
+    .preview-modal .close span {
+      display: block !important;
+    }
+
+      @media print {
+        @page {
+          margin: 0.5cm 1cm 0.5cm 1.5cm;
+          @top-center {
+            content: "";
+          }
+          @bottom-center {
+            content: "";
+          }
+        }
+        .my-printed-component {
+          page-break-before: always;
+        }
+      }
+
+    /* END warning message css  */
+  </style>
+</head>
+
+<body id="kt_body">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div id="splash-screen" class="kt-splash-screen">
+    <img src="%PUBLIC_URL%/media/logos/logo.png" style="width: 120px;" alt="Global Bank logo" />
+    <svg class="splash-spinner" viewBox="0 0 50 50">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+    </svg>
+  </div>
+  <div id="layout-portal"></div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APG-6 </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p style="left:0; bottom: 0;width:100%;text-align:center;"><b >Advance Payment Security</b> <br></p>         
+        <p>
+            
+            <b>Beneficiary: {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} </b> <br>
+           <b>  Date:{{subform.2.issuedate.formattedissueDateBG}} </b><br>
+          <b> Advance Payment Guarantee No.:.......... </b> <br>                             
+        </p>       
+        
+        
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b> (hereinafter called "the Contractor") has entered into <b>
+                 Contract No: {{subform.2.contract_number}} </b> date <b> {{subform.2.issuedate.formattedissueDateBG}}</b> with you, for the execution of <b> {{subform.2.purpose_guarantee}}</b> (hereinafter called "the Contract").            
+        </p>
+        <p>
+            Furthermore, we understand that, according to the conditions of the Contract, an advance payment in the sum 
+            <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b>
+            is to be made against an advance payment guarantee.
+         
+        </p>
+        <p>
+           At the request of the Contractor, we <b>Global IME Bank Ltd. Kantipath, Nepal</b> hereby irrevocably undertake to pay you any sum of sums no 
+           exceeding in total amount of 
+           <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}}), </b>
+            upon receipt by us of your first demand in writing accompanied by 
+           a written statement stating that the contractor is in breach of its obligation under the contract because the contractor 
+           used the advance payment for purposes other than the costs of mobilization in respect of the words. 
+            
+        </p>
+        <p>It is condition for any claim and payment under this guarantee to be made that the advance payment referred to above must have 
+            been received by the Contractor on its account number:..........  at <b>  Global IME Bank Ltd. Kantipath, Nepal</b> .
+            
+        </p>
+        <p>
+            The Maximum amount of this gurantee shall be progressively reduced by the amount of the advance payment repaid by the Contractor
+            as indicated in copies of interim statements or payment certificates which shall be presented to us. this gurantee shall expire, at the latest, upon
+            our receipt of a copy of the interim payment certificate indicating that eighty percent (80%) of the Contract Price has been certified 
+            for payment, or on the day of <b>  {{subform.2.validityDate}},</b> whichever is earlier. Consequently, any demand for Payment under this guarantee must 
+            be received by us at this office on or before that date.
+
+            
+        </p>
+        <p>
+            This gurantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 458
+        </p>
+      
+        <p>
+            <br>
+            <br>
+            <p style="left:0; bottom: 0;width:100%;text-align:center;">
+                <i>..........</i><br>
+                <i><b>Seal of Bank and Signature</b></i>
+              </p>
+        </p>
+      
+    </div>
+</body>
+
+
+
+</html>

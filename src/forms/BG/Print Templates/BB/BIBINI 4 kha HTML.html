@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numberInputs = document.getElementsByTagName("input");
+        for (var i = 0; i < numberInputs.length; i++) {
+            if (numberInputs[i].type === "number") {
+                numberInputs[i].addEventListener("blur", function () {
+                    this.value = parseFloat(this.value).toFixed(2);
+                });
+            }
+        }
+    </script>
+    <style>
+        table {
+            padding: 10px;
+            margin-left: 10mm;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 4px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+
+        td {
+            padding: 6px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            border-collapse: collapse;
+        }
+
+        table input {
+            border: 0;
+        }
+
+        .custom {
+            border: 0;
+        }
+
+        .datepicker,
+        input,
+        select {
+            font-family: Arial, sans-serif;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .datepicker:focus,
+        input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+        }
+
+        .currency {
+            text-transform: capitalize;
+        }
+    </style>
+    <div class="container">
+        <div class="float-right">
+            अनुसूची १.६
+        </div><br>
+        <div class="text-center">(इ.प्रा. परिपत्र संख्या-१ को दफा १.३.२ को (घ) को प्रयोजनको लागि) <br></div>
+        <div class="text-center"> <b>वि.वि.नि. फा.नं. ४ (ख)</b></div>
+        <div> ग्लोबल आइएमई बैंक लि.</div>
+        <div> <select class="datepicker" required data-label="Selected Branch" id="selectBranch" name="branch">
+            </select> शाखा</div>
+        <div class="float-right">मितिः <input required data-required="true" id="date-required" type="date"
+                data-label="date" name="date" class="custom" id="date"> </div>
+
+        <br>
+        <div>नेपाल सरकार</div>
+        <div>
+            <select name="customer_address" class="custom">
+                <option value="tatopani">तातोपानी</option>
+                <option value="rasuwagadi">रसुवागढी</option>
+            </select> भन्सार कार्यालय ।
+        </div>
+
+        <div class="text-center ">
+            <input required data-required="true" id="data-required" type="name" data-label="lc" name="lc"
+                class="datepicker" id="lc" placeholder="LC Number"><br> <br>
+            <b> <u> विषय:- परिवर्त्य वि.मु.को <label for="Subject"> <select class="custom form-select"
+                            data-label="subject-select">
+
+                            <option value="cash">नगद </option>
+                            <option value="draft">ड्राफ्ट</option>
+                            <option value="tt">टि.टि.</option>
+                        </select></label> सटही सुविधा सम्बन्धमा | </u></b>
+
+        </div> <br>
+        <div style="text-align: justify;">
+            <p>
+                निम्न विवरण बमोजिमको सामानको पैठारीको लागि श्री
+                <input required data-required="true" id="data-required" type="name" data-label="applicant_name"
+                    name="applicant_name" class="custom" id="applicant_name"
+                    placeholder="........................................"> लाई
+                यस बैंक / वित्तीय संस्थाबाट निम्नानुसारको विदेशी मुद्राको
+                नगद/ ड्राफ्ट / टि.टि. प्रदान गरिएको व्यहोरा प्रमाणित गरिएको छ । यस सम्बन्धी प्रोफर्मा इन्भ्वाइसको
+                प्रतिलिपि यसैसाथ
+                संलग्न छ । साथै, आयातकर्ताले उक्त वस्तु ट्रान्सपोर्ट डकुमेन्ट जारी गराई ढुवानी गर्ने व्यहोरा समेत अनुरोध
+                छ।
+
+            </p>
+        </div> <br><br>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 mb-3">
+                <table>
+                    <tr class="table-data">
+                        <th>सि.नं.</th>
+                        <th>आयात गरिने सामानको विवरण </th>
+                        <th>हार्मोनिक कोड नम्बर</th>
+                        <th>परिमाण</th>
+                        <th>सटही लिएको कूल वि.मु. रकम</th>
+                    </tr>
+                    <tr>
+                        <th><input style="max-width: 20mm;" required data-required="true" id="data-required" type="text"
+                                data-label="sn1" name="sn1" class="custom" id="sn1"></th>
+                        <th><input required data-required="true" id="data-required" type="text"
+                                data-label="importing-good1" name="importing-good1" class="custom" id="importing-good1">
+                        </th>
+                        <th><input required data-required="true" id="data-required" type="text"
+                                data-label="harmonic-code1" name="harmonic-code1" class="custom" id="harmonic-code1">
+                        </th>
+                        <th><input style="max-width: 35mm;" required data-required="true" id="data-required" type="text"
+                                data-label="quantity1" name="quantity1" class="custom" id="quantity1"></th>
+                        <th>
+                            <table>
+                                <tr class="custom">
+                                    <td>
+                                        <select name="currency1" id="currency">
+                                            <option value=" "> Currency</option>
+                                            <option value="USD">USD</option>
+                                            <option value="INR">INR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input required data-required="true" id="data-required" type="number"
+                                            step="0.01" min="0" data-label="amount1" name="amount1" class="custom"
+                                            id="amount1" placeholder="रकम">
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><input style="max-width: 20mm;" type="text" step="0.01" min="0" data-label="sn2" name="sn2"
+                                class="custom" id="sn2"></th>
+                        <th><input type="text" data-label="importing-good2" name="importing-good2" class="custom"
+                                id="importing-good2"></th>
+                        <th><input type="text" data-label="harmonic-code2" name="harmonic-code2" class="custom"
+                                id="harmonic-code2"></th>
+                        <th><input style="max-width: 35mm;" type="text" data-label="quantity2" name="quantity2"
+                                class="custom" id="quantity2"></th>
+                        <th>
+                            <table>
+                                <tr class="custom">
+                                    <td>
+                                        <select name="currency2" id="currency">
+                                            <option value=" "> Currency</option>
+                                            <option value="USD">USD</option>
+                                            <option value="INR">INR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" data-label="amount2" name="amount2" class="custom"
+                                            id="amount2" placeholder="रकम">
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </th>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 mb-3 ">
+                <div>
+                    भवदीय,
+                </div> <br>
+                ........................................ <br>
+                <p>विवरण तयार गर्नेको दस्तखत</p>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+                <label for="Remarks">Description</label>
+                <textarea required name="description" class="form-control" id="description" data-label="Description"
+                    rows="3" data-label="Subject"></textarea>
+
+                <br><br><br>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3 ">
+
+                <div>
+                    ........................................ <br>
+                    अख्तियार प्राप्त अधिकारीको दस्तखत
+                </div><br>
+                <div>
+                    नामः <input required data-required="true" id="data-required" type="name" data-label="reporter-name"
+                        name="reporter-name" class="custom account-name" id="reporter-name"
+                        placeholder="नाम लेख्नुहोस ">
+                </div><br>
+                <div>
+                    पद: <input required data-required="true" id="data-required" type="name"
+                        data-label="reporter-designation" name="reporter-designation" class="custom"
+                        id="reporter-designation" placeholder=" पद लेख्नुहोस ">
+                </div><br>
+                <div>
+                    बैंकको छाप
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="float-left">
+        <b>नोटः</b>
+        <ol type="i">
+            <li>
+                आयात गरिने सम्पूर्ण वस्तुहरुको नाम, ब्राण्ड, परिमाण, इकाइ मूल्य र कुल मूल्यबारे विस्तृत र प्रमाणित विवरण
+                अनिवार्य रुपले उल्लेख गर्नुपर्नेछ । यस पृष्ठमा नअटाएको खण्डमा पछाडिको पृष्ठ प्रयोग गर्नुपर्नेछ ।
+            </li>
+            <li>
+                माथि उल्लेखित नगद /ड्वाफट/टि.टि. को मिति भन्दा अगाडि नै नेपाल भित्रिसकेको मालवस्तुहरुको आयातको लागि
+                यो फाराम प्रयोग गर्न मिल्ने छैन ।
+            </li>
+        </ol>
+    </div>
+    <br> <br><br><br>
+
+    <hr style="border-style: dotted;  border-width: 2px;">
+    <div class="text-center">
+        <b>भन्सार प्रयोजनको लागि </b>
+    </div>
+    <div class="text-center">
+        <p>
+            माथि उल्लेखित विवरण अनुसारको मूल्य विदेशी मुद्रा ..................... को जम्मा .....................
+            परिमाणको
+            ..................... सामानहरु मिति ..................... को भन्सार रसिद नं. ..................... बाट यस
+            भन्सार <br>
+            कायालयबाट छुटाई लगेको प्रमाणित गर्दछौं ।
+        </p>
+    </div>
+    <br><br>
+    <div class="float-right">
+        ........................................ <br>
+        <b> भन्सार अधिकृतको दस्तखत र छाप </b>
+        <br>
+    </div>
+    <br><br><br>
+    <div class="text-left">
+        नोट: <br> (क) पहिलो २ प्रति भन्सार प्रयोजनको लागि (भन्सार कार्यालयबाट प्रमाणित गरिसकेपछि १ प्रति सम्बन्धित
+        बैंक/वित्तीय संस्थामा नै बुझाउनुपर्ने |) <br>
+        (ख) तेस्रो प्रति सम्बन्धित बैंक /वित्तीय संस्थामा अभिलेख राख्नुपर्ने ।
+    </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+
+        var userAccount = $(".user-name").text();
+        var checkUserAccount = $(".account-name").val();
+        if (!checkUserAccount) {
+            $(".account-name").val(userAccount);
+        }
+    })
+    run();
+    async function run() {
+        const branchURL = `https://globalconnect.gibl.com.np/api/dbBranches`;
+        var branches;
+        let data = await fetch(`${branchURL}`, {
+            method: "GET",
+        });
+        branches = await data.json();
+        for (let i = 0; i < branches.data.length; i++) {
+            let branchSelOut = document.getElementById("selectBranch");
+            let selOption = document.createElement("option");
+            selOption.text = branches.data[i].name;
+            selOption.value = branches.data[i].name;
+            selOption.selected = true;
+            branchSelOut.appendChild(selOption);
+        }
+    }
+</script>
+
+</html>

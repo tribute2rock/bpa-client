@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>PBG-15</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            <p>
+                <b>Date: {{subform.2.issuedate.formattedissueDateBG}}</b>
+            </p>
+            <p style="margin-bottom:0;width:100%; float: left;">
+                <b style="float: left;width: 80%;">
+                    {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+                    {{subform.2.beneficiary_address}}
+                    </b>
+                    <br>
+            </p>
+           
+            <p>
+                <b>Our Ref No.: {{subform.2.reference_number}}</b>
+            </p>
+           
+            <p>We refer to the Power Purchase Agreement ("PPA") to be signed between you and Daramkhola 
+                Hydro Energy Ltd. ("the Developer") concerning purchase and selling of power/energy from
+                 Daramkhola Hydroelectric Project (7300 kw) to be detail-designed, executed, completed, 
+                 tested and Commissioned by the Developer within the framework of their Generation license 
+                 and provisions of the PPA.
+            </p>
+             
+            <p>By this letter we, the undersigned, <b> Global IME Bank Ltd.</b> A Bank incorporated under the laws
+                 of Nepal and Having its registered/principal office at <b>Panipokhari-03, Kathmandu, Nepal </b>  do 
+                 hereby irrevocably guarantee payment owed to you by the Developer, pursuant to the PPA,
+                  the sum of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b>
+                   until <b>{{subform.2.validityDate}} </b> 
+                
+            </p>
+            <p>
+                We undertake to make payment under this letter of guarantee upon receipt by us of your first
+                 written demand signed by your duly authorized officer declaring the Developer to be in default 
+                 under the PPA and without cavil or argument any sum or sums within the above named limits without
+                  your need to prove or show grounds or reasons for your demand and without the right of the Developer
+                   to dispute or question such demand.
+            </p>
+            <p>
+                Our liability under this letter of Guarantee shall be to pay to you the sum so requested up to the
+                 amount guaranteed hereunder in respect of any demand duly made hereunder prior to expiry of this 
+                 letter of Guarantee without being entitled to inquire whether or not this payment is lawfully demanded.
+            </p>
+            <p>
+                This letter of Guarantee shall be valid from the date of issue until the expiry date specified above.
+            </p>
+            <p>
+                Except for the documents herein specified no other documents or other action shall be required
+                 notwithstanding any applicable law or regulation. 
+            </p>
+            <p>
+                Our liability under this letter of Guarantee shall become null and void immediately upon its
+                 expiry, whether it is returned or not, and no claim may be made hereunder after such expiry
+                  or after the aggregate of the sums paid by us to you shall equal the sums guaranteed hereunder,
+                   whichever is the earlier.
+            </p>
+            <p>
+                All Notice to be given hereunder shall be given by registered post or hand delivered to the 
+                addressee at the address herein set out or as otherwise advised by and between the parties hereto.
+            </p>
+            <p>
+                We hereby agree that any part of the PPA may be amended, renewed, extended, modified, compromised, released or discharged by mutual agreement between you and the Developer and this security may be exchanged or surrendered without in any way impairing or affecting our liabilities hereunder without notice to us and without the necessity for any additional endorsement,
+                 consent or guarantee by us provided, however, that the sum guaranteed shall not be increased or decreased.
+            </p>
+            <p>
+                No action, event or condition which by any applicable law should operate to discharge us from
+                 liability hereunder shall have any effect and we hereby waive any right we may have to apply
+                  such law. so that in all respects our liability hereunder shall be irrevocable and except as 
+                  stated herein, unconditional in all respects.
+            </p>
+            <p>
+                Unless demand or claim made in writing by you to us under this guarantee reaches the counters
+                 of this bank at Central Trade Finance, Kamaladi, Kathmandu, Nepal by <b> {{subform.2.validityDate}} </b> within the
+                  close of banking hours, all our obligations shall cease and we shall not entertain any claim
+                   or contestation beyond or after that date.
+            </p>
+            <br />
+        
+            <p>
+                <b>For:Global IME Bank Limited</b><br>
+               <b>Trade Operation</b> 
+            </p>
+            <br><br><br><br>
+            <p style="float: left; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+                <b>Name: {{subform.2.name1}}</b><br /><br />
+                <b>Designation: {{subform.2.designation1}}</b>
+               
+            </p>
+            <p style="float:right; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+                <b>Name: {{subform.2.name2}}</b><br /><br />
+                <b>Designation: {{subform.2.designation2}}</b>
+                
+            </p>
+            <br>
+            <br>
+  
+          
+           
+        </div>
+
+    </body>
+
+</html>

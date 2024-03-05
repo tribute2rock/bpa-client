@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apgInAccordance</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Retention Money Guarantee No. : {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            We have been informed that <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}},
+                {{subform.2.company_address}}, {{subform.2.company_address2}}</b>
+            (hereinafter called “the Applicant), has entered into Contract Number. <b>{{subform.2.contract_number}}
+            </b> for the Execution of <b>{{subform.2.purpose_guarantee}}</b> (hereinafter called ‘The
+            Contract’).
+        </p>
+        <p>
+            Furthermore, we understand that, according to the conditions of the Contract, the beneficiary retains money
+            up to the limit set forth in the contract (“the Retention Money”). and that when at least eighty (80)
+            percent of the whole works have been completed, progress of the works is satisfactory in accordance with the
+            Contract as per approved work schedule and it can be assured that the works can be completed at the intended
+            completion date, payment of <b>{{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}})</b> is to be made against a Retention Money Guarantee.
+        </p>
+        <p>
+            At the request of the Contractor, we, <b>{{subform.2.branch_name}}</b> hereby irrevocably undertakes
+            to pay you any sum or sums not exceeding in total an amount of <b>{{main.currency_short}}
+                {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b> upon receipt by us of the
+            Beneficiary’s complying demand supported by the Beneficiary’s statement, whether in the
+            demand itself or in a separate signed document accompanying or identifying the demand, stating that the
+            Applicant is in breach of its obligations(s) under the Contract, without your needing to prove or to show
+            grounds for your demand or the sum specified therein.
+        </p>
+        <p>
+            This guarantee shall be expire, no later than the <b>{{subform.2.final_validityDate}}</b> and any demand for
+            payment under this
+            guarantee must be received at Trade Operations Department, Central Business Park, 6th Floor, Thapathali,
+            Kathmandu, Nepal on or before that date, all our obligations shall cease and we shall not entertain any
+            claim or contestation beyond or after that date.
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 758.
+        </p>
+        <p>
+            <b>For: Global IME Bank Limited <br>
+                Trade Operations </b><br>
+        </p>
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+
+    </div>
+</body>
+
+</html>

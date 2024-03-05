@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Food Program PBG</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+                           
+        <p style="margin-bottom:0;width:100%; float: left;">
+          <b> To:</b> <br> <b>{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} </b>
+        </p>
+        <br><br>
+        <p>
+            <b> Date: {{subform.2.issuedate.formattedissueDateBG}} </b> <br>
+         <b>  GUARANTEE NO.:.......... </b><br> </p>
+         <ul>
+            <li><b>  THE GUARANTOR : Global IME Bank Limited, Kamaladi, Nepal </b></li><br>
+            <li><b>  THE APPLICANT : {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b></li><br>
+            <li> <b>  THE BENEFICIARY : {{subform.2.salutation}} {{subform.2.beneficiary_name}} {{subform.2.beneficiary_name}}</b></li><br>
+            <li>  <b>  THE UNDERLYING RELATIONSHIP:</b> The Applicant’s obligations in respect of Contract
+               <b> {{subform.2.purpose_guarantee}} </b> dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b> between the Applicant and the Beneficiary, for
+                 Providing Security Service</li><br>
+            <li><b>  GUARANTEE AMOUNT AND CURRENCY: {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}} ) </b></li><br>
+            <li>  <b>  LANGUAGE OF ANY REQUIRED DOCUMENTS: </b>English </li><br>
+            <li> <b>  FORM OF PRESENTATION: </b>Paper Only. Demands shall be signed by duly authorised representatives of the Beneficiary.
+                . </li><br>
+            <li><b> PLACE FOR PRESENTATION :</b> Paper presentation: GLOBAL IME BANK LIMITED, KANTIPATH, NEPAL. 
+            </li><br>
+            <li><b> EXPIRY DATE: {{subform.2.validityDate}} </b></li><br>
+            <li><b> THE PARTY LIABLE FOR THE PAYMENT OF ANY CHARGES: </b>The Applicant</li><br>
+            <li>The Guarantor irrevocably undertakes to pay to the Beneficiary, without any deduction, setoff or withholding, without proof or conditions, and notwithstanding any contest or dispute by
+                the Applicant, any amount up to the Guarantee Amount upon presentation of the Beneficiary’s
+                complying demand, in the Form of Presentation indicated above and supported by a statement
+                indicating in what respect the Applicant is in breach of its obligations under the Underlying
+                Relationship. Payments shall be made by electronic funds transfer within five business days of
+                presentation of a complying demand. </li> <br>
+            <li>The Beneficiary may make partial and multiple demands. The maximum liability of the
+                Guarantor shall not exceed the Guarantee Amount. Any demand under this guarantee must be
+                received by the Guarantor on or before the Expiry Date at the Place for Presentation.</li> <br>
+            <li>The Beneficiary may make partial and multiple demands. The maximum liability of the Guarantor shall not 
+                exceed the Guarantee Amount. Any demand under this guarantee must be received by the Guarantor on or before 
+                the Expiry Date at the Place for Presentation.</li><br>
+            <li>This guarantee shall be exclusively governed by internationally accepted general principles of
+                law, to the exclusion of any single national legal system, and is subject to the Uniform Rules
+                for Demand Guarantees (URDG) 2010 Revision, ICC Publication No 758.</li> <br>
+            <li>Any dispute, controversy or claim between the parties arising out of or relating to this guarantee
+                which cannot be settled amicably shall be settled by arbitration in accordance with the
+                UNCITRAL Arbitration Rules then obtaining. The appointing authority shall be the Secretary
+                General of the Permanent Court of Arbitration. The language to be used in the arbitral
+                proceedings shall be English. The arbitral tribunal shall have no authority to award punitive
+                damages. The decision of the arbitral tribunal shall be final and binding on the parties. The
+                place of arbitration shall be Rome, Italy. </li><br>
+                <li>
+                    The Guarantor acknowledges that nothing hereunder or in any document entered into in
+            relation hereto shall constitute or be deemed to constitute a waiver, express or implied, of any
+            privileges or immunities enjoyed by the Beneficiary, the United Nations, and the Food and
+            Agriculture Organization of the United Nations pursuant to the 1946 Convention on the
+            Privileges and Immunities of the United Nations, the 1947 Convention on the Privileges and
+            Immunities of the Specialized Agencies, customary international law, other relevant
+            international or national agreements, and under domestic law.
+                </li><br> 
+         </ul>
+      
+        <p>
+            <b> For: Global IME Bank Limited </b><br><br><br><br>
+        </p>
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br />
+            <b>Name: {{subform.2.name1}}</b> <br>
+            <b>Designation: {{subform.2.designation1}}</b>
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br />
+            <b>Name: {{subform.2.name2}}</b> <br>
+            <b>Designation: {{subform.2.designation2}}</b>
+            
+            
+        </p>
+        <p>
+        <br><br>
+        <footer style=" left:0; bottom: 0;width:100%;text-align:center;">
+          
+            This Bank Guarantee can be verified at our website www.globalimebank.com 
+        </footer>
+    </p>
+    </div>
+</body>
+
+</html>

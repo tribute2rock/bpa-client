@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBL-PBG </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+            <b> Date: {{subform.2.issuedate.formattedissueDateBG}}</b> <br> <br>
+            <b> {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} </b> <br>
+            </p>
+        <p>
+          <b>Ref.: {{subform.2.reference_number}}</b>
+        </p>
+        <P>
+            Dear Sir(s),
+        </P>
+        <p>
+            At the request of <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereafter called the "Agency "), we <b> Himalayan Bank Ltd, New Road Branch, </b> 
+            having our registered office at Corporate Office, <b> Kamaladi Ward No. 31, P.O. Box No. 20590, Kathmandu, Nepal </b> (hereafter called the "Gurantor")
+            do hereby issue this bank gurantee to extend of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> for the Appeal for Case Against VAT under the following terms and conditions:
+            <ol>
+                <li>The Gurantor undertakes and agrees to pay a sum not exceeding the amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}  ), </b> Against
+                your Written claim along with this original gurantee, reaching us on or before the data of expiry certifying and evidencing the Agency has failed to 
+               Company with the term and Conditions of the Contract. </li>
+                <li>This letter of gurantee shall become in force from <b> {{subform.2.issuedate.formattedissueDateBG}}</b> expires after office hours on <b>{{subform.2.validityDate}}</b>. After the expiry, this Gurantee shall 
+                automatically become null and void and the Gurantor will be freed form all the responsibilities under the said guarantee</li>
+                <li>However, claims if any, under this gurantee must be submitted to us not later than <b> {{subform.2.validityDate}}</b> within banking hours.</li>
+            </ol>
+            
+        </p>
+        <p>
+            <i><b>For Himalayan Bank Limited</b></i>
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+                <p style="float: left; width: 50%;">
+                    <b>..........</b><br /><br />
+                     <b>Authorized Signature</b><br /><br />
+                    <b>New Road Branch</b><br /><br />
+            
+        </p>
+        <p style="float: left; width: 50%;">
+            <b>..........</b><br /><br />
+             <b>Authorized Signature</b><br /><br />
+            <b>New Road Branch</b><br /><br />
+    
+</p>
+        
+      
+   
+    </div>
+</body>
+
+
+
+</html>

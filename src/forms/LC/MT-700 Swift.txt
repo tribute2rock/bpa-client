@@ -1,0 +1,82 @@
+<div style="font-size: 13px">
+        
+MT 700<br/>
+<u> <b> RECEIVER </b> </u>: {{subform.1.receiver}}{{subform.1.receiver_Dinfo}}<br/>  <br/>
+
+<u> <b> F27: SEQUENCE OF TOTAL  </b> </u> <br/>
+{{subform.1.sequence_of_total}}<br/>
+<u> <b> F40A: FORM OF DOCUMENTARY CREDIT  </b> </u> <br/>
+{{subform.1.nature_of_lc}}<br/>
+<u> <b> F20: DOCUMENTARY CREDIT NUMBER  </b> </u> <br/>
+{{subform.1.documentary_credit_number}}<br/>
+<u> <b> F31C: DATE OF ISSUE  </b> </u> <br/>
+{{#subform.1.date_of_issue.formatted}}{{.}}{{/subform.1.date_of_issue.formatted}}{{^subform.1.date_of_issue.formatted}}XXXXXXXXXX{{/subform.1.date_of_issue.formatted}}<br/>
+<u> <b> F40E: APPLICABLE RULES   </b> </u> <br/>
+{{subform.1.applicable_rules}}<br/>
+<u> <b> F31D: DATE AND PLACE OF EXPIRY  </b> </u> <br/>
+{{subform.1.date_of_expiry.formatted}},{{subform.1.place_of_expiry}}<br/>
+<u> <b> F51{{subform.1.applicant_bank_check}}: APPLICANT BANK - PARTY IDENTIFIER - IDENTIFIER CODE  </b> </u> <br/>
+{{subform.1.applicant_bank}}{{subform.1.applicant_bank_Dinfo}}<br/>
+<u> <b> F50: APPLICANT  </b> </u> <br/>
+{{subform.1.applicant_name}}<br/>
+{{subform.1.applicant_address}}<br/>
+<u> <b> PAN </b> </u>: {{subform.1.applicant_pan}} <br/>
+<u> <b> TEL </b> </u>: +977 {{subform.1.applicant_phone}} <br/>
+<u> <b> F59 </b> </u>: BENIFICIARY NAME AND ADDRESS  <br/>
+{{subform.1.beneficiary_name}}<br/>
+{{subform.1.beneficiary_address}}<br/>
+<u> <b> TEL </b> </u>: {{subform.1.beneficiary_phone}} <br/>
+<u> <b> F32B </b> </u>: CURRENCY CODE, AMOUNT <br/>
+<u> <b> Currency </b> </u>: {{subform.1.currency}} <br/>
+<u> <b> Amount </b> </u>: {{subform.1.currency_amount}} <br/>
+<u> <b> F39A </b> </u>: PERCENTAGE CREDIT  AMOUNT TOLERANCE <br/>
+{{subform.1.tolerance_type}}<br/>
+<u> <b> F41{{subform.1.available_with_check}}: AVAILABLE WITH .. BY .. - NAME AND ADDRESS - CODE   </b> </u> <br/>
+{{subform.1.available_with}}<br/>BY {{subform.1.available_by}}<br/>
+<u> <b> F42C: DRAFT AT..  </b> </u> <br/>
+{{subform.1.drafts_at}}<br/>
+<u> <b> F42{{subform.1.drawee_check}}: DRAWEE - PARTY IDENTIFIER - NAME AND ADDRESS     </b> </u> <br/>
+{{subform.1.drawee}}{{subform.1.drawee_Dinfo}}<br/>
+<u> <b> F43P: PARTIAL SHIPMENT  </b> </u> <br/>
+{{subform.1.partial_shipment}}<br/>
+<u> <b> F43T: TRANSHIPMENT  </b> </u> <br/>
+{{subform.1.transshipment}}<br/>
+<u> <b> F44A: PLACE OF TAKING IN CHARGE/DISPATCH FROM ../PLACE OF RECEIPT  </b> </u> <br/>
+{{subform.1.shipment_from}}<br/>
+<u> <b> F44E: PORT OF LOADING/AIRPORT OF DEPARTURE  </b> </u> <br/>
+{{subform.1.port_of_loading}}<br/>
+<u> <b> F44F: PORT OF DISCHARGE/AIRPORT OF DESTINATION  </b> </u> <br/>
+{{subform.1.port_of_discharge}}<br/>
+<u> <b> F44B: PLACE OF FINAL DESTINATION/FOR TRANSPORTATION TO ../PLACE OF DELIVERY  </b> </u> <br/>
+{{subform.1.port_of_final_destination}}<br/>
+<u> <b> F44C: LATEST DATE OF SHIPMENT  </b> </u> <br/>
+{{subform.1.latest_date_of_shipment.formatted}}<br/>
+<u> <b> F45A: DESCRIPTION OF GOODS AND/OR SERVICES  </b> </u> <br/>
+{{subform.1.description_of_good}}<br/>
+<u> <b> F46A: DOCUMENTS REQUIRED  </b> </u> <br/>
+{{subform.1.documents_required}}<br/>
+<u> <b> F47A: ADDITIONAL CONDITIONS  </b> </u> <br/>
+{{subform.1.additional_conditions}}<br/>
+<u> <b> F71D: CHARGES  </b> </u> <br/>
+{{subform.1.charges}}<br/>
+<u> <b> F48: PERIOD OF PRESENTATION  </b> </u> <br/>
+{{subform.1.period_for_presentation}}<br/>
+<u> <b> F49: CONFIRMATION INSTRUCTIONS  </b> </u> <br/>
+{{subform.1.confirmation_instruction}}<br/>
+<u> <b> F58{{subform.1.requested_confirmation_check}}: CONFIRMING BANK  </b> </u> <br/>
+{{subform.1.requested_confirmation}}{{subform.1.requested_confirmation_Dinfo}}<br/>
+<u> <b> F53A: REIMBURSING BANK  </b> </u> <br/>
+{{subform.1.reimbursing_bank}}<br/>
+<u> <b> F78:INSTRUCTION TO PAY / ACCEPT / NEGOTIATE  </b> </u> <br/>
+{{subform.1.instruction_to_pay}}<br/>
+<u> <b> F57{{subform.1.advise_through_bank_check}}: ADVISE THROUGH BANK  </b> </u> <br/>
+{{subform.1.advise_through_bank_Dinfo}}<br/>
+<u> <b> F72Z: SENDER TO RECEIVER INFO  </b> </u> <br/>
+{{subform.1.sernder_receiver_information}}<br/>
+
+<p><b>Approver Log </b></p>
+{{#each log}}
+<p> {{this.name}} {{this.action}} the request as {{this.group}} on {{this.date}} </p>
+<p>{{this.comment}}</p>
+{{/each}}
+</div>

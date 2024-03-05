@@ -1,0 +1,41 @@
+MT 700\n
+RECEIVER:{{subform.1.receiver}}{{subform.1.receiver_Dinfo}}\n\n
+
+:27:{{subform.1.sequence_of_total}}\n
+:40A:{{subform.1.nature_of_lc}}\n
+:20:{{subform.1.documentary_credit_number}}\n
+:31C:{{#subform.1.date_of_issue.formatted}}{{.}}{{/subform.1.date_of_issue.formatted}}{{^subform.1.date_of_issue.formatted}}XXXXXXXXXX{{/subform.1.date_of_issue.formatted}}\n
+:40E:{{subform.1.applicable_rules}}\n
+:31D:{{subform.1.date_of_expiry.formatted}},{{subform.1.place_of_expiry}}\n
+:51{{subform.1.applicant_bank_check}}:{{subform.1.applicant_bank}}{{subform.1.applicant_bank_Dinfo}}\n
+:50:{{subform.1.applicant_name}}\n
+{{subform.1.applicant_address}}\n
+PAN:{{subform.1.applicant_pan}}\n
+TEL:+977{{subform.1.applicant_phone}}\n
+:59:{{subform.1.beneficiary_name}}\n
+{{subform.1.beneficiary_address}}\n
+TEL:{{subform.1.beneficiary_phone}}\n
+:32B:{{subform.1.currency}}{{subform.1.amount_comma}}\n
+:39A:{{subform.1.tolerance_type}}\n
+:41{{subform.1.available_with_check}}:{{subform.1.available_with}} \n
+By {{subform.1.available_by}}\n
+:42C:{{subform.1.drafts_at}}\n
+:42{{subform.1.drawee_check}}:{{subform.1.drawee}}{{subform.1.drawee_Dinfo}}\n
+:43P:{{subform.1.partial_shipment}}\n
+:43T:{{subform.1.transshipment}}\n
+:44A:{{subform.1.shipment_from}}\n
+:44E:{{subform.1.port_of_loading}}\n
+:44F:{{subform.1.port_of_discharge}}\n
+:44B:{{subform.1.port_of_final_destination}}\n
+:44C:{{subform.1.latest_date_of_shipment.formatted}}\n
+:45A:{{subform.1.description_of_good}}\n
+:46A:{{subform.1.documents_required}}\n
+:47A:{{subform.1.additional_conditions}}\n
+:71D:{{subform.1.charges}}\n
+:48:{{subform.1.period_for_presentation}}\n
+:49:{{subform.1.confirmation_instruction}}\n
+:58{{subform.1.requested_confirmation_check}}:{{subform.1.requested_confirmation}}{{subform.1.requested_confirmation_Dinfo}}\n
+:53{{subform.1.reimbursing_bank_check}}:{{subform.1.reimbursing_bank}}{{subform.1.reimbursing_bank_Dinfo}}\n
+:78:{{subform.1.instruction_to_pay}}\n
+:57{{subform.1.advise_through_bank_check}}:{{subform.1.advise_through_bank_Dinfo}}\n
+:72Z:{{subform.1.sernder_receiver_information}}\n

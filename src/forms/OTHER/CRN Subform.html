@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRN Subform</title>
+</head>
+
+<body>
+    <style>
+        .heading-title {
+            position: relative;
+            margin-bottom: 15px;
+            background-color: #f5f5f5;
+            padding: 12px 0 15px 20px;
+        }
+
+        .heading-title span {
+            color: #363636;
+            display: inline-block;
+            position: relative;
+            z-index: 99;
+        }
+
+        .heading-title::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            z-index: 9;
+            background: #c5191e;
+        }
+
+        .heading-title::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 9;
+            background: #0f428a;
+        }
+    </style>
+    <div class="mt-3">
+        <div class="text-right">
+            <span onclick="requestLoad()" id="importBtn" style="cursor: pointer"
+                class="text-center mb-3 d-inline-block border border-secondary p-1 text-secondary px-3">Import
+                Detail</span>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h6 class="heading-title">
+                    <span>
+                        CRN Number
+                    </span>
+                </h6>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <input type="text" class="form-control" name="crn_number" data-label="CRN Number" id="crn_number" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Account Name</label>
+                    <input type="text" class="form-control" name="account_name" data-label="Account Name"
+                        id="account_name" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Account Number</label>
+                    <input type="text" class="form-control" name="account_number" data-label="Account Number"
+                        id="account_number" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="text" class="form-control" name="mobile_number" data-label="Mobile Number"
+                        id="mobile_number" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Email</label>
+                    <textarea class="form-control" name="account_email" required data-label="Email"
+                        id="account_email"></textarea>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Citizenship Number</label>
+                    <input type="text" class="form-control" name="citizenship_number" data-label="Citizenship Number"
+                        id="citizenship_number" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="text" class="form-control" name="account_dob" data-label="Date of Birth"
+                        id="account_dob" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>DP ID</label>
+                    <input type="text" class="form-control" name="account_dpid" data-label="DP ID" id="account_dpid" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Client ID</label>
+                    <textarea class="form-control" name="account_clientid" required data-label="Client ID"
+                        id="account_clientid"></textarea>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" name="address" data-label="Address" id="address" />
+                </div>
+            </div>
+
+            <!-- <div class="col-md-6">
+              <h6 class="heading-title">
+                  <span>
+                      CURRENCY AND AMOUNT
+                  </span>
+              </h6>
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="form-group">
+                          <label>Currency - <small id="currency_val"></small></label>
+                          <input type="text" class="form-control" name="currency" data-label="Currency"
+                              id="currency" />
+                      </div>
+                  </div>
+                  <div class="col-md-8">
+                      <div class="form-group">
+                          <label>In Figures - <small id="figure_val"></small></label>
+                          <input type="text" class="form-control" required name="in_figures" data-label="In Figures"
+                              id="in_figures" />
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label>In Words - <small id="words_val"></small></label>
+                  <input type="text" class="form-control" name="in_words" data-label="In Words" id="in_words" />
+              </div>
+              </div> -->
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    async function requestLoad() {
+        let data;
+        const requestId = 9949;
+        // const requestId = :requestId;
+        if (requestId != "") {
+            const populateURL = `http://192.168.126.73:8080/api/v1/populate/${requestId}`;
+            let emp = await fetch(`${populateURL}`, {
+                method: "GET",
+            });
+
+            data = await emp.json();
+        }
+
+        // document.getElementById("account_name").value = data.auto_populate_F4D31252_20DA_4713_813E_AB68C36F6651;
+        // document.getElementById("account_number").value = data.auto_populate_77E555E6_D286_440D_84FD_75E686D7BE5B;
+        // document.getElementById("mobile_number").value = data.auto_populate_D3000387_8BAE_4BE6_8671_337FC34976AB;
+        // document.getElementById("account_email").value = data.account_email;
+        // document.getElementById("citizenship_number").value = data.citizenship_number;
+        // document.getElementById("account_dob").value = data.account_dob;
+        // document.getElementById("account_dpid").value = data.text_input_921CE452_3A74_480B_8AE6_E629EB059BA0;
+        // document.getElementById("account_clientid").value = data.text_input_CA0E59B6_0D4E_4B41_B2D1_3AA6538291BE;
+        // document.getElementById("address").value = data.address;
+        // document.getElementById("branch").value = data.dynamic_dropdown_509EFAF5_E723_48F9_9C5D_C8302CAA5174;
+
+
+        document.getElementById("account_name").value = data?.accountName;
+        document.getElementById("account_number").value = data?.accountNumber;
+        document.getElementById("mobile_number").value = data?.mobileNumber;
+        document.getElementById("account_email").value = data?.email;
+        document.getElementById("citizenship_number").value = data?.citizenshipNo;
+        document.getElementById("account_dob").value = data?.dob;
+        document.getElementById("address").value = data?.address;
+        document.getElementById("account_dpid").value = data?.dp_id;
+        document.getElementById("account_clientid").value = data?.client_id;
+        // document.getElementById("branch").value = data?.dynamic_dropdown_branch;
+    }     
+</script>

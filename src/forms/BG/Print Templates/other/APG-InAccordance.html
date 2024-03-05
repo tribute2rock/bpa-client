@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apgInAccordance</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Ref No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            In accordance with the payment provision included in the Conditions of Contract to provide for advance
+            payment to <b>{{subform.2.salutation_acccount}} </b><b>{{subform.2.company_name}}</b>,
+            <b>{{subform.2.company_address}}</b> (hereinafter called "the Supplier") shall deposit with the
+            Purchaser a Bank Guarantee to guarantee its proper and faithful performance under the said Conditions of
+            Contract in an amount of <b>{{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}})</b>.
+        </p><br>
+        <p>
+            We, Global IME Bank Ltd., Kamaladi, Kathmandu, Nepal, agree unconditionally and irrevocably to guarantee as
+            primary obligator and not as Surety merely, the payment to the Purchaser on its first demand without
+            whatsoever right of objection on our part and without its first claim to the Supplier, in the amount not
+            exceeding <b>{{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}})</b>
+        </p><br>
+        <p>
+            We further agree that no change or addition to or other modification of the terms of the Contract to be
+            performed there under or of any of the Contract documents which may be made between the Purchaser and the
+            Supplier, shall in any way release us from any liability under this guarantee, and we hereby waive notice of
+            any such change, addition of modification.
+        </p>
+        <p>
+            This guarantee shall remain valid and in full effect from the date of the advance payment under the Contract
+            until <b>{{subform.2.final_validityDate}}</b>
+        </p>
+        <p>
+            Notwithstanding anything contained herein above this guarantee will remain in force up to
+            <b>{{subform.2.final_validityDate}}</b>.
+            Consequently, any demand for the payment under this guarantee must be received by us at the Trade Operations
+            Department, Central Business Park, 6th Floor, Thapathali, Kathmandu, Nepal on or before this date i.e
+            <b>{{subform.2.final_validityDate}}</b>
+        </p>
+        <p>
+            <b>For: Global IME Bank Limited <br>
+                Trade Operations </b><br>
+        </p>
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name2}}</b><br /><br />
+            <b>Designation : {{subform.2.designation2}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+
+    </div>
+</body>
+
+</html>

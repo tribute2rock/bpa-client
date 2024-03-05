@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Guarantee Format </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+            <b> Date:{{subform.2.issuedate.formattedissueDateBG}}</b> <br>
+            <br>
+
+            <b>{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}}  </b> <br>
+            
+            </p>
+        <p>
+        <b>  Our Ref. No.: {{subform.2.reference_number}} </b>
+        </p>
+      
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called “the Bidder”) has submitted to you 
+            its bid dated {{subform.2.issuedate.formattedissueDateBG}} (hereinafter called “the Bid”) for the
+            execution of {{subform.2.purpose_guarantee}}, under the Invitation for Bids No........... ("the IFB").       
+        </p>
+        <p>
+            Furthermore, we understand that, according to your conditions, bids must be supported by a bid guarantee.
+        </p>
+        <p>
+            At the request of the Bidder, we, Global IME Bankk Limited, Kamaladi, Kathmandu, Nepal hereby irrevocably undertake to
+            pay you any sum or sums not exceeding in total an amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b>
+                 upon receipt by us of your first demand in writing accompanied by a written statement stating that the Bidder
+            is in breach of its obligation(s) under the bid conditions, because the Bidder: 
+            <ol type="a">
+                <li>has withdrawn its Bid during the period of bid validity specified by the Bidder in the Letter of Bid; or</li>
+                <li>does not accept the correction of errors in accordance with the Instructions to Bidders (hereinafter "the ITB"): or</li>
+                <li>having been notified of the acceptance of its Bid by the Employer during the period of Bid Validity, (i) fails or
+                    refuses to execute the Contract Agreement, or (ii) fails or refuses to furnish the Performance Security, in
+                    accordance with the ITB, or (iii) fails or refuses to furnish the domestic preference security, if required.</li>
+            </ol>
+        </p>
+            This guarantee will expire:
+            <ol type="a">
+            <li> if the Bidder is the successful Bidder, upon our receipt of copies of the Contract Agreement
+                signed by the Bidder and the Performance Security issued to you upon the instruction of the Bidder; or</li>
+            <li> if the Bidder is not the successful Bidder, upon the earlier of 
+                <ol type="i">
+                    <li>our receipt of a copy of your notification to the Bidder of the name of the
+                        successful Bidder, or</li>
+                    <li>28 days after the expiration of the Bidder's bid.
+                    </li>
+                </ol>
+            </li>
+            </ol>
+        <p>
+            <p>
+                Notwithstanding anything contains herein above , any demand for payment under this guarantee must be received by {{subform.2.validityDate}} us at
+                the office on or before that date <b> i.e. {{subform.2.validityDate}} </b>or before guarantee expiry conditions as stated above whichever is
+                earlier. Our Liability under this guarantee is restricted to <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}} ), </b>and valid from <b> {{subform.2.issuedate.formattedissueDateBG}} to {{subform.2.validityDate}} </b>
+                    or before guarantee expiry conditions as stated above
+                whichever is earlier.
+            </p>
+            <p>
+                This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 458.
+
+            </p>
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+                <p style="float: left; width: 50%;">
+                    <b>..........</b><br /><br />
+                    
+            
+        </p>
+        <p style="float: left; width: 50%;">
+            <b>..........</b><br /><br />
+            
+    
+        </p>
+        
+      
+   
+    </div>
+</body>
+
+
+
+</html>

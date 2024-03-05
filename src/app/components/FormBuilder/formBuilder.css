@@ -1,0 +1,391 @@
+.left {
+  min-height: 130vh;
+  height: max-content;
+  width: 75%;
+  border-radius: 10px;
+  background: #F5F5F5;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.03);
+  padding: 25px 10px;
+}
+
+.main-cointainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  border-radius: 10px;
+  background: #F5F5F5;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.03);
+  height: 130vh;
+  padding: 10px 0;
+  width: 23%;
+  overflow-y: scroll;
+}
+
+.dropZone {
+  display: flex;
+  width: 90%;
+  height: 12vh;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 2px dashed #DAC7C7;
+  margin: auto;
+  margin-top: 5vh;
+}
+
+.dropZone h1 {
+  color: #D6BEBE;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.rightTemplates .topicName {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-family: arial;
+  font-size: 14px;
+  font-style: normal;
+  height: 6vh;
+}
+
+.formInsertion {
+  width: 90%;
+  height: 8vh;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+  margin: auto;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.formData {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.formInsertion .inputLogo {
+  width: 29.191px;
+  height: 28px;
+}
+
+.formInsertion .inputName {
+  color: #9fa8b3;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-left: 10px;
+}
+
+.lowOpacity {
+  opacity: 0.4;
+}
+
+/* .allForms {
+  display: flex;
+  width: 100%;
+}  */
+.formsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formConditionsOne {
+  width: 64vw;
+  flex-basis: 100%;
+}
+
+.formConditionsTwo {
+  width: 31vw;
+  flex-basis: 50%;
+
+}
+
+.formConditionsThree {
+  width: 20vw;
+  flex-basis: 30%;
+
+}
+
+.formConditionsFour {
+  width: 14vw;
+  flex-basis: 12%;
+}
+
+.gradientBox {
+  width: 220px;
+  border: 1px solid rgb(206, 194, 194);
+  height: 80px;
+}
+
+.clearGradientBtn {
+  color: #090909;
+  font-size: 18px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.clearGradientBtn:hover {
+  background: #e8e8e8a0;
+}
+
+.displayGradient {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgb(152, 148, 148);
+}
+
+.clearAndDisplay {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.colorsPicker {
+  margin: 5px 2px;
+  display: flex;
+}
+
+.colorsPicker input {
+  margin: 0 2px 2px;
+  width: 24%;
+  height: 33px;
+}
+
+.selectForGradient {
+  margin: 0 2px 10px;
+  width: 50%;
+  height: 33px;
+}
+
+/* edit delete buttons  */
+
+.inputShortText {
+  position: relative;
+  cursor: move;
+  margin: 10px;
+}
+
+.inputShortTextpreview {
+  margin: 10px;
+}
+
+.inputShortText:hover .inputFunctions {
+  display: flex;
+}
+
+.inputShortTextpreview:hover .inputFunctions {
+  display: flex;
+}
+
+.inputFunctions {
+  display: flex;
+  color: var(--tail-grids-text-color, #637381);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  position: absolute;
+  right: 0.5vw;
+  top: -5px;
+  display: none;
+  transition: all 0.1;
+}
+
+.inputFunctions .copy,
+.inputFunctions .edit,
+.inputFunctions .delete {
+  margin: 3px;
+  border-radius: 10px;
+  background-color: rgba(223, 223, 223, 0.44);
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.inputFunctions .copy:hover,
+.inputFunctions .edit:hover,
+.inputFunctions .delete:hover {
+  background-color: rgba(223, 223, 223, 0.74);
+}
+
+.inputFunctions .copy span,
+.inputFunctions .edit span,
+.inputFunctions .delete span {
+  margin: 1px 3px;
+}
+
+.hideIconText {
+  display: none;
+}
+
+
+.required:after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+.hiddenThis {
+  display: none;
+}
+
+.notHidden {
+  display: block;
+}
+
+.gradientAndClear {
+  display: flex;
+  width: 100%;
+}
+
+.formLabelClass {
+  min-width: max-content;
+  height: 70%;
+  margin: auto;
+}
+
+.formSpanClass {
+  margin-right: 10px;
+  display: inline;
+}
+
+.formGroupClass {
+  display: flex;
+  align-items: center;
+}
+
+.widthDropdown {
+  width: 100%;
+}
+
+
+/* scrollbar */
+
+.right {
+  overflow-y: auto;
+  /* Adjust the maximum height as needed */
+}
+
+.right::-webkit-scrollbar {
+  width: 6px;
+  cursor: pointer;
+}
+
+.right::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.518);
+  border-radius: 6px;
+}
+
+.right::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(169, 169, 169, 0.354);
+}
+
+
+.previewformConditionsOne {
+  width: 73vw;
+  flex-basis: 100%;
+}
+
+.previewformConditionsTwo {
+  width: 35vw;
+  flex-basis: 50%;
+
+}
+
+.previewformConditionsThree {
+  width: 22vw;
+  flex-basis: 30%;
+
+}
+
+.previewformConditionsFour {
+  width: 16vw;
+  flex-basis: 12%;
+}
+
+.adddeleteGroupBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.lastoptionHidden {
+  display: none;
+}
+
+/* .add-new-api-btn {
+
+} */
+
+.add-new-api-btn {
+  display: inline-flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border-radius: 10px;
+  background: #219654dc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.add-new-api-btn button {
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.add-new-api-btn:hover {
+  background: #219654;
+
+}
+
+.delete-api-btn {
+  display: inline-flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border-radius: 10px;
+  background: #d34053e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-api-btn button {
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.delete-api-btn:hover {
+  background: #D34053;
+
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Solution APG</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p >
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">VOLUME I</b><br>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">COMMERCIAL PART</b><br>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">SECTION 4</b><br>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">APPENDICES</b> <br>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">FORMAT OF ADVANCE PAYMENT GUARANTEE </b> <br>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">Date:{{subform.2.issuedate.formattedissueDateBG}}</b><br>
+             Guarantee No:.......... <br>
+             {{subform.2.salutation}} {{subform.2.beneficiary_name}}<br>
+             {{subform.2.beneficiary_address}}
+            <br>
+            <br>
+
+        </p>   
+        <p>
+        Dear Sirs,           
+        </p>
+        <p>
+            WHEREAS, in consideration of your agreeing to pay to <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b>  a company
+            incorporated under the laws of Nepal and having its registered / principal office at
+            {{subform.2.company_address}} (hereinafter referred to as “Contractor” which expressions shall include its
+            successors and assigns) a sum of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}) </b> as and by
+            way of Advance Payment in terms of your Contract no: <b> {{subform.2.contract_number}}</b> dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b> (hereinafter
+            referred as the “Contract”) for the works and services to be performed by the Contractor under the
+            said Contract on furnishing a bank guarantee of equivalent value in the manner hereinafter contained,
+            we Global IME Bank Ltd. Kantipath, Nepal ( which include our successors and
+            assigns) do hereby irrevocably and unconditionally agree and undertake as follows:
+            <ol type="1">
+                <li>We hereby undertake and bind ourselves irrevocably and unconditionally guarantee to pay to
+                    you the sum in aggregate not exceeding <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                        {{subform.2.in_words}}) </b> representing the Advance Payment made by you to the Contractor as aforesaid, merely on the
+                    first written demand signed by your duly authorized representative without your need to prove or
+                    show grounds or reasons for your demand and without any protest or demur. Any such demand made
+                    on us shall be conclusive not with standing any difference between the you and the Contractor or any
+                    dispute pending before any Court, Tribunal, Arbitrato or any other authority as regards the amount
+                     due and payable to you by us under this guarantee</li>
+                <li>This guarantee shall come into force simultaneously with issue of this Bank Guarantee and shall
+                    remain in full force and effect up to and including .......... or the earlier date upon which we have
+                    received a written notice from you and the Contractor jointly stating that the Contract has been
+                    terminated and no claim against the Contractor is outstanding. Should it be necessary to extend the
+                    validity of this guarantee beyond the said date, we undertake to extend the period of the guarantee till
+                    such time as may be mutually agreed between you and the Contractor.</li>
+                    <li>Not with standing anything contained hereinabove 
+                        <ol type="a">
+                            <li>Our liability under this guarantee is restricted to <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                                {{subform.2.in_words}}). </b></li>
+                            <li>The Bank Guarantee shall be valid up to <b>{{subform.2.validityDate}}</b> (The expiry date)</li>
+                            <li>Unless a claim in writing is lodged with us within a period of 2 (Two) months from the
+                                date of expiry of the guarantee i.e. upto and including <b> {{subform.2.claim_validity}}</b> (The claim date), all
+                                your rights under this guarantee shall stand forfeited and we shall be released and
+                                discharged from all liabilities under this guarantee whether or not this document shall
+                                have been returned to us.
+                                </li>
+                        </ol>
+                    </li>
+            </ol>
+        </p>
+       
+        <br>    
+        <p style="float:left; width: 100%;">
+            <br>
+            THIS GUARANTEE SHALL BE SUBJECT TO THE LAWS OF NEPAL AND THE
+                JURISDICTION OF THE COURTS IN KATMANDU, NEPAL.<br /><br />
+                SIGNED AND DELIVERED on this day of : <b> {{subform.2.issuedate.formattedissueDateBG}}</b> <br>
+                For and on behalf of : {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+                Bank: <b> Global IME Bank Ltd. </b> <br>
+                Address: <b> Kantipath, Nepal </b>  <br>
+                <br>
+                <br>
+                <br>
+
+                .......... <br>
+                (AUTHORISED SIGNATORY OF BANK) <br>
+        </p>
+        
+    </div>
+</body>
+
+</html>

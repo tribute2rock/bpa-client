@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>PBG-14</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            <p>
+                <b>Date:{{subform.2.issuedate.formattedissueDateBG}}</b>
+            </p>
+            <p style="margin-bottom:0;width:100%; float: left;">
+                <b style="float: left;width: 80%;">
+                    {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+                    {{subform.2.beneficiary_address}}
+                    </b>
+                    <br>
+            </p>
+           
+            <p>
+                <b>Our Bank Guarantee Reference No.: {{subform.2.reference_number}}</b>
+            </p>
+           
+            <p>We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called the Contractor) 
+                has been awarded the Contract No: <b> {{subform.2.contract_number}} </b> for the execution of {{subform.2.purpose_guarantee}}
+                (hereinafter called the "Contract".)
+            </p>
+             
+            <p>Furthermore, we understand that, according to the conditions of the contract, 
+                a performance guarantee is required.
+                
+            </p>
+            <p>
+                At the request of the Contractor, we <b> Global IME Bank Ltd. </b> having our Head Office at Kantipath, Nepal , hereby 
+                irrevocably undertake to pay you any sum or sums not exceeding in total an amount
+                 of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b>
+                 such sum being payable in Nepalese Rupees, upon receipt by us of your 
+                 first written demand and without cavil or argument, any sum or sums within the limits 
+                 of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b> as aforesaid, without your needing to 
+                 prove or to show grounds or reasons for your demand or the sum specified therein. 
+            </p>
+            <p>
+                We hereby waive the necessity of your demanding the said debt from the contractor before presenting us with the demand.
+
+            </p>
+            <p>
+                We further agree that any change or addition to or other modification of the terms of the contract 
+                or of works to be performed there under or of any of the contract document which may be made between 
+                you and the contractor shall not in any way release us from any liability under this guarantee, and
+                 we hereby waive the notice or any such change, addition or modification.
+
+            </p>
+            <p>
+                This guarantee shall be valid from the the Day of <b>{{subform.2.issuedate.formattedissueDateBG}} </b>  and shall expire no later than the
+               <b> {{subform.2.validityDate}}, </b> and any demand for payment under this guarantee must be received by us at
+                  this office on or before that date.
+            </p>
+            <p>
+                All banking charges arising on account of this Bank Guarantee shall be borne by the contractor.
+            </p>
+            <p>If the expiry date of this guarantee falls on a non-banking day in Nepal, the expiry date 
+                shall be extended to the first banking day thereafter.</p>
+            <p>All claim arising from this guarantee would be honored 
+                in the currency of this guarantee in accordance with your instructions.</p>
+            <p>This Guarantee shall be effective from <b>{{subform.2.issuedate.formattedissueDateBG}} </b>  and expire on <b> {{subform.2.validityDate}} </b></p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+           
+            <p style="float: left; width: 50%;">
+                <b>..........</b><br /><br />
+                <b>Signature</b><br /><br />
+               
+            </p>
+            <p style="float:right; width: 50%;">
+                <b>..........</b><br /><br />
+                <b>Signature</b><br /><br />
+                
+            </p>
+            <br>
+            <br>
+  
+          
+           
+        </div>
+
+    </body>
+
+</html>

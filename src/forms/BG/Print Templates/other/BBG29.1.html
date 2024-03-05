@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 20px; margin-top: 100px; text-align: justify;">
+
+        <span>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </span>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address2}}</b>
+        </p>
+        <p>
+            <b>Our Ref No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>We have been informed that <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}},
+                {{subform.2.company_address}}, {{subform.2.company_address2}}</b>
+            (hereinafter called “the Bidder”) intends to submit its bid to you (herein after called “the Bid”) for the
+            execution of
+            <b>{{subform.2.purpose_guarantee}}</b> under Invitation for Bids No: <b>{{subform.2.contract_number}} ("the
+                IFB")</b>
+        </p>
+        <p>
+            Furthermore, we understand that, according to the conditions, bids must be supported by a bid guarantee.
+        </p>
+        <p>
+            At the request of the Bidder, we, Global IME Bank Limited (hereinafter called the ‘Bank’) hereby irrevocably
+            undertake to pay you any sum or sums not exceeding in total an amount of <b>{{main.currency_short}}
+                {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b> upon receipt by us of your
+            first demand in written accompanied by a
+            written
+            statement stating that the Bidder is in breach of its obligations(s) under the bid conditions,
+            because the
+            Bidder:
+        </p>
+        <ul style="list-style:lower-alpha">
+            <li>
+                has withdrawn or modifies its Bid: <br>
+
+                i) during the period of bid validity specified by the Bidder on the Letter Technical and Price Bid, in
+                case of electronic submission. <br>
+
+                ii) from the period twenty- four hours prior to bid submission deadline up to the period of bid validity
+                specified by the Bidder on the Letter of Technical Bid and Price Bid, in case of hard copy submission;
+                or
+            </li>
+
+            <li>
+                does not accept the correction of errors in accordance with the Instruction to Bidders (hereinafter “the
+                ITB’); or
+            </li>
+            <li>
+
+                changes the prices or substance of the bid while providing information pursuant to clause 29.1 of ITB:
+                or
+            </li>
+            <li>
+                having been notified of the acceptance of its Bid by the Purchaser during the period of bid validity,
+                (i) fails or refuses to execute the Contract Agreement, or (ii) fails or refuses to furnish the
+                performance security, in accordance with the ITB.
+            </li>
+            <li>
+                is involved in fraud and corruption in accordance with the ITB
+            </li>
+
+        </ul>
+        <p>
+            This guarantee will expire (a) if the Bidder is the successful Bidder, upon our receipt of copies of the
+            Contract signed by the Bidder and the performance security issued to you upon the instruction of the Bidder,
+            and (b) if the Bidder is not the successful Bidder, upon the earlier of (i) our receipt of a copy your
+            notification to the Bidder of the name of the successful Bidder, or (ii) <b>({{subform.2.total_days}})
+                days</b> after the
+            expiration of the Bidder's bid which comes to be <b>{{subform.2.final_validityDate}}</b>.
+        </p>
+        <p>
+            Consequently, any demand for payment under this guarantee must be received by us at the office on or before
+            that date.
+        </p>
+        <p>
+            <b>For: Global IME Bank Limited <br>
+                Trade Operations </b><br>
+        </p>
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name2}}</b><br /><br />
+            <b>Designation : {{subform.2.designation2}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+    </div>
+</body>
+
+</html>

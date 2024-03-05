@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apgInAccordance</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Reference No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            WHEREAS <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b>
+            (hereinafter “the Supplier”) has
+            received the notification of award for the execution of <b>{{subform.2.purpose_guarantee}}
+                {{subform.2.contract_number_final}} {{subform.2.contract_number}}</b>
+            (Hereinafter “the Contract”).
+        </p>
+        <p>
+            AND WHEREAS it has been stipulated by you in the aforementioned Contract that the Supplier shall furnish you
+            with a Performance Bond Guarantee issued by a reputable guarantor for the sum specified therein as security
+            for compliance with the Supplier’s performance obligations in accordance with the Contract.
+        </p>
+        <p>
+            AND WHEREAS the undersigned <b>Global IME Bank Ltd.</b>, legally domiciled in
+            <b>{{subform.2.branch_name}}</b>, (hereinafter “the
+            Guarantor”), have agreed to give the Supplier such a Bank Guarantee.
+        </p>
+        <p>
+            THEREFORE WE hereby affirm that we are the Guarantor and responsible to you, on behalf of the Supplier, up
+            to a total of <b>{{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}})</b> and we undertake to
+            pay
+            you,
+            upon your first written demand declaring the Supplier to be in default under the Contract, without cavil or
+            argument, any sum or sums within the limits of <b>{{main.currency_short}} {{subform.2.in_figures}}
+                ({{main.currency_full}} {{subform.2.in_words}})</b> as aforesaid, without your needing to prove or to
+            show grounds or reasons for your demand or
+            the sum
+            specified therein.
+        </p>
+        <p>
+            This guarantee will remain in full force from <b><b>{{subform.2.final_issuedate.default}}</b></b> until the
+            close of
+            banking hours on
+            <b>{{subform.2.final_validityDate}}</b> or on completion of the Contract whichever is earlier. Any demand in
+            respect to this
+            guarantee
+            should reach this bank at Trade Operations Department, Central Business Park, 6th Floor, Thapathali,
+            Kathmandu, Nepal not later than the above date i.e. <b>{{subform.2.final_validityDate}}</b>.
+        </p>
+        <p>
+            <b>For: Global IME Bank Limited <br>
+                Trade Operations </b><br>
+        </p>
+        <br>
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name2}}</b><br /><br />
+            <b>Designation : {{subform.2.designation2}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+
+    </div>
+</body>
+
+</html>

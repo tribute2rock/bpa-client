@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            Dear Sir(s),
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+           Subject: Performance Bond Guarantee
+        </p>
+        <p>
+            Our Ref No.:{{subform.2.reference_number}} <br>
+            Applicant: {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}  <br>
+            Effective From:.......... <br>
+            Valid Till: {{subform.2.validityDate}} <br>
+            Purpose: {{subform.2.purpose_guarantee}}  <br>
+        </p>
+               <p>
+                At the request of <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b> (hereinafter called the “Agency”) we, <b> Global IME
+                Bank Ltd., having our registered office at Kathmandu-3, Nepal </b> (hereinafter called the “Guarantor”)
+                do hereby issue this Performance Bond Guarantee  (hereinafter called the “Guarantee”) for <b>{{subform.2.purpose_guarantee}} </b> 
+                (hereinafter called the “Contract”) under the following terms and conditions:
+                
+        </p>
+              <ul style="list-style:decimal; margin-left: 0; padding-left: 15px;">
+            <li>
+                The Guarantor undertakes and agrees to pay you, upon your first written demand without cavil or
+                argument any sum not exceeding the above mentioned amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b> against
+                your written claim, along with the Guarantee original, reaching us on or before the Guarantee
+                expire stating the agency has failed to comply with the terms and conditions of the contract.
+            </li>
+
+            <li>
+                This Guarantee shall be effective from <b> {{subform.2.issuedate.formattedissueDateBG}} </b> and expires on  <b> {{subform.2.validityDate}} </b> or on completion of the
+                contract as defined by (Beneficiary) whichever is earlier. After the expiry or completion of terms
+                and conditions of the contract whichever occurs earlier, this Guarantee automatically becomes
+                null void and Guarantor will be freed from all the obligations under the said guarantee.
+            </li>
+           
+            <li>
+                Claims, if any, under this Guarantee must be submitted to us not later than the said expiry date,
+                i.e. {{subform.2.validityDate}} within close of banking hours accompanied with the original guarantee letter. After
+                the said expiry date, our entire obligation hereunder shall cease and we shall not entertain any
+                claim beyond the date.
+            </li>
+             <li>Retention of this guarantee does not confer any rights upon yourselves beyond the expiry date.
+                Please return this original guarantee to us upon expiry or completion of Contract whichever
+                occurs first.
+            </li>
+                      
+
+        </ul>
+             <p>
+            NOTWITHSTANDING anything contained hereinabove, our liability under this guarantee is
+            restricted to <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}})</b> and shall remain in full force from <b> {{subform.2.issuedate.formattedissueDateBG}}</b> until the close
+            banking hours on <b> {{subform.2.validityDate}} </b>or on completion of Contract whichever is earlier.
+
+        </p>
+        <p>
+            Unless demand or claim made in writing by you to us under this guarantee reaches us on the close of
+            banking hours on the expiry date as mentioned above, all our obligations hereunder shall cease and
+            we shall not entertain any claim or contestation beyond or after date. Claims, if any, under this
+            guarantee should reach us at Global IME Bank Ltd., Central Trade Finance Department, Kamaladi, Kathmandu, Nepal.
+        </p>    
+     
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            This Bank Guarantee can be verified at our website www.globalimebank.com 
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retention Format</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 20px;">Retention Money Security</b>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 20px;">(On Letter Paper of the Bank)</b>
+            
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;"><b>
+            Global IME Bank Ltd. Kantipath, Nepal <br>
+            Beneficiary:{{subform.2.salutation}} {{subform.2.beneficiary_name}}  <br>{{subform.2.beneficiary_address}} <br>
+            Date:{{subform.2.issuedate.formattedissueDateBG}} <br>
+         RETENTION MONEY GUARANTEE No.: ..........</b>
+         <br><br><br>
+        </p>
+        
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called ''the Applicant" ) has entered into 
+            Contract No.: <b> {{subform.2.contract_number}} </b> dated <b>{{subform.2.issuedate.formattedissueDateBG}} </b>  with the Beneficiary, for the execution of
+           <b> {{subform.2.purpose_guarantee}} </b> (hereinafter called "the Contract").
+
+        <p>
+            Furthermore, we understand that. according to the conditions of the Contract. the Beneficiary retains
+             moneys up to the limit set forth in the Contract ("the Retention Money"), and that when at
+              least eighty (80 %) percent of the whole works have been completed. progress of the works is 
+              satisfactory in accordance with the Contract as per approved work schedule and it can be
+               assured that the works can be completed at the intended completion date, payment 
+               of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b>is to be made against a Retention Money guarantee.
+        </p>
+        <p>
+            At the request of the Applicant, we, as Guarantor, hereby irrevocably undertake to pay the 
+            Beneficiary any sum or sums not exceeding in total an amount of
+            <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b>  upon receipt by us of the 
+                Beneficiary's complying demand supported by the Beneficiary's statement. 
+                whether in the demand itself or in a separate signed document accompanying 
+                or identifying the demand. stating that the Applicant is in breach of its
+                 obligation(s) under the Contract, without your needing to prove or show 
+                 grounds for your demand or the sum specified therein.
+
+                      
+        </p>
+        <p>
+            This guarantee shall expire no later than the <b> {{subform.2.validityDate}},</b> and any demand for payment 
+            under it must be
+            received by us at the office indicated above on or before that date.
+
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 758.
+        </p>
+        <br><br><br><br><br><br>
+        <p>
+           .......... <br>
+           <i><b>(Seal of Bank and signature(s))</b></i>
+        </p>
+        </div>
+              
+           
+        
+        
+        
+        
+</body>
+
+
+
+</html>

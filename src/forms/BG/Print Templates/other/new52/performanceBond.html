@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Bond</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top:80px; text-align: justify;">
+        <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">2. FORM OF BANK GUARANTEE FOR PERFORMANCE SECURITY DEPOSIT</b> 
+        <p>
+            <b> Date: {{subform.2.issuedate.formattedissueDateBG}}</b> <br><br>
+            <b>To: <br>{{subform.2.salutation}} {{subform.2.beneficiary_name}} </b> <br>
+            <b>{{subform.2.beneficiary_address}} </b> <br>
+            </p>
+        
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (the "company"), having its
+            registered office at {{subform.2.company_address}} has entered into a
+            Agreement on {{subform.2.issuedate.formattedissueDateBG}} with you for the work of "Construction of Multipurpose Hall at
+            Phaksinda colony, Damsite of Arun-3 HEP in Sankhuwasabha Distt. Nepal"
+            
+            
+        </p>
+        <p>
+            In accordance with the terms of the AGREEMENT, the Company is required to submit an unconditional and
+            irrevocable, payable on-demand bank guarantee of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b>, (the "Security Amount") to SAPDC for the due and faithful
+            performance of the Company's obligations under the AGREEMENT (the "Performance Security") and we  Global IME Bank Ltd. Kantipath, Nepal
+            have at the request of the Company agreed to provide such Performance Security, being this Bank Guarantee (Performance Security) No. ..........
+            
+        </p>
+        <p>
+            On your first written demand, stating that (a) the Company is in default of its obligations
+             under the AGREEMENT, or (b) the Company has not replaced this Performance Security with another
+              performance security issued on the same terms at least fourteen (14) days prior to the Expiry Date 
+              (as hereinafter defined), we, the Guarantor as primary obligor hereby expressly, unconditionally and 
+              irrevocably undertake to pay to SAPDC, without demur, reservation, protest and any reference to the 
+              Company or the AGREEMENT the amount specified in such demand, provided that the total of all demands 
+              shall not exceed the sum of the Security Amount. You shall not be required to prove or show grounds
+               for your demand or the sum specified therein. It is clarified further that your demand shall be 
+               conclusive evidence to us that such payment is due under the terms of the AGREEMENT. It shall not be
+                necessary, and the Guarantor hereby waives any necessity, for SAPDC to proceed against the Company 
+                before presenting to the Guarantor its demand under the Performance Security.
+        </p>
+        <p>
+            The term of this Performance Security shall commence on the date of its issuance and shall expire on
+             the date 45 days beyond the defect liability Period (the "expiry Date")  
+        </p>
+        <p>
+            All claims, if any, in respect of this Performance Security must be received by the Guarantor 
+            on or before the Expiry Date.   
+        </p>
+        <p>
+            This guarantee is subject to Uniform Rules for Demand Guarantees ICC Publication No. 758, except that
+             the provisions of Article 26 are hereby excluded and shall be governed by and construed in accordance with
+             the Laws of Nepal and will be subject to the jurisdiction of the courts of Nepal.
+        </p>
+        <p>
+            The Performance Security shall not be affected by any change in the constitution of the Guarantor or of the Company.
+        </p>
+        <p>
+            Notwithstanding anything contained her einabove:
+            <ol>
+                <li>Our liability under this Guarantee shall not exceed the Security Amount</li>
+                <li>Any demand may be brought by SAPDC under this Guarantee up to close of business on the Expiry Date.</li>
+                <li>We shall be liable to pay any amount under this Guarantee or part thereof only if we receive a
+                     claim or demand in writing within banking hours at our branch on or before the Expiry Date 
+                     and if no such demand has been received by us by that time and date, all rights to bring 
+                     any demand under this guarantee will cease.</li>
+            </ol>
+        </p>
+        <p>
+            Notwithstanding sub-section (2) and (3) above, all claims made by SAPDC on or before the Expiry Date shall,
+             subject to sub-section (1) above, be honoured by the Guarantor where payment in respect of such demands
+              have not been made by the Expiry Date.
+        </p>
+        <p>
+            This guarantee (or any of its proceeds) is not assignable and is not transferable in whole or in part.
+        </p>
+        <p>
+            Upon payment by the Guarantor in respect of all claims or demands made by SAPDC under this Bank Guarantee on or before the Expiry Date, this guarantee automatically becomes null and void whether or not the original has been returned to us.
+        </p>
+        <br />
+     
+        <p>
+            Signed for and on behalf of : {{subform.2.purpose_guarantee}} <br>
+            Name : {{subform.2.name1}} <br>
+            Designation : {{subform.2.designation1}} <br>
+            Seal of the Bank : .......... <br>
+            Signed for and on behalf of : {{subform.2.purpose_guarantee}} <br>
+        </p>
+        <p><b>[Note:delete the following signature block if not applicable]</b></p>     
+        <p><b><i>Signed for and on behalf of confirming bank in Nepal: .......... <br></i>
+            Name : {{subform.2.name2}} <br>
+            Designation : {{subform.2.designation2}} <br>
+            Seal of the Bank : .......... <br>
+            Signed for and on behalf of : {{subform.2.purpose_guarantee}} <br>
+ 
+        </b>
+        </p>     
+        
+       <footer style="left:0; bottom: 0;width:100%;text-align:center;">
+        <br>
+        <br>
+       <br><br>
+       <br>
+      <br>
+        Note: This Bank Guarantee can be verified at our website www.globalimebank.com
+       </footer>
+   
+    </div>
+</body>
+
+
+
+</html>

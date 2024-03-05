@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBG-9</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p>
+            <b>Date: {{subform.2.issuedate.formattedissueDateBG}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">Our Ref.No:{{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            <b>Brief Description of Contract ..........</b>
+        </p>
+        <p>
+            <b>Name and address of Beneficiary: {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>{{subform.2.beneficiary_address}}  </b> (Whom the Contract defines as the Employer ).
+        </p>
+        <p>
+            We have been informed that <b>  {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b>
+            (hereinafter called the “ Principal”),is your contractor under such Contract, which requires him to obtain a performance Security. 
+        </p>
+        <p>
+            Furthermore, we understand that, according to the conditions of the Contract, a performance guarantee is
+            required.
+        </p>
+        <p>
+            At the request of the Principal, We <b> Global IME Bank Ltd. Kantipath, Nepal </b> hereby irrevocably undertake to
+            pay you, the Beneficiary/Employer, any sum of sums not exceeding in total the amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> upon receipt by us of your demand in writing and your written
+            statement stating: 
+            <ol type="a">
+                <li>that the principal is in breach of his obligation(s) under the contact, and</li>
+                <li>the respect in which the principal is in breach. </li>
+            </ol>
+        </p>
+        <p>
+            Any demand for payment must contain your signatures(s) which must be authenticated by your bankers or by a
+            notary public. The authenticated demand and statement must be received by us at this office on or before (the
+            date 70 days after the expected expiry of the Defects Notification Period for the Works) <b> {{subform.2.validityDate}} </b> (the
+            ‘expiry date”), when this guarantee shall expire and shall be returned to us. 
+        </p>
+        <p>
+            We have been informed that the Beneficiary may require the Principal to extend this guarantee if the
+            performance certificate under the contract has not been issued by the date 28 days prior to such expiry date. we
+            undertake to pay you such guaranteed amount upon receipt by us, within such period of 28 days, of your
+            demand in writing and your written statement that the performance certificate has not been issued, reasons
+            attributable to the principal, and that this guarantee has not be extended.
+        </p>
+
+        <p>
+            This Guarantee shall be governed by the laws of ..........and shall be subject to the uniform Rules for
+            Demand Guarantee, published as number 758 by the international Chamber of Commerce, except as stated
+            above. 
+        </p>
+               <p>
+            <b>For; Global IME Bank Limited <br>
+                Trade Operations </b><br>
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br />
+            
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            This Bank Guarantee can be verified at our website www.globalimebank.com 
+        </footer>
+
+    </div>
+</body>
+
+</html>

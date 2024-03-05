@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBG-2 </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+            <b> Date:{{subform.2.issuedate.formattedissueDateBG}}</b> <br>
+            <b>{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+           Our Ref.No.: {{subform.2.reference_number}}
+        </p>
+        <p>
+            Whereas, <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} (hereinafter called "the Bidder")</b> has submitted its
+            bid dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b> to <b> Sealed Quotation No. .......... (hereinafter called “the Sealed
+            Quotation”).</b>
+        </p>
+       
+        <p>
+            KNOW ALL PEOPLE by these presents that We, <b> Global IME Bank Ltd. </b> having
+            our registered office at Adarshanagar, Birgunj-13, Parsa <b> (hereinafter called "the bank") </b>, are bound
+            unto {{subform.2.beneficiary_name}} {{subform.2.beneficiary_address}} (hereinafter called "the Purchaser") in the sum of
+            <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> for which payment well and truly to be
+            made to the said Purchaser, the bank binds itself, its successors, and assigns by these presents. Sealed
+            with the Common Seal of the said Bank this {{subform.2.issuedate.formattedissueDateBG}}
+        </p>
+        <p>THE CONDITIONS of this obligation are: 
+           <ol type="a">
+            <li>If the bidder withdraws its quotation during the period of Quotation validity specified by the
+                Bidders on the Quotation Form; </li>
+               
+                <span style="margin-left: 100px;">
+                    OR
+                </span>
+            <li>If the Bidder, having been notified of the acceptance of its' Quotation by the Nepal Telecom
+                during the period of Quotation validity, Either fails or refuses to sign the contract agreement
+                within fifteen (15) days from the date of issuance of Letter of Intent (LOI); or fails or refuses
+                to furnish the Performance Security in accordance with the clause No.-1 of Section III: </li>
+            <li>Condition of Contract (COC). </li>
+            
+           </ol>
+        </p>
+        <p>We undertake to pay to the Purchaser up to the above amount upon receipt of his first written demand,
+            without the Purchaser having to substantiate his demand, provided that in his demand the Purchaser
+            will note that the amount claimed by it is due to its owing to the occurrence of one or both of the two
+            conditions, specifying the occurred condition or conditions. 
+        </p>
+        <p>
+            This Guarantee will remain effective from <b>{{subform.2.issuedate.formattedissueDateBG}}</b> and will remain in force up to <b>{{subform.2.validityDate}}</b> [As per in the
+            clause no.4 of section II: Instructions to Bidder] and any demand in respect there of shall reach the
+            Central Trade Operations, Kamaladi, Kathmandu, Nepal not later than the above date i.e. <b>{{subform.2.validityDate}}</b>. 
+        </p>
+        
+             <br />
+             
+        <p>
+            For:Global IME Bank Limited<br>
+              <b><span style="margin-left: 20px;">  Trade Operation</span></b>
+        </p>
+        <br><br><br><br><br><br>
+        <p style="float: left; width: 50%;">
+            Authorized Signature<br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            Authorized Signature<br /><br />
+            
+            
+        </p>
+        <br>
+        <br>
+       
+   
+    </div>
+</body>
+
+
+
+</html>

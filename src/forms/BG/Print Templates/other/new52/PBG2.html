@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBG2</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p>
+            <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 30px;">Performance Security</b>
+            
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            Beneficiary:{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} <br>
+            Date:{{subform.2.issuedate.formattedissueDateBG}} <br>
+            Performance Guarantee No.: {{subform.2.reference_number}}
+        </p>
+        <br><br><br><br>
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b>
+            has entered into Contract No.: <b> {{subform.2.contract_number}} </b> dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b> with you	
+            for the execution of <b>{{subform.2.purpose_guarantee}} </b> ("hereinafter called "the Contract").
+        <p>
+          Furthermore, we understand that, according to the conditions of the Contract a perforamance guarantee is required.
+        </p>
+        <p>
+            At the request of the Contractor, we Global IME Bank Ltd. Kantipath, Nepal hereby irrevocably undertake to
+            pay you any sum or sums not exceeding in total an amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b>. Such sum being payable in the types and proportions of currencies in which the Contract Price is payable, upon receipt by us of your first demand in writing accompanied by a written statement stating that the Contractor is in breach of its obligation(s) under the Contract, without your needing to prove or to show grounds for your demand or the sum specified therein.
+                      
+        </p>
+        <p>
+            This guarantee shall expire no later than the earlier of
+        </p>
+        <ol>
+            <li>18 months after our receipt of
+                <ol type="i">
+                    <li>a copy of the Completion Certificate; or</li>
+                    <li>a registered letter from the Contractor, attaching a copy of the notice to the project manager that the Facilities are ready for commissioning, and stating that 14 days have elapsed from receipt of such notice (or 7 days have elapsed if the notice was a repeated notice) and the project manager has failed to issue a Completion Certificate or inform the Contractor in writing of any defects or deficiencies; or</li>
+                    <li>a registered letter from the Contractor stating that no Completion Certificate has been issued but the Employer is making use of the Facilities; or</li>
+                </ol>
+            </li>
+            <li> the {{subform.2.validityDate}}</li>
+        </ol>
+        <p>
+            Consequently, any demand for payment under this guarantee must be received by us at this office on or before that date.   
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 758,
+             except that subparagraph (ii) of Sub-Article 20(a) is hereby excluded.
+        </p>
+        <br><br><br><br><br><br>
+        <p style="float: left; width: 100%;">
+            <b>..........</b><br>
+            <b><i>Signature(s) and seal of bank (where appropriate)</i></b><br /><br />
+        </p>
+        <div><i><b style="background-color: black;color: white; width: 100%;"> Note to Bidder </b></i>
+            <table  style="border:2px solid black;">
+                <td>
+                    <i>If the institution issuing the Performance security is located outside the country of the employer,
+                        it shall have correspondent financial institution located in the country of the employer to make it enforceable.
+                    </i>
+                </td>
+            </table>
+        </div>  
+        </div>     
+           
+        
+        
+        
+        
+</body>
+
+
+
+</html>

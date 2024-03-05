@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Declaration Application Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body class="form-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p><b>Please Select Company Type</b></p>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="companyType" value="Pvt. Ltd Company"
+                            required>
+                        Pvt. Ltd Company
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="companyType" value="Limited Company">
+                        Limited Company
+                    </label>
+                </div>
+                <div class="form-check-inline ">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="companyType" value="Government Authority">
+                        Government Authority
+                    </label>
+                </div>
+                <div class="form-check-inline ">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="companyType" value="Joint Venture">
+                        Joint Venture
+                    </label>
+                </div>
+                <div class="form-check-inline ">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="companyType" value="Partnership Firm">
+                        Partnership Firm
+                    </label>
+                </div>
+                <div class="form-check-inline ">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="companyType" value="Proprietorship Firms">
+                        Proprietorship Firms
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr />
+            </div>
+            <div class="col-6 form-group">
+                <label>Applicant Company Name</label>
+                <input name="registration_account_name" data-label="Applicant Company Name" type="text"
+                    class="form-control" id="Applicant-company-name" />
+            </div>
+            <div class="col-6 form-group">
+                <label>Account Number</label>
+                <input name="registration_account_number" data-label="Account Number" type="text" class="form-control"
+                    id="account-number" maxlength="14" minlength="14" onkeyup=""
+                    onkeypress="return onlyNumberKey(event)" />
+            </div>
+        </div>
+        <p>
+            All requests, consents, approvals, authorizations, acknowledgements and
+            other communications required or permitted under this transaction for
+            execution of any LC and BG through Online Web Portal on company request
+            shall be deemed to be given One Time Password (OTP) Code sent to
+            authorised Mobile/Email of company by Bank specified below. The username
+            and passwords for web portal users shall sent to the OTP of authorised
+            mobile/Email of company by bank.
+        </p>
+        <div class="form-body">
+            <div class="body-top-sixth"></div>
+            <div class="row">
+                <div class="col-6 form-group">
+                    <label>Authorised Mobile Number</label>
+                    <input name="registration_mobile_number" data-label="Mobile Number" type="text" class="form-control"
+                        id="mobile-number" maxlength="10" minlength="10" onkeypress="return onlyNumberKey(event)" />
+                </div>
+                <div class="col-6 form-group">
+                    <label>Authorised Email</label>
+                    <input name="registration_email" data-label="Email" type="email" class="form-control" id="email" />
+                </div>
+            </div>
+            <div class="body-top-eighth">
+                <p>
+                    The company acknowledges that transaction conducted through the web
+                    portal as mentioned above through OTP Code sent to authorised mobile
+                    of company shall constitute its legal, valid and binding obligations
+                    to the company.
+                </p>
+            </div>
+            <div class="body-top-ninth">
+                <p>
+                    By executing this document, the signatory certifies that the
+                    signatory is duly authorised to execute this document on behalf of
+                    Company which is substantiated by the board minute of the company.
+                </p>
+            </div>
+        </div>
+
+        <div class="row company-file">
+            <div class="col-12">
+                <p>
+                    <b>Please Provide Required Documents:</b>
+                </p>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>PAN</label>
+                    <input onchange="updateImageDisplay('pan_preview')" name="fileupload_pan" data-label="PAN"
+                        type="file" class="required form-control" id="pan" required />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview pan_preview" id="pan_preview">
+                    <p class="pan_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Board Minute</label>
+                    <input onchange="updateImageDisplay('boardminute_preview')" name="fileupload_lc_file"
+                        data-label="LC File" type="file" class="form-control" id="Applicant-company-name" />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview boardminute_preview" id="boardminute_preview">
+                    <p class="boardminute_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Memorandum of Association(MOA)</label>
+                    <input onchange="updateImageDisplay('moa_preview')" name="fileupload_moa" data-label="MOA"
+                        type="file" class="form-control" id="moa" />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview moa_preview" id="moa_preview">
+                    <p class="moa_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Article of Association(AOA)</label>
+                    <input onchange="updateImageDisplay('aoa_preview')" name="fileupload_aoa" data-label="AOA"
+                        type="file" class="form-control" id="aoa" />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview aoa_preview" id="aoa_preview">
+                    <p class="aoa_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Tax lodge/Clearance (Recent F/Y)</label>
+                    <input onchange="updateImageDisplay('tax_preview')" name="fileupload_tax_clearance"
+                        data-label="Tax Clearance" type="file" class="form-control" id="tax-clearance" />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview tax_preview" id="tax_preview">
+                    <p class="tax_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Citizenship certificates (all director and authorized signatory)</label>
+                    <input onchange="updateImageDisplay('citizenship_preview')" name="fileupload_citznCertificate"
+                        data-label="Citizenship Certificate" type="file" class="required form-control"
+                        id="citizen_certificate" required />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview citizenship_preview" id="citizenship_preview">
+                    <p class="citizenship_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label>Registration Document (Company Register/Cottage industry / others)</label>
+                    <input onchange="updateImageDisplay('registration_preview')" name="fileupload_reg_doc"
+                        data-label="Registration Document" type="file" class="required form-control"
+                        id="Registration-document" required />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview registration_preview" id="registration_preview">
+                    <p class="registration_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label>Self-Declaration Application Form <a target="_blank"
+                            href="https://globalconnect.gibl.com.np/images/icons/SelfDeclarationApplication.pdf">(Click
+                            to
+                            Download Form)</a></label>
+                    <input onchange="updateImageDisplay('self_preview')" name="fileupload_selfdeclaration_doc"
+                        data-label="Self-Declaration Application Form" type="file" class="required form-control"
+                        id="self-declaration-application-form" required />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview self_preview" id="self_preview">
+                    <p class="self_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label>Other Document (Valid exim code, partnership deed and other relevant documents)</label>
+                    <input onchange="updateImageDisplay('other_preview')" name="fileupload_other_doc"
+                        data-label="Other Document" type="file" class="form-control" id="Other-document" />
+                    <small>This file is required </small>
+                </div>
+                <div class="img-preview other_preview" id="other_preview">
+                    <p class="other_preview_p">No files currently selected for upload</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .img-preview img {
+            width: 100px;
+            height: 120px;
+            object-fit: contain;
+            object-position: top;
+            border: 1px solid #aaa;
+            padding: 2px;
+        }
+
+        .print-head-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .main-logo {
+            width: 200px;
+        }
+
+        small {
+            display: none;
+        }
+
+        .required+small {
+            display: block;
+        }
+    </style>
+    <script>
+        async function isValidAccountNumber(dta) {
+            //checks if account number is valid
+            const populateURL = `http://localhost:8080/api/isValid/?acNum=${encodeURIComponent(dta)}`;
+            let emp = await fetch(`${populateURL}`, {
+                method: "GET",
+            });
+            let data = await emp.json();
+            return data;
+        }
+        async function isVAlidMobileNumber(dta) {
+            //checks if mobile number is valid
+            const populateURL = `http://localhost:8080/api/isValid/?mobNum=${encodeURIComponent(dta)}`;
+            let emp = await fetch(`${populateURL}`, {
+                method: "GET",
+            });
+            let data = await emp.json();
+            return data;
+        }
+        async function isvalidEmail(dta) {
+            //checks if Email is valid
+            const populateURL = `http://localhost:8080/api/isValid/?email=${encodeURIComponent(dta)}`;
+            let emp = await fetch(`${populateURL}`, {
+                method: "GET",
+            });
+            let data = await emp.json();
+            return data;
+        }
+        function updateImageDisplay(l) {
+            const preview = document.querySelector(`.${l}`);
+
+            const uploadfile = event.target.files;
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            const curFiles = uploadfile;
+            if (curFiles.length === 0) {
+                const para = document.createElement('p');
+                para.textContent = 'No files currently selected for upload';
+                preview.appendChild(para);
+            } else {
+                const list = document.createElement('div');
+                preview.appendChild(list);
+
+                for (const file of curFiles) {
+                    const listItem = document.createElement('div');
+                    const para = document.createElement('p');
+                    if (validFileType(file)) {
+                        para.textContent = `File: ${file.name}, size ${returnFileSize(file.size)}.`;
+                        const image = document.createElement('img');
+                        image.src = URL.createObjectURL(file);
+
+                        listItem.appendChild(image);
+                        listItem.appendChild(para);
+                    } else {
+                        para.textContent = `File: ${file.name}, size ${returnFileSize(file.size)}.`;
+                        listItem.appendChild(para);
+                    }
+
+                    list.appendChild(listItem);
+                }
+            }
+        }
+
+        function validFileType(file) {
+            let imgFileTypes = [
+                "image/apng",
+                "image/bmp",
+                "image/gif",
+                "image/jpeg",
+                "image/pjpeg",
+                "image/png",
+                "image/svg+xml",
+                "image/tiff",
+                "image/webp",
+                "image/x-icon"
+            ];
+            return imgFileTypes.includes(file.type);
+        }
+
+        function returnFileSize(number) {
+            if (number < 1024) {
+                return number + 'bytes';
+            } else if (number >= 1024 && number < 1048576) {
+                return (number / 1024).toFixed(1) + 'KB';
+            } else if (number >= 1048576) {
+                return (number / 1048576).toFixed(1) + 'MB';
+            }
+        }
+        $("#account-number").keyup(async function () {
+            var accNum = $(this).val();
+            let dummyAc;
+            if (accNum.length == 14) {
+
+                dummyAc = await isValidAccountNumber(accNum);
+                if (dummyAc.status == 'Failed') {
+                    alert("Account Number Already Registered.");
+                    $("#account-number").val("");
+                }
+            }
+        })
+        $("#mobile-number").keyup(async function () {
+            var mobNum = $(this).val();
+            let dummyMob;
+            if (mobNum.length == 10) {
+                console.log("Doesnt run until length is 10")
+                dummyMob = await isVAlidMobileNumber(mobNum);
+                if (dummyMob.status == 'Failed') {
+                    alert("Mobile Number Already Registered.");
+                    $("#mobile-number").val("");
+                }
+            }
+        })
+        $("#email").keyup(async function () {
+            var emailDta = $(this).val();
+            let dummyEml;
+            const isValidEmail = /\S+@\S+\.\S+/.test(emailDta);
+            if (isValidEmail) {
+                dummyEml = await isvalidEmail(emailDta);
+                if (dummyEml.status == 'Failed') {
+                    alert("Email Already Registered.");
+                    $("#email").val("");
+                }
+            }
+        })
+
+        function onlyNumberKey(evt) {
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57) && ASCIICode !== 46)
+                return false;
+            return true;
+        }
+        $(".company-file").hide();
+        var selectedVal = $("input[type=radio][name=companyType]:checked").val();
+        if (selectedVal !== undefined) {
+            $(".company-file").show();
+        }
+        $("input[type=radio][name=companyType]").change(function () {
+            $(".company-file").show();
+            var companyType = $(this).val();
+            if (companyType == "Pvt. Ltd Company" || companyType == "Limited Company") {
+                $("input[type=file][name=fileupload_lc_file]").prop("required", true);
+                $("input[type=file][name=fileupload_lc_file]").addClass("required");
+                $("input[type=file][name=fileupload_moa]").prop("required", true);
+                $("input[type=file][name=fileupload_moa]").addClass("required");
+                $("input[type=file][name=fileupload_aoa]").prop("required", true);
+                $("input[type=file][name=fileupload_aoa]").addClass("required");
+                $("input[type=file][name=fileupload_tax_clearance]").prop("required", true);
+                $("input[type=file][name=fileupload_tax_clearance]").addClass("required");
+            } else if (companyType == "Government Authority") {
+                $("input[type=file][name=fileupload_lc_file]").prop("required", false);
+                $("input[type=file][name=fileupload_lc_file]").removeClass("required");
+                $("input[type=file][name=fileupload_moa]").prop("required", false);
+                $("input[type=file][name=fileupload_moa]").removeClass("required");
+                $("input[type=file][name=fileupload_aoa]").prop("required", false);
+                $("input[type=file][name=fileupload_aoa]").removeClass("required");
+                $("input[type=file][name=fileupload_tax_clearance]").prop("required", false);
+                $("input[type=file][name=fileupload_tax_clearance]").removeClass("required");
+            } else if (companyType == "Joint Venture") {
+                $("input[type=file][name=fileupload_lc_file]").prop("required", true);
+                $("input[type=file][name=fileupload_lc_file]").addClass("required");
+                $("input[type=file][name=fileupload_moa]").prop("required", false);
+                $("input[type=file][name=fileupload_moa]").removeClass("required");
+                $("input[type=file][name=fileupload_aoa]").prop("required", false);
+                $("input[type=file][name=fileupload_aoa]").removeClass("required");
+                $("input[type=file][name=fileupload_tax_clearance]").prop("required", true);
+                $("input[type=file][name=fileupload_tax_clearance]").addClass("required");
+            } else if (companyType == "Partnership Firm" || companyType == "Proprietorship Firms") {
+                $("input[type=file][name=fileupload_lc_file]").prop("required", false);
+                $("input[type=file][name=fileupload_lc_file]").removeClass("required");
+                $("input[type=file][name=fileupload_moa]").prop("required", false);
+                $("input[type=file][name=fileupload_moa]").removeClass("required");
+                $("input[type=file][name=fileupload_aoa]").prop("required", false);
+                $("input[type=file][name=fileupload_aoa]").removeClass("required");
+                $("input[type=file][name=fileupload_tax_clearance]").prop("required", true);
+                $("input[type=file][name=fileupload_tax_clearance]").addClass("required");
+            }
+        });
+    </script>
+</body>
+
+</html>

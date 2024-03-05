@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBG-23</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b>{{subform.2.issuedate.formattedissueDateBG}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Ref No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called "the Applicant") 
+            has submitted or will submit to the Beneficiary its bid (hereinafter called "the Bid") for the execution
+             of the <b> {{subform.2.purpose_guarantee}}</b> under Invitation for
+              Bids No: <b> ..........</b>("the IFB")
+        </p>
+        <p>
+            Furthermore, we understand that, according to the Beneficiary's conditions, bids must be supported by a bid guarantee.
+        </p>
+        <p>
+            At the request of the Applicant, we <b> Global IME Bank Ltd, Kantipath Nepal </b> hereby irrevocably undertake to pay the
+             Beneficiary any sum or sums not exceeding in total an amount of 
+             <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> upon receipt by us of the Beneficiary's complying
+              demand, supported by the Beneficiary's statement, whether in the demand itself or a separate signed document 
+              accompanying or identifying the demand, stating that either the Applicant:
+        </p>
+        <ol type="a">
+            <li>has withdrawn or modifies its Bid during the period of the bid validity set forth in the Applicant's Letter of Bid
+                ("the Bid Validity Period"), or any extension thereto provided by the Applicant; or <br>
+                 (ii) from the period twenty- four hours prior to bid submission deadline up to the period of bid validity specified by
+                the Bidder on the Letter of Technical Bid and Price Bid, in case of hard copy submission; or
+
+                </li>
+            <li>has not accept the correction of arithmetical errors pursuant to clause 31.2</li>
+            <li>has not submitted the original Bid Security letter and/or does not submit documents or clarifications within the 
+                specified period, when requested by the Employer as per ITB Sub-clause 27.1, in case of the electronic submission of bid.</li>
+            <li>having been notified of the acceptance of its Bid by the Beneficiary during the Bid Validity Period or any extension thereto provided by the Applicant, (i) has failed to execute the contract agreement, or (ii) has failed to
+                furnish the performance security, in accordance with the Instructions to Bidders ("ITB") of the Beneficiary's bidding document.
+                </li>
+        </ol>
+     
+        <p>
+            This guarantee will expire: (a) if the Applicant is the successful bidder, upon our receipt of copies of the contract 
+            agreement signed by the Applicant and the performance security issued to the Beneficiary in relation to such contract 
+            agreement; or (b) if the Applicant is not the successful bidder, upon the earlier of (i) our receipt of a copy of the
+            Beneficiary's notification to the Applicant of the results of the bidding process; or (ii) twenty-eight days after the end of the Bid Validity Period.
+            
+        </p>
+        <p>
+        <p>
+            Consequently, any demand for payment under this guarantee must be received by  us at the office indicated above on or
+             before that date i.e. <b>{{subform.2.validityDate}}</b>.
+        </p>
+        <p>This Bank Guarantee shall not be withdrawn or released merely upon return of the original guarantee by the Bidder
+             unless notified by you for the release of the guarantee.</p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees (URDG) 2010 Revision, ICC Publication No. 758. 
+        </p>
+       <p>
+            <b>For: Global IME Bank Limited</b><br>
+      
+        </p>
+        <br />
+        <br />
+        <br>
+        <br />
+        <br />
+
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br />
+           
+        </p>
+        <br><br><br><br><br>
+        <footer style=" left:0; bottom: 0;width:100%;text-align:center;">
+            <i>This Bank Guarantee can be verified at our website www.globalimebank.com </i> 
+        </footer>
+    </div>
+</body>
+
+</html>

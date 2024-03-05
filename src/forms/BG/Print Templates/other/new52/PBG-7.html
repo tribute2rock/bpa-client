@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBG-7 </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+            <b> Date:{{subform.2.issuedate.formattedissueDateBG}}</b> <br>
+            <b>{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>{{subform.2.beneficiary_address}} </b>
+        </p>
+        <p>
+           Our Ref.No: {{subform.2.reference_number}}
+        </p>
+        <p>
+            Whereas <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b> (hereinafter called “the Proposer”) has submitted a
+            Proposal to <b> {{subform.2.purpose_guarantee}}</b> dated <b>{{subform.2.issuedate.formattedissueDateBG}}, to execute {{subform.2.purpose_guarantee}} (purpose of contract)</b> (hereinafter called
+            “the Proposal”). 
+        </p>
+       
+        <p>
+            AND WHEREAS it has been stipulated by you that the Proposer shall furnish you with a Bank
+            Guarantee by recognized bank for the sum specified therein as security in the event that the
+            Proposer:
+        </p>
+        <p>
+           <ol type="a">
+            <li>Fails to sign the Contract after {{subform.2.beneficiary_name}} has awarded it; </li>
+            <li>Withdraws its Proposal after the date of the opening of the Proposals;</li>
+            <li>Fails to comply with {{subform.2.beneficiary_name}} variation of requirement, as per RFP
+                instructions; or</li>
+            <li>Fails to furnish Performance Security, Insurances, or other documents that {{subform.2.beneficiary_name}}  may require as a condition to rendering the contract effective. </li>
+           </ol>
+        </p>
+        <p>
+            AND WHEREAS we have agreed to give the Proposer such this Bank Guarantee:
+        </p>
+        <p>
+            NOW THEREFORE We, <b> Global IME Bank Ltd., Kantipath, Nepal </b> having our registered office
+            at Kathmandu-3 hereby affirm that we are the Guarantor and responsible to you, on behalf of the
+            Proposer, up to a total <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> such sum being
+            payable in the types and proportions of currencies in which the Price Proposal is payable, and we
+            undertake to pay you, upon your first written demand and without cavil or argument, any sum or
+            sums within the limits of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> without your
+            needing to prove or to show grounds or reasons for your demand for the sum specified therein.
+            Furthermore, any demand against this guarantee shall be made on equivalent Nepalese Rupees at
+            prevailing rate of USD unless and until permitted by Nepal Rastra Bank to pay you on United
+            States Dollar. 
+        </p>
+        <p>
+            Consequently, any demand for the payment under this guarantee must be received by us at
+            Central Trade Operation, Kamaladi, Kathmandu, on or before this date i.e. <b> 30 April 2015.</b> Our
+            liability under this guarantee is restricted to <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b>
+            and valid from <b> {{subform.2.issuedate.formattedissueDateBG}} to {{subform.2.validityDate}} </b>
+        </p>
+             <br />
+
+        <p>
+            <b>For:Global IME Bank Limited</b><br>
+              <b><span style="margin-left: 20px;">  Trade Operation</span></b>
+        </p>
+        <br /><br /><br /><br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+            
+        </p>
+        <br>
+        <br>
+       
+   
+    </div>
+</body>
+
+
+
+</html>

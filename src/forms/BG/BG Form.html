@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <input type="text" class="form-control d-none user-branch" name="branch_name" id="branch_name"
+        data-label="Branch Name" />
+    <input type="text" class="form-control d-none currency-short-input" name="currency_short" id="currency_short"
+        data-label="Currency Short" />
+    <input type="text" class="form-control d-none currency-full-input" name="currency_full" id="currency_full"
+        data-label="Currency Full" />
+    <div class="date-converter">
+        <a href=""></a>
+        <iframe src="https://www.hamropatro.com/widgets/dateconverter.php" frameborder="0" scrolling="no"
+            marginwidth="0" marginheight="0" style="border:none; overflow:hidden; width:302px; height:118px;"
+            allowtransparency="true"></iframe>
+    </div>
+    <div class="mt-3">
+        <div class="print-head-wrapper">
+            <img src="https://globalimebank.com/assets/upload/images/config/Gibl_logo-1.png" class="main-logo" />
+            <p class="mb-0 ml-3"><b>APPLICATION FOR ISSUANCE OF BANK GUARANTEE <br /> बैंक जमानत जारी गरी पाउँं</b></p>
+            <hr class="w-100" />
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <h6 class="heading-title">
+                    <span>
+                        GUARANTEE TO BE ISSUED -ON ACCOUNT OF<br />
+                        (जमानत निवेदन व्यक्ति / फर्म / कम्पनीका नाम र ठेगाना)
+                    </span>
+                </h6>
+                <div class="form-group px-2">
+                    <label>Individual/Company/Firm Name (व्यक्ति/कम्पनी/फर्मको नाम)</label>
+                    <textarea id="companyName" required class="form-control" name="company_name"
+                        data-label="Individual/Company/Firm Name"></textarea>
+                </div>
+                <div class="form-group px-2">
+                    <label>Individual/Company/Firm Address (व्यक्ति/कम्पनी/फर्मको ठेगाना)</label>
+                    <textarea id="companyAddress" required class="form-control" name="company_address"
+                        data-label="Individual/Company/ Firm Address"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h6 class="heading-title">
+                    <span>
+                        NAME AND ADDRESS OF BENEFICIARY<br />(हिताधिकारीको नाम र ठेगाना)
+                    </span>
+                </h6>
+                <div class="form-group px-2">
+                    <label>
+                        <div>Beneficiary Name (हिताधिकारीको नाम)</div>
+                    </label>
+                    <textarea required class="form-control" id="beneficiaryName" name="beneficiary_name"
+                        data-label="Beneficiary Name"></textarea>
+                </div>
+                <div class="form-group px-2">
+                    <label>Beneficiary Address (हिताधिकारीको ठेगाना)</label>
+                    <textarea id="beneficiaryAddress" required class="form-control" name="beneficiary_address"
+                        data-label="Beneficiary Address"></textarea>
+                </div>
+            </div>
+            <!-- <div class="col-lg-6 col-sm-12">
+                <div class="form-group">
+                    <label>Individual/Company/Firm Address (व्यक्ति/कम्पनी/फर्मको ठेगाना)</label>
+                    <textarea required class="form-control" name="company_address"
+                        data-label="Individual/Company/ Firm Address"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="form-group">
+                    <label>Beneficiary Address (हिताधिकारीको ठेगाना)</label>
+                    <textarea required class="form-control" name="beneficiary_address"
+                        data-label="Beneficiary Address"></textarea>
+                </div>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <h6 class="heading-title">
+                    <span>
+                        CURRENCY & AMOUNT<br />(मुद्रा र रकम)
+                    </span>
+                </h6>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group px-2">
+                            <label>Currency (मुद्रा)</label>
+                            <select class="form-control" name="currency" id="currency" data-label="Currency" required>
+                                <option value="">Select Currency</option>
+                                <option value="NPR">NPR</option>
+                                <option value="INR">INR</option>
+                                <option value="USD">USD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="EUR">EURO</option>
+                                <option value="SGD">SGD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="JPY">JPY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group px-2">
+                            <label>Amount In Figures (अंकमा रकम)</label>
+                            <input type="text" class="form-control" name="currency_amount" id="currency_amount"
+                                data-label="Currency Amount" required onkeypress="return onlyNumberKey(event)" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group px-2">
+                            <label>Amount In Words (शब्दमा रकम)</label>
+                            <input type="text" class="form-control" name="currency_word" id="currency_word"
+                                data-label="Currency Words" required disabled />
+
+                            <!-- <textarea class="form-control" name="currency_word" data-label="Currency Words"
+                            required disabled></textarea> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h6 class="heading-title">
+                    <span>
+                        TYPE OF GUARANTEE<br>(जमानतको प्रकार)
+                    </span>
+                </h6>
+                <div class="form-group px-2">
+                    <label>Selected Guarantee Type</label>
+                    <input required class="form-control" type="text" name="type_of_guarantee" disabled>
+                </div>
+            </div>
+            <!-- <div class="col-md-12">
+                <div class="form-group">
+                    <label>Amount In Words (शब्दमा रकम)</label>
+                    <input type="text" class="form-control" name="currency_word" id="currency_word"
+                        data-label="Currency Words" required disabled />
+                </div>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <h6 class="heading-title">
+                    <span>
+                        VALIDITY(MM/DD/YYYY) IN GREGORIAN CALENDAR<br />
+                        (मान्य अवधि(महिना/दिन/साल) ईस्वी सम्वत)
+                    </span>
+                </h6>
+                <div class="row align-items-center">
+                    <div class="col-1 border-right border-secondary">
+                        <div class="form-check form-check-inline px-2">
+                            <input class="form-check-input" type="radio" name="date_type" id="from-to"
+                                value="From To" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="form-group">
+                            <label>From (बाट)</label>
+                            <input type="date" class="form-control" name="date_from" data-label="Validity From Date" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label>Till (सम्म)</label>
+                            <input type="date" class="form-control" name="date_till" data-label="Validity Till Date" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="form-group px-2">
+                            <label>Validity Period (मान्यता अवधि)</label>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-lg-6 col-12">
+                                <div class="row">
+                                    <div class="col-lg-2 col-sm-1 col-1  border-right border-secondary mr-2">
+                                        <div class="form-check form-check-inline px-2">
+                                            <input class="form-check-input mt-2" type="radio" name="date_type"
+                                                id="date-period" value="Date Period" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-sm-10 col-10 inline-block">
+                                        <div class="row">
+                                            <div class="col-5 mr-1 p-0">
+                                                <input type="text" class="form-control " name="validity_period"
+                                                    data-label="Validity Period" id="input_number" onchange="diff()" />
+                                            </div>
+                                            <div class="col-6 p-0">
+                                                <select class="form-control  inline" name="validity_period_select"
+                                                    data-label="Validity Period Type" id="select-type"
+                                                    onchange="diff()">
+                                                    <option value="days">Days</option>
+                                                    <option value="months">Months</option>
+                                                    <option value="years">Years</option>
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6  col-12">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-3 col-2 ">
+                                        &nbsp;From
+                                    </div>
+                                    <div class="col-lg-9 col-10 inline-block ">
+                                        <div class="row mt-2 mt-lg-0">
+                                            <div class=" col-2 p-0 ">
+                                                <div class=" border-right border-secondary mr-2">
+                                                    <input class=" " type="radio" name="validity_date_type"
+                                                        id="date-period" value="Date Period Date" />
+
+                                                </div>
+                                            </div>
+                                            <div class="col-8 p-0">
+                                                <input type="date" class="form-control" name="validity_period_date"
+                                                    data-label="Validity Period Message" id="input_date"
+                                                    onchange="diff()" />
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class=" col-2 p-0 ">
+                                                <div class=" border-right border-secondary mr-2">
+                                                    <input class=" " type="radio" name="validity_date_type"
+                                                        id="date-period" value="Date of Issuance"
+                                                        onClick="claimdiff('flush')" />
+                                                </div>
+                                            </div>
+                                            <div class="col-8 p-0">
+                                                Date Of Issuance
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group px-2">
+                            <label>Expiry Date</label>
+                            <input type="date" class="form-control" name="expiry_date" id="output_date"
+                                data-label="Expiry Date" disabled />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h6 class="heading-title">
+                    <span>
+                        CLAIM VALIDITY<br />
+                        (दाबिको अवधि)
+                    </span>
+                </h6>
+                <div class="form-group px-2">
+                    <label>Claim Validity (दाबिको अवधि)</label>
+                </div>
+                <div class="row align-items-center  form-group">
+                    <div class="col-1 border-right border-secondary">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="claim_validity_type" id="type_one"
+                                value="Type One" />
+                        </div>
+                    </div>
+                    <div class="col-11 pl-2">
+                        <input name="claim_validity" data-label="Claim Validity" placeholder="Select date" type="date"
+                            id="claim_validity" class="form-control" />
+                    </div>
+                </div>
+                <div class="row align-items-center form-group">
+                    <div class="col-1 border-right border-secondary">
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="radio" name="claim_validity_type" id="type_two"
+                                value="Type Two" />
+                        </div>
+                    </div>
+                    <div class="col-11">
+                        <div class="row align-items-center m-0">
+                            <input type="text" class="form-control col-2" name="claim_validity_period"
+                                data-label="Validity Period" id="claim_input_number" onchange="claimdiff()" />
+                            <select class="form-control col-3 ml-1" name="claim_validity_period_select"
+                                data-label="Validity Period Type" id="claim-select-type" onchange="claimdiff()">
+                                <option value="days">Days</option>
+                                <option value="months">Months</option>
+                                <option value="years">Years</option>
+                            </select>
+                            <span class="col-6">From Expiry Date</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group px-2">
+                            <label>Claim Expiry Date</label>
+                            <input type="date" class="form-control" name="claim_expiry_date" id="claim_output_date"
+                                data-label="Claim Expiry Date" disabled />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group px-2">
+                    <label>Purpose of Guarantee(जमानतको उद्देश्य)
+                    </label>
+                    <textarea id="purposeOfGuarantee" class="form-control" name="purpose_of_guarantee"
+                        data-label="Purpose Of Guarantee" required></textarea>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group px-2">
+                    <label>Contract Number (ठेक्का नं)</label>
+                    <div class="form-group">
+                        <input name="contract_number" data-label="Contract Number" type="text" id="contract_number"
+                            class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-4">
+                <div class="px-2">Format Attached:(ढाँचा संलग्न:)</div>
+
+                <div class="form-group px-2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="attached_format" id="attached_yes"
+                            value="Yes" />
+                        <label class="form-check-label" for="attached_yes">Yes(छ)</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="attached_format" id="attached_no"
+                            value="No" />
+                        <label class="form-check-label" for="attached_no">No(छैन)</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                            name="fileupload_formatAttached" data-label="Format Attached" id="customFile"
+                            style="display: none" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="other_enclosed_documents"
+                            id="other_enclosed_documents" value="Other enclosed documents" />
+                        <label class="form-check-label" for="other_enclosed_documents">Other enclosed
+                            Documents(अन्य संलग्न कागजातहरू) <small
+                                class="bid-text pl-2 pr-2  p-1 alert alert-danger">Please Attach Bid
+                                Notice</small></label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <input multiple type="file" class="form-control-file" id="exampleFormControlFile2"
+                            name="fileupload_enclosedDocument" data-label="Enclosed Document" id="customFile"
+                            style="display: none" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h6 class="heading-title">
+                    <span>
+                        PLEASE HANDOVER THE ORIGINAL GUARANTEE TO<br />
+                        (कृपया मूल जमानतको हस्तान्तरण गर्नुहोस्)
+                    </span>
+                </h6>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="form-group px-2">
+                    <label>Name(नाम)</label>
+                    <input type="text" class="form-control" name="org_guarantee_name"
+                        data-label="Original Guarantee Name" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="form-group px-2">
+                    <label>Having Specimen Signature / ID ref (दस्तखत नमूना र परिचत पत्र न.)</label>
+                    <input type="text" class="form-control" name="signature_id" data-label="Specimen Signature / ID" />
+                </div>
+            </div>
+            <div class="col-12">
+                <h6 class="heading-title">
+                    <span>
+                        PLEASE DEBIT OUR FOLLOWING ACCOUNT FOR NECESSARY MARGIN AND CHARGES.<br />
+                        (कृपया आवश्यक मार्जिन र शुल्कहरूको लागि हाम्रो निम्न खाता डेबिट गर्नुहोस्।)
+                    </span>
+                </h6>
+                <div class="form-group px-2">
+                    <input type="text" class="form-control account-number" name="account_number"
+                        data-label="Account Number" required maxlength="14" />
+                </div>
+            </div>
+        </div>
+        <h6 class="heading-title">
+            <span>
+                IN CASE APPLICATION IS FOR COUNTER GUARANTEE<br />
+                (यदी जमानतको आवेदन काउन्टर जमानतको लागि भएमा)
+            </span>
+        </h6>
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-sm-12">
+                &nbsp;Charges - other than GIBL:<br />
+                &nbsp;(सुल्कहरु - जिआइबिएल देखि छुट्टै)
+                <div class="form-group px-2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="charges_radio" id="applicant"
+                            value="Applicant" />
+                        <label class="form-check-label" for="applicant">Applicant(आवेदक)</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="charges_radio" id="beneficiary"
+                            value="Beneficiary" />
+                        <label class="form-check-label" for="beneficiary">Beneficiary(हिताधिकारी)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+                <div class="form-group">
+                    <div class="form-check form-check-inline px-2">
+                        <label class="form-check-label" for=" corresponding_banks">Claim Period for corresponding
+                            banks(संवाददाता बैंकहरूको लागि दाबी अवधि)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <div class="form-group px-2">
+                    <input name="corresponding_banks" placeholder="Select date" type="date" id="example"
+                        class="form-control" data-label="Claim Period for Corresponding Banks" />
+                </div>
+            </div>
+        </div>
+        <p class="px-2">We request you to issue bank guarantee as per above details. In making this request, we hereby
+            commit to
+            abide by bank's policies and all applicable regulatory provisions and latest /prevalling Uniform Rules for
+            Demand
+            Guarantee (URDG) and hereby unconditionally and irrevocably undertake to pay any claim or claims under this
+            guarantee without any arguments whatsoever. We also authorize you to debit our account and/or to book loan
+            as you may deem necessary in our name to honor the claim(s) and also for charges and other expenses as may
+            be applicable.</p>
+        <p class="px-2">We hereby also confirm our understanding and agreement that our liability under the guarantee
+            issued
+            in favor of Government of Nepal, Customs Offices shall continue to remain valid even beyond the expiry
+            date
+            of
+            the guarantee untill either the original guarantee is returned to the Bank and /or cancellation of the
+            same is
+            confirmed in writing to the Bank by the Beneficiary. You are also authorized to debit our account for
+            commission and charges from expiry of the guarantee till its cancellation.
+        </p>
+        <p class="px-2">
+            माथि उल्लेख गरिए बमोजिम बैंक जमानत जारी गरिदिनु हुन अनुरोध छ। बैक तथा वित्तीय संस्थाको बैंक जमानतका
+            सम्बन्धमा प्रचलित कानुन, नियम, नीति तथा प्रचलनमा
+            रहेको Uniform Rules for Demand Guarantee(URDG) अनुसार विना शर्त अपरिहार्य रुपमा जमानतबाट उत्पन्न हुने
+            सम्पूर्ण दाबी सोबाट उत्पन्न हुने अन्य खर्च
+            समेत विना विवाद निर्विवादित रुपमा जुनसुकै अवस्थामा पनि तिर्न बुझाउन प्रतिबद्धता गर्दछु । साथै जमानीबाट
+            उत्पन्न दायित्वको भुक्तानी, आवश्यक शुल्क, फि म/वा मेरो
+            तर्फवाट दिएको अवस्थामा बाट उत्पन्न दायित्वलाई म/वा मेरो खातामा रहेको रकमबाट खर्च लेखी जमानीको दायित्वको
+            हिसाब मिलान गरेमा वा आवश्यकतानुसार
+            म/वा मेरो नाम ऋणीमा समाबेश गरी force loan खडा गरेमा समेत मेरो पूर्ण मन्जुरी रहेको छ।
+        </p>
+        <p class="px-2">
+            साथै बैंकबाट नेपाल सरकार, भन्सार कार्यालयका लागी जारी गरिएको जमानतको अबधि समाप्त भएको अवस्थामा समेत सो
+            जमानतबाट उत्पन्न दायित्व निरन्तर
+            रुपमा कायम रहिरहनेछ जबसम्म जारी गरिएको सक्कल जमानतको प्रति हितकारीबाट फिर्ता नभएसम्म वा हिताधिकारिबाट
+            जमानतको दायित्व नरहेको भन्नै सम्बन्धमा
+            लिखित रुपमा बैंकलाई जानकारी प्राप्त नभएसम्म बैंकबाट जारी गरिएको जमानतको दायित्वबाट उत्पन्न दायित्व म/वा
+            मेरो/वा हाम्रो लागि निरन्तर रुपमा कायम
+            रहिरहनेछ भन्ने कुरामा मेरो/हाम्रो मन्जुरी रहेको छ । सो जमानत बापत लाग्ने कमिशन, चार्ज जमानीको दायित्व
+            नसकिए सम्म सो जमानतबाट उत्पन्न दायित्वलाई म/वा
+            मेरो खातामा रहेको रकमवाट खर्च लेखी जमानीको दायित्वको हिसाबमा मिलान गरेमा समेत मेरो मञ्जुरी रहेको छ ।
+        </p>
+        </br>
+        <div class="row pt-2 pb-2">
+            <div class="col-lg-6 col-sm-12 form-group">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 form-group">
+                        <label for="firm_name">&nbsp;Name of the Individual/Firm/Company<br />(व्यक्ति/फर्म/कम्पनीको
+                            नाम)</label>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                        <textarea id="firmName" class="form-control" name="firm_name"
+                            data-label="Name Of the Firm/Company" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 form-group">
+                        <label for="pan_number">&nbsp;Enter Your Pan Number(प्यान नम्बर)</label>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                        <input type="number" class="form-control" name="pan_number" data-label="PAN Number" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 form-group">
+                        <label for="seal">&nbsp;Seal Of the Firm/Company(फर्म/कम्पनी को छाप)</label>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                        <input type="text" class="form-control" name="seal" data-label="Seal Of the Firm/Company" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="ml-2 alert alert-danger counter-guarantee-notice">
+                    &nbsp;Is the Bank Guarantee to be issued on behalf of 3rd party or JV?
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="counter_check" id="cg_yes" value="cg yes"
+                                required />
+                            <label class="form-check-label" for="cg_yes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="counter_check" id="cg_no"
+                                value="cg no" />
+                            <label class="form-check-label" for="cg_no">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center counter-guarantee-form">
+            <div class="col-8 border p-2 mb-4">
+                <div class="">
+                    <h6 class="heading-title">
+                        <span>
+                            FOR COUNTER GUARANTEE<br />
+                            (यदी जमानतको आवेदन काउन्टर जमानतकौ लागि भएमा)
+                        </span>
+                    </h6>
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="form-group">
+                                <label>Guarantee ref. No</label>
+                                <input type="text" class="form-control form-control-sm" name="cg_ref_no"
+                                    data-label="CG Reference Number  " />
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="form-group">
+                                <label>For <span class="currency-short"></span></label>
+                                <input type="text" class="form-control form-control-sm" name="for_rs"
+                                    data-label="CG Amount" />
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Favoring M/S</label>
+                                <!-- <textarea class="form-control form-control-sm" id="favouring_ms" name="favouring_ms"
+                                    data-label="CG Favouring"></textarea> -->
+                                <u><span class="font-weight-bold" id="favouring_ms" name="favouring_ms"></span></u>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="text-justify">In considerations of your signing the above letter of guarantee for
+                                <u><span class="font-weight-bold currency-short"> </span>
+                                    <span class="font-weight-bold" id="for_rs1" name="for_rs1"></span>
+                                    (<span class="font-weight-bold currency-full"></span>
+                                    <span class="font-weight-bold" id="for_rsw1" name="for_rsw1"></span>)</u>
+                                in favour of
+                                <u><span class="font-weight-bold" id="principal_creditor"
+                                        data-label="Principal Creditor"></span></u>
+                                (principal creditor) at our request we undertake to indemnity and hold you harmless
+                                against any claims, damage or cost arising under the said guarantee in the event of you
+                                being called upon to pay to
+                                <u><span class="font-weight-bold" id="beneficiary_name_1"
+                                        data-label="Beneficiary Name 1"></span></u>
+                                (beneficiary) the amount of
+                                <u><span class="font-weight-bold currency-short"></span>
+                                    <span class="font-weight-bold" id="for_rs2" name="for_rs2"></span>
+                                    (<span class="font-weight-bold currency-full"></span>
+                                    <span class="font-weight-bold" id="for_rsw2" name="for_rsw2"></span></u>)
+                                or part thereof in terms of the guarantee executed by you in their favor, you shall be
+                                deemed entitled to pay the amount to them without any reference to us and we shall on
+                                demand from you make good such amount to you to the extent of
+                                <u><span class="font-weight-bold currency-short"></span>
+                                    <span class="font-weight-bold" id="for_rs3" name="for_rs3"></span>
+                                    (<span class="font-weight-bold currency-full"></span>
+                                    <span class="font-weight-bold" id="for_rsw3" name="for_rsw3"></span></u>)
+                                with interest at the rate of
+                                <input type="text" class="w-5 form-control-sm mb-1 d-inline ml-2 mr-2"
+                                    name="cg_intrestRate" id="cg_intrestRate" data-label="CG Amount 7" />. %
+                                per annum upto the date of payment. Your statement to the effect that such a payment
+                                have been made by you under the guarantee referred to therein shall be conclusive and
+                                binding on us without any proof being called upon. In the event of our failing to
+                                discharge our liabilities to you under this indemnity you shall be entitled to exercise
+                                your lien on the balances in our accounts maintained with your branch or any other
+                                branch of your company/ bank or monies, shares, securities belonging to us which may be
+                                held by you or which may come to your hands as bankers and appropriate the same to the
+                                extent of
+                                <u><span class="font-weight-bold currency-short"></span>
+                                    <span class="font-weight-bold" id="for_rs4" name="for_rs4"></span>
+                                    (<span class="font-weight-bold currency-full"></span>
+                                    <span class="font-weight-bold" id="for_rsw4" name="for_rsw4"></span>)</u>
+                                towards our liabilities under this indemnity.
+                            </p>
+                            <p class="text-justify">
+                                <b>You are unconditionally authorized to debit my/ our company/ firm account
+                                    No <span id="account_number1" data-label="Account Number 1"></span>
+                                    maintained with you for the amount of claim (if any) under this bank guarantee.</b>
+                            </p>
+                            <p>
+                                This indemnity shall be continuing security binding on us and shall remain in
+                                force and effect up to
+                                <input type="text" class="form-control form-control-sm mb-1 d-inline w-30 ml-2 mr-2"
+                                    name="validity_1" id="validity_1" data-label="CG Validity" />
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p>Dated the <input type="date" class="form-control form-control-sm mb-1" name="dated_the"
+                                    id="dated_the" data-label="Dated The"></p>
+                        </div>
+                        <div class="col-6">
+                            <p>For <input type="text" class="form-control form-control-sm mb-1" name="counter_for"
+                                    id="counter_for" data-label="Counter Guarantee For"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none">
+                <input type="text" name="for_rs1" id="input_for_rs1" data-label="CG Amount 1" />
+                <input type="text" name="for_rsw1" id="input_for_rsw1" data-label="CG Amount 2" />
+                <input type="text" name="principal_creditor" id="input_principal_creditor"
+                    data-label="CG Principal Creditor" />
+                <input type="text" name="beneficiary_name_1" id="input_beneficiary_name_1"
+                    data-label="CG Beneficiary Name" />
+                <input type="text" name="for_rs2" id="input_for_rs2" data-label="CG Amount 3" />
+                <input type="text" name="for_rsw2" id="input_for_rsw2" data-label="CG Amount 4" />
+                <input type="text" name="for_rsw3" id="input_for_rsw3" data-label="CG Amount 6" />
+                <input type="text" name="for_rs3" id="input_for_rs3" data-label="CG Amount 5" />
+                <input type="text" name="currency_word" id="input_currency_word" data-label="CG Amount 7" />
+                <input type="text" name="for_rs4" id="input_for_rs4" data-label="CG Amount 8" />
+                <input type="text" name="for_rsw4" id="input_for_rsw4" data-label="CG Amount 9" />
+                <input type="text" name="account_number1" id="input_account_number1" data-label="Account Number 1" />
+                <input id="input_favouring_ms" name="favouring_ms" data-label="CG Favouring" />
+            </div>
+        </div>
+    </div>
+    <style>
+        .print-head-wrapper,
+        .terms-condition {
+            display: none;
+        }
+
+        .main-logo {
+            width: 200px;
+        }
+
+        @media print {
+
+            .body-overlay:before {
+                background-color: transparent;
+            }
+
+            .date-converter,
+            .bid-text,
+            .counter-guarantee-notice {
+                display: none;
+            }
+
+            .counter-guarantee-form {
+                page-break-before: always;
+            }
+
+            .terms-condition {
+                display: block;
+                page-break-before: always;
+            }
+
+            .print-head-wrapper {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+        }
+
+        .date-converter {
+            position: fixed;
+            left: -100%;
+            bottom: 0;
+            background-color: #fff;
+            padding: 10px;
+            z-index: 999;
+            border: 1px solid #ccc;
+            transition: 400ms ease;
+        }
+
+        .date-converter.open {
+            left: 0;
+        }
+
+        .date-converter a {
+            display: block;
+            width: 90px;
+            text-align: center;
+            color: #fff;
+            line-height: 1;
+            padding: 10px 10px 10px 5px;
+            font-size: 14px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background: #c5191e;
+            background: -moz-linear-gradient(left, #c5191e 0%, #0f428a 100%);
+            background: -webkit-linear-gradient(left, #c5191e 0%, #0f428a 100%);
+            background: linear-gradient(to right, #c5191e 0%, #0f428a 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c5191e', endColorstr='#0f428a', GradientType=1);
+            position: fixed;
+            bottom: 110px;
+            left: 0;
+            text-decoration: none;
+            transition: 400ms ease;
+        }
+
+        .date-converter.open a {
+            left: 322px;
+        }
+
+        .date-converter a:before {
+            content: "Date Converter";
+        }
+
+        .date-converter.open a:before {
+            content: "Close";
+        }
+
+        .date-converter a:hover {
+            text-decoration: none;
+        }
+
+        .account-number,
+        #account_number1 {
+            text-transform: uppercase;
+        }
+
+        .heading-title {
+            position: relative;
+            margin-bottom: 15px;
+            background-color: #f5f5f5;
+            padding: 12px 0 15px 20px;
+        }
+
+        .heading-title span {
+            color: #363636;
+            display: inline-block;
+            position: relative;
+            z-index: 99;
+        }
+
+        .heading-title::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            z-index: 9;
+            background: #c5191e;
+
+        }
+
+        .heading-title::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 9;
+            background: #0f428a;
+
+        }
+    </style>
+    <script>
+        //Text area height based on length of input value
+        $("document").ready(function () {
+            $("#companyName").height($("#companyName").val().split('\n').length * 20);
+            $("#beneficiaryName").height($("#beneficiaryName").val().split('\n').length * 20);
+            $("#companyAddress").height($("#companyAddress").val().split('\n').length * 20);
+            $("#beneficiaryAddress").height($("#beneficiaryAddress").val().split('\n').length * 20);
+            $("#purposeOfGuarantee").height($("#purposeOfGuarantee").val().split('\n').length * 20);
+            $("#firmName").height($("#firmName").val().split('\n').length * 20);
+
+            //For filling Counter Guarantee Forms
+            $("#for_rs1").text($("#input_for_rs1").val());
+            $("#for_rsw1").text($("#input_for_rsw2").val());
+            $("#principal_creditor").text($("#input_principal_creditor").val());
+            $("#beneficiary_name_1").text($("#input_beneficiary_name_1").val());
+            $("#for_rs2").text($("#input_for_rs2").val());
+            $("#for_rsw2").text($("#input_for_rsw2").val());
+            $("#for_rsw3").text($("#input_for_rsw2").val());
+            $("#for_rsw4").text($("#input_for_rsw2").val());
+
+            $("#for_rs3").text($("#input_for_rs3").val());
+            $("#currency_word").text($("#input_currency_word").val());
+            $("#for_rs4").text($("#input_for_rs4").val());
+            $("#account_number1").text($("#input_account_number1").val());
+            $("#favouring_ms").text($("#input_favouring_ms").val());
+            changeCurrency();
+        });
+        // Date Converter
+        $(".date-converter a").click(function (e) {
+            e.preventDefault();
+            $(".date-converter").toggleClass("open");
+        });
+        // Currency Check
+        $("#currency").change(function () {
+            changeCurrency();
+        });
+
+        //function to change value as per Currency
+        function changeCurrency() {
+            var selectedCurrency = document.getElementById("currency").value;
+            if (selectedCurrency == "NPR") {
+                $(".currency-short").text("NPR");
+                $(".currency-full").text("Nepalese Rupees");
+                $(".currency-short-input").val("NPR");
+                $(".currency-full-input").val("Nepalese Rupees");
+            }
+            else if (selectedCurrency == "INR") {
+                $(".currency-short").text("INR");
+                $(".currency-full").text("Indian Rupees");
+                $(".currency-short-input").val("INR");
+                $(".currency-full-input").val("Indian Rupees");
+            }
+            else if (selectedCurrency == "USD") {
+                $(".currency-short").text("USD");
+                $(".currency-full").text("United States Dollars");
+                $(".currency-short-input").val("USD");
+                $(".currency-full-input").val("United States Dollars");
+            }
+            else if (selectedCurrency == "AUD") {
+                $(".currency-short").text("AUD");
+                $(".currency-full").text("Australian Dollars");
+                $(".currency-short-input").val("AUD");
+                $(".currency-full-input").val("Australian Dollars");
+            }
+            else if (selectedCurrency == "EURO") {
+                $(".currency-short").text("EUR");
+                $(".currency-full").text("EURO");
+                $(".currency-short-input").val("EUR");
+                $(".currency-full-input").val("EURO");
+            }
+            else if (selectedCurrency == "SGD") {
+                $(".currency-short").text("SGD");
+                $(".currency-full").text("Singapore Dollars");
+                $(".currency-short-input").val("SGD");
+                $(".currency-full-input").val("Singapore Dollars");
+            }
+            else if (selectedCurrency == "GBP") {
+                $(".currency-short").text("GBP");
+                $(".currency-full").text("Pound sterling");
+                $(".currency-short-input").val("GBP");
+                $(".currency-full-input").val("Pound sterling");
+            }
+            else if (selectedCurrency == "CNY") {
+                $(".currency-short").text("CNY");
+                $(".currency-full").text("Chinese Yuan");
+                $(".currency-short-input").val("CNY");
+                $(".currency-full-input").val("Chinese Yuan");
+            }
+            else if (selectedCurrency == "JPY") {
+                $(".currency-short").text("JPY");
+                $(".currency-full").text("Japanese Yen");
+                $(".currency-short-input").val("JPY");
+                $(".currency-full-input").val("Japanese Yen");
+            }
+        }
+        //   Counter Guarantee check         
+        $(".counter-guarantee-form").hide();
+        $(document).ready(function () {
+            autoAdjustTextArea();
+            var userBranch = $("#branch-name").text();
+            var checkUserBranch = $(".user-branch").val();
+            if (!checkUserBranch) {
+                $(".user-branch").val(userBranch);
+            }
+
+            var userAccount = $(".user-account").text();
+            var checkUserAccount = $(".account-number").val();
+            if (!checkUserAccount) {
+                $(".account-number").val(userAccount);
+            }
+            var selectedGuaranteeText = $("#selectedGuaranteeType").text();
+            var selectedGuaranteeVal = $("input[type=text][name=type_of_guarantee]").val();
+            if (!selectedGuaranteeVal) {
+                $("input[type=text][name=type_of_guarantee]").val(selectedGuaranteeText);
+            }
+            if (selectedGuaranteeText == "Bid Bond") {
+                $(".bid-text").show();
+                $("input[type=file][name=fileupload_enclosedDocument]").show();
+                $("input[type=checkbox][name=other_enclosed_documents]").prop("checked", true);
+            }
+
+            if (selectedGuaranteeText == "Bid Bond" || selectedGuaranteeText == "Performance Bond" || selectedGuaranteeText == "Advance Payment" || selectedGuaranteeText == "Supply Credit Guarantee" || selectedGuaranteeText == "Line of Credit Commitment" || selectedGuaranteeText == "Custom Guarantee") {
+                console.log("Bank Guarantee", selectedGuaranteeText)
+            }
+            else {
+                alert('You cannot submit this form. Please go back to home -> select branch and guarantee type -> process');
+            }
+            var initialCounterValue = $("input[type=radio][name=counter_check]:checked").val();
+            if (initialCounterValue == "cg yes") {
+
+                $("#firmName").prop("disabled", false);
+                $(".counter-guarantee-form").show();
+
+            } else if (initialCounterValue == "cg no") {
+                $("#firmName").prop("disabled", true);
+                $(".counter-guarantee-form").hide();
+            }
+
+            var attachedFormatCheck = $("input[type=radio][name=attached_format]:checked").val();
+            if (attachedFormatCheck == "Yes") {
+                $("input[type=file][name=fileupload_formatAttached]").show();
+                $("input[type=file][name=fileupload_formatAttached]").prop("required", true);
+            } else {
+                $("input[type=file][name=fileupload_formatAttached]").hide();
+                $("input[type=file][name=fileupload_formatAttached]").prop("required", false);
+            }
+
+            var otherEnclosedDocument = $("input[type=checkbox][name=other_enclosed_documents]");
+            if (otherEnclosedDocument.is(":checked")) {
+                $("input[type=file][name=fileupload_enclosedDocument]").show();
+                $("input[type=file][name=fileupload_enclosedDocument]").prop("required", true);
+            } else {
+                $("input[type=file][name=fileupload_enclosedDocument]").hide();
+                $("input[type=file][name=fileupload_enclosedDocument]").prop("required", false);
+            }
+
+            var fromDateCheck = $("input[type=date][name=date_from]").val();
+            if (fromDateCheck == "") {
+                var fromDateCheck = $("input[type=radio][name=date_type]").prop('required', true);
+            } else {
+                var fromDateCheck = $("input[type=radio][name=date_type]").prop('required', false);
+            }
+            var dateTypeCheck = $("input[type=radio][name=date_type]:checked").val();
+            if (dateTypeCheck == "From To") {
+                $("input[type=date][name=date_from]").prop("disabled", false);
+                $("input[type=date][name=date_from]").prop("required", true);
+                $("input[type=date][name=date_till]").prop("disabled", false);
+                $("input[type=date][name=date_till]").prop("required", true);
+                $("input[type=text][name=validity_period]").prop("disabled", true);
+                $("input[type=text][name=validity_period]").val("");
+                $("input[type=text][name=validity_period]").prop("required", false);
+                $("select[name=validity_period_select]").prop("disabled", true);
+                $("select[name=validity_period_select]").prop("required", false);
+                $("select[name=validity_period_select]").val("");
+                $("input[type=date][name=validity_period_date]").prop("disabled", true);
+                $("input[type=date][name=validity_period_date]").val("");
+                $("input[type=date][name=validity_period_date]").prop("required", false);
+                $("input[type=radio][name=validity_date_type]").prop('checked', false);
+                $("input[type=radio][name=validity_date_type]").prop('disabled', true);
+            } else if (dateTypeCheck == "Date Period") {
+                $("input[type=date][name=date_from]").prop("disabled", true);
+                $("input[type=date][name=date_from]").val("");
+                $("input[type=date][name=date_from]").prop("required", false);
+                $("input[type=date][name=date_till]").prop("disabled", true);
+                $("input[type=date][name=date_till]").prop("required", false);
+                $("input[type=date][name=date_till]").val("");
+                $("input[type=text][name=validity_period]").prop("disabled", false);
+                $("input[type=text][name=validity_period]").prop("required", true);
+                $("select[name=validity_period_select]").prop("disabled", false);
+                $("select[name=validity_period_select]").prop("required", true);
+                $("input[type=radio][name=validity_date_type]").prop('disabled', false);
+            }
+
+            var validityDateCheck = $("input[type=radio][name=validity_date_type]:checked").val();
+            if (validityDateCheck == "Date Period Date") {
+                $("input[type=date][name=validity_period_date]").prop("disabled", false);
+                $("input[type=date][name=validity_period_date]").prop("required", true);
+
+            } else if (validityDateCheck == "Date of Issuance") {
+                $("#output_date").val("");
+                $("input[type=date][name=validity_period_date]").prop("disabled", true);
+                $("input[type=date][name=validity_period_date]").val("");
+                $("input[type=date][name=validity_period_date]").prop("required", false);
+            }
+
+            var claimValidityTypeCheck = $("input[type=radio][name=claim_validity_type]:checked").val();
+            if (claimValidityTypeCheck == "Type One") {
+                $("input[type=date][name=claim_expiry_date]").val("");
+                $("input[type=date][name=claim_validity]").prop("disabled", false);
+                $("input[type=date][name=claim_validity]").prop("required", true);
+                $("input[type=text][name=claim_validity_period]").prop("disabled", true);
+                $("input[type=text][name=claim_validity_period]").val("");
+                $("input[type=text][name=claim_validity_period]").prop("required", false);
+                $("select[name=claim_validity_period_select]").prop("disabled", true);
+                $("select[name=claim_validity_period_select]").val("");
+                $("select[name=claim_validity_period_select]").prop("required", false);
+            } else if (claimValidityTypeCheck == "Type Two") {
+                $("input[type=date][name=claim_validity]").prop("disabled", true);
+                $("input[type=date][name=claim_validity]").val("");
+                $("input[type=date][name=claim_validity]").prop("required", false);
+                $("input[type=text][name=claim_validity_period]").prop("disabled", false);
+                $("input[type=text][name=claim_validity_period]").prop("required", true);
+                $("select[name=claim_validity_period_select]").prop("disabled", false);
+                $("select[name=claim_validity_period_select]").prop("required", true);
+            }
+        });
+
+        function autoAdjustTextArea() {
+            let textArea = document.getElementById("companyName");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+
+            textArea = document.getElementById("beneficiaryName");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+
+            textArea = document.getElementById("companyAddress");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+
+            textArea = document.getElementById("beneficiaryAddress");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+
+            textArea = document.getElementById("currency_amount");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+
+            textArea = document.getElementById("purposeOfGuarantee");
+            textArea.style.height = "auto";
+            textArea.style.height = textArea.scrollHeight + 10 + "px";
+        }
+
+        $("#companyName").bind('input propertychange', function () {
+            var firmName = $(this).val();
+            document.getElementById("input_favouring_ms").value = firmName;
+
+            document.getElementById("favouring_ms").innerHTML = firmName;
+        });
+        $("input[type=radio][name=counter_check]").change(handleChangeRadio);
+        $("#currency_amount").keyup(handleChangeRadio);
+        $("#beneficiaryName").keyup(function () {
+            const counterValue = $("input[type=radio][name=counter_check]:checked").val();
+            if (counterValue == "cg yes") {
+                $("input[type=text][name=beneficiary_name_1]").val($("#beneficiaryName").val());
+                document.getElementById("beneficiary_name_1").innerHTML = $("#beneficiaryName").val();
+            }
+        })
+        $("#currency_amount").keyup(function () {
+            const counterValue = $("input[type=radio][name=counter_check]:checked").val();
+            if (counterValue == "cg yes") {
+                var amountFigure = $("input[type=text][name=currency_amount]").val();
+                var amountWord = toWords(amountFigure) + " only";
+                $("input[type=text][name=for_rs]").val(amountFigure);
+                $("input[type=text][name=for_rs1]").val(amountFigure);
+                $("input[type=text][name=for_rs2]").val(amountFigure);
+                document.getElementById("for_rs1").innerHTML = amountFigure;
+                document.getElementById("for_rs2").innerHTML = amountFigure;
+
+                $("input[type=text][name=for_rs2]").val(amountFigure);
+                document.getElementById("for_rs3").innerHTML = amountFigure;
+
+                $("input[type=text][name=for_rs4]").val(amountFigure);
+                $("input[type=text][name=for_rs4]").val(amountFigure);
+                document.getElementById("for_rs4").innerHTML = amountFigure;
+
+                $("input[type=text][name=for_rsw1]").val(amountWord);
+                $("input[type=text][name=for_rsw3]").val(amountWord);
+                $("input[type=text][name=for_rsw4]").val(amountWord);
+
+                document.getElementById("for_rsw1").innerHTML = amountWord;
+                document.getElementById("for_rsw2").innerHTML = amountWord;
+                document.getElementById("for_rsw3").innerHTML = amountWord;
+                document.getElementById("for_rsw4").innerHTML = amountWord;
+
+                $("input[type=text][name=for_rsw2]").val(amountWord);
+                $("input[type=text][name=for_rsw3]").val(amountWord);
+                $("input[type=text][name=for_rsw4]").val(amountWord);
+            }
+        })
+        $("#companyName").keyup(function () {
+            const counterValue = $("input[type=radio][name=counter_check]:checked").val();
+            if (counterValue == "cg yes") {
+                var companyName = $("#companyName").val();
+                $("input[type=text][name=principal_creditor]").val(companyName);
+                document.getElementById("principal_creditor").innerHTML = companyName;
+                $("#input_favouring_ms").val(companyName);
+                document.getElementById("favouring_ms").innerHTML = companyName;
+
+                $("input[type=text][name=counter_for]").val(companyName);
+            }
+        });
+        $("input[type=text][name=account_number]").keyup(function () {
+            const counterValue = $("input[type=radio][name=counter_check]:checked").val();
+            if (counterValue == "cg yes") {
+                $("#account_number1").val($("input[type=text][name=account_number]").val());
+                document.getElementById("account_number1").innerHTML = $("input[type=text][name=account_number]").val();
+            }
+        })
+        function handleChangeRadio() {
+            const counterValue = $("input[type=radio][name=counter_check]:checked").val();
+            if (counterValue == "cg yes") {
+                $("#firmName").prop("disabled", false);
+                $("#validity_1").prop("required", true);
+                $(".counter-guarantee-form").show();
+                var amountFigure = $("input[type=text][name=currency_amount]").val();
+                var amountWord = $("input[type=text][name=currency_word]").val();
+                var companyName = $("#companyName").val();
+                var firmName = $("#firmName").val();
+                var beneficiaryName = $("#beneficiaryName").val();
+                var accountNumber = $("input[type=text][name=account_number]").val();
+                var validityDate = $("input[type=date][name=expiry_date]").val();
+                if ($("input[type=text][name=for_rs]").val() == '') {
+                    $("input[type=text][name=for_rs]").val(amountFigure);
+                };
+                // if ($("input[type=text][name=for_rs1]").val() == '') {
+                $("input[type=text][name=for_rs1]").val(amountFigure);
+                document.getElementById("for_rs1").innerHTML = amountFigure;
+
+                // };
+                // if ($("input[type=text][name=for_rs2]").val() == '') {
+                $("input[type=text][name=for_rs2]").val(amountFigure);
+                document.getElementById("for_rs2").innerHTML = amountFigure;
+
+                // };
+                // if ($("input[type=text][name=for_rs3]").val() == '') {
+                $("input[type=text][name=for_rs3]").val(amountFigure);
+                document.getElementById("for_rs3").innerHTML = amountFigure;
+
+                // };
+                // if ($("input[type=text][name=for_rs4]").val() == '') {
+                $("input[type=text][name=for_rs4]").val(amountFigure);
+                document.getElementById("for_rs4").innerHTML = amountFigure;
+
+                // };
+                // if ($("input[type=text][name=for_rsw1]").val() == '') {
+                $("input[type=text][name=for_rsw1]").val(amountWord);
+                // };
+                document.getElementById("for_rsw1").innerHTML = amountWord;
+                document.getElementById("for_rsw2").innerHTML = amountWord;
+                document.getElementById("for_rsw3").innerHTML = amountWord;
+                document.getElementById("for_rsw4").innerHTML = amountWord;
+
+                // if ($("input[type=text][name=for_rsw2]").val() == '') {
+                $("input[type=text][name=for_rsw2]").val(amountWord);
+                // };
+                // if ($("input[type=text][name=for_rsw3]").val() == '') {
+                $("input[type=text][name=for_rsw3]").val(amountWord);
+                // };
+                // if ($("input[type=text][name=for_rsw4]").val() == '') {
+                $("input[type=text][name=for_rsw4]").val(amountWord);
+                // };
+                // if ($("input[type=text][name=principal_creditor]").val() == '') {
+                $("input[type=text][name=principal_creditor]").val(companyName);
+                // };
+                document.getElementById("principal_creditor").innerHTML = companyName;
+
+                // if (document.getElementById("favouring_ms").innerHTML = "") {
+                $("#input_favouring_ms").val(companyName);
+                document.getElementById("favouring_ms").innerHTML = companyName;
+                document.getElementById("beneficiary_name_1").innerHTML = beneficiaryName;
+
+                // };
+                // if ($("input[type=text][name=beneficiary_name_1]").val() == '') {
+                $("input[type=text][name=beneficiary_name_1]").val(beneficiaryName);
+                // };
+                // if ($("input[type=text][name=account_number1]").val() == '') {
+                $("input[type=text][name=account_number1]").val(accountNumber);
+                // };
+                document.getElementById("account_number1").innerHTML = accountNumber;
+                if ($("input[type=text][name=validity_1]").val() == '') {
+                    $("input[type=text][name=validity_1]").val(validityDate);
+                    if ($("input[type=radio][name=validity_date_type]:checked").val() == 'Date of Issuance') {
+                        let newVal = $("input[type=text][name=validity_period]").val() + ' ' + document.getElementById("select-type").value + ' from Date of Issuance'
+                        $("input[type=text][name=validity_1]").val(newVal);
+                    }
+                };
+                if ($("input[type=text][name=counter_for]").val() == '') {
+                    $("input[type=text][name=counter_for]").val(firmName);
+                };
+                $("#firmName").change(function () {
+                    var forFirmName = $(this).val();
+                    $("input[type=text][name=counter_for]").val(forFirmName);
+                });
+                if ($("#dated_the").val() == '') {
+                    document.getElementById('dated_the').value = new Date().toISOString().substring(0, 10);
+                };
+                if ($("#firmName").val() === $("#companyName").val()) {
+                    alert("Firm Name and Company Name shouuld be different");
+                    $("#firmName").val("");
+                    return;
+                }
+            } else if (counterValue == "cg no") {
+                var companyName = $("#companyName").val();
+                $("#firmName").prop("disabled", true);
+                $("#firmName").val(companyName);
+                $("#validity_1").prop("required", false);
+                $(".counter-guarantee-form input, .counter-guarantee-form textarea").val('');
+                $(".counter-guarantee-form").hide();
+            }
+        }
+        $("#firmName").keyup(function () {
+            if ($("#firmName").val() === $("#companyName").val()) {
+                alert("Firm Name and Company Name shouuld be different");
+                $("#firmName").val("");
+            }
+        })
+        // Validity Period
+        Date.prototype.addDays = function (d) {
+            var s = new Date(this.getTime() + d * 86400000);
+            return s;
+        };
+        Date.prototype.addMonths = function (m) {
+            var s = new Date(this);
+            s.setDate(s.getDate() - 1);
+            var years = Math.floor(m / 12);
+            var months = m - years * 12;
+            if (years) s.setFullYear(s.getFullYear() + years);
+            if (months) s.setMonth(s.getMonth() + months);
+            return s;
+        };
+        Date.prototype.addYears = function (y) {
+            var s = new Date(this);
+            s.setDate(s.getDate() - 1);
+            s.setFullYear(s.getFullYear() + y);
+            return s;
+        };
+        // 
+        Date.prototype.addMonthsClaim = function (m) {
+            var s = new Date(this);
+            s.setDate(s.getDate());
+            var years = Math.floor(m / 12);
+            var months = m - years * 12;
+            if (years) s.setFullYear(s.getFullYear() + years);
+            if (months) s.setMonth(s.getMonth() + months);
+            return s;
+        };
+        Date.prototype.addYearsClaim = function (y) {
+            var s = new Date(this);
+            s.setDate(s.getDate());
+            s.setFullYear(s.getFullYear() + y);
+            return s;
+        };
+
+
+        function convert(str) {
+            var date = new Date(str),
+                mnth = ("0" + (date.getMonth() + 1)).slice(-2),
+                day = ("0" + date.getDate()).slice(-2);
+            return [date.getFullYear(), mnth, day].join("-");
+        }
+
+        function diff() {
+            var baseDate = new Date();
+            baseDate = document.getElementById("input_date").value;
+            input_number = parseInt(document.getElementById("input_number").value);
+            baseDate += " 00:00:00-04:00";
+            baseDate = new Date(baseDate);
+
+            var selectValue = $("#select-type").val();
+            if (selectValue == "days") {
+                $("#output_date").val(convert(baseDate.addDays(input_number - 1)));
+            } else if (selectValue == "months") {
+                $("#output_date").val(convert(baseDate.addMonths(input_number)));
+            } else if (selectValue == "years") {
+                $("#output_date").val(convert(baseDate.addYears(input_number)));
+            }
+        }
+        // Date Check
+        $("input[type=date][name=date_from],input[type=date][name=date_till]").blur(function () {
+            var start = $("input[type=date][name=date_from]").val();
+            var end = $("input[type=date][name=date_till]").val();
+            var diff = new Date(Date.parse(end) - Date.parse(start));
+            var days = diff / 1000 / 60 / 60 / 24;
+            if (days < 1 || isNaN(days) && end !== "") {
+                alert("Please check the date.");
+                $(this).val("");
+            } else {
+                var newDateThis = $("input[type=date][name=date_till]").val();
+                $("#output_date").val(newDateThis);
+            }
+        });
+
+        function claimdiff(params) {
+            var baseDate = new Date();
+            baseDate = document.getElementById("output_date").value;
+            if (params === "flush") {
+                input_number = parseInt(document.getElementById("claim_input_number").value = null);
+                document.getElementById("type_two").checked = false;
+                // document.getElementById("type_two").value=null;
+            } else {
+                input_number = parseInt(document.getElementById("claim_input_number").value);
+            }
+            baseDate += " 00:00:00-04:00";
+            baseDate = new Date(baseDate);
+
+            var selectValue = $("#claim-select-type").val();
+            if (selectValue == "days") {
+                $("#claim_output_date").val(convert(baseDate.addDays(input_number)));
+            } else if (selectValue == "months") {
+                $("#claim_output_date").val(convert(baseDate.addMonthsClaim(input_number)));
+            } else if (selectValue == "years") {
+                $("#claim_output_date").val(convert(baseDate.addYearsClaim(input_number)));
+            }
+
+        }
+
+        $("#currency_amount").keyup(function () {
+            var numberValue = $(this).val();
+            var numberValuevalue;
+            if (numberValue.includes(".") && numberValue.split(".")[1] == ('' || 00)) {
+                numberValuevalue = parseFloat(numberValue.split(",").join("").split(".")[0]).toFixed(2);
+
+                $("#currency_word").val(toWords(numberValuevalue?.split(",")?.join("").split(".")[0]) + 'Only');
+            } else {
+                $("#currency_word").val(toWords(numberValue.split(",").join("")) + 'Only');
+            }
+        });
+        $("#currency_amount").change(function () {
+            var numberValue = $(this).val();
+            var numberValuevalue;
+
+            if (numberValue.includes(".") && numberValue.split(".")[1] == ('' || 00 || 000)) {
+                numberValuevalue = parseFloat(numberValue?.split(",").join("").split(".")[0]).toFixed(2);
+
+                numberValuevalue += '';
+                var x = numberValuevalue.split('.');
+                var x1 = x[0];
+                var x2 = x.length > 1 ? '.' + x[1] : '';
+                var rgx = /(\d+)(\d{3})/;
+                while (rgx.test(x1)) {
+                    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+                }
+                $(this).val(x1 + x2);
+            } else {
+                numberValue += '';
+                var x = numberValue.split('.');
+                var x1 = x[0];
+                var x2 = x.length > 1 ? '.' + x[1] : '';
+                var rgx = /(\d+)(\d{3})/;
+                while (rgx.test(x1)) {
+                    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+                }
+                $(this).val(x1 + x2);
+            }
+        });
+        // Convert numbers to words
+        // copyright 25th July 2006, by Stephen Chapman http://javascript.about.com
+        // permission to use this Javascript on your web page is granted
+        // provided that all of the code (including this copyright notice) is
+        // used exactly as shown (you can change the numbering system if you wish)
+
+        // American Numbering System
+        var th = ['', 'Thousand', 'Million', 'Billion', 'Trillion'];
+        // uncomment this line for English Number System
+        // var th = ['','thousand','million', 'milliard','billion'];
+
+        var dg = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+        var tn = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen',
+            'Nineteen'
+        ];
+        var tw = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+        function toWords(s) {
+            s = s.toString();
+            s = s.replace(/[\, ]/g, '');
+            if (s != parseFloat(s)) return 'not a number';
+            var x = s.indexOf('.');
+            if (x == -1) x = s.length;
+            if (x > 15) return 'too big';
+            var n = s.split('');
+            var str = '';
+            var sk = 0;
+            for (var i = 0; i < x; i++) {
+                if ((x - i) % 3 == 2) {
+                    if (n[i] == '1') {
+                        str += tn[Number(n[i + 1])] + ' ';
+                        i++;
+                        sk = 1;
+                    } else if (n[i] != 0) {
+                        str += tw[n[i] - 2] + ' ';
+                        sk = 1;
+                    }
+                } else if (n[i] != 0) {
+                    str += dg[n[i]] + ' ';
+                    if ((x - i) % 3 == 0) str += 'Hundred ';
+                    sk = 1;
+                }
+                if ((x - i) % 3 == 1) {
+                    if (sk) str += th[(x - i - 1) / 3] + ' ';
+                    sk = 0;
+                }
+            }
+            if (x != s.length) {
+                var y = s.length;
+                str += 'and ';
+                for (var i = x + 1; i < y; i++) str += n[i];
+                str += '/100 ';
+            }
+            return str.replace(/\s+/g, ' ');
+        }
+
+
+        $("input[type=radio][name=attached_format]").change(function () {
+            if (this.value == "Yes") {
+                $("input[type=file][name=fileupload_formatAttached]").show();
+                $("input[type=file][name=fileupload_formatAttached]").prop("required", true);
+            } else {
+                $("input[type=file][name=fileupload_formatAttached]").hide();
+                $("input[type=file][name=fileupload_formatAttached]").prop("required", false);
+            }
+        });
+
+        $("input[type=checkbox][name=other_enclosed_documents]").change(function () {
+            if (this.checked == true) {
+                $("input[type=file][name=fileupload_enclosedDocument]").show();
+                $("input[type=file][name=fileupload_enclosedDocument]").prop("required", true);
+            } else {
+                $("input[type=file][name=fileupload_enclosedDocument]").hide();
+                $("input[type=file][name=fileupload_enclosedDocument]").prop("required", false);
+            }
+        });
+        $(".otherGuarantee").hide();
+        $(".otherGuarantee input").prop("required", false);
+        $(".bid-text").hide();
+        $("input[type=radio][name=type_of_guarantee]").change(function () {
+            if (this.value == "Other Guarantee") {
+                $(".otherGuarantee").show();
+                $(".otherGuarantee input").prop("required", true);
+            } else {
+                $(".otherGuarantee").hide();
+                $(".otherGuarantee input").prop("required", false);
+            }
+            if (this.value == "Bid Bond") {
+                $(".bid-text").show();
+                $("input[type=file][name=fileupload_enclosedDocument]").show();
+                $("input[type=checkbox][name=other_enclosed_documents]").prop("checked", true);
+            } else {
+                $(".bid-text").hide();
+                $("input[type=file][name=fileupload_enclosedDocument]").hide();
+                $("input[type=checkbox][name=other_enclosed_documents]").prop("checked", false);
+            }
+        });
+        $("input[type=date][name=date_from]").prop("disabled", true);
+        $("input[type=date][name=date_till]").prop("disabled", true);
+        $("input[type=text][name=validity_period]").prop("disabled", true);
+        $("select[name=validity_period_select]").prop("disabled", true);
+        $("input[type=date][name=validity_period_date]").prop("disabled", true);
+        $("input[type=radio][name=date_type]").change(function () {
+            $("#output_date").val("");
+            if (this.value == "From To") {
+                $("input[type=date][name=date_from]").prop("disabled", false);
+                $("input[type=date][name=date_from]").prop("required", true);
+                $("input[type=date][name=date_till]").prop("disabled", false);
+                $("input[type=date][name=date_till]").prop("required", true);
+                $("input[type=text][name=validity_period]").prop("disabled", true);
+                $("input[type=text][name=validity_period]").val("");
+                $("input[type=text][name=validity_period]").prop("required", false);
+                $("select[name=validity_period_select]").prop("disabled", true);
+                $("select[name=validity_period_select]").prop("required", false);
+                $("select[name=validity_period_select]").val("");
+                $("input[type=date][name=validity_period_date]").prop("disabled", true);
+                $("input[type=date][name=validity_period_date]").val("");
+                $("input[type=date][name=validity_period_date]").prop("required", false);
+                $("input[type=radio][name=validity_date_type]").prop('checked', false);
+                $("input[type=radio][name=validity_date_type]").prop('disabled', true);
+            } else if (this.value == "Date Period") {
+                $("input[type=date][name=date_from]").prop("disabled", true);
+                $("input[type=date][name=date_from]").val("");
+                $("input[type=date][name=date_from]").prop("required", false);
+                $("input[type=date][name=date_till]").prop("disabled", true);
+                $("input[type=date][name=date_till]").prop("required", false);
+                $("input[type=date][name=date_till]").val("");
+                $("input[type=text][name=validity_period]").prop("disabled", false);
+                $("input[type=text][name=validity_period]").prop("required", true);
+                $("select[name=validity_period_select]").prop("disabled", false);
+                $("select[name=validity_period_select]").prop("required", true);
+                $("input[type=radio][name=validity_date_type]").prop('disabled', false);
+                $("input[type=radio][name=validity_date_type]").prop('required', true);
+            }
+        });
+        $("input[type=radio][name=validity_date_type]").change(function () {
+            if (this.value == "Date Period Date") {
+                $("input[type=date][name=validity_period_date]").prop("disabled", false);
+                $("input[type=date][name=validity_period_date]").prop("required", true);
+
+            } else if (this.value == "Date of Issuance") {
+                $("#output_date").val("");
+                $("input[type=date][name=validity_period_date]").prop("disabled", true);
+                $("input[type=date][name=validity_period_date]").val("");
+                $("input[type=date][name=validity_period_date]").prop("required", false);
+            }
+        });
+        $("input[type=date][name=claim_validity]").prop("disabled", true);
+        $("input[type=text][name=claim_validity_period]").prop("disabled", true);
+        $("select[name=claim_validity_period_select]").prop("disabled", true);
+        $("input[type=radio][name=claim_validity_type]").change(function () {
+            if (this.value == "Type One") {
+                $("input[type=date][name=claim_expiry_date]").val("");
+                $("input[type=date][name=claim_validity]").prop("disabled", false);
+                $("input[type=date][name=claim_validity]").prop("required", true);
+                $("input[type=text][name=claim_validity_period]").prop("disabled", true);
+                $("input[type=text][name=claim_validity_period]").val("");
+                $("input[type=text][name=claim_validity_period]").prop("required", false);
+                $("select[name=claim_validity_period_select]").prop("disabled", true);
+                $("select[name=claim_validity_period_select]").val("");
+                $("select[name=claim_validity_period_select]").prop("required", false);
+            } else if (this.value == "Type Two") {
+                $("input[type=date][name=claim_validity]").prop("disabled", true);
+                $("input[type=date][name=claim_validity]").val("");
+                $("input[type=date][name=claim_validity]").prop("required", false);
+                $("input[type=text][name=claim_validity_period]").prop("disabled", false);
+                $("input[type=text][name=claim_validity_period]").prop("required", true);
+                $("select[name=claim_validity_period_select]").prop("disabled", false);
+                $("select[name=claim_validity_period_select]").prop("required", true);
+            }
+        });
+        $("input[type=date][name=claim_validity]").change(function () {
+            $("input[type=date][name=claim_expiry_date]").val($(this).val());
+        });
+        $("#firmName").prop("disabled", true);
+        $("#companyName").change(function () {
+            var appName = $("#companyName").val();
+            var firName = $("#firmName").val(appName);
+        });
+        $("#firmName").change(function () {
+            var appName = $("#companyName").val();
+            var firName = $("#firmName").val();
+            if (appName !== firName) {
+                $(".counter-guarantee-notice").show();
+            } else {
+                $(".counter-guarantee-notice").hide();
+            }
+        });
+
+        function onlyNumberKey(evt) {
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57) && ASCIICode !== 46)
+                return false;
+            return true;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APG14 </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+             Date:{{subform.2.issuedate.formattedissueDateBG}} <br>
+             {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+             {{subform.2.beneficiary_address}} <br>
+            </p>
+
+                <p>
+            <b> Our Ref.No: {{subform.2.reference_number}}</b>
+          </p>
+          <p>
+             Dear Sir(s)
+          </p>
+          <p>
+            At the request of {{subform.2.salutation_acccount}} {{subform.2.company_name}}, Kathmandu, Nepal, (hereinafter called the "Principal"),
+             We Global IME Bank Ltd., Kamaladi, Nepal having our registered office at Panipokhari-3, Kathmandu,
+              Nepal (hereinafter called the "Guarantor") do hereby issue this performance Bank Guarantee 
+              (hereinafter called the "Guarantee") for the work of {{subform.2.purpose_guarantee}}
+              (hereinafter called the "Contract") with Nepal Electricity Authority (NEA) under the following terms 
+              and conditions:
+              <ol>
+                <li>The Guarantor undertakes and agrees to pay you, upon your first written demand and without
+                     cavil agreement sum not exceeding the amount of 
+                     <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                        {{subform.2.in_words}}), </b>
+                     subject to the extent 
+                     the principal is liable to pay, against your written claim, along with the Guarantee original 
+                     reaching us on or before the late of expiry that the principal has failed to comply with the 
+                     terms and conditions of the contract.</li>
+                <li>This Guarantee shall be effective from <b> {{subform.2.issuedate.formattedissueDateBG}} </b>
+                    and expires on <b> {{subform.2.validityDate}} </b> or on completion of contract
+                     whichever is earlier. After the expiry or in the event the principal should complete the terms and conditions 
+                     of the contract, whichever occurs earlier, this Guarantee shall automatically become null and void
+                      and the Guarantor will be freed from all the responsibilities under the said Guarantee.</li>
+                <li>	Any demand in respect of this guarantee should be reached at the counter of this bank at Central
+                     Trade Finance Department, Kamaladi, Kathmandu, Nepal not later than the above date 
+                     i.e. <b> {{subform.2.validityDate}} </b> within the banking hours and all our 
+                     obligations hereunder shall cease and we shall not entertain any claim or contestation beyond or after that date.</li>
+              </ol>
+         </p>
+        
+        <p>
+          <b> For;Global IME Bank Limited<br>
+              <span style="margin-left: 20px;">  Trade Operation</span></b> 
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+                <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+            
+        </p>
+        
+        <footer style=" left:0; bottom: 0;width:100%;text-align:center;">
+            This Bank Guarantee can be verified at our website www.globalimebank.com 
+        </footer>
+    </div>
+</body>
+
+
+
+</html>

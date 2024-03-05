@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 14px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Ref No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            We have been informed that <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}},
+                {{subform.2.company_address}}, {{subform.2.company_address2}}</b>
+            (Hereinafter called “the Bidder”), intends to submit its bid (Hereinafter called “the Bid”)
+            to you <b>{{subform.2.purpose_guarantee}}</b> under Invitation for Bids No.
+            <b>{{subform.2.contract_number}}</b> (“the IFB”)
+        </p>
+        <p>
+            Furthermore, we understand that, according to the conditions, bids must be supported by a bid guarantee.
+        </p>
+        <p>
+            At the request of the Bidder, we, Global IME Bank Limited (hereinafter called the ‘Bank’) hereby irrevocably
+            undertake to pay you any sum or sums not exceeding in total an amount of <b>{{main.currency_short}}
+                {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b> upon receipt by us of your
+            first demand in written accompanied by a
+            written
+            statement stating that the Bidder is in breach of its obligations(s) under the bid conditions,
+            because the
+            Bidder:
+        </p>
+        <ul style="list-style:lower-alpha ;">
+            <li>has withdrawn or modifies its Bid during the period of bid validity specified by the Bidder in the Form
+                of Bid; or</li>
+            <li>does not accept the correction of errors in accordance with the Instructions to Bidders
+
+                (hereinafter “the ITB”) or</li>
+            <li>having been notified of acceptance of its Bid by the Employer during the period of bid validity, (i)
+                fails or refuses to execute the Contract Agreement, or (ii) fails or refuses to furnish the
+
+                performance security, in accordance with the ITB.</li>
+            <li>is involved in fraud and corruption in accordance with the ITB.</li>
+        </ul>
+        <p>
+            This Guarantee will remain in force up to and including the date <b>{{subform.2.final_validityDate}}
+                ({{subform.2.total_days}}) days</b> after the
+            deadline
+            for submission of Bids as such deadline is stated in the instructions to Bidders or as it may be
+            extended by
+            the Employer, notice of which extension(s) to the bank is hereby waived. Any demand in respect of this
+            guarantee should be reached at the counter of this bank at Trade Operations Department, Central Business
+            Park, 6th Floor, Thapathali, Kathmandu, Nepal not later than the above date i.e.
+            <b>{{subform.2.final_validityDate}}</b>
+            within the
+            banking hours.
+        </p>
+        <p>
+            This Bank Guarantee shall not be withdrawn or released merely upon return of the original guarantee by the
+            Bidder unless notified by you for the release of the guarantee.
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 758
+        </p>
+        <br>
+        <br>
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name2}}</b><br /><br />
+            <b>Designation : {{subform.2.designation2}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+    </div>
+</body>
+
+</html>

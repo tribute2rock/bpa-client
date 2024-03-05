@@ -1,0 +1,143 @@
+/* new requests */
+.content-section .each-content .content-item {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fff;
+  -webkit-transition: 400ms ease;
+  -o-transition: 400ms ease;
+  transition: 400ms ease;
+}
+
+.content-section .each-content .content-item:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 1s;
+  background: rgb(255, 255, 255);
+}
+
+.content-section .each-content .content-item h5 {
+  color: #444444 !important;
+  font-size: 16px !important;
+}
+
+/* form */
+.form-title {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+.form-title h3 {
+  /* padding: 0.8rem 1rem; */
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.btn-toolbar {
+  border-top: 1px solid #ccc;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  padding-top: 15px;
+}
+
+/* workflow */
+.approver-group {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  display: block;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fff;
+  transition: 400ms ease;
+  border-bottom: 4px solid #66bb6a;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.approver-group-link {
+  border-bottom: 4px solid #66bb6a;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.approver-group h6 {
+  color: #424242 !important;
+  font-size: 16px !important;
+}
+.approver-group h5 {
+  color: #212121 !important;
+  font-size: 16px !important;
+}
+
+.approver-group .material-icons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 122, 122, 0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  transform: scale(0);
+  transition: 400ms ease;
+}
+
+.approver-group:hover .material-icons {
+  transform: scale(1);
+}
+.approver-group .material-icons:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/* for workflow non approver */
+.non-approver-group {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  display: block;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fff;
+  transition: 400ms ease;
+  border-bottom: 4px solid #ef5350;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.non-approver-group .non-approver-group-link {
+  border-bottom: 4px solid #66bb6a;
+}
+
+.non-approver-group h6 {
+  color: #424242 !important;
+  font-size: 16px !important;
+}
+.non-approver-group h5 {
+  color: #212121 !important;
+  font-size: 16px !important;
+}
+
+.non-approver-group .material-icons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 122, 122, 0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  transform: scale(0);
+  transition: 400ms ease;
+}
+
+.non-approver-group:hover .material-icons {
+  transform: scale(1);
+}
+.non-approver-group .material-icons:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}

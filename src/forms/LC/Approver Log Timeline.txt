@@ -1,0 +1,79 @@
+MT 700<br/>
+RECEIVER: {{subform.1.receiver}}{{subform.1.receiver_Dinfo}}<br/><br/>
+
+F27: SEQUENCE OF TOTAL<br/>
+{{subform.1.sequence_of_total}}<br/>
+F40A: FORM OF DOCUMENTARY CREDIT<br/>
+{{subform.1.nature_of_lc}}<br/>
+F20: DOCUMENTARY CREDIT NUMBER<br/>
+{{subform.1.documentary_credit_number}}<br/>
+F31C: DATE OF ISSUE<br/>
+{{#subform.1.date_of_issue.formatted}}{{.}}{{/subform.1.date_of_issue.formatted}}{{^subform.1.date_of_issue.formatted}}XXXXXXXXXX{{/subform.1.date_of_issue.formatted}}<br/>
+F40E: APPLICABLE RULES <br/>
+{{subform.1.applicable_rules}}<br/>
+F31D: DATE AND PLACE OF EXPIRY<br/>
+{{subform.1.date_of_expiry.formatted}},{{subform.1.place_of_expiry}}<br/>
+F51{{subform.1.applicant_bank_check}}: APPLICANT BANK - PARTY IDENTIFIER - IDENTIFIER CODE<br/>
+{{subform.1.applicant_bank}}{{subform.1.applicant_bank_Dinfo}}<br/>
+F50: APPLICANT<br/>
+{{subform.1.applicant_name}}<br/>
+{{subform.1.applicant_address}}<br/>
+PAN: {{subform.1.applicant_pan}}<br/>
+TEL: +977 {{subform.1.applicant_phone}}<br/>
+F59: BENIFICIARY NAME AND ADDRESS <br/>
+{{subform.1.beneficiary_name}}<br/>
+{{subform.1.beneficiary_address}}<br/>
+TEL: {{subform.1.beneficiary_phone}}<br/>
+F32B: CURRENCY CODE, AMOUNT<br/>
+Currency: {{subform.1.currency}}<br/>
+Amount: {{subform.1.currency_amount}}<br/>
+F39A: PERCENTAGE CREDIT  AMOUNT TOLERANCE<br/>
+{{subform.1.tolerance_type}}<br/>
+F41{{subform.1.available_with_check}}: AVAILABLE WITH .. BY .. - NAME AND ADDRESS - CODE <br/>
+{{subform.1.available_with}}<br/>BY {{subform.1.available_by}}<br/>
+F42C: DRAFT AT..<br/>
+{{subform.1.drafts_at}}<br/>
+F42{{subform.1.drawee_check}}: DRAWEE - PARTY IDENTIFIER - NAME AND ADDRESS   <br/>
+{{subform.1.drawee}}{{subform.1.drawee_Dinfo}}<br/>
+F43P: PARTIAL SHIPMENT<br/>
+{{subform.1.partial_shipment}}<br/>
+F43T: TRANSHIPMENT<br/>
+{{subform.1.transshipment}}<br/>
+F44A: PLACE OF TAKING IN CHARGE/DISPATCH FROM ../PLACE OF RECEIPT<br/>
+{{subform.1.shipment_from}}<br/>
+F44E: PORT OF LOADING/AIRPORT OF DEPARTURE<br/>
+{{subform.1.port_of_loading}}<br/>
+F44F: PORT OF DISCHARGE/AIRPORT OF DESTINATION<br/>
+{{subform.1.port_of_discharge}}<br/>
+F44B: PLACE OF FINAL DESTINATION/FOR TRANSPORTATION TO ../PLACE OF DELIVERY<br/>
+{{subform.1.port_of_final_destination}}<br/>
+F44C: LATEST DATE OF SHIPMENT<br/>
+{{subform.1.latest_date_of_shipment.formatted}}<br/>
+F45A: DESCRIPTION OF GOODS AND/OR SERVICES<br/>
+{{subform.1.description_of_good}}<br/>
+F46A: DOCUMENTS REQUIRED<br/>
+{{subform.1.documents_required}}<br/>
+F47A: ADDITIONAL CONDITIONS<br/>
+{{subform.1.additional_conditions}}<br/>
+F71D: CHARGES<br/>
+{{subform.1.charges}}<br/>
+F48: PERIOD OF PRESENTATION<br/>
+{{subform.1.period_for_presentation}}<br/>
+F49: CONFIRMATION INSTRUCTIONS<br/>
+{{subform.1.confirmation_instruction}}<br/>
+F58{{subform.1.requested_confirmation_check}}: CONFIRMING BANK<br/>
+{{subform.1.requested_confirmation}}{{subform.1.requested_confirmation_Dinfo}}<br/>
+F53A: REIMBURSING BANK<br/>
+{{subform.1.reimbursing_bank}}<br/>
+F78:INSTRUCTION TO PAY / ACCEPT / NEGOTIATE<br/>
+{{subform.1.instruction_to_pay}}<br/>
+F57{{subform.1.advise_through_bank_check}}: ADVISE THROUGH BANK<br/>
+{{subform.1.advise_through_bank_Dinfo}}<br/>
+F72Z: SENDER TO RECEIVER INFO<br/>
+{{subform.1.sernder_receiver_information}}<br/>
+<p></p>
+<p><b>Approver Log </b></p>
+{{#each log}}
+<p> {{this.name}} {{this.action}} the request as {{this.group}} on {{this.date}} </p>
+<p>{{this.comment}}</p>
+{{/each}}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>BOK-PBG</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            <p>
+                <b>Date: {{subform.2.issuedate.formattedissueDateBG}}</b>
+            </p>
+            <p style="margin-bottom:0;width:100%; float: left;">
+                <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} </b>
+                    
+                    <br>
+                    <br>
+            </p>
+            <br>
+            <p>
+               
+                <b>Dear Sir, </b>
+            </p>         
+            
+            <p>
+                <b>PERFORMANCE GUARANTEE</b> <br>
+                Our Reference  : {{subform.2.reference_number}}<br />
+                Amount: {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}} )<br />
+                Purpose: {{subform.2.purpose_guarantee}}<br />
+                Applicant : {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}<br />
+                Beneficiary : {{subform.2.salutation}} {{subform.2.beneficiary_name}} {{subform.2.beneficiary_address}}<br />
+                Validity : {{subform.2.validityDate}}<br />
+                
+            </p>
+            <p>At the request of <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b> (hereinafter called the "Principal") we, Bank of Kathmandu Limited.,
+                 having our registered office. at G P 0 Box 9044, Kamal Pokhari, Kathmandu, Nepal (hereinafter called the "Guarantor") do hereby issue this Performance Bank Guarantee 
+                 (hereinafter called "Guarantee") for concluding Power Purchase Agreement (PRA) of Lower Khare Khola Small Hydropower Project with NEA (hereinafter called "Contract")
+                  with Nepal Electricity Authority, Central Office, Durbar Marg, Kathmandu, Nepal (NEA) under the following terms and conditions.
+                  <ol type="1">
+                    <li>The Guarantor undertakes and agrees to pay you, upon your first written demand and without cavil or argument any sum or sums not exceeding the amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                        {{subform.2.in_words}}), </b>subject to the extent the Principal is liable to pay, against your written claim, along with the Guarantee 
+                        original, reaching us on or before the Guarantee expiry certifying the Principal has failed to comply with the terms and conditions of the Contract.</li>
+                    <li>
+                        This Guarantee shall be effective <b> from {{subform.2.issuedate.formattedissueDateBG}} and expires on {{subform.2.validityDate}} </b>
+                        or on completion of the Contract whichever is earlier. Upon expiry, this Guarantee shall automatically become null and void and
+                         the Guarantor will be freed from all the responsibilities under the said Guarantee.
+                    </li>
+                    <li>Claims, if any, under this Guarantee must be submitted in writing to us not later than the said expiry date i.e. <b>{{subform.2.validityDate}}</b> 
+                         within banking hours with Guarantee original.</li>
+                    <li>This Guarantee should be returned to us upon its expiry or upon fulfillment of obligation under this Guarantee
+                         whichever shall occur first.</li>
+                  </ol>
+            </p>
+            <p>In all communications, please state our Reference Number.</p>
+             
+            <br />
+            <br />
+            <br /> 
+            <p>Your Faithfully
+            </p>
+            <br />
+            <br />
+            <br />
+            
+            <p style="float: left; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+               
+            </p>
+            <p style="float:right; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+                
+                
+            </p>
+            
+           
+       
+           
+           
+        </div>
+
+    </body>
+
+</html>

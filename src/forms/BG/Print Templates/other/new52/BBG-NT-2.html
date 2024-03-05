@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<input>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>BBG-NT-2</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        
+            <p style="  left:0; bottom: 0;width:100%;text-align:center;">
+                <b>Bid Security (Bank Guarantee)</b>
+            </p>
+              <p>
+                <i>[The Bank Shall fill in this Bank Guarantee Form in accordance with the instructions]</i> <br>
+                <b>Global IME Bank Ltd. Kantipath, Nepal</b> <br>
+                 <b>Beneficiary: {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}}</b><br />
+                 <b>Date:{{subform.2.issuedate.formattedissueDateBG}}</b><br />
+                <b>BID GUARANTEE NO.: ..........</b><br />
+                
+                       
+            </p>
+            <p>
+                We have been informed that <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called "the Bidder") 
+                has submitted to you its bid dated {{subform.2.issuedate.formattedissueDateBG}} (hereinafter called "the Bid") for the execution
+                 of <b> {{subform.2.purpose_guarantee}} </b>  under Invitation for Bids No. .......... ("the IFB").
+            </p>
+            <p>Furthermore, we understand that, according to your conditions, bids must be supported by a bid guarantee. </p>
+          
+           
+            <p>At the request of the Bidder, we Global IME Bank Ltd. hereby irrevocably undertake to pay you any sum or sums 
+                not exceeding in total an amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b> upon receipt by us of your
+                 first demand in writing accompanied by a written statement stating that the Bidder is in breach of its
+                  obligation(s) under the bid conditions, because the Bidder:
+                  <ol type="a">
+                    <li>has withdrawn its Bid during the period of bid validity specified by the Bidder in the Form of Bid; or</li>
+                    <li>having been notified of the acceptance of its Bid by the Purchaser during the period of bid validity, (i) fails or refuses to execute the Contract Form, if required,
+                         or (ii) fails or refuses to furnish the performance security, in accordance with the Instructions to Bidders.</li>
+                    <li>has responded to the clarification sought by Nepal Telecom with the response that constitutes
+                         change in price and substance of the Bid; or</li>
+                    <li>has carry out or cause to carry out the acts mentioned in Clause No. ITB 3 with an intention to influence the implementation
+                         of the procurement process or the procurement agreement; or</li>
+                    <li>fails to sign the Contract in accordance with ITB 44; or</li>
+                    <li>fails to furnish a Performance Security in accordance with ITB 43.</li>
+                    <li>If the Bidder fails to extend the bid validity period and Bid Security period as requested by Nepal Telecom
+                        after issuance of notification of Intention of Award and Notification of Award as per ITB 42.
+                        </li>
+                  </ol>
+                
+            </p>
+            <p>
+                This guarantee will expire: (a) if the Bidder is the successful bidder, upon our receipt of copies of the contract signed by the Bidder and the performance security issued to you upon the instruction of the Bidder; or (b) if the Bidder is not the successful bidder, upon the earlier of (i) our receipt of a copy of your notification to the Bidder of the name
+                 of the successful bidder; or (ii) twenty-eight days after the expiration of the Bidder's Bid.
+            </p>
+            <p>
+                This Bank Guarantee shall not be withdrawn or released merely upon return of the original Guarantee by the Bidder unless notified by the purchaser for the release of the Guarantee.
+            </p>
+            <p>
+                Consequently, any demand for payment under this guarantee must be received by us at the office on or before that date. 
+            </p>
+            <p>
+                This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 458.
+            </p>
+            
+            <br>
+            <br><br><br><br>
+            
+            <p style="float: left; width: 50%;">
+                <b>..........</b><br /><br />
+                <b><i>[Signature'(s)]</b><br /></i> 
+               
+            </p>
+         
+        </div>
+
+    </body>
+
+</html>

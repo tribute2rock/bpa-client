@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>PBG-Format-New</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            <p>
+                <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 25px;">Performance Bank Guarantee(unconditional)</b>
+            </p>
+            <p style="margin-bottom:0;width:100%; float: left;">
+                <b style="float: left;width: 80%;">
+                    To: {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} <br> </b>
+                    <br>
+            </p>         
+           
+            <p>Whereas <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called "the Service Provider") has undertaken, in
+                pursuance of Contract No.: <b>{{subform.2.contract_number}} </b> dated <b>{{subform.2.issuedate.formattedissueDateBG}}</b> to  execute <b>{{subform.2.purpose_guarantee}} </b> (hereinafter called "the Contract"):
+                
+            </p>
+             
+            <p>And whereas it has been stipulated by you in the said Contract that the Service Provider shall
+                 furnish you with a Bank Guarantee by a recognized hank for the sum specified therein as
+                  security for compliance with his obligations in accordance with the Contract;
+                
+            </p>
+            <p>
+                And whereas we have agreed to give the Service Provider such a Bank Guarantee;
+            </p>
+            <p>
+                Now therefore we hereby affirm that we are the Guarantor and responsible to you, 
+                on behalf of the Service Provider, up to a total of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b> such sum being payable in the 
+                types and proportions of currencies in which the Contract Price is payable, and we 
+                undertake to pay you, upon your first written demand and without cavil or argument, 
+                any sum or sums within the limits of  <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b> as aforesaid without your needing to prove or
+                 to show grounds or reasons for your demand for the sum specified therein.
+            </p>
+            <p>
+                We hereby waive the necessity of your demanding The said debt from the Service Provider before presenting us with the demand.
+            </p>
+            <p>
+                We further agree that no change or addition to or other modification of the terms of the Contract 
+                or of the Services to be performed there under or of any of the Contract documents which may 
+                be made between you and the Service Provider shall in any way release us from any liability under this 
+                Guarantee, and we hereby waive notice of any such change, addition, or modification. 
+            </p>
+            <p>
+                This Guarantee shall be valid until a date 30 days from the date of issue of the Certificate of Completion.
+            </p>
+           
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        
+           
+            <p style="float: left; width: 50%;">
+                <b>Signature and Seal of the Guarantor:..........</b><br /><br />
+                <b>Name of Bank: Global IME Bank Ltd</b><br /><br />
+                <b>Address: Kantipath, Nepal</b> <br>
+                <b>Date: {{subform.2.issuedate.default}}</b>
+               
+            </p>
+            
+            <br>
+            <br>
+  
+          
+           
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,317 @@
+<body>
+    <style>
+        .datepicker,
+        input {
+            font-family: Arial, sans-serif;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .datepicker:focus,
+        input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+        }
+
+        table {
+            padding: 10px;
+            margin-left: 10mm;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 4px;
+            text-align: left;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+
+        td {
+            padding: 6px;
+            text-align: left;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            /*
+border-collapse: collapse; */
+        }
+
+        table input {
+            border: 0;
+        }
+
+        .custom {
+            border: 0;
+        }
+
+        .currency {
+            text-transform:
+                capitalize;
+        }
+    </style>
+    <div class="container">
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="1" data-label="अनुसूची"
+            name="name_anusuchi" value="अनुसूची १.३" />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="2" data-label=".इ.प्रा."
+            name="name_pratipatra" value="परिपत्र संख्या- १ को दफा १.१.४ (ख) को (७) को प्रयोजनका लागि" />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="3" data-label="ISSUING BANK"
+            name="name_issuing" value="ग्लोबल आइएमई बैंक लि." />
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-order="4"
+            data-label="BI BI NI FORM TYPE" name="name_bibini_ft" value="वि.वि.नि. फा.नं. ४ (घ)" />
+        <div class="float-right"> अनुसूची १.३ </div><br>
+        <div class="text-center">(इ.प्रा. परिपत्र संख्या- १ को दफा १.१.४ (ख) को (७) को प्रयोजनका लागि) <br></div>
+        <div class="text-center"> <b>वि.वि.नि. फा.नं. ४ (घ)</b></div> <input onkeyup="transformToUppercase(this)"
+            type="hidden" data-order="6" data-label="BI BI NI SRL NUMBER" name="requestIdentifier_copy"
+            class=" custom datepicker" id="copy" placeholder="BIBINI Number">
+        <div class="float-right">मितिः <input data-required="true" onkeyup="transformToUppercase(this)" type="text"
+                data-label="ISSUED DATE" data-order="7" name="date" class="date-picker
+mypicker" autocomplete="off" placeholder="DD-MM-YYYY" id="date"> </div> <br>
+        <div class="text-center" style="margin-left: 35mm;"> <input data-required="true"
+                onkeyup="transformToUppercase(this)" type="name" data-label="BANK NAME" name="bankName" class="
+custom text-center no-outline" id="bankName" value="Global IME Bank Limited."></div> <br>
+        <div class="text-center"><select class="datepicker selectBranchddl" data-order="5" data-label="SELECTED BRANCH"
+                id="selectBranch" name="branch"> </select> शाखा</div> <br><br>
+        <input onkeyup="transformToUppercase(this)" type="text" class="d-none" data-label="REQUESTED BRANCH SOL"
+            name="requestedBranchSol_branch" id="requestedBranchSol_branch" />
+        <div class="text-center"> <u>क्रेडिट सुविधा (Usance
+                प्रतीतपत्र) अन्तर्गत भुक्तानी गरेको प्रमाणपत्र </u></div> <br>
+        <div>श्री नेपाल राष्ट्र बैंक <br> विदेशी
+            विनिमय व्यवस्थापन विभाग <br> <u>बालुवाटार, काठमाडौं ।</u> </div> <br>
+        <div> महाशय, </div>
+        <div style="text-align: justify;">
+            <p> तल उल्लिखित आयातकर्ताले क्रेडिट सुविधा (Usance प्रतीतपत्र) अन्तर्गत खोलेको
+                प्रतीतपत्रबाट मिति : <input required data-required="true" onkeyup="transformToUppercase(this)"
+                    type="text" data-label="DATE" name="issue-date" class=" custom mypicker" autocomplete="off"
+                    placeholder="DD-MM-YYYY" id="issue-date"> मा छुटाएको Document को भुक्तानी
+                निम्न बमोजिम भएको ब्यहोरा प्रमाणित गर्दछु । </p>
+        </div> <br><br>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 mb-3">
+                <table class="custom">
+                    <tr class="custom">
+                        <th class="custom">1</th>
+                        <th class="custom">आयातकर्ताको नाम :</th>
+                        <th class="custom"><input required data-required="true" id="applicant_name"
+                                onkeyup="transformToUppercase(this)" type="name" data-order="8"
+                                data-label="APPLICANT NAME" name="applicant_name" class=" custom" id="applicant_name"
+                                placeholder="आयातकर्ताको नाम">
+                    <tr class="custom">
+                        <th class="custom">2</th>
+                        <th class="custom">प्रतीतपत्र
+                            नं. :</th>
+                        <th class="custom"><input required data-required="true" id="certificate-no"
+                                onkeyup="transformToUppercase(this)" type="name" data-label="CERTIFICATE NUMBER"
+                                name="certificate-no" class=" custom" id="certificate-no" placeholder="प्रतीतपत्र
+नं."></th>
+                    </tr>
+                    <tr class="custom">
+                        <th class="custom">3</th>
+                        <th class="custom">प्रतीतपत्र खोल्दाको
+                            मिति :</th>
+                        <th class="custom"><input required data-required="true" id="certificate-date"
+                                onkeyup="transformToUppercase(this)" type="text" data-label="CERTIFICATE DATE"
+                                name="certificate-date" class=" custom datepicker mypicker" autocomplete="off"
+                                placeholder="DD-MM-YYYY" id="certificate-date"></th>
+                    </tr>
+                    <tr class="custom">
+                        <th class="custom">4</th>
+                        <th class="custom">प्रतीतपत्र खोल्दाको रकम :</th>
+                        <th class="custom"> <select class="custom datepicker" name="certificateCurrency" id="currency"
+                                data-label="CERTIFICATE CURRENCY">
+                                <option value="" selected disabled hidden>Currency</option>
+                                <option value="USD">USD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SGD">SGD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="JPY">JPY</option>
+                                <option value="CHF">CHF</option>
+                                <option value="INR">INR</option>
+                            </select> </select>
+                            <input required data-required="true" id="certificate-price"
+                                onkeyup="transformToUppercase(this)" type="text" step="0.01" min="0"
+                                data-label="CERTIFICATE PRICE" name="certificate-price" class=" custom "
+                                id="certificate-price" placeholder="प्रतीतपत्र खोल्दाको रकम ">
+                        </th>
+                    </tr>
+                    <tr class="custom">
+                        <th class="custom">5</th>
+                        <th class="custom">भुक्तानी गरिएको वि.मु. रकम:</th>
+                        <th class="custom"> <select class="custom datepicker" name="amountPaidCurrency" id="currency"
+                                data-label="PAID CURRENCY">
+                                <option value="" selected disabled hidden>Currency</option>
+                                <option value="USD">USD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SGD">SGD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="JPY">JPY</option>
+                                <option value="CHF">CHF</option>
+                                <option value="INR">INR</option>
+                            </select> <input required data-required="true" id="amount-paid"
+                                onkeyup="transformToUppercase(this)" type="text" data-label="PAID CURRENCY AMOUNT"
+                                name="amount-paid" class=" custom" id="amount-paid" placeholder="भुक्तानी गरिएको रकम">
+                        </th>
+                    </tr>
+                    <tr class="custom">
+                        <th class="custom">6</th>
+                        <th class="custom">भुक्तानी मिति :</th>
+                        <th class="custom"><input required data-required="true" id="payment-date"
+                                onkeyup="transformToUppercase(this)" type="text" data-label="PAYMENT DATE"
+                                name="payment-date" class=" custom mypicker" autocomplete="off" placeholder="DD-MM-YYYY"
+                                id="payment-date"></th>
+                    </tr>
+                    <tr class="custom">
+                        <th class="custom">7</th>
+                        <th class="custom">विनिमय दर :</th>
+                        <th class="custom"> <select class="custom datepicker" name="exchangeCurrency" id="currency"
+                                data-label="EXCHANGE CURRENCY">
+                                <option value="" selected disabled hidden>Currency</option>
+                                <option value="USD">USD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SGD">SGD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="CNY">CNY</option>
+                                <option value="JPY">JPY</option>
+                                <option value="CHF">CHF</option>
+                                <option value="INR">INR</option>
+                            </select> <input required data-required="true" id="exchange-rate"
+                                onkeyup="transformToUppercase(this)" type="text" step="0.01" min="0"
+                                data-label="EXCHANGE RATE" name="exchange-rate" class=" custom
+currencyInput" id="exchange-rate" placeholder="विनिमय दर"> </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 mb-3 "> </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+                <br><br><br>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3 ">
+                <div>
+                    ........................................ <br> अख्तियार प्राप्त अधिकारीको दस्तखत </div><br>
+                <div>
+                    नामः<input required data-required="true" onkeyup="transformToUppercase(this)" type="name"
+                        data-label="REPORTER'S NAME" data-order="9" name="reporter-name" class="custom
+account-name" id="reporter-name" placeholder="नाम लेख्नुहोस "> </div><br>
+                <div> पद:<input required data-required="true" onkeyup="transformToUppercase(this)" type="name"
+                        data-label="REPORTER'S DESIGNATION" data-order="10" name="reporter-designation" class="custom"
+                        id="reporter-designation" placeholder=" पद लेख्नुहोस "> </div><br>
+                <div> बैंकको छाप </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        $(".mypicker").datepicker({
+            dateFormat: "dd-mm-yy",
+
+        });
+    });
+
+    function transformToUppercase(element) {
+        if (element.tagName === 'INPUT') {
+            // For input elements, convert their values to uppercase
+            element.value = element.value.toUpperCase();
+        } else if (element.tagName === 'SELECT') {
+            // For select elements, convert the value of the selected option to uppercase
+            const selectedOption = element.options[element.selectedIndex];
+            selectedOption.value = selectedOption.value.toUpperCase();
+        }
+    }
+
+    var currencyInputs = document.getElementsByClassName("currencyInput");
+    for (var i = 0; i < currencyInputs.length; i++) {
+        if (currencyInputs[i] instanceof HTMLInputElement) {
+            currencyInputs[i].addEventListener("blur", function () {
+                var value = parseFloat(this.value.replaceAll(",", "")).toFixed(2);
+
+                if (value != "NaN") {
+                    this.value = formatCurrency(value);
+                }
+                else {
+                    this.value = "";
+                }
+            });
+        } else {
+            console.error("Element with class 'currencyInput' not found or not an input element.");
+        }
+    }
+    var globalSol = {};
+    var globalSolA = [];
+    $('#selectBranch').on('change', function () {
+
+        let finalBranch = document.getElementById('selectBranch').value;
+        let test = globalSolA.find(branch => branch.name.replace("BRANCH", ' ') == finalBranch)
+        document.getElementById('requestedBranchSol_branch').value = test.sol;
+
+    });
+
+    run();
+    async function run() {
+        const branchURL = `http://192.168.126.74:8080/api/dbBranches`;
+        var branches;
+        let data = await fetch(`${branchURL}`, {
+            method: "GET",
+        });
+        branches = await data.json();
+        if (branches && branches.data.length > 0) {
+            branches.data.sort((a, b) => a.sol - b.sol)
+        }
+        var selectedBranch = "";
+        let branchdllList = document.getElementsByClassName("selectBranchddl");
+        for (let brddl of branchdllList) {
+            if (selectedBranch == "") {
+                selectedBranch = brddl.value;
+            }
+            for (let i = 0; i < branches.data.length; i++) {
+                let selOption = document.createElement("option");
+                selOption.text = branches.data[i].name;
+                let branchName = branches.data[i].name;
+                let newBranchName = branchName.replace("BRANCH", ' ')
+                selOption.value = newBranchName
+                if (selectedBranch == newBranchName) {
+                    selOption.selected = true;
+                }
+                brddl.appendChild(selOption);
+            }
+        }
+        globalSolA = branches.data;
+        if (!document.getElementById('requestedBranchSol_branch').value) {
+            document.getElementById('requestedBranchSol_branch').value = globalSolA[0].sol;
+        }
+    }
+    // Convert currencyInput value to Nepali currency format
+    //    var currencyInputs = document.getElementsByClassName("currencyInput");
+    //    for (var i = 0; i < currencyInputs.length; i++) {
+    //       if (currencyInputs[i] instanceof HTMLInputElement) {
+    //           currencyInputs[i].addEventListener("blur", function () {
+    //              var value = parseFloat(this.value).toFixed(2);
+    //              this.value = formatCurrency(value);
+    //          });
+    //       } else {
+    //           console.error("Element with class 'currencyInput' not found or not an input element.");
+    //       }
+    //    }
+    // Format currency value in Nepali or INR format
+    function formatCurrency(value) {
+        return parseFloat(value).toLocaleString("ne-IN", {
+            style: "decimal",
+            useGrouping: true,
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        });
+    }
+
+
+</script>

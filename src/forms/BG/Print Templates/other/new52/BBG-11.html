@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>BBG-11</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            
+            <p style="margin-bottom:0;width:100%; float: left;">
+                <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}} </b>
+                <b style="float: left;width: 80%;">{{subform.2.beneficiary_address}}</b>
+                <br>
+                    </b>
+                    <br>
+                    <br>
+            </p>
+            <p>
+                <u><b> Re:Bid Bond </b></u> <br>
+                <b>We issue our guarantee in your favor as detail below:</b>
+            </p>
+              <p>
+                <b>Guarantee Ref. No. : {{subform.2.reference_number}}</b><br />
+                <b>Date of Issue: {{subform.2.issuedate.formattedissueDateBG}}</b><br />
+                <b>Amount: {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}})</b><br />
+                <b>Applicant : {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b><br />
+                <b>Expiry Date  :{{subform.2.validityDate}}</b><br />
+                <b>Purpose : {{subform.2.purpose_guarantee}}</b><br />
+                
+            </p>
+            <p>We <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> being the guarantor under the present guarantee 
+                 hereby  undertake,  subject  to  no  other  conditions  than  those  specified  in  this document,
+                  to pay on demand upon receipt of your request in writing any sum or sums upto an amount
+                    mentioned  above,  provided  that  you  have  submitted  a  statement  stating  that  the
+                     Applicant has either failed to sign a contract corresponding to the tender or to submit a 
+                     performance guarantee as provided for in the tender.
+            </p>
+            <p>This guarantee is effective form issue date  as mentioned above. </p>
+          
+           
+            <p>Notwithstanding anything stated herein above the value of this guarantee shall not exceed
+               <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}} )</b> and it will expire on <b>{{subform.2.validityDate}}</b>. Any 
+               claim under this gurantee must be received in writing along with original gurantee as well as  amendment (if any)
+               by this office within banking hours on or before the expiry date and if no such claim has been received by us by that 
+               day, all your rights under this guarantee will cease.
+                
+            </p>
+            <p>
+                Retention of the guarantee does not confer any rights upon yourselves beyond the expiry date and this guarantee
+                should be returned to us without delay.
+            </p>
+            <p>
+                In all communications please state our guarantee ref number.
+            </p>
+            
+            <br><br><br><br><br><br>
+            
+            <p style="float: left; width: 50%;">
+                <b>..........</b><br /><br />
+                <b>Authorized Signature</b><br /><br />
+               
+            </p>
+            <p style="float:right; width: 50%;">
+                <b>..........</b><br /><br />
+                <b>Authorized Signature</b><br /><br />
+
+                
+                
+            </p>
+          
+            
+           
+       
+           
+           
+        </div>
+
+    </body>
+
+</html>

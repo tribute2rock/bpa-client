@@ -1,0 +1,78 @@
+<body>
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+                padding: 0;
+                height: 29.7cm !important;
+                width: 21cm !important;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+            padding: 0;
+            height: 29.7cm !important;
+            width: 21cm !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 29.7cm;
+            width: 21cm;
+            margin-top: 0.7cm;
+            font-size: 12px;
+            /* height: 297mm;            width: 210mm; */
+        }
+    </style>
+    <div style="height: 4.5cm; width: 21cm">
+        <div style="height: 4.5cm; width: 16cm; float: left"></div>
+        <div style="height: 4.5cm; width: 3cm; float: left">
+            <div style="height: 3cm; width: 3cm"></div>
+            <div style="height: 1.5cm; width: 3cm">{{main.date}}</div>
+        </div>
+        <div style="height: 4.5cm; width: 2cm; float: left"></div>
+        <div style="clear: both"></div>
+    </div>
+    <div style="height: 0.1cm; width: 21cm"></div>
+    <div style="height: 0.5cm; width: 21cm">
+        <div style="height: 0.5cm; width: 7.5cm; float: left"></div>
+        <div style="height: 0.5cm; width: 3.5cm; float: left">{{main.branch}}</div>
+        <div style="height: 0.5cm; width: 10cm; float: left"></div>
+        <div style="clear: both"></div>
+    </div>
+    <div style="height: 6.5cm; width: 21cm"></div>
+    <div style="height: 1cm; width: 21cm">
+        <div style="height: 1cm; width: 2cm; float: left"></div>
+        <div style="height: 1cm; width: 3.5cm; float: left"> {{main.issue-date}} </div>
+        <div style="height: 1cm; width: 15.5cm; float: left"></div>
+        <div style="clear: both"></div>
+    </div>
+    <div style="height: 1.15cm; width: 21cm"></div>
+    <div style="height: 5.5cm; width: 21cm">
+        <div style="height: 5.5cm; width: 7cm; float: left"></div>
+        <div style="height: 5.5cm; width: 12cm; float: left">
+            <div style="height: 0.75cm; width: 12cm">{{main.applicant_name}}</div>
+            <div style="height: 0.75cm; width: 12cm">{{main.certificate-no}}</div>
+            <div style="height: 0.75cm; width: 12cm">{{main.certificate-date}}</div>
+            <div style="height: 0.76cm; width: 12cm"> {{main.certificateCurrency}} {{main.certificate-price}} </div>
+            <div style="height: 0.76cm; width: 12cm"> {{main.amountPaidCurrency}} {{main.amount-paid}} </div>
+            <div style="height: 0.76cm; width: 12cm">{{main.payment-date}}</div>
+            <div style="height: 0.76cm; width: 12cm"> {{main.exchangeCurrency}} {{main.exchange-rate}} </div>
+        </div>
+        <div style="height: 5.5cm; width: 2cm; float: left"></div>
+        <div style="clear: both"></div>
+    </div>
+    <div style="height: 0.7cm; width: 21cm"></div>
+    <div style="height: 1.5cm; width: 21cm">
+        <div style="height: 1.5cm; width: 14.7cm; float: left"></div>
+        <div style="height: 1.5cm; width: 4.5cm; float: left">
+            <div style="height: 0.7cm; width: 4.5cm;padding-left: 4px;">{{main.reporter-name}}</div>
+            <div style="height: 0.7cm; width: 4.5cm;padding-left: 4px;">{{main.reporter-designation}}</div>
+        </div>
+        <div style="height: 1cm; width: 2cm; float: left"></div>
+    </div>
+</body>

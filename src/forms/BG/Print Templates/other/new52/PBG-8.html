@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<inpu>
+    <meta charset="UTF-8"></input>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></input>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></input>
+    <title>PBG-8</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                font-size: 15px;
+            }
+
+            small {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                text-align: center;
+            }
+        </style>
+        <div class="print-body"
+            style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+            <p style=" left:0; bottom: 0;width:100%;text-align:center;">
+                IN THE LETTER HEAD OF BANK
+            </p>
+            <p>
+                Name of Beneficiary: {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}}
+            </p>
+            <p>
+                Dear Sir/Madam,
+            </p>
+            <p>
+                <b>Subject: ..........</b><br />
+                <b>Ref No. : {{subform.2.reference_number}}</b><br />
+                <b>Amount:   {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b><br />
+                <b>Applicant : {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b><br />
+                <b>Beneficiary: {{subform.2.salutation}} {{subform.2.beneficiary_name}} {{subform.2.beneficiary_address}} </b><br />
+                <b style="margin-left: 60px;">PAN: ..........</b><br />
+                <b>Effective Date:..........</b><br />
+                <b>Validity: {{subform.2.validityDate}}</b><br />
+                <b>Purpose : {{subform.2.purpose_guarantee}}</b>
+            </p>
+            <p>In consideration of your sales of goods to {{subform.2.salutation_acccount}} {{subform.2.company_name}} (Name of applicant) on credit, we
+                Global IME Bank Ltd.(Name of Bank) having our registered central office at  Kantipath, Nepal (herein called
+                “the bank”), being the guarantor under this guarantee, hereby, irrevocably and unconditionally undertake
+                to pay you on your first written demand, any sum or sums up to aggregate maximum amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}) </b>, stating that the applicant has failed (Fully or partially) to pay you on due date. 
+            </p>
+             
+            <p>Unless a demand or claim made in writing by you to us under this guarantee reaches us on the close of banking hours
+                on the claim expiry date, all our obligations hereunder shall cease and we shall not entertain any claim of contestation
+                beyond or after that date. Claim if any under this guarantee should reach at Central Trade Finance Department,
+                Kamaladi, Kathmandu, Nepal of Global IME Bank Ltd.
+            </p>
+            <p>Any first written demand so made by the beneficiary on the bank shall be final and conclusive as regards
+                to the amount due and payable by the bank under this guarantee.
+                Not with standing anything stated herein above, the value of this guarantee shall not exceed
+                <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}). </b>
+            </p>
+            <p>
+                This guarantee is valid until {{subform.2.validityDate}}. Any claim under this guarantee must be reached at the counter of
+                this bank at ......... on or before {{subform.2.validityDate}} within banking hours. In case of any dispute, invoice
+                issued by the beneficiary will be binding for the final decision. 
+            </p>
+            <p>
+                This letter of Guarantee will bind our successors and assignees and will remain operative irrespective of
+                any change in the constitution of our Bank.
+            </p>
+            <br />
+          
+            <p>
+                <b>For:Global IME Bank Limited</b><br>
+               <b>Trade Operation</b> 
+            </p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <p style="float: left; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+                
+            </p>
+            <p style="float:right; width: 50%;">
+                <b>Authorized Signature</b><br /><br />
+            
+                
+            </p>
+          <p>
+            <br><br><br><br><br><br><br><br>
+
+          </p>
+           
+       
+            <footer style=" font-size: 8px; left:0; bottom: 0;width:100%;text-align:center;">
+                <p>This Bank Guarantee can be verified at our website www.globalimebank.com
+                </p>         
+            </footer>
+           
+        </div>
+
+    </body>
+
+</html>

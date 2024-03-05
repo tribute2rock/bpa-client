@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retention Money </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+             To, <br> {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+             {{subform.2.beneficiary_address}} <br>
+              </p>
+                
+          <p style="text-align: left; display:flex; flex-direction: column; align-items: center;" >
+             On Demand Guarantee No.:..........
+          </p>
+          
+        <p>
+            We have been informed that <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b>  hereinafter called the "Contractor" has enter in to the 
+            Contract no: <b>{{subform.2.contract_number}} </b>  dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b> with you for execution of Upgrading of Name of road herein
+             after called "the Contract" and had completed the whole of the works on <b> {{subform.2.purpose_guarantee}} </b> .
+            
+            
+        </p>
+        <p>
+            Furthermore we understand that, according to the condition of Contract, On completion
+             of the whole works, the Contractor may substitute retention money with an "on demand" 
+             bank guarantee. 
+        </p>
+        <p>
+            At the request of the Contractor ,we Global IME Bank Ltd., having our register office at  Kantipath, Nepal
+             hereby irrevocably undertake to pay any sum or sums not exceeding in total amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> upon receipt by us your first demand 
+        in writing accompanied by a written statement stating that the contractor is in breach of its obligation (s) 
+        under the contract, without your needing to prove or show ground for your demand or the sum specified
+        therein.
+
+        </p>
+        <p>
+            The guarantee shall expire, no later than {{subform.2.validityDate}} and any demand for payment under it must 
+            be received by us at this office on or before that date.
+        </p>
+        <p>
+            This guarantee shall be remain effective and in full force from <b> {{subform.2.issuedate.formattedissueDateBG}} </b> 
+            until the close of Banking <b> {{subform.2.validityDate}} </b> .
+        <p>
+          <b> For;Global IME Bank Ltd. Kantipath, Nepal<br>
+               
+        </p>
+        <br /><br /><br /><br /><br />
+                <p style="float: left; width: 50%;">
+                    .......... <br>
+            <b>Authorized Signature</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            .......... <br>
+            <b>Authorized Signature</b><br /><br />
+            
+            
+        </p>
+        
+      
+    </div>
+</body>
+
+
+
+</html>

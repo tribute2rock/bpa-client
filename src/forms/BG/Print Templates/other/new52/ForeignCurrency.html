@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertible Foreign Currency Guarantee Format </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+            <b>  Date:{{subform.2.issuedate.formattedissueDateBG}}</b> <br> <br>
+            <b>{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+          <b><i>Our Ref. No.:  {{subform.2.reference_number}}</i></b> 
+        </p>
+        <p>
+            Whereas <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b>  (hereinafter called the Applicant) has applied with you for <b>{{subform.2.purpose_guarantee}}</b> (the
+            Contract) and whereas you require from the Applicant a Performance Bond for an amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> <b> payable in equivalent Nepalese Rupees at prevailing
+            exchange rate. </b> We, <b> Global Bank Limited, Kantipath, Kathmandu, Nepal </b> (the Guarantor) hereby
+            agree and covenant as follows: 
+        </p>
+       
+        <p>
+            In the event of the Applicant failing to perform their obligations under the Contract for any reason
+            whatsoever, the Guarantor shall pay you without demur a sum or sums up to  <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}),  payable in equivalent Nepalese Rupees at prevailing exchange rate,</b>  against
+            your receipt for the sum claimed accompanied by your statement that the Applicant failed to
+            comply with the Contract terms. 
+        </p>
+        <p>
+            Notwithstanding anything contained herein above, our liability under this guarantee is restricted
+            <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}),  payable in equivalent Nepalese Rupees at
+            prevailing exchange rate </b> and shall remain in full force from <b> {{subform.2.issuedate.formattedissueDateBG}} </b> until the close of banking
+            hours on <b> {{subform.2.validityDate}} </b> or on completion of the Contract whichever is earlier. 
+        </p>
+        <p>
+            Unless demand or claim made in writing by you to us under this guarantee reaches the counters of
+            this bank at Central Trade Operations, Kamaladi, Kathmandu, Nepal by <b> {{subform.2.validityDate}} </b>, within the
+            close of banking hours all our obligations shall cease and we shall not entertain any claim or
+            contestation beyond or after that date.  
+        </p>
+        
+             <br />
+        <p>
+            <b>For:Global IME Bank Limited</b><br>
+              <b><span style="margin-left: 20px;">  Trade Operation</span></b>
+        </p>
+        <br><br><br><br><br><br>
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+            
+        </p>
+        <br>
+        <br>
+       
+   
+    </div>
+</body>
+
+
+
+</html>

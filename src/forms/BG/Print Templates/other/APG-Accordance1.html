@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apgAccordance1</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b>{{subform.2.final_issuedate.default}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">{{subform.2.salutation}} {{subform.2.beneficiary_name}}</b>
+        </p>
+        <p>
+            <b>{{subform.2.beneficiary_address}}</b>
+        </p>
+        <p>
+            <b>Our Ref No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            In accordance with the provisions of the General Conditions of Contract, Clause 50 (“Advance Payment”) of
+            the above mentioned Contract,<b> {{subform.2.salutation_acccount}} </b><b>{{subform.2.company_name}}</b>,
+            <b>{{subform.2.company_address}}</b>, <b>{{subform.2.company_address2}}</b> (hereinafter called “the
+            Contractor”) shall deposit with <b>{{subform.2.beneficiary_name}}, {{subform.2.beneficiary_address}},
+                {{subform.2.beneficiary_address2}}</b>, a bank guarantee to guarantee his proper and faithful
+            performance under the said Clause of the Contract in an amount of <b>{{main.currency_short}}
+                {{subform.2.in_figures}} ({{main.currency_full}} {{subform.2.in_words}})</b>
+        </p><br>
+        <p>
+            We, Global IME Bank Limited, <b>{{subform.2.branch_name}}</b> as instructed by the Contractor,
+            agree unconditionally and irrevocably to guarantee as primary obligator and not as Surety merely, the
+            payment to
+            <b>{{subform.2.beneficiary_name}},{{subform.2.beneficiary_address}},{{subform.2.beneficiary_address2}}</b>
+            on his first demand without whatsoever right of objection on our part and without his first claim to the
+            Contractor, in the amount not exceeding <b>{{main.currency_short}} {{subform.2.in_figures}}
+                ({{main.currency_full}} {{subform.2.in_words}})</b>.
+        </p><br>
+        <p>
+            This security shall remain valid and in full effect from the date of the advance payment under the Contract
+            until <b>{{subform.2.final_validityDate}}</b>; i.e. until
+            <b>{{subform.2.beneficiary_name}},{{subform.2.beneficiary_address}},{{subform.2.beneficiary_address2}}</b>
+            receives full repayment of the same amount from the Service Provider
+        </p>
+        <p>
+            Notwithstanding anything contained herein above this guarantee will remain in force up to
+            <b>{{subform.2.final_validityDate}}</b>
+            Consequently, any demand for the payment under this guarantee must be received by us at the Trade Operations
+            Department, Central Business Park, 6th Floor, Thapathali, Kathmandu, Nepal on or before this date i.e
+            <b>{{subform.2.final_validityDate}}</b>
+        </p>
+        <p>
+            <b>For: Global IME Bank Limited <br>
+                Trade Operations </b><br>
+        </p>
+        <br />
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name1}}</b><br /><br />
+            <b>Designation : {{subform.2.designation1}}</b>
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            <b>Name : {{subform.2.name2}}</b><br /><br />
+            <b>Designation : {{subform.2.designation2}}</b>
+        </p>
+        <footer style="position: absolute; left:0; bottom: 0;width:100%;text-align:center;">
+            <small>This Bank Guarantee can be verified at our website www.globalimebank.com </small>
+        </footer>
+    </div>
+</body>
+
+</html>

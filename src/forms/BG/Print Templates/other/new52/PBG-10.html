@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBG-10 </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+            <b> Date:{{subform.2.issuedate.formattedissueDateBG}}</b> <br>
+            <b> {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}} </b> <br>
+            </p>
+        <p>
+          <b> Our Ref.No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            In consideration of your allowing <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b>  (the "Agency/Applicant")
+            for maintaining <b> {{subform.2.purpose_guarantee}}</b> (the "Contract"), We <b> Global IME Bank Ltd.</b> Kantipath, Nepal (the "
+            Guarantor") understand that you have requested a Performance Bond Guarantee from the
+            Agency/Applicant for an amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}) </b>. In this regard we
+            agree and covenant as follows:
+            
+        </p>
+        <p>
+            In the event of the Agency/Applicant being unable to meet its obligations under the above contract,
+            for any reason whatsoever, we shall pay without demur a maximum sum of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> upon receipt of your claim accompanied by your statement that the applicants
+            has failed to meet its obligations.
+        </p>
+        <p>
+            Notwithstanding anything contained hereinabove, our liability under this Guarantee is restricted to
+           <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}})</b>. This Guarantee is effective from  <b>{{subform.2.issuedate.formattedissueDateBG}},</b> shall
+            remain in full force until the close of banking hours on <b> {{subform.2.validityDate}} </b> with a claim period of three
+            month i.e. up to <b>{{subform.2.validityDate}}</b>.
+        </p>
+        <p>
+            Unless a demand or claim is made in writing by you along with this original Guarantee, which reaches
+            us at our corporate office at Central Trade Finance Department, Kamaladi, Kathmandu, Nepal before
+            the close of banking hours on <b>{{subform.2.validityDate}},</b> all our obligations and liabilities hereunder shall cease
+            and the Guarantee will be freed from all the responsibilities under the said Guarantee. 
+        </p>
+        <p>
+            Retention of the Guarantee does not confer any rights upon your selves beyond its expiry date and this
+            Guarantee should be returned to us without delay.   
+        </p>
+        <p>
+            Any cause of action including damages, if any arising out of any dispute in respect of this Guarantee
+            shall be governed by and in accordance with the laws of Nepal.
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+                <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br /><br />
+            
+            
+        </p>
+        
+       <footer style="left:0; bottom: 0;width:100%;text-align:center;">
+        <br>
+        <br>
+       <br><br>
+       <br>
+      <br>
+        Note: This Bank Guarantee can be verified at our website www.globalimebank.com
+       </footer>
+   
+    </div>
+</body>
+
+
+
+</html>

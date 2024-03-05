@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <style>
+        .container {
+        /* Set the height and width of the container to match the background image */
+        height: 297mm;
+        width: 210mm;
+        background-image: url('./4.jpg');
+        background-size: cover;
+        background-position: cent  }
+       
+       
+       
+        .input-box {
+        /* Set the position of the input box */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Set the z-index to a higher value than the background image */
+        }
+        
+        /* Define print styles */
+        @media print {
+        .container { /* Set background image to be visible in print */
+           background-image: url('./4.jpg') !important;
+        }
+        }
+       </style>
+<div class="container">
+<!-- Input box goes inside the container div -->
+<input type="text" class="input-box" placeholder="Enter your text">
+</div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBG-19</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b> {{subform.2.issuedate.formattedissueDateBG}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;"> {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br> {{subform.2.beneficiary_address}}</b>
+        </p>
+        
+        <p>
+            <b>Our Ref No.: {{subform.2.reference_number}}</b>
+        </p>
+        <p>
+            WHEREAS,<b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b> (hereinafter called "the Proposer")
+             has submitted a Proposal to UNDP dated  <b>{{subform.2.issuedate.formattedissueDateBG}}</b> to execute Services <b>{{subform.2.purpose_guarantee}}</b> .
+              ("hereinafter called the Proposal"):
+        </p>
+        <p>
+            AND WHEREAS it has been stipulated by you that the Proposer shall furnish you with a Bank Guarantee
+             by a recognized bank for the sum specified therein as security in the event that the Proposer:
+             <ol type="a">
+                <li>Fails to sign the Contract after UNDP has awarded it;</li>
+                <li>Withdraws its Proposal after the date of the opening of the Proposals;</li>
+                <li>Fails to comply with UNDP's variation of requirement, as per RFP instructions; or</li>
+                <li>Fails to furnish Performance Security, insurances, or other documents that
+                     UNDP may require as a condition to rendering the contract effective.</li>
+             </ol>
+        </p>
+     
+        <p>
+            NOW THEREFORE, we hereby affirm that we are the Guarantor and responsible to you, 
+            on behalf of the Proposer, up to a total of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}} ), </b>
+             such sum being payable in the types and proportions of currencies in which the Price Proposal is payable,
+              and we undertake to pay you, upon your first written demand and without cavil or argument, 
+              any sum or sums within the limits of
+              <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}} ) </b> without your needing to 
+               prove or show grounds or reasons for your demand for the sum specified therein.
+        </p>
+        <p>
+        <p>
+            The guarantee shall be valid 30 days from the date of the validity of the Proposal/Bid.
+        </p>
+        <p>
+            This Guarantee will remain in force up to  <b>{{subform.2.validityDate}}</b>and any demand in respect there of shall reach the
+             Bank at Central Trade Finance Department, Kamaladi, Kathmandu, Nepal not later than the above date i.e.  <b>{{subform.2.validityDate}}</b>.
+        </p>
+       <p>
+            <b>For: Global IME Bank Limited</b><br>
+      
+        </p>
+        <br />
+        <br /> <br><br>
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signature</b><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signature</b><br />
+           
+        </p>
+        <br><br><br><br><br>
+        <footer style=" left:0; bottom: 0;width:100%;text-align:center;">
+            This Bank Guarantee can be verified at our <i>website www.globalimebank.com </i> 
+        </footer>
+    </div>
+</body>
+
+</html>

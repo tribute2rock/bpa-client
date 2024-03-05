@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPRO-BBG</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+        <p>
+            <div style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">Bank Guarantee for Review Purpose</div>
+            <div style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">Global IME Bank Ltd. Kantipath, Nepal</div>
+            <div style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">(On Letter head of a 'A' Class Commercial Bank)</div>
+            
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;"><b>
+            Beneficiary:{{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>{{subform.2.beneficiary_address}} <br>
+            Date:{{subform.2.issuedate.formattedissueDateBG}} <br>
+            Security No.: ..........
+        </b>
+        </p>
+        <br><br><br><br>
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}}</b>
+           intends to submit application for review to you for the execution of <b> {{subform.2.purpose_guarantee}} </b> dated <b> {{subform.2.issuedate.formattedissueDateBG}} </b>
+           invitation for Bids No.:..........
+        <p> 
+        At the first of the application, we <b> Global IME BANK LID. KANTIPATH </b>  hereby ---- undertake to pay you any sum or sums not exceeding in total
+        amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}} ), </b> upon receipt by us of your first demand in writing accompanied by a written statement stating that 
+        the applicant's demand is rejected.
+        </p>
+        <p>
+            This guarantee will remain in force up to and including the date <b> {{subform.2.total_days}}  days </b> from the date of submission
+            of review application or as it may be extended by the Public Procurement Review Committee, notice of which extension(s),
+            to the Bank is hereby waived. Any demand in respect of this guarantee should reach the Bank not later than the above date.
+
+                      
+        </p>
+        <p>
+            This Bank guarantee shall not be withdrawn or released merely upon return of the original guarantee by the Review
+            applicant unless notified by you for the release of the guarantee.
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication No. 758.
+        </p>
+        <br><br><br><br><br><br>
+        <p>
+            <footer style=" left:0; bottom: 0;width:100%;text-align:center;">
+                .......... <br>
+               <b> Bank's Seal and Authorized Signature(s)</b>
+
+                <br><br><br><br>
+                <p>
+                    Developed by IT Team of CIT
+                </p>
+            </footer>
+        </p>
+      </div>  
+              
+           
+        
+        
+        
+        
+</body>
+
+
+
+</html>

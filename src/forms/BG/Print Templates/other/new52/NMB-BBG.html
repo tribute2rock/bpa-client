@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMB-BBG</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+        <b>  Date:{{subform.2.issuedate.formattedissueDateBG}} </b> <br> <br>
+        <b> {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+          {{subform.2.beneficiary_address}} </b> <br>
+        </p>
+        <p>
+            Dear Sir/Madam,
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+         <b> OUR REFERENCE: {{subform.2.reference_number}} </b> 
+        </p>
+        <p>
+            AMOUNT: <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}}), </b> <br>
+            APPLICANT: {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} <br>
+            VALIDITY: {{subform.2.validityDate}} <br>
+            PURPOSE: {{subform.2.purpose_guarantee}} <br>
+        </p>
+         <p>
+            Whereas <b>{{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> is in need of the Bid Bond of<b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}}) </b>, we <b> Global IME Bank Ltd. </b> being the Guarantor under the present 
+            guarantee hereby undertake, subject to no other conditions than those specified in this documents, to pay on demand to yourselves upon your request in writing any sum or sums up to an aggregate maximum
+            amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}}), </b>provided that you have submitted a statement stating that the 
+            Applicant has failed to perform its obligations to you and as a result thereof you have become entitled to payment of the amount claimed and that the said sum has not otherwise been paid to you. <br>
+            Notwithstanding anything stated hereinabove the value of this guarantee shall not exceed <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}} ), </b> and it will expire on <b> {{subform.2.validityDate}}</b>. Any claim under this guarantee must be received in writing by this office within the 
+            banking hours on or before the expiry date and if no such claim has been received by us by that time and date, all your rights under this guarantee will cease.
+            Retention of the guarantee does not confer any rights upon yourselves beyond the expiry date and this guarantee should be returned to us without delay. In all communications, please state our reference number.
+    
+                
+        </p>
+        <p>
+            Yours Faithfully,
+        <br>
+        <br>
+        <br>
+        <br><br>
+        </p>
+        <p style="float: left; width: 50%;">
+            <b>Authorized Signatory</b><br />
+            <b> NMB Bank Ltd.</b><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b>Authorized Signatory</b><br />
+            <b>NMB Bank Ltd.</b><br />
+           
+        </p>
+        
+    </div>
+</body>
+
+</html>

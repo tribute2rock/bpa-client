@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>FD Account Opening</title>
+</head>
+
+<body>
+    <style>
+        .title {
+        position: relative;
+        margin-bottom: 15px;
+        color: white;
+        padding: 10px 0 10px 10px;
+        background: linear-gradient(90deg, rgba(197, 33, 39, .8), rgba(139, 45, 72, .85) 25.67%, rgba(91, 55, 99, .9) 49.79%, rgba(57, 62, 118, .94) 70.98%, rgba(37, 66, 130, .98) 88.44%, #1d4486) !important;
+    }
+    </style>
+    <div class="container" style="margin-top: 20px;">
+
+        <div class="row mb-3">
+            <h6 class="col-12 title">
+                <span>
+                    Account Details:
+                </span>
+            </h6>
+        </div>
+        <!-- <div name="first_div" id="first_div" style="display: none;"> -->
+        <div name="first_div" id="first_div">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="fdAccountType" class="pb-2">Select Account Type </label>
+                    <select class="form-control" data-label="Selected Account Type" id="fdAccountType" name="fdAccountType"
+                        datarequired="true">
+                        <option value="current" selected> Current Account </option>
+                        <option value="other"> Other Account </option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="accountNumber" class="pb-2">Account Number</label>
+                    <input disabled type="text" datarequired="true" class="form-control accountNumber" data-label="Account Number"
+                        id="accountNumber" name="accountNumber" placeholder="Account Number">
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="accountName" class="pb-2">Account Name</label>
+                    <input disabled type="text" datarequired="true" class="form-control accountName" data-label="Account Name"
+                        id="accountName" name="accountName" placeholder="Account Name">
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-sm-12 mb-3">
+                    <label for="dob" class="pb-2">Date of Birth
+                    </label>
+                    <input type="date" class="form-control" data-label="Date of Birth" id="dob" name="dob" required
+                        onchange="validateDate(this.value)">
+                </div>
+            </div>
+
+            <!-- <div name="second_div" id="second_div" style="display: none;"> -->
+               
+                <div class="row mt-3">
+                    <h6 class="title">
+                        <span>
+                            Citizenship Details:
+                        </span>
+                    </h6>
+                    <div class="col-lg-6 col-sm-12 mb-3" id="citizenshipNumberDiv">
+                        <label for="citizenshipNumber" class="pb-2">Citizenship Number
+                        </label>
+                        <input type="text" class="form-control" data-label="Citizenship Number" id="citizenshipNumber"
+                            name="citizenshipNumber" placeholder="Enter Citizenship Number">
+                    </div>
+                    <div class="col-lg-6 col-sm-12 mb-3" id="citizenshipFileDiv">
+                        <label for="fileupload_citizenshipFile" class="pb-2">Citizenship Document</label>
+                        <input type="file" class="form-control" id="citizenshipFile"
+                            name="fileupload_citizenshipFile" data-label="Citizenship File" accept=".jpg,.jpeg,.png,.pdf"
+                            max="2097152" onchange="updateImageDisplay('citizenshipFile_preview')">
+                        <div class="img-preview citizenshipFile_preview" id="citizenshipFile_preview">
+                            <p class="citizenshipFile_preview_p"></p>
+                        </div>
+                    </div>
+                </div>
+            <div name="second_div" id="second_div">
+                <div class="row">
+                    <h6 class="col-12 title">
+                        <span>
+                           FD Details:
+                        </span>
+                    </h6>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label for="fdScheme" class="pb-2">Select FD scheme </label>
+                        <select class="form-control" data-label="Selected FD Scheme" id="fdScheme" name="fdScheme"
+                            datarequired="true">
+                            <option value="">Please select</option>
+                            <option value="BLBFD"> BRANCHLESS BANKING FD </option>
+                            <option value="NRNFD"> GLOBAL NRN FCY FIXED DEPOSIT ACCOUNT </option>
+                            <option value="GMUFD"> GLOBAL MERI UNILAI FD </option>
+                            <option value="GTUFD"> GLOBAL TOP UP FD </option>
+                            <option value="RTDMN"> RETAIL TERM DEPOSIT MONTHLY </option>
+                            <option value="RTDQT"> RETAIL TERM DEPOSIT QUATERLY </option>
+                            <option value="CTDMN"> CORPORATE TERM DEPOSIT MONTHLY </option>
+                            <option value="GSAFD"> GBL SAMRIDDHA AWASKASH FD </option>
+                            <option value="CTDQT"> CORPORATE TERM DEPOSIT QUATERLY </option>
+                            <option value="GIRTD"> GLOBAL IME REMITTERS TERM DEPOSIT </option>
+                            <option value="GINFD"> GLOBAL INSTITUTIONAL NRN FCY FIXED DEPOSIT ACCOUNT </option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label for="fdAmount" class="pb-2">FD Amount</label>
+                        <input type="number" datarequired="true" class="form-control" data-label="FD Amount" id="fdAmount"
+                            name="fdAmount" placeholder="Enter FD Amount" min="0">
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label for="fdTenure" class="pb-2">FD Tenure </label>
+                        <select class="form-control" data-label="Selected FD Tenure" id="fdTenure" name="fdTenure"
+                            datarequired="true">
+                            <option value="">Please select</option>
+                            <option value="3"> 3 </option>
+                            <option value="6"> 6 </option>
+                            <option value="9"> 9 </option>
+                            <option value="12"> 12 </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row  mt-2">
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="require_nominee_checkbox"
+                                id="require_nominee_checkbox" value="Require Nominee" data-label="Require Nominee" />
+                            <label class="form-check-label" for="require_nominee_checkbox" class="pb-2">Require Nominee</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label name="hideShow" style="display: none;" for="nomineeName" class="pb-2"> Nominee Name </label>
+                        <input type="text" class="form-control" data-label="Nominee Name" id="nomineeName"
+                            name="nomineeName" placeholder="Enter Nominee Name" style="display: none;">
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label name="hideShow" style="display: none;" for="nomineeRelationship" class="pb-2"> Nominee Relationship
+                        </label>
+                        <select class="form-control" data-label="Nominee Relationship" id="nomineeRelationship"
+                            name="nomineeRelationship" style="display: none;">
+                            <option value=""> Select Nominee Relationship </option>
+                            <option value="father"> Father </option>
+                            <option value="mother"> Mother </option>
+                            <option value="brother"> Brother </option>
+                            <option value="friend"> Friend </option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label name="hideShow" style="display: none;" for="nomineeFathersName" class="pb-2" > Nominee Fathers Name
+                        </label>
+                        <input type="text" class="form-control" data-label="Nominee Fathers Name"
+                            id="nomineeFathersName" name="nomineeFathersName" placeholder="Enter Nominee Fathers Name"
+                            style="display: none;">
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label name="hideShow" style="display: none;" for="nomineeGrandFatherName" class="pb-2"> Nominee Grand Father
+                            Name </label>
+                        <input type="text" class="form-control" data-label="Nominee Grand Father Name"
+                            id="nomineeGrandFatherName" name="nomineeGrandFatherName"
+                            placeholder="Enter Nominee Grand Father Name" style="display: none;">
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label name="hideShow" style="display: none;" for="gaurdainNominee" class="pb-2"> Gaurdain Nominee </label>
+                        <input type="text" class="form-control" data-label="Gaurdain Nominee" id="gaurdainNominee"
+                            name="gaurdainNominee" placeholder="Enter Gaurdain Nominee" style="display: none;">
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label name="hideShow" style="display: none;" for="gaurdianRelationship" class="pb-2"> Gaurdian Relationship
+                        </label>
+                        <select class="form-control" data-label="Gaurdian Relationship" id="gaurdianRelationship"
+                            name="gaurdianRelationship" style="display: none;">
+                            <option value=""> Select Gaurdian Relationship </option>
+                            <option value="father"> Father </option>
+                            <option value="mother"> Mother </option>
+                            <option value="brother"> Brother </option>
+                            <option value="friend"> Friend </option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            
+                <div class="row mt-2">
+                    <h6 class="col-12 title">
+                        <span>
+                            Upload Signature:
+                        </span>
+                    </h6>
+                </div>
+                <div>
+                    <div class="col-12 mb-3">
+                        <input type="file" datarequired="true" class="form-control" id="signature" name="fileupload_signature"
+                            data-label="Signature File" accept=".jpg,.jpeg,.png,.pdf" max="2097152"
+                            onchange="updateImageDisplay('signature_preview')">
+                        <div class="img-preview signature_preview" id="signature_preview">
+                            <p class="signature_preview_p"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+
+    </div>
+    
+</body>
+
+<script>
+    $(document).ready(function () {
+        popAccountDetail();
+    })
+
+    function validateDate(inputValue) {
+        const inputDate = new Date(inputValue);
+        const today = new Date();
+
+        // const errorMessage = document.getElementById('errorMessage');
+        const dateInput = document.getElementById('dob');
+
+        if (inputDate > today) {
+            alert("Date must not be beyond the current date.")
+            // errorMessage.textContent = "Date must not be beyond the current date.";
+            dateInput.value = ''; // Clear the input field
+        } else {
+            // errorMessage.textContent = "";
+        }
+    }
+
+    function popAccountDetail() {
+        var userAccount = $(".user-account").text();
+        var userAccountName = $(".user-name").text();
+
+        var checkUserAccount = $(".accountNumber").val();
+        var checkUserName = $(".accountName").val();
+
+        if (!checkUserAccount) {
+            $(".accountNumber").val(userAccount);
+        }
+        if (!checkUserName) {
+            $(".accountName").val(userAccountName);
+        }
+    }
+
+    $("select[name=fdAccountType]").change(function () {
+        // $("#first_div").show();
+        if (this.value == "other") {
+            document.getElementById('accountNumber').classList.remove('accountNumber');
+            document.getElementById('accountName').classList.remove('accountName');
+            document.getElementById('accountNumber').disabled = false;
+            document.getElementById('accountName').disabled = false;
+        } else {
+            document.getElementById('accountNumber').value = '';
+            document.getElementById('accountName').value = '';
+            document.getElementById('accountNumber').classList.add('accountNumber');
+            document.getElementById('accountName').classList.add('accountName');
+            document.getElementById('accountNumber').disabled = true;
+            document.getElementById('accountName').disabled = true;
+            popAccountDetail();
+        }
+    })
+
+    $("input[type=text][name=accountNumber]").change(function () {
+        checkInputs();
+    })
+    $("input[type=text][name=accountName]").change(function () {
+        checkInputs();
+    })
+    $("input[type=date][name=dob]").change(function () {
+        checkInputs();
+    })
+    $("input[type=file][name=fileupload_signature]").change(function () {
+        checkInputs();
+    })
+    $("input[type=text][name=citizenshipNumber]").change(function () {
+        checkInputs();
+    })
+    $("input[type=file][name=fileupload_citizenshipFile]").change(function () {
+        checkInputs();
+    })
+
+    $("input[type=checkbox][name=require_nominee_checkbox]").change(function () {
+        if (this.checked == true) {
+            document.getElementById('nomineeName').style.display = 'block';
+            document.getElementById('nomineeRelationship').style.display = 'block';
+            document.getElementById('nomineeFathersName').style.display = 'block';
+            document.getElementById('nomineeGrandFatherName').style.display = 'block';
+            document.getElementById('gaurdainNominee').style.display = 'block';
+            document.getElementById('gaurdianRelationship').style.display = 'block';
+
+            document.getElementById('nomineeName').required = true;
+            document.getElementById('nomineeRelationship').required = true;
+            document.getElementById('nomineeFathersName').required = true;
+            document.getElementById('nomineeGrandFatherName').required = true;
+            document.getElementById('gaurdainNominee').required = true;
+            document.getElementById('gaurdianRelationship').required = true;
+
+            var labelShow = document.getElementsByName("hideShow");
+
+            // Loop through all label elements
+            for (var i = 0; i < labelShow.length; i++) {
+                labelShow[i].style.display = "block";
+            }
+
+        } else {
+            document.getElementById('nomineeName').value = '';
+            document.getElementById('nomineeRelationship').value = '';
+            document.getElementById('nomineeFathersName').value = '';
+            document.getElementById('nomineeGrandFatherName').value = '';
+            document.getElementById('gaurdainNominee').value = '';
+            document.getElementById('gaurdianRelationship').value = '';
+            document.getElementById('nomineeName').style.display = 'none';
+            document.getElementById('nomineeRelationship').style.display = 'none';
+            document.getElementById('nomineeFathersName').style.display = 'none';
+            document.getElementById('nomineeGrandFatherName').style.display = 'none';
+            document.getElementById('gaurdainNominee').style.display = 'none';
+            document.getElementById('gaurdianRelationship').style.display = 'none';
+
+            document.getElementById('nomineeName').required = false;
+            document.getElementById('nomineeRelationship').required = false;
+            document.getElementById('nomineeFathersName').required = false;
+            document.getElementById('nomineeGrandFatherName').required = false;
+            document.getElementById('gaurdainNominee').required = false;
+            document.getElementById('gaurdianRelationship').required = false;
+
+            var labelHide = document.getElementsByName("hideShow");
+
+            // Loop through all label elements
+            for (var i = 0; i < labelHide.length; i++) {
+                labelHide[i].style.display = "none";
+            }
+        }
+    });
+
+    var fileInputSignature = document.getElementById("signature");
+    fileInputSignature.addEventListener("change", function () {
+        const file = fileInputSignature.files[0];
+        fileValidation(file, fileInputSignature)
+    });
+
+    var fileInputCitizenship = document.getElementById("citizenshipFile");
+    fileInputCitizenship.addEventListener("change", function () {
+        const file = fileInputCitizenship.files[0];
+        fileValidation(file, fileInputCitizenship)
+    });
+
+    var allowedTypes = ["image/jpeg", "image/png", "application/pdf"];
+    var maxSize = 2 * 1024 * 1024; // 2 MB
+
+    function fileValidation(file, fileInput) {
+        if (!allowedTypes.includes(file.type)) {
+            alert("Invalid file type. Please select a JPEG, PNG, or PDF.");
+            fileInput.value = "";
+            return;
+        }
+
+        if (file.size > maxSize) {
+            alert("File size too large. Maximum file size is 2 MB.");
+            fileInput.value = "";
+            return;
+        }
+    }
+    function updateImageDisplay(l) {
+        const preview = document.querySelector(`.${l}`);
+
+        const uploadfile = event.target.files;
+        while (preview.firstChild) {
+            preview.removeChild(preview.firstChild);
+        }
+
+        const curFiles = uploadfile;
+        if (curFiles.length === 0) {
+            const para = document.createElement('p');
+            para.textContent = 'No files currently selected for upload';
+            preview.appendChild(para);
+        } else {
+            const list = document.createElement('div');
+            preview.appendChild(list);
+
+            for (const file of curFiles) {
+                const listItem = document.createElement('div');
+                const para = document.createElement('p');
+                para.textContent = `File: ${file.name}.`;
+                const image = document.createElement('img');
+                listItem.appendChild(para);
+                list.appendChild(listItem);
+            }
+        }
+    }
+
+    function checkInputs() {
+        // if (document.getElementById('accountNumber').value !== '' && document.getElementById('accountName').value !== '' && document.getElementById('signature').value !== '' && document.getElementById('dob').value !== '' && document.getElementById('citizenshipNumber').value !== '' && document.getElementById('citizenshipFile').value !== '') {
+        //     document.getElementById('second_div').style.display = 'block';
+        // } else {
+        //     document.getElementById('second_div').style.display = 'none';
+        // }
+    }
+</script>
+
+</html>

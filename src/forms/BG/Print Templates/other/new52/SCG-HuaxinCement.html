@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCG-Huaxin Cement</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p style="left:0; bottom: 0;width:100%;text-align:center;">
+           <b>FORM OF BANK GUARANTEE </b> 
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            Global IME Bank Ltd. Kantipath, Nepal
+        </p>
+        <br><br>
+        <p>
+            Beneficiary.: {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>{{subform.2.beneficiary_address}} <br>
+            Date:{{subform.2.issuedate.formattedissueDateBG}} <br>
+            Bank Guarantee No:.......... <br>
+            Reference: {{subform.2.reference_number}} <br>
+           
+        </p>
+               <p>
+                We have been informed that {{subform.2.salutation_acccount}} {{subform.2.company_name}},{{subform.2.company_address}} (hereinafter called the "BUYER")
+                 is entering/has entered into a Cement sales contract dated {{subform.2.issuedate.formattedissueDateBG}}
+                  with Huaxin Cement Narayani Pvt Ltd (the "SELLER") pursuant to 
+                  which the BUYER has agreed to buy certain products of SELLER (hereinafter called the "Contract").
+                   Furthermore, we understand that according to the provisions of the Contract, the BUYER must submit
+                    an unconditional and irrevocable bank guarantee issued by a reputed commercial bank of Nepal as a
+                     security for the full and timely performance of its obligations under the Contract.
+                
+        </p>
+        <p>
+        At the request of the BUYER, we Global IME Bank Ltd. Kantipath, Nepal , hereby irrevocably and unconditionally undertake to 
+        pay you any sum or sums not exceeding in total an amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}}), </b>
+        upon receipt by us of your demand in writing accompanied by a written statement that the BUYER is in breach of its obligation(s) under the Contract without your needing to prove or to show grounds for your demand of the sum specified therein.
+    </p>
+         <p>
+            This guarantee shall remain valid for a period till {{subform.2.validityDate}} Consequently, any demand
+             for payment under this Guarantee must be received by us at the office on or before that date. 
+             <br>
+
+        </p>
+        <p>
+            This guarantee is subject to the Uniform Rules for Demand Guarantees, ICC Publication
+             No. 758 except that the provisions of the sub-clauses (a), (b) and (d) of Article 15 are excluded.
+        </p>    
+        <p style="float: left; width: 100%;">
+            <br /><br /><br /><br /><br />
+            <b>..........</b><br />
+            <b>SIGNATURE</b><br />
+            <b>NAME: {{subform.2.name1}}
+            </b> <br>
+            <b>DESIGNATION: {{subform.2.designation1}}
+            </b>
+      </p>
+    </div>
+</body>
+
+</html>

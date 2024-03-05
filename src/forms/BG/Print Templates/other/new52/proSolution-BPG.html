@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Solution BPG</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+             <b style="text-align: left; display:flex; flex-direction: column; align-items: center;font-size: 15px;">FORMAT OF PERFORMANCE BANK GUARANTEE </b> <br>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+            <b style="float: left;width: 80%;">Date:{{subform.2.issuedate.formattedissueDateBG}}</b><br>
+             Guarantee No:.......... <br>
+            TO: {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+            {{subform.2.beneficiary_address}}
+            <br>
+            <br>
+            <br>
+        </p>   
+        <p>
+        Dear Sirs,           
+        </p>
+        <p>
+            WHEREAS, <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> a company incorporated under the laws of Republic of Nepal,
+            having its registered office at {{subform.2.company_address}} (Hereinafter referred to as the “Contractor” which
+            expressions shall include its successors and permitted assigns) has in terms of Contract No
+            {{subform.2.contract_number}} dated {{subform.2.issuedate.formattedissueDateBG}}, entered between you and the said Contractor, contracted to perform
+            the Works and services as stated in the Contract.
+        </p>
+        <p>
+            AND WHEREAS, as per provision of the said Contract, the Contractor is required to furnish to you a
+            Bank Guarantee for <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> towards due and
+            faithful performance of the Contractor’s obligations under the Contract.
+        </p>
+        <p>
+            Now, we Global IME Bank Ltd. Bank having the address at  Kantipath, Nepal (Hereinafter referred to as
+            “Bank”) hereby irrevocably and unconditionally agree and undertake as follows:
+        </p>
+
+            <ol type="1">
+                <li>  We hereby undertake and bind ourselves irrevocably and unconditionally guarantee to pay to
+                    you the sum in aggregate not exceeding <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                        {{subform.2.in_words}}), </b> merely on the first written demand signed by your duly authorized
+                    representative without your need to prove or show grounds or reasons for your demand and without
+                    any protest or demur. Any such demand made on us shall be conclusive notwithstanding any
+                    difference between the you and the Contractor or any dispute pending before any Court, Tribunal,
+                    Arbitrator or any other authority as regards the amount due and payable to you by us under this
+                    guarantee. </li>
+                <li>This guarantee shall come into force simultaneously with issue of this Bank Guarantee and shall
+                    remain in full force and effect up to and including <b>{{subform.2.claim_validity}} </b>   or the earlier date upon which we have
+                    received a written notice from you and the Contractor jointly stating that the Contract has been
+                    terminated and no claim against the Contractor is outstanding. Should it be necessary to extend the
+                    validity of this guarantee beyond the said date, we undertake to extend the period of the guarantee till
+                    such time as may be mutually agreed between you and the Contractor.</li>
+                    <li>Notwithstanding anything contained hereinabove
+                        <ol type="a">
+                            <li>
+                                Our liability under this guarantee is restricted to<b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                                    {{subform.2.in_words}}). </b>
+                                </li>
+                            <li>The Bank Guarantee shall be valid up to {{subform.2.validityDate}} (The expiry date)</li>
+                            <li>Unless a claim in writing is lodged with us within a period of 2 (Two) months from the
+                                date of expiry of the guarantee i.e. upto and including {{subform.2.claim_validity}}(The claim date), all
+                                your rights under this guarantee shall stand forfeited and we shall be released and
+                                discharged from all liabilities under this guarantee whether or not this document shall
+                                have been returned to us.
+                                </li>
+                        </ol>
+                    </li>
+            </ol>
+        
+       
+        <br>
+        <br>
+      
+        <p style="float:left; width: 100%;">
+            <br>
+            THIS GUARANTEE SHALL BE SUBJECT TO THE LAWS OF NEPAL AND THE
+                JURISDICTION OF THE COURTS IN KATMANDU, NEPAL.<br /><br />
+                SIGNED AND DELIVERED on this day of : {{subform.2.issuedate.formattedissueDateBG}} <br>
+                For and on behalf of: {{subform.2.salutation}} {{subform.2.beneficiary_name}} {{subform.2.beneficiary_address}} <br>
+                Bank: Global IME Bank Ltd.  <br>
+                Address: Kantipath, Nepal <br><br><br><br><br>
+                .......... <br>
+                (AUTHORISED SIGNATORY OF BANK) <br>
+        </p>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APG-2 </title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+                 
+        <p>
+           <b>  Date: {{subform.2.issuedate.formattedissueDateBG}} </b><br>
+                        
+            </p>
+            <p>
+                {{subform.2.salutation}} {{subform.2.beneficiary_name}} <br>
+                {{subform.2.beneficiary_address}} 
+                           
+               </p>
+                <p>
+            <b> Advance Payment Guarantee No.: ..........</b>
+          </p>
+        <br>
+        
+        <p>
+            We have been informed that <b> {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} </b> (hereinafter called “the
+            Contractor”), has entered into <b> Contract No.: {{subform.2.contract_number}},</b> with you for the Execution of
+            <b> {{subform.2.purpose_guarantee}} </b>(hereinafter called ‘the Contract’). 
+            
+        </p>
+        <p>
+            Furthermore, we understand that, according to the conditions of the Contract an advance
+            payment in the sum of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                {{subform.2.in_words}}), </b> is to be made against an advance payment guarantee.
+        </p>
+        <p>
+            At the request of the Contractor, we,<b> Global IME Bank Limited, </b>(hereinafter called the
+                ‘Bank’) hereby irrevocably undertakes to pay you any sum or sums not exceeding in total an
+                amount of <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}), </b>
+                upon receipt by us of your first demand in writing accompanied by a written statement stating that the
+                Contractor is in breach of its obligations under the Contract, because the contractor used the
+                advance payment for purposes other than the costs of mobilization in respect of the works. 
+            
+        </p>
+        <p>The Maximum amount of this guarantee shall be progressively reduced by the amount of the
+            advance payment repaid by the contractor as indicated in copies of interim statements or
+            payment certificates which shall be presented to us. This Guarantee Shall expire, at the latest,
+            upon our receipt of a copy of the interim payment certificate indicating that eighty(80)
+            percent of the Contract Price has been certified for payment, or on the <b> {{subform.2.validityDate}} ,</b>
+            whichever is earlier. Consequently, any demand for payment under this guarantee must be
+            received by this bank at Central Trade Operations, Kamaladi, Kathmandu, Nepal on or before
+            that date. <b> (i.e. {{subform.2.validityDate}}) </b>
+            
+        </p>
+       
+        <p>
+          <b> For;Global IME Bank Limited<br>
+              <span style="margin-left: 25px;">  Trade Operation</span></b> <br><br><br> 
+        </p>
+        <br />
+                <p style="float: left; width: 50%;">
+                 
+            <b>Authorized Signature</b><br /><br />
+            
+        </p>
+        <p style="float:right; width: 50%;">
+       
+            <b>Authorized Signature</b><br /><br />
+            
+            
+        </p>
+        
+      
+    </div>
+</body>
+
+
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBG-callMobility</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 12px;
+        }
+
+        small {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+            text-align: center;
+        }
+    </style>
+    <div class="print-body"
+        style="font-family: 'Times New Roman', Times, serif;margin-left: 20mm; margin-right: 20mm; margin-bottom: 80px; margin-top: 100px; text-align: justify;">
+
+        <p>
+            <b>Date: {{subform.2.issuedate.formattedissueDateBG}}</b>
+        </p>
+        <p style="margin-bottom:0;width:100%; float: left;">
+           Re: Our Letter of Guarantee(Performance Bond) No.:..........
+        </p>
+        <p>
+           Guarantee Ref No.: {{subform.2.reference_number}} <br>
+            Date of Issue: {{subform.2.issuedate.formattedissueDateBG}} <br>
+            Applicant: {{subform.2.salutation_acccount}} {{subform.2.company_name}}, {{subform.2.company_address}} <br>
+            Beneficiary: {{subform.2.salutation}} {{subform.2.beneficiary_name}}, {{subform.2.beneficiary_address}} <br>
+            Amount: {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+            {{subform.2.in_words}}) <br>
+            Date and Place of expiry: {{subform.2.validityDate}} <br>
+
+        </p>
+               <p>
+                We, <b> The Global IME Banke Bank,</b> do hereby issue this unconditional and irrevocable
+                 Performance Security bank guarantee up to and inclusive of the amount of 
+                 <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}) </b> in favor of Call Mobility Pvt. Ltd., 
+                 on behalf of the Applicant, towards fulfillment of any or all obligations of the Applicant
+                  to Call Mobility Pvt. Ltd., arising out of Call Mobility Pvt. Ltd.'s sale of goods to the
+                   Applicant.
+                
+        </p>
+              <ul style="list-style:decimal; margin-left: 0; padding-left: 15px;">
+            <li>
+                We, the Bank, do hereby undertake to pay to Call Mobility Pvt. Ltd., on
+                 Call Mobility Pvt. Ltd.'s first written demand, immediately but not later than
+                  seven working days, the amount demanded by Call Mobility Pvt. Ltd. up to and
+                   inclusive of the amount of : <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                    {{subform.2.in_words}}) </b>
+                    under this Bank Guarantee without any demur or protest, without any reference, verification
+                     or recourse to the Applicant and without requiring Call Mobility Pvt. Ltd. to first invoke any
+                      legal remedy that may be available to Call Mobility Pvt. Ltd. to compel the Applicant to pay.
+                       Any demand made on the Bank shall be conclusive with regard to the amounts payable by the Bank
+                        under this Bank Guarantee, notwithstanding the pendency of any disputes or differences between
+                         Call Mobility Pvt. Ltd. and the Applicant in any Court of Law, Tribunal or Arbitrator or any 
+                         other authority.
+            </li>
+
+            <li>
+                We undertake, unequivocally and unconditionally, to pay to Call Mobility Pvt. Ltd. the amount 
+                demanded, merely on such written demand from Call Mobility Pvt. Ltd., declaring that the Applicant
+                 has not fulfilled its obligations.
+            </li>
+           
+            <li>
+                We hereby undertake and agree that we shall not question the aforesaid declaration once made by
+                 Call Mobility Pvt. Ltd. on any grounds whatsoever for due performance of our obligations under this 
+                 Bank Guarantee. The Bank's obligation to pay to Call Mobility Pvt. Ltd. shall continue till remittance
+                  is actually made to Call Mobility Pvt. Ltd. within  the validity period of this Guarantee. 
+            </li>
+             <li>This Bank Guarantee will not be discharged due to change in the constitution of the Bank or the Applicant.
+            </li>
+            <li>In the event of the insolvency or liquidation of the Applicant or in the event of any 
+                reconstruction or amalgamation in which or as a consequence of which the Applicant loses its 
+                separate corporate identity, the Bank shall continue to be liable to BENEFICIARY for the payment 
+                of monies up to the Bank's liability under this Guarantee.</li>
+            <li>We, the Bank, undertake not to revoke this Bank Guarantee during its currency except with 
+                the previous consent of Call Mobility Pvt. Ltd. in writing.</li>
+            <li>The Demand amount under this Bank Guarantee can be lodged 
+                in part or in full, at the sole discretion of Call Mobility Pvt. Ltd.</li>
+                      
+
+        </ul>
+             <p>
+              <b>  Notwithstanding anything stated hereinbefore:</b>
+              <ol>
+                <li>The liability of the Bank under this Guarantee
+                     is restricted to <b> {{main.currency_short}} {{subform.2.in_figures}} ({{main.currency_full}}
+                        {{subform.2.in_words}}), </b>.</li>
+                <li>We are liable to pay the guaranteed amount or any part thereof demanded by 
+                    you under this Bank Guarantee, only if Call Mobility Pvt. Ltd. serves upon
+                     us a written claim reaching the counter of this bank at Trade Operations Department, 
+                     Central Business Park, 6th Floor, Thapathali, Kathmandu, Nepal or demand 
+                    within the validity period of this Guarantee. Thereafter the Bank shall stand Discharged from all its liability
+                    under this gurantee and the rights of Call Mobility Pvt.Ltd. Under this Guarantee shall stand extinguished.
+                    </li>
+              </ol>
+
+        </p>
+        <p>
+            For: Global IME Bank Ltd.
+        </p> 
+        <br><br><br><br><br>   
+        <p style="float: left; width: 50%;">
+            <b> ..........</b><br />
+            <b>Authorized Signature</b><br />
+            
+            
+        </p>
+        <p style="float:right; width: 50%;">
+            <b> ..........</b><br />
+            <b>Authorized Signature</b><br />
+ 
+           
+        </p>
+       
+        
+    </div>
+</body>
+
+</html>
