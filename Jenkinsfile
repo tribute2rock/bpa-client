@@ -12,25 +12,5 @@ pipeline {
                 bat 'npm run build'
             }
         }
-
-        stage('Test') {
-            steps {
-                // Run test script
-                sh './jenkins/scripts/test.sh'
-            }
-        }
-
-        stage("Deliver") {
-            steps {
-                // Run delivery script
-                sh './jenkins/scripts/deliver.sh'
-                
-                // Wait for user input
-                input message: 'Finished using the project? (Click "Proceed" to continue)'
-
-                // Run kill script
-                sh './jenkins/scripts/kill.sh'
-            }
-        }
     }
 }
