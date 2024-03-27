@@ -9,8 +9,8 @@ pipeline {
         stage("Build") {
             steps {
                 // Install dependencies
-                sh 'npm i --legacy-peer-deps'
-                sh 'npm run build'
+                bat 'npm i --legacy-peer-deps'
+                bat 'npm run build'
             }
         }
 
