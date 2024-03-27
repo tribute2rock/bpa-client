@@ -9,7 +9,10 @@ pipeline {
         stage("Build") {
             steps {
                 // Install dependencies
+                bat 'npm i --legacy-peer-deps'
                 bat 'npm run build'
+                bat 'mkdir public'
+                bat 'xcopy /s /e /y E:\\JenkinsHome\\workspace\\bpa-client-new\\build E:\\JenkinsHome\\workspace\\bpa-api-new\\public'
             }
         }
     }
